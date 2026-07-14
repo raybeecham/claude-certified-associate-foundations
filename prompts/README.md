@@ -21,6 +21,7 @@ These templates are study aids and starting points, not universal production pro
 3. [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
 4. [Core Entry Points worked-example prompts](module-01/03a-core-entry-points-worked-example-prompts.md)
 5. [Capability Layer, Skills and Code Execution prompts](module-01/04-capability-layer-skills-code-execution-prompts.md)
+6. [Capability Layer, Memory prompts](module-01/04a-capability-layer-memory-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -37,7 +38,7 @@ Before using a template:
 - create representative tests; and
 - establish human review where the output is consequential.
 
-A prompt cannot enforce identity, authorization, data isolation, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
