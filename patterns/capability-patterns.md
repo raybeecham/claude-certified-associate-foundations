@@ -384,6 +384,10 @@ More capabilities do not automatically produce a better workflow.
 
 - [Capability Layer lesson](../modules/01-platform-model-foundations/lessons/04-capability-layer-skills-code-execution.md)
 - [Capability Layer prompt notebook](../prompts/module-01/04-capability-layer-skills-code-execution-prompts.md)
+- [Capability Layer scenario](../modules/01-platform-model-foundations/lessons/04b-capability-layer-scenario.md)
+- [Capability Layer scenario prompts](../prompts/module-01/04b-capability-layer-scenario-prompts.md)
+- [Memory lesson](../modules/01-platform-model-foundations/lessons/04a-capability-layer-memory.md)
+- [Memory patterns](memory-patterns.md)
 - [Core Entry Points](../modules/01-platform-model-foundations/lessons/03-core-entry-points.md)
 - [How Claude Behaves](../modules/01-platform-model-foundations/lessons/02-how-claude-behaves.md)
 
