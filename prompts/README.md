@@ -20,6 +20,7 @@ These templates are study aids and starting points, not universal production pro
 2. [How Claude Behaves prompts](module-01/02-how-claude-behaves-prompts.md)
 3. [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
 4. [Core Entry Points worked-example prompts](module-01/03a-core-entry-points-worked-example-prompts.md)
+5. [Capability Layer, Skills and Code Execution prompts](module-01/04-capability-layer-skills-code-execution-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -40,4 +41,4 @@ A prompt cannot enforce identity, authorization, data isolation, or irreversible
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, or engagement-identifying examples in these prompts. Use fictional, generic, or public scenarios.
+Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, or engagement-identifying examples in these prompts. Use fictional, generic, synthetic, or public scenarios.
