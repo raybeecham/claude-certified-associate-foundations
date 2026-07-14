@@ -25,7 +25,7 @@ We are building this module section by section from the certification preparatio
 - [ ] 04. Capability Layer
   - [x] [Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
   - [x] [Memory](lessons/04a-capability-layer-memory.md)
-  - [ ] Scenario
+  - [x] [Scenario](lessons/04b-capability-layer-scenario.md)
   - [ ] Checkpoint
 - [ ] 05. Choosing Models
 - [ ] 06. Context Management
@@ -52,6 +52,9 @@ By the end of this module, you should be able to:
 - explain what Incognito mode does and does not control;
 - review imported memories before persistence;
 - recognize memory-poisoning and persistent-state integrity risks;
+- redesign a recurring high-consequence workflow using capability layers;
+- preserve verification and human accountability while reducing repeated effort;
+- measure both efficiency and quality after a workflow redesign;
 - differentiate Haiku, Sonnet, and Opus by capability characteristics and task fit;
 - match model selection to quality, speed, cost, and volume requirements;
 - manage context limitations and continuity features across sessions;
@@ -71,6 +74,7 @@ By the end of this module, you should be able to:
 - [Core Entry Points worked example](lessons/03a-core-entry-points-worked-example.md)
 - [Capability Layer, Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
 - [Capability Layer, Memory](lessons/04a-capability-layer-memory.md)
+- [Capability Layer scenario](lessons/04b-capability-layer-scenario.md)
 
 ### Module 1 prompt notebooks
 
@@ -80,6 +84,7 @@ By the end of this module, you should be able to:
 - [Core Entry Points worked-example prompts](../../prompts/module-01/03a-core-entry-points-worked-example-prompts.md)
 - [Capability Layer prompts](../../prompts/module-01/04-capability-layer-skills-code-execution-prompts.md)
 - [Memory prompts](../../prompts/module-01/04a-capability-layer-memory-prompts.md)
+- [Capability Layer scenario prompts](../../prompts/module-01/04b-capability-layer-scenario-prompts.md)
 
 ### Engineering patterns
 
@@ -106,9 +111,10 @@ Use this diagnostic checklist throughout the module:
 5. What calculation, transformation, chart, or file should use Code Execution?
 6. What continuity, if any, belongs in Memory?
 7. Is the Memory candidate recurring, stable, authorized, and properly scoped?
-8. Does the model fit the quality, speed, cost, and volume requirements?
-9. Is context being managed deliberately?
-10. What validation and human review does the consequence require?
+8. Which decisions remain consequential, uncertain, or accountable to a human reviewer?
+9. Does the model fit the quality, speed, cost, and volume requirements?
+10. Is context being managed deliberately?
+11. What validation and human review does the consequence require?
 
 For repeated work, also ask:
 
@@ -134,6 +140,14 @@ For Memory, ask:
 5. Could untrusted content alter it?
 6. Can the user inspect, correct, and remove it?
 
+For a workflow redesign, ask:
+
+1. What repeated setup can be removed?
+2. Which controls must remain after automation?
+3. Are both time and quality being measured?
+4. Is an error-free period being interpreted as evidence rather than a guarantee?
+5. Who owns configuration, procedure, computation, review, and maintenance?
+
 ## Completion criteria
 
 - [ ] I can explain why repeated runs can differ without assuming that one is automatically wrong.
@@ -154,6 +168,10 @@ For Memory, ask:
 - [ ] I can explain why Incognito mode does not override organizational policy.
 - [ ] I can review imported memories for staleness, sensitivity, and scope.
 - [ ] I can describe a control against memory poisoning.
+- [ ] I can map a recurring workflow to Project, Skill, Code Execution, Memory, and human review responsibilities.
+- [ ] I can explain why verification should remain after a capability-layer redesign.
+- [ ] I can calculate time savings and percentage reduction for a redesigned workflow.
+- [ ] I can explain why several clean cycles do not prove future perfection.
 - [ ] I can separate context, procedure, computation, continuity, and authoritative records.
 - [ ] I can explain application state without claiming the model "remembers" by itself.
 - [ ] I can separate context, output, and knowledge freshness.
@@ -182,4 +200,4 @@ Product capabilities and plan availability can change. Use official sources as t
 
 ## Version-awareness note
 
-Memory behavior, supported plans, Project scoping, Incognito behavior, import workflows, workspace administration, and retention can change. Treat the current official Help Center and organization policy as authoritative.
+Memory behavior, supported plans, Project scoping, Incognito behavior, import workflows, Skill administration, Code Execution availability, workspace administration, and retention can change. Treat the current official Help Center and organization policy as authoritative.
