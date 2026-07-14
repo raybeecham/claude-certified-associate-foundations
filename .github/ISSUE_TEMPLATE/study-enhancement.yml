@@ -1,0 +1,59 @@
+name: Study enhancement
+description: Propose an original question, lab, example, or tool improvement
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Enhancement type
+      options:
+        - Scenario question
+        - Flashcard
+        - Lab
+        - Case study
+        - Explanation
+        - CLI or automation
+        - Documentation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Study domain
+      options:
+        - 1. Platform & Model Foundations
+        - 2. Prompting & Task Execution
+        - 3. Evaluating & Validating Output
+        - 4. Workflow Integration & Solutions Design
+        - 5. Configuration & Knowledge Management
+        - 6. Governance, Risk & Responsible Use
+        - 7. Troubleshooting & Optimization
+        - Cross-domain
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the learning objective and the original material to add.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public sources
+      description: List official sources for current product or policy claims.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Exam integrity
+      options:
+        - label: The proposed material is original and does not reconstruct live-exam or proprietary course content.
+          required: true

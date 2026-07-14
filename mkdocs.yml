@@ -1,0 +1,33 @@
+site_name: Claude Foundations Study Guide
+site_description: Independent study guide for the Claude Certified Associate - Foundations certification
+site_url: https://raybeecham.github.io/claude-certified-associate-foundations/
+repo_url: https://github.com/raybeecham/claude-certified-associate-foundations
+repo_name: raybeecham/claude-certified-associate-foundations
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Certification Overview: certification-overview.md
+  - Four-Week Study Plan: study-plan.md
+  - Exam Strategy: exam-strategy.md
+  - Master Cheat Sheet: master-cheat-sheet.md
+  - Glossary: glossary.md
+  - Official Resources: official-resources.md
+  - Progress Tracker: progress-tracker.md
+  - Question-Writing Guide: question-writing-guide.md

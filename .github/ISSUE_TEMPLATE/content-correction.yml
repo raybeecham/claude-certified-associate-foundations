@@ -1,0 +1,49 @@
+name: Content correction
+description: Report a factual, conceptual, or source problem
+title: "[Correction]: "
+labels: ["content", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not submit proprietary course material or recalled live-exam content.
+
+  - type: input
+    id: location
+    attributes:
+      label: File and section
+      placeholder: modules/03-evaluating-validating-output/notes.md, Grounding
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain what is inaccurate, unclear, or outdated.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source
+      description: Provide a current public source when the correction is factual.
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Exam integrity
+      options:
+        - label: This report does not contain recalled or proprietary exam content.
+          required: true

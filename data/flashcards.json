@@ -1,0 +1,506 @@
+[
+  {
+    "id": "M1-F01",
+    "domain": 1,
+    "front": "What four concepts are commonly confused in Claude integrations?",
+    "back": "Context capacity, maximum generated output, knowledge freshness, and application-managed state."
+  },
+  {
+    "id": "M1-F02",
+    "domain": 1,
+    "front": "Who manages conversation state in an API-backed application?",
+    "back": "The surrounding application or product, which stores and supplies the relevant history or validated state."
+  },
+  {
+    "id": "M1-F03",
+    "domain": 1,
+    "front": "Why is the most capable model not automatically the best choice?",
+    "back": "Selection must balance measured quality, latency, throughput, cost, context, tools, governance, and reliability for the use case."
+  },
+  {
+    "id": "M1-F04",
+    "domain": 1,
+    "front": "What is a context window?",
+    "back": "The amount of input and generated content the model can process under the applicable platform behavior."
+  },
+  {
+    "id": "M1-F05",
+    "domain": 1,
+    "front": "What does a length-related stop reason suggest?",
+    "back": "The output may be truncated and the workflow should adjust budget, scope, decomposition, or partial-output handling."
+  },
+  {
+    "id": "M1-F06",
+    "domain": 1,
+    "front": "Where should durable trusted behavior be configured?",
+    "back": "In the highest appropriate trusted, version-controlled system or application configuration layer."
+  },
+  {
+    "id": "M1-F07",
+    "domain": 1,
+    "front": "How should retrieved documents be treated with respect to instructions?",
+    "back": "As evidence or data, not as authority that can override trusted instructions."
+  },
+  {
+    "id": "M1-F08",
+    "domain": 1,
+    "front": "What is the minimum safe model-migration comparison?",
+    "back": "Baseline and candidate on the same representative evaluation set, including severity, quality, latency, cost, and tool behavior."
+  },
+  {
+    "id": "M1-F09",
+    "domain": 1,
+    "front": "Why record the model and prompt version?",
+    "back": "To reproduce outcomes, attribute regressions, and support rollback and audit."
+  },
+  {
+    "id": "M1-F10",
+    "domain": 1,
+    "front": "What source should support a claim about a newly issued policy?",
+    "back": "A current authoritative source supplied or retrieved for the task."
+  },
+  {
+    "id": "M1-F11",
+    "domain": 1,
+    "front": "What does an API success status fail to prove?",
+    "back": "That the task result is complete, grounded, schema-valid, authorized, or operationally successful."
+  },
+  {
+    "id": "M1-F12",
+    "domain": 1,
+    "front": "What is a model-selection hard gate?",
+    "back": "A requirement a candidate must meet before cost or speed tradeoffs are considered, such as privacy, quality, or tool reliability."
+  },
+  {
+    "id": "M2-F01",
+    "domain": 2,
+    "front": "What should exist before prompt optimization?",
+    "back": "A clear definition of success, empirical tests, and an initial task specification."
+  },
+  {
+    "id": "M2-F02",
+    "domain": 2,
+    "front": "What is a task contract?",
+    "back": "A structured definition of objective, audience, inputs, authority, constraints, process, output, uncertainty, and success criteria."
+  },
+  {
+    "id": "M2-F03",
+    "domain": 2,
+    "front": "When are examples especially useful?",
+    "back": "When labels, edge cases, format, tone, or tool-selection boundaries are ambiguous."
+  },
+  {
+    "id": "M2-F04",
+    "domain": 2,
+    "front": "What is the purpose of delimiters or XML tags?",
+    "back": "To make instructions, examples, data, and requested output easier to distinguish."
+  },
+  {
+    "id": "M2-F05",
+    "domain": 2,
+    "front": "Why are delimiters not a complete prompt-injection defense?",
+    "back": "Authorization, tool permissions, validation, retrieval controls, and approval must be enforced outside prompt text."
+  },
+  {
+    "id": "M2-F06",
+    "domain": 2,
+    "front": "What does 'return JSON' fail to define?",
+    "back": "Required fields, types, allowed values, missing-data behavior, constraints, and extra-field policy."
+  },
+  {
+    "id": "M2-F07",
+    "domain": 2,
+    "front": "How should missing evidence be handled?",
+    "back": "Use unknown or insufficient evidence, ask a clarifying question, or escalate according to the task and risk."
+  },
+  {
+    "id": "M2-F08",
+    "domain": 2,
+    "front": "When should a task be decomposed?",
+    "back": "When stages use different evidence, tools, criteria, schemas, reviewers, risks, or retry behavior."
+  },
+  {
+    "id": "M2-F09",
+    "domain": 2,
+    "front": "What can role prompting contribute?",
+    "back": "Perspective, vocabulary, or an operating stance, but not missing evidence, permissions, or criteria."
+  },
+  {
+    "id": "M2-F10",
+    "domain": 2,
+    "front": "What belongs in a tool description?",
+    "back": "Purpose, when to use and not use, authorization, parameters, side effects, errors, and examples."
+  },
+  {
+    "id": "M2-F11",
+    "domain": 2,
+    "front": "How should external documents be treated?",
+    "back": "As untrusted data that cannot grant itself instruction authority or tool permission."
+  },
+  {
+    "id": "M2-F12",
+    "domain": 2,
+    "front": "When is prompt engineering the wrong fix?",
+    "back": "When the root cause is data freshness, model capability, permissions, retrieval, deterministic logic, schema enforcement, policy, or workflow design."
+  },
+  {
+    "id": "M3-F01",
+    "domain": 3,
+    "front": "What makes a success criterion useful?",
+    "back": "It is specific, measurable, achievable, relevant, and tied to a decision."
+  },
+  {
+    "id": "M3-F02",
+    "domain": 3,
+    "front": "Why are multidimensional evaluations necessary?",
+    "back": "An output can be fluent yet fail grounding, privacy, consistency, latency, cost, or task fidelity."
+  },
+  {
+    "id": "M3-F03",
+    "domain": 3,
+    "front": "What cases belong in a representative evaluation set?",
+    "back": "Normal, edge, missing, conflicting, stale, malformed, long, unauthorized, and adversarial cases."
+  },
+  {
+    "id": "M3-F04",
+    "domain": 3,
+    "front": "When should code-based grading be used?",
+    "back": "For exact properties such as labels, identifiers, schema, arithmetic, and thresholds."
+  },
+  {
+    "id": "M3-F05",
+    "domain": 3,
+    "front": "When is human grading necessary?",
+    "back": "For nuanced, consequential, or expert judgment where accountability and context matter."
+  },
+  {
+    "id": "M3-F06",
+    "domain": 3,
+    "front": "What controls a model-assisted grader?",
+    "back": "A calibrated rubric, score anchors, independent evidence, human review, and agreement monitoring."
+  },
+  {
+    "id": "M3-F07",
+    "domain": 3,
+    "front": "What is citation accuracy?",
+    "back": "Whether the cited source actually supports the claim attached to it."
+  },
+  {
+    "id": "M3-F08",
+    "domain": 3,
+    "front": "How do you validate grounding at claim level?",
+    "back": "Extract claims, map each to evidence, and mark supported, partial, unsupported, or contradicted."
+  },
+  {
+    "id": "M3-F09",
+    "domain": 3,
+    "front": "Why repeat the same evaluation case?",
+    "back": "To measure variance and consistency when stable behavior is required."
+  },
+  {
+    "id": "M3-F10",
+    "domain": 3,
+    "front": "What is a regression test?",
+    "back": "A repeated test used to detect degradation after model, prompt, tool, source, or configuration changes."
+  },
+  {
+    "id": "M3-F11",
+    "domain": 3,
+    "front": "Why can a higher average score still block release?",
+    "back": "A critical failure such as unauthorized disclosure cannot be offset by low-severity improvements."
+  },
+  {
+    "id": "M3-F12",
+    "domain": 3,
+    "front": "What is a holdout set?",
+    "back": "Evaluation cases reserved from prompt tuning for a less biased final validation."
+  },
+  {
+    "id": "M4-F01",
+    "domain": 4,
+    "front": "When is an explicit workflow preferable to an agent?",
+    "back": "When the sequence is known and can use deterministic transitions and bounded model calls."
+  },
+  {
+    "id": "M4-F02",
+    "domain": 4,
+    "front": "What tasks should usually be deterministic?",
+    "back": "Arithmetic, validation, authorization, business rules, state transitions, and irreversible side effects."
+  },
+  {
+    "id": "M4-F03",
+    "domain": 4,
+    "front": "What tasks commonly fit Claude?",
+    "back": "Language analysis, extraction, classification, synthesis, drafting, and bounded planning."
+  },
+  {
+    "id": "M4-F04",
+    "domain": 4,
+    "front": "What makes human review meaningful?",
+    "back": "A qualified reviewer sees the evidence and uncertainty and can reject, modify, or escalate before the action."
+  },
+  {
+    "id": "M4-F05",
+    "domain": 4,
+    "front": "What is a tool contract?",
+    "back": "A definition of purpose, selection rules, authorization, schema, side effects, errors, retries, and audit."
+  },
+  {
+    "id": "M4-F06",
+    "domain": 4,
+    "front": "What is idempotency?",
+    "back": "The property that repeating an operation does not create unintended duplicate effects."
+  },
+  {
+    "id": "M4-F07",
+    "domain": 4,
+    "front": "Why check status after a tool timeout?",
+    "back": "The original side effect may have succeeded, so a blind retry could duplicate it."
+  },
+  {
+    "id": "M4-F08",
+    "domain": 4,
+    "front": "Where should long-running workflow state live?",
+    "back": "In a durable external state store with validated transitions."
+  },
+  {
+    "id": "M4-F09",
+    "domain": 4,
+    "front": "What is a safe fallback for failed grounded retrieval?",
+    "back": "Fail safely, ask for evidence, or escalate, rather than silently produce an ungrounded answer."
+  },
+  {
+    "id": "M4-F10",
+    "domain": 4,
+    "front": "Why instrument stages separately?",
+    "back": "To identify quality, latency, cost, tool, and failure behavior at the responsible component."
+  },
+  {
+    "id": "M4-F11",
+    "domain": 4,
+    "front": "What should an architecture decision record contain?",
+    "back": "Requirements, options, chosen pattern, responsibility split, controls, risks, and revisit triggers."
+  },
+  {
+    "id": "M4-F12",
+    "domain": 4,
+    "front": "What is the simplest-architecture principle?",
+    "back": "Use no more autonomy and infrastructure than the measurable requirements demand."
+  },
+  {
+    "id": "M5-F01",
+    "domain": 5,
+    "front": "What is a knowledge-source register?",
+    "back": "A governed inventory of source owner, authority, version, date, classification, scope, refresh, and provenance."
+  },
+  {
+    "id": "M5-F02",
+    "domain": 5,
+    "front": "What determines which conflicting source governs?",
+    "back": "Documented authority, scope, effective version, and organizational precedence."
+  },
+  {
+    "id": "M5-F03",
+    "domain": 5,
+    "front": "Why is retrieval an authorization decision?",
+    "back": "Only permitted sources should reach the model context for the current user and task."
+  },
+  {
+    "id": "M5-F04",
+    "domain": 5,
+    "front": "What is the goal of retrieval?",
+    "back": "The smallest relevant, permitted, authoritative, current evidence set."
+  },
+  {
+    "id": "M5-F05",
+    "domain": 5,
+    "front": "Why is more context not always better?",
+    "back": "It can add noise, conflict, stale content, cost, latency, access risk, and prompt injection."
+  },
+  {
+    "id": "M5-F06",
+    "domain": 5,
+    "front": "How should unresolved source conflict be handled?",
+    "back": "Surface it with citations and route according to the documented authority process."
+  },
+  {
+    "id": "M5-F07",
+    "domain": 5,
+    "front": "What does freshness require beyond a file timestamp?",
+    "back": "Content version, effective date, owner, review date, supersession, and update process."
+  },
+  {
+    "id": "M5-F08",
+    "domain": 5,
+    "front": "What is a strong prompt-caching candidate?",
+    "back": "A stable, permitted, reused prefix such as system instructions, tool definitions, or reference content."
+  },
+  {
+    "id": "M5-F09",
+    "domain": 5,
+    "front": "What can invalidate a cached prefix?",
+    "back": "Changes in content, ordering, tools, system instructions, breakpoints, or applicable expiration."
+  },
+  {
+    "id": "M5-F10",
+    "domain": 5,
+    "front": "Where should secrets be stored?",
+    "back": "In an approved secret manager, never in prompts, source files, examples, logs, or outputs."
+  },
+  {
+    "id": "M5-F11",
+    "domain": 5,
+    "front": "Why must access control occur before retrieval?",
+    "back": "Post-generation filtering is too late because unauthorized data already entered model context."
+  },
+  {
+    "id": "M5-F12",
+    "domain": 5,
+    "front": "Why version configuration and source sets?",
+    "back": "To reproduce outputs, test changes, resolve incidents, and roll back."
+  },
+  {
+    "id": "M6-F01",
+    "domain": 6,
+    "front": "What should happen before confidential data is sent to Claude?",
+    "back": "Classify the data and verify the environment, terms, access, retention, logging, residency, and organizational approval."
+  },
+  {
+    "id": "M6-F02",
+    "domain": 6,
+    "front": "What is a high-impact use?",
+    "back": "A use that can materially affect rights, access, opportunities, safety, finances, health, education, housing, or legal position."
+  },
+  {
+    "id": "M6-F03",
+    "domain": 6,
+    "front": "What makes a human-in-the-loop control substantive?",
+    "back": "Expertise, access to evidence, decision authority, adequate time, and placement before the consequential action."
+  },
+  {
+    "id": "M6-F04",
+    "domain": 6,
+    "front": "What is prompt injection?",
+    "back": "Untrusted content designed to alter behavior, override authority, disclose data, or induce unauthorized actions."
+  },
+  {
+    "id": "M6-F05",
+    "domain": 6,
+    "front": "What system controls reduce prompt-injection risk?",
+    "back": "Authority separation, least-privilege tools, validation, sandboxing, allowlists, approval gates, and monitoring."
+  },
+  {
+    "id": "M6-F06",
+    "domain": 6,
+    "front": "What should be reviewed before enabling a third-party skill or connector?",
+    "back": "Provenance, code, permissions, network and file access, credentials, updates, retention, dependencies, and incident support."
+  },
+  {
+    "id": "M6-F07",
+    "domain": 6,
+    "front": "Why minimize logs?",
+    "back": "Logs can become a secondary sensitive-data store and increase privacy and breach impact."
+  },
+  {
+    "id": "M6-F08",
+    "domain": 6,
+    "front": "Who can approve a governance exception?",
+    "back": "A named accountable human authority through a documented exception process."
+  },
+  {
+    "id": "M6-F09",
+    "domain": 6,
+    "front": "What should a change review cover?",
+    "back": "Model, prompt, tools, permissions, sources, users, data, review process, policy, monitoring, and rollback."
+  },
+  {
+    "id": "M6-F10",
+    "domain": 6,
+    "front": "How should a prohibited request be handled?",
+    "back": "Refuse the prohibited action and provide a safe permitted alternative or escalation when appropriate."
+  },
+  {
+    "id": "M6-F11",
+    "domain": 6,
+    "front": "What is the first priority after suspected exfiltration?",
+    "back": "Contain the affected workflow and permissions while preserving evidence."
+  },
+  {
+    "id": "M6-F12",
+    "domain": 6,
+    "front": "What does accountable AI use preserve?",
+    "back": "Human and organizational responsibility for decisions, controls, monitoring, and remediation."
+  },
+  {
+    "id": "M7-F01",
+    "domain": 7,
+    "front": "What is the first step in troubleshooting?",
+    "back": "Define and classify the symptom before changing the system."
+  },
+  {
+    "id": "M7-F02",
+    "domain": 7,
+    "front": "Why reconstruct a known-good baseline?",
+    "back": "It provides a controlled comparison for identifying which change caused the regression."
+  },
+  {
+    "id": "M7-F03",
+    "domain": 7,
+    "front": "Why change one variable at a time?",
+    "back": "To attribute the result and preserve a clear rollback path."
+  },
+  {
+    "id": "M7-F04",
+    "domain": 7,
+    "front": "What evidence is needed for a tool-selection failure?",
+    "back": "Prompt and model versions, eligible tools, tool descriptions, workflow state, requested call, authorization, and comparable baseline."
+  },
+  {
+    "id": "M7-F05",
+    "domain": 7,
+    "front": "How do you reduce wrong-tool selection?",
+    "back": "Differentiate names and when-to-use rules, add examples, strengthen schemas, and expose only relevant tools."
+  },
+  {
+    "id": "M7-F06",
+    "domain": 7,
+    "front": "How should invented tool fields be handled?",
+    "back": "Reject them with a strict schema and application validation rather than silently coercing them."
+  },
+  {
+    "id": "M7-F07",
+    "domain": 7,
+    "front": "What should be checked when output ends early?",
+    "back": "Stop reason, output budget, context size, client timeout, streaming, tool limits, and task scope."
+  },
+  {
+    "id": "M7-F08",
+    "domain": 7,
+    "front": "How should a refusal be investigated?",
+    "back": "Check the exact task, current policy, authorization, refusal metadata, and recent system changes without attempting evasion."
+  },
+  {
+    "id": "M7-F09",
+    "domain": 7,
+    "front": "What commonly causes prompt-cache misses?",
+    "back": "A changed or reordered stable prefix, tool definitions, system content, cache breakpoint, or expiration."
+  },
+  {
+    "id": "M7-F10",
+    "domain": 7,
+    "front": "How should latency be optimized?",
+    "back": "Profile every stage, identify the bottleneck, and test a targeted change against quality and risk thresholds."
+  },
+  {
+    "id": "M7-F11",
+    "domain": 7,
+    "front": "What is the right cost metric?",
+    "back": "Total cost per successful task, including retries, tools, infrastructure, correction, and human review."
+  },
+  {
+    "id": "M7-F12",
+    "domain": 7,
+    "front": "When is a troubleshooting issue resolved?",
+    "back": "After the root cause is fixed, the minimal case and regression set pass, monitoring is in place, and rollback is preserved."
+  }
+]

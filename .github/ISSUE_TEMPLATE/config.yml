@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Anthropic support
+    url: https://support.claude.com/
+    about: Use official support for Claude product and account questions.

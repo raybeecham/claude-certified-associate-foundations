@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-foundations-study-guide"
+version = "0.1.0"
+description = "Offline study tools for an independent Claude Foundations certification guide"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ray Beecham" }]
+
+[project.scripts]
+claude-study = "tools.study_cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["tools*"]

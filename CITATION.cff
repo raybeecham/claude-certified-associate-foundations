@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If this study guide supports your work, cite the repository."
+title: "Claude Certified Associate - Foundations Study Guide"
+type: software
+authors:
+  - family-names: "Beecham"
+    given-names: "Ray"
+repository-code: "https://github.com/raybeecham/claude-certified-associate-foundations"
+url: "https://raybeecham.github.io/claude-certified-associate-foundations/"
+license: MIT
+version: 0.1.0
+date-released: 2026-07-14
