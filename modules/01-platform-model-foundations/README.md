@@ -23,7 +23,7 @@ We are building this module section by section from the certification preparatio
   - [x] [Entry Points](lessons/03-core-entry-points.md)
   - [x] [Worked Example](lessons/03a-core-entry-points-worked-example.md)
 - [ ] 04. Capability Layer
-  - [ ] Skills and Code Execution
+  - [x] [Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
   - [ ] Memory
   - [ ] Scenario
   - [ ] Checkpoint
@@ -40,6 +40,11 @@ By the end of this module, you should be able to:
 
 - select the appropriate Claude entry point and feature set for a professional task;
 - explain why generative outputs vary and why fluency is not evidence of accuracy;
+- separate persistent context, reusable procedure, executed computation, and cross-session continuity;
+- decide when Projects, Skills, Code Execution, and Memory add value;
+- explain why Skills reduce variance without eliminating review;
+- perform a basic trust and permission review for a Skill;
+- explain why successful code execution does not automatically validate inputs or methodology;
 - differentiate Haiku, Sonnet, and Opus by capability characteristics and task fit;
 - match model selection to quality, speed, cost, and volume requirements;
 - manage context limitations and continuity features across sessions;
@@ -57,6 +62,7 @@ By the end of this module, you should be able to:
 - [How Claude Behaves](lessons/02-how-claude-behaves.md)
 - [Core Entry Points](lessons/03-core-entry-points.md)
 - [Core Entry Points worked example](lessons/03a-core-entry-points-worked-example.md)
+- [Capability Layer, Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
 
 ### Module 1 prompt notebooks
 
@@ -64,6 +70,11 @@ By the end of this module, you should be able to:
 - [How Claude Behaves prompts](../../prompts/module-01/02-how-claude-behaves-prompts.md)
 - [Core Entry Points prompts](../../prompts/module-01/03-core-entry-points-prompts.md)
 - [Core Entry Points worked-example prompts](../../prompts/module-01/03a-core-entry-points-worked-example-prompts.md)
+- [Capability Layer prompts](../../prompts/module-01/04-capability-layer-skills-code-execution-prompts.md)
+
+### Engineering patterns
+
+- [Capability patterns](../../patterns/capability-patterns.md): Reusable designs for Projects, Skills, Code Execution, Memory, least privilege, and computational validation
 
 ### Baseline module material
 
@@ -74,16 +85,19 @@ By the end of this module, you should be able to:
 
 ## Exam lens
 
-Expect scenarios in which several Claude surfaces, features, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, output, source, quality, latency, cost, and governance requirements, not from selecting the most advanced option by default.
+Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, source, quality, latency, cost, and governance requirements, not from selecting the most advanced option by default.
 
 Use this diagnostic checklist throughout the module:
 
 1. How is Claude likely to behave on this task?
 2. Am I using the correct entry point?
-3. Am I activating only the capabilities the task actually needs?
-4. Does the model fit the quality, speed, cost, and volume requirements?
-5. Is context being managed deliberately?
-6. What validation and human review does the consequence require?
+3. What stable context belongs in a Project?
+4. What reusable procedure belongs in a Skill?
+5. What calculation, transformation, chart, or file should use Code Execution?
+6. What continuity, if any, belongs in Memory?
+7. Does the model fit the quality, speed, cost, and volume requirements?
+8. Is context being managed deliberately?
+9. What validation and human review does the consequence require?
 
 For repeated work, also ask:
 
@@ -93,6 +107,13 @@ For repeated work, also ask:
 
 If two or more are true, a Project is usually worth considering.
 
+For computational work, ask:
+
+1. Are the inputs complete and authorized?
+2. Is the method correct?
+3. Did the operation execute successfully?
+4. Was the result independently validated?
+
 ## Completion criteria
 
 - [ ] I can explain why repeated runs can differ without assuming that one is automatically wrong.
@@ -101,6 +122,12 @@ If two or more are true, a Project is usually worth considering.
 - [ ] I can explain why Project conversations share configuration but not complete thread context.
 - [ ] I can identify a recurring setup tax and estimate a Project's break-even point.
 - [ ] I can separate durable Project instructions, reusable knowledge, and session-specific input.
+- [ ] I can distinguish Project context from a Skill procedure.
+- [ ] I can define invariants and allowed variation for a Skill.
+- [ ] I can identify the provenance, permission, and data-access questions required before enabling a Skill.
+- [ ] I can explain when Code Execution should replace language-only calculation.
+- [ ] I can explain why executed code can still produce an invalid result.
+- [ ] I can separate context, procedure, computation, continuity, and authoritative records.
 - [ ] I can explain application state without claiming the model "remembers" by itself.
 - [ ] I can separate context, output, and knowledge freshness.
 - [ ] I can justify a model selection with measurable criteria.
@@ -109,7 +136,7 @@ If two or more are true, a Project is usually worth considering.
 
 ## Public-repository scenario policy
 
-Examples in this repository are fictional, generic, or based on public information. Do not contribute client names, nonpublic agency details, proprietary work products, confidential data, or facts that could identify a real engagement.
+Examples in this repository are fictional, generic, synthetic, or based on public information. Do not contribute client names, nonpublic agency details, proprietary work products, confidential data, credentials, or facts that could identify a real engagement.
 
 ## Official reading
 
