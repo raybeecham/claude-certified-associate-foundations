@@ -20,6 +20,7 @@ An independent, scenario-driven study repository for the **Claude Certified Asso
 | Hands-on labs | 7 | Applied exercises with acceptance criteria |
 | Case studies | 3 | Security, governance, and workflow design practice |
 | Prompt templates | 7 | Reusable task, evaluation, orchestration, and review patterns |
+| Engineering pattern library | Growing | Reusable Claude workflow and architecture patterns |
 | Study CLI | 1 | Offline quizzes, flashcards, practice exams, and local score tracking |
 
 ## Study domains
@@ -37,12 +38,13 @@ An independent, scenario-driven study repository for the **Claude Certified Asso
 For each domain:
 
 1. Read the module overview and learning objectives.
-2. Work through `notes.md`.
-3. Complete the module lab before viewing the model solution.
-4. Drill the flashcards until recall is consistent.
-5. Take the module quiz and explain why each distractor is wrong.
-6. Record weak areas in [the progress tracker](docs/progress-tracker.md).
-7. Revisit the official documentation linked from that module.
+2. Work through `notes.md` and the course-aligned lessons.
+3. Practice with the module prompt notebooks and engineering patterns.
+4. Complete the module lab before viewing the model solution.
+5. Drill the flashcards until recall is consistent.
+6. Take the module quiz and explain why each distractor is wrong.
+7. Record weak areas in [the progress tracker](docs/progress-tracker.md).
+8. Revisit the official documentation linked from that module.
 
 After all seven domains, complete both practice exams under timed, closed-note conditions.
 
@@ -94,6 +96,8 @@ These are study recommendations, not official passing requirements:
 - **Version aware:** Volatile model names, limits, pricing, and product behavior are not treated as permanent facts.
 - **Governed deployment:** Data handling, least privilege, human oversight, logging, and incident response are part of solution design.
 - **Security conscious:** Examples emphasize adversarial input, prompt injection, source integrity, and controlled tool use.
+- **Separation of concerns:** Context, procedure, computation, continuity, and authoritative records are designed independently.
+- **Public-safe examples:** Scenarios use fictional, generic, synthetic, or public information rather than identifiable nonpublic work.
 
 ## Documentation map
 
@@ -107,6 +111,7 @@ These are study recommendations, not official passing requirements:
 - [Question-writing guide](docs/question-writing-guide.md)
 - [Practice exams](practice-exams/)
 - [Prompt library](prompts/)
+- [Engineering pattern library](patterns/)
 - [Case studies](case-studies/)
 
 ## Contributing
