@@ -19,6 +19,7 @@ These templates are study aids and starting points, not universal production pro
 1. [Workflow foundation prompts](module-01/01-workflow-foundation-prompts.md)
 2. [How Claude Behaves prompts](module-01/02-how-claude-behaves-prompts.md)
 3. [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
+4. [Core Entry Points worked-example prompts](module-01/03a-core-entry-points-worked-example-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
