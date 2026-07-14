@@ -16,6 +16,7 @@ The pattern library is an engineering reference, not a substitute for current of
 ## Available patterns
 
 - [Capability patterns](capability-patterns.md): Separate Project context, Skill procedures, Code Execution, and Memory continuity
+- [Memory patterns](memory-patterns.md): Minimize, curate, scope, import, protect, and remediate persistent continuity
 
 ## Planned pattern groups
 
