@@ -19,9 +19,9 @@ We are building this module section by section from the certification preparatio
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. How Claude Behaves](lessons/02-how-claude-behaves.md)
-- [ ] 03. Core Entry Points
+- [x] 03. Core Entry Points
   - [x] [Entry Points](lessons/03-core-entry-points.md)
-  - [ ] Worked Example
+  - [x] [Worked Example](lessons/03a-core-entry-points-worked-example.md)
 - [ ] 04. Capability Layer
   - [ ] Skills and Code Execution
   - [ ] Memory
@@ -56,12 +56,14 @@ By the end of this module, you should be able to:
 - [Module Introduction](lessons/01-module-introduction.md)
 - [How Claude Behaves](lessons/02-how-claude-behaves.md)
 - [Core Entry Points](lessons/03-core-entry-points.md)
+- [Core Entry Points worked example](lessons/03a-core-entry-points-worked-example.md)
 
 ### Module 1 prompt notebooks
 
 - [Workflow foundation prompts](../../prompts/module-01/01-workflow-foundation-prompts.md)
 - [How Claude Behaves prompts](../../prompts/module-01/02-how-claude-behaves-prompts.md)
 - [Core Entry Points prompts](../../prompts/module-01/03-core-entry-points-prompts.md)
+- [Core Entry Points worked-example prompts](../../prompts/module-01/03a-core-entry-points-worked-example-prompts.md)
 
 ### Baseline module material
 
@@ -83,12 +85,22 @@ Use this diagnostic checklist throughout the module:
 5. Is context being managed deliberately?
 6. What validation and human review does the consequence require?
 
+For repeated work, also ask:
+
+1. Does the task recur?
+2. Is the background context substantially stable?
+3. Is the output format consistent?
+
+If two or more are true, a Project is usually worth considering.
+
 ## Completion criteria
 
 - [ ] I can explain why repeated runs can differ without assuming that one is automatically wrong.
 - [ ] I can separate confident language from factual evidence.
 - [ ] I can choose among Chat, Projects, Artifacts, and Research for a scenario.
 - [ ] I can explain why Project conversations share configuration but not complete thread context.
+- [ ] I can identify a recurring setup tax and estimate a Project's break-even point.
+- [ ] I can separate durable Project instructions, reusable knowledge, and session-specific input.
 - [ ] I can explain application state without claiming the model "remembers" by itself.
 - [ ] I can separate context, output, and knowledge freshness.
 - [ ] I can justify a model selection with measurable criteria.
