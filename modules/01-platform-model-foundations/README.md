@@ -24,7 +24,7 @@ We are building this module section by section from the certification preparatio
   - [x] [Worked Example](lessons/03a-core-entry-points-worked-example.md)
 - [ ] 04. Capability Layer
   - [x] [Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
-  - [ ] Memory
+  - [x] [Memory](lessons/04a-capability-layer-memory.md)
   - [ ] Scenario
   - [ ] Checkpoint
 - [ ] 05. Choosing Models
@@ -45,6 +45,13 @@ By the end of this module, you should be able to:
 - explain why Skills reduce variance without eliminating review;
 - perform a basic trust and permission review for a Skill;
 - explain why successful code execution does not automatically validate inputs or methodology;
+- identify strong and weak Memory candidates;
+- distinguish Memory from Project configuration and authoritative records;
+- curate Memory for freshness, accuracy, scope, and sensitivity;
+- explain Project-scoped Memory boundaries;
+- explain what Incognito mode does and does not control;
+- review imported memories before persistence;
+- recognize memory-poisoning and persistent-state integrity risks;
 - differentiate Haiku, Sonnet, and Opus by capability characteristics and task fit;
 - match model selection to quality, speed, cost, and volume requirements;
 - manage context limitations and continuity features across sessions;
@@ -63,6 +70,7 @@ By the end of this module, you should be able to:
 - [Core Entry Points](lessons/03-core-entry-points.md)
 - [Core Entry Points worked example](lessons/03a-core-entry-points-worked-example.md)
 - [Capability Layer, Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
+- [Capability Layer, Memory](lessons/04a-capability-layer-memory.md)
 
 ### Module 1 prompt notebooks
 
@@ -71,10 +79,12 @@ By the end of this module, you should be able to:
 - [Core Entry Points prompts](../../prompts/module-01/03-core-entry-points-prompts.md)
 - [Core Entry Points worked-example prompts](../../prompts/module-01/03a-core-entry-points-worked-example-prompts.md)
 - [Capability Layer prompts](../../prompts/module-01/04-capability-layer-skills-code-execution-prompts.md)
+- [Memory prompts](../../prompts/module-01/04a-capability-layer-memory-prompts.md)
 
 ### Engineering patterns
 
 - [Capability patterns](../../patterns/capability-patterns.md): Reusable designs for Projects, Skills, Code Execution, Memory, least privilege, and computational validation
+- [Memory patterns](../../patterns/memory-patterns.md): Curation, scope separation, Incognito, import review, memory-poisoning defense, and remediation
 
 ### Baseline module material
 
@@ -95,9 +105,10 @@ Use this diagnostic checklist throughout the module:
 4. What reusable procedure belongs in a Skill?
 5. What calculation, transformation, chart, or file should use Code Execution?
 6. What continuity, if any, belongs in Memory?
-7. Does the model fit the quality, speed, cost, and volume requirements?
-8. Is context being managed deliberately?
-9. What validation and human review does the consequence require?
+7. Is the Memory candidate recurring, stable, authorized, and properly scoped?
+8. Does the model fit the quality, speed, cost, and volume requirements?
+9. Is context being managed deliberately?
+10. What validation and human review does the consequence require?
 
 For repeated work, also ask:
 
@@ -114,6 +125,15 @@ For computational work, ask:
 3. Did the operation execute successfully?
 4. Was the result independently validated?
 
+For Memory, ask:
+
+1. Is this continuity rather than authoritative knowledge?
+2. What is the narrowest valid scope?
+3. When was the fact last confirmed?
+4. When should it be reviewed or deleted?
+5. Could untrusted content alter it?
+6. Can the user inspect, correct, and remove it?
+
 ## Completion criteria
 
 - [ ] I can explain why repeated runs can differ without assuming that one is automatically wrong.
@@ -127,6 +147,13 @@ For computational work, ask:
 - [ ] I can identify the provenance, permission, and data-access questions required before enabling a Skill.
 - [ ] I can explain when Code Execution should replace language-only calculation.
 - [ ] I can explain why executed code can still produce an invalid result.
+- [ ] I can distinguish Memory from Project instructions, Project knowledge, chat history, and a source of record.
+- [ ] I can identify what should and should not be stored in Memory.
+- [ ] I can perform a monthly Memory-curation review.
+- [ ] I can explain Project-scoped Memory boundaries.
+- [ ] I can explain why Incognito mode does not override organizational policy.
+- [ ] I can review imported memories for staleness, sensitivity, and scope.
+- [ ] I can describe a control against memory poisoning.
 - [ ] I can separate context, procedure, computation, continuity, and authoritative records.
 - [ ] I can explain application state without claiming the model "remembers" by itself.
 - [ ] I can separate context, output, and knowledge freshness.
@@ -152,3 +179,7 @@ Product capabilities and plan availability can change. Use official sources as t
 - [Claude takes research to new places](https://www.anthropic.com/news/research)
 - [Using the Messages API](https://platform.claude.com/docs/en/build-with-claude/working-with-messages)
 - [Stop reasons and fallback](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
+
+## Version-awareness note
+
+Memory behavior, supported plans, Project scoping, Incognito behavior, import workflows, workspace administration, and retention can change. Treat the current official Help Center and organization policy as authoritative.
