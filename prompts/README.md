@@ -2,7 +2,7 @@
 
 These templates are study aids and starting points, not universal production prompts. Adapt them to the use case, current platform capabilities, data policy, tool design, and evaluation results.
 
-## Templates
+## General templates
 
 1. [Task brief](task-brief-template.md)
 2. [Grounded analysis](grounded-analysis-template.md)
@@ -11,6 +11,16 @@ These templates are study aids and starting points, not universal production pro
 5. [Workflow orchestrator](workflow-orchestrator-template.md)
 6. [Governance review](governance-review-template.md)
 7. [Troubleshooting](troubleshooting-template.md)
+
+## Module study notebooks
+
+### Module 1: Claude Platform & Model Foundations
+
+1. [Workflow foundation prompts](module-01/01-workflow-foundation-prompts.md)
+2. [How Claude Behaves prompts](module-01/02-how-claude-behaves-prompts.md)
+3. [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
+
+Additional notebooks will be added as the course-aligned lessons are completed.
 
 ## Usage discipline
 
@@ -26,3 +36,7 @@ Before using a template:
 - establish human review where the output is consequential.
 
 A prompt cannot enforce identity, authorization, data isolation, or irreversible-action approval by itself.
+
+## Public-repository content rule
+
+Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, or engagement-identifying examples in these prompts. Use fictional, generic, or public scenarios.
