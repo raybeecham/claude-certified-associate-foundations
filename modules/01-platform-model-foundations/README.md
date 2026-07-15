@@ -2,7 +2,7 @@
 
 ## Why this domain matters
 
-A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding model behavior, using stale evidence, mixing capability responsibilities, selecting an underpowered or unnecessarily expensive model, or failing to manage context. This domain establishes the platform mental model used by every later module.
+A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding model behavior, using stale evidence, mixing capability responsibilities, selecting an underpowered or unnecessarily expensive model, or allowing context to become bloated and unreliable.
 
 Four decisions set the quality ceiling for a Claude workflow:
 
@@ -11,11 +11,11 @@ Four decisions set the quality ceiling for a Claude workflow:
 3. model selection; and
 4. context management.
 
-Before making those decisions, the learner must also understand Claude's probabilistic behavior and the review controls that behavior requires.
+Before making those decisions, the learner must understand Claude's probabilistic behavior and the review controls that behavior requires.
 
 ## Course-aligned lesson map
 
-We are building this module section by section from the certification preparation course. Each completed lesson expands the course concepts with original explanations, generic professional examples, reusable prompts, labs, knowledge checks, flashcards, and engineering perspectives.
+We are building this module section by section from the certification preparation course. Each completed lesson expands the course concepts with original explanations, generic professional examples, reusable prompts, labs, knowledge checks, flashcards, and engineering patterns.
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. How Claude Behaves](lessons/02-how-claude-behaves.md)
@@ -28,7 +28,7 @@ We are building this module section by section from the certification preparatio
   - [x] [Scenario](lessons/04b-capability-layer-scenario.md)
   - [x] [Checkpoint](lessons/04c-capability-layer-checkpoint.md)
 - [x] [05. Choosing Models](lessons/05-choosing-models.md)
-- [ ] 06. Context Management
+- [x] [06. Context Management](lessons/06-context-management.md)
 - [ ] 07. Exercise
 - [ ] 08. Quiz
 - [ ] 09. Key Takeaways
@@ -38,31 +38,28 @@ We are building this module section by section from the certification preparatio
 
 By the end of this module, you should be able to:
 
-- select the appropriate Claude entry point and feature set for a professional task;
 - explain why generative outputs vary and why fluent confidence is not evidence of accuracy;
 - choose among Chat, Projects, Artifacts, and Research;
 - identify when recurring work has outgrown an ordinary Chat;
-- separate persistent context, reusable procedure, executed computation, and cross-session continuity;
-- decide when Projects, Skills, Code Execution, and Memory add value;
 - distinguish Project standing instructions from Project knowledge;
 - distinguish reusable Project knowledge from current-cycle source material;
+- separate persistent context, reusable procedure, executed computation, and cross-session continuity;
+- decide when Projects, Skills, Code Execution, and Memory add value;
 - explain why Skills reduce variance without eliminating review;
 - perform a basic trust and permission review for a Skill;
-- explain why successful code execution does not automatically validate inputs or methodology;
-- identify strong and weak Memory candidates;
-- distinguish Memory from Project configuration and authoritative records;
-- curate Memory for freshness, accuracy, scope, and sensitivity;
-- explain Project-scoped Memory and Incognito boundaries;
+- explain why executed code can still produce an invalid result;
+- curate Memory for freshness, scope, accuracy, and sensitivity;
 - recognize memory-poisoning and persistent-state integrity risks;
-- redesign recurring high-consequence workflows using capability layers;
-- preserve verification and human accountability while reducing repeated effort;
-- map workflow components to standing instructions, knowledge, Skills, Code Execution, current inputs, and human review;
+- redesign recurring workflows using capability layers while preserving human accountability;
 - differentiate Haiku, Sonnet, and Opus by task fit;
-- match model selection to capability, speed, cost, usage, and volume requirements;
-- identify the minimum model that passes representative evaluations;
+- select the minimum model that passes representative evaluations;
 - design model escalation and routing patterns;
-- explain why a stronger model does not replace grounding, computation, or review; and
-- manage context limitations and continuity across sessions.
+- distinguish context-length limits from usage limits;
+- recognize context degradation;
+- choose among restart, summarize, and persist;
+- create and validate a state-capsule handoff;
+- plan long work across clean session boundaries; and
+- reconstruct the smallest authoritative context required for the next action.
 
 ## Current lesson resources
 
@@ -77,6 +74,7 @@ By the end of this module, you should be able to:
 - [Capability Layer scenario](lessons/04b-capability-layer-scenario.md)
 - [Capability Layer checkpoint](lessons/04c-capability-layer-checkpoint.md)
 - [Choosing Models](lessons/05-choosing-models.md)
+- [Context Management](lessons/06-context-management.md)
 
 ### Module 1 prompt notebooks
 
@@ -89,12 +87,14 @@ By the end of this module, you should be able to:
 - [Capability Layer scenario prompts](../../prompts/module-01/04b-capability-layer-scenario-prompts.md)
 - [Capability Layer checkpoint prompts](../../prompts/module-01/04c-capability-layer-checkpoint-prompts.md)
 - [Choosing Models prompts](../../prompts/module-01/05-choosing-models-prompts.md)
+- [Context Management prompts](../../prompts/module-01/06-context-management-prompts.md)
 
 ### Engineering patterns
 
 - [Capability patterns](../../patterns/capability-patterns.md): Project context, Skill procedures, Code Execution, Memory, least privilege, and computational validation
 - [Memory patterns](../../patterns/memory-patterns.md): Curation, scope separation, Incognito, import review, memory-poisoning defense, and remediation
 - [Model-selection patterns](../../patterns/model-selection-patterns.md): Tier selection, minimum-qualified-model evaluation, routing, migration, and version control
+- [Context-management patterns](../../patterns/context-management-patterns.md): Context budgeting, clean restarts, state capsules, persistence, usage planning, and secure handoffs
 
 ### Baseline module material
 
@@ -104,8 +104,6 @@ By the end of this module, you should be able to:
 - [quiz.md](quiz.md): Original scenario questions
 
 ## Capability Layer completion summary
-
-Use this placement model:
 
 | Responsibility | Correct home |
 |---|---|
@@ -136,76 +134,87 @@ Then apply the production rule:
 
 > Use the fastest and least costly model that passes the validated quality threshold.
 
-A stronger model does not replace:
+A stronger model does not replace authoritative sources, Code Execution, schema validation, privacy controls, or human review.
 
-- authoritative sources;
-- Code Execution for calculations;
-- structured-output validation;
-- privacy and authorization controls;
-- human review; or
-- accountable final decisions.
+## Context Management summary
 
-### Current product note
+Context is a finite working budget. When a session loses coherence, use:
 
-The certification uses the Haiku, Sonnet, and Opus frame. As of July 14, 2026, current Anthropic documentation also lists Claude Fable 5 as a widely released tier above the current Opus tier. Treat that as a dated product note, not an exam memorization target.
+```text
+Restart   = begin a clean conversation
+Summarize = transfer validated operational state
+Persist   = move durable information into the correct long-lived layer
+```
+
+Use this placement model:
+
+| State | Correct location |
+|---|---|
+| Current task detail | Current conversation |
+| Durable workstream rule | Project instructions |
+| Reused approved source | Project knowledge |
+| General recurring preference | Memory, when appropriate |
+| Reusable procedure | Skill |
+| Traceable decision | Decision log or formal record |
+| Current operational truth | Authoritative external system |
+
+The highest-value context rule is:
+
+> Reconstruct the smallest authoritative context required for the next action.
+
+### Context limit versus usage limit
+
+```text
+Context limit = depth of one conversation
+Usage limit   = quantity of Claude use over time
+```
+
+As of July 14, 2026, Anthropic's Help Center describes automatic summarization for paid Claude chats when Code Execution is enabled, plus rolling five-hour and weekly usage tracking for paid plans. Treat all plan-specific values and product behavior as dated and verify them in the current Help Center and **Settings > Usage**.
 
 ## Exam lens
 
-Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, evidence, quality, latency, cost, volume, and governance requirements, not from selecting the most advanced option by default.
+Expect scenario questions where multiple features or models could technically work. Select the answer that best matches recurrence, persistence, procedure, computation, continuity, evidence, ambiguity, quality, latency, cost, volume, context health, and governance requirements.
 
 Use this diagnostic checklist:
 
 1. How is Claude likely to behave on this task?
-2. Am I using the correct entry point?
-3. What durable behavior belongs in Project standing instructions?
+2. What is the correct entry point?
+3. What durable behavior belongs in Project instructions?
 4. What reusable evidence belongs in Project knowledge?
-5. What source material applies only to the current cycle?
-6. What reusable procedure belongs in a Skill?
-7. What calculation, transformation, chart, or file should use Code Execution?
-8. What continuity, if any, belongs in Memory?
-9. Which facts remain controlled by an authoritative external system?
-10. Which decisions remain consequential, uncertain, or accountable to a human reviewer?
-11. Is the task structured, balanced, or highly complex and ambiguous?
-12. Does the selected model fit the quality, speed, cost, and volume requirements?
-13. Has the model passed representative evaluation cases?
-14. Is context being managed deliberately?
-
-For model selection, ask:
-
-1. What is the minimum acceptable quality?
-2. Which severe failures matter most?
-3. What request volume and latency are expected?
-4. What cost or usage budget applies?
-5. Can routine cases use a lower tier?
-6. Which conditions should trigger escalation?
-7. What controls remain outside the model?
-8. Which exact model version and settings are being used?
+5. What source material applies only to the current task?
+6. What repeatable procedure belongs in a Skill?
+7. What must be calculated or generated with Code Execution?
+8. What continuity belongs in Memory?
+9. Which facts remain controlled by an authoritative system?
+10. Which decisions require accountable human review?
+11. Is the task structured, balanced, or highly ambiguous?
+12. What is the minimum qualified model?
+13. Is the active context focused and authoritative?
+14. Has context degradation appeared?
+15. Should the workflow continue, checkpoint, summarize, restart, or persist?
+16. What usage and session budget remains?
 
 ## Completion criteria
 
-- [ ] I can explain why repeated runs can differ without assuming one is automatically wrong.
-- [ ] I can separate confident language from factual evidence.
+- [ ] I can explain why repeated outputs may differ.
+- [ ] I can separate confident language from evidence.
 - [ ] I can choose among Chat, Projects, Artifacts, and Research.
-- [ ] I can identify a recurring setup tax and estimate a Project's value.
-- [ ] I can distinguish standing instructions from Project knowledge.
-- [ ] I can distinguish Project knowledge from current-cycle source material.
-- [ ] I can distinguish Project context from a Skill procedure.
-- [ ] I can define invariants and allowed variation for a Skill.
-- [ ] I can identify provenance, permission, and data-access questions before enabling a Skill.
-- [ ] I can explain when Code Execution should replace language-only calculation.
-- [ ] I can explain why executed code can still produce an invalid result.
-- [ ] I can distinguish Memory from Project instructions, Project knowledge, chat history, and a source of record.
-- [ ] I can perform a Memory-curation review and describe a control against memory poisoning.
-- [ ] I can map a recurring workflow to Project, Skill, Code Execution, Memory, current inputs, and human review.
-- [ ] I can explain why verification remains after a capability-layer redesign.
-- [ ] I can classify every item in the Capability Layer checkpoint and explain the placement.
+- [ ] I can identify a recurring setup tax.
+- [ ] I can distinguish instructions, knowledge, current inputs, Skills, Code Execution, Memory, and formal records.
+- [ ] I can perform a basic Skill trust review.
+- [ ] I can explain why executed code still requires method validation.
+- [ ] I can curate Memory and defend against memory poisoning.
+- [ ] I can map a recurring workflow across capability layers.
 - [ ] I can distinguish Haiku, Sonnet, and Opus by task fit.
-- [ ] I can explain why Sonnet is the normal certification starting point for professional knowledge work.
-- [ ] I can identify cases that justify Haiku or Opus.
-- [ ] I can define an evaluation for selecting the minimum qualified model.
-- [ ] I can design escalation from Haiku to Sonnet or Opus using observable checks.
+- [ ] I can design a minimum-qualified-model evaluation.
 - [ ] I can explain why a stronger model does not guarantee accuracy.
-- [ ] I completed the module lab and scored at least 80% on the quiz.
+- [ ] I can distinguish context-length limits from usage limits.
+- [ ] I can recognize signs of context degradation.
+- [ ] I can choose among restart, summarize, and persist.
+- [ ] I can create and validate a state capsule.
+- [ ] I can classify information into active context, Project, Memory, Skill, or an authoritative record.
+- [ ] I can create a usage-aware multi-session work plan.
+- [ ] I completed the module exercise and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
 
@@ -213,19 +222,17 @@ Examples in this repository are fictional, generic, synthetic, or based on publi
 
 ## Official reading
 
-Product capabilities, model versions, and plan availability can change. Use official sources as the current authority.
+Product capabilities, model versions, context sizes, and plan limits change. Use official sources as the current authority.
 
 - [Claude Help Center](https://support.claude.com/en/)
 - [Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [Choosing the right model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)
-- [Model IDs and versioning](https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions)
-- [Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
-- [Introducing Claude Fable 5 and Claude Mythos 5](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5)
 - [Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows)
-- [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
-- [Using the Messages API](https://platform.claude.com/docs/en/build-with-claude/working-with-messages)
-- [Stop reasons and fallback](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
+- [How large is the context window on paid Claude plans?](https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans)
+- [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)
+- [Usage limit best practices](https://support.claude.com/en/articles/9797557-usage-limit-best-practices)
+- [Use Claude's chat search and memory to build on previous context](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 
 ## Version-awareness note
 
-Model names, versions, model-picker defaults, comparative capability, pricing, effort settings, plan availability, automatic switching, Memory behavior, Project scoping, Skill administration, Code Execution availability, workspace administration, and retention can change. Treat current official documentation, the actual product surface, and organization policy as authoritative.
+Model names, versions, defaults, pricing, effort settings, context-window sizes, automatic context management, Code Execution dependencies, Project retrieval, Memory, chat search, rolling usage windows, weekly pools, usage credits, workspace administration, Enterprise billing, and retention can change. Treat current official documentation, product settings, and organization policy as authoritative.
