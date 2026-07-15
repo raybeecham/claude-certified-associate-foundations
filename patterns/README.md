@@ -11,18 +11,18 @@ A pattern describes:
 - common failure modes; and
 - a compact decision rule.
 
-The pattern library is an engineering reference, not a substitute for current official product documentation. Feature availability, model behavior, permissions, and plan details can change.
+The pattern library is an engineering reference, not a substitute for current official product documentation. Feature availability, model behavior, permissions, pricing, and plan details can change.
 
 ## Available patterns
 
 - [Capability patterns](capability-patterns.md): Separate Project context, Skill procedures, Code Execution, and Memory continuity
 - [Memory patterns](memory-patterns.md): Minimize, curate, scope, import, protect, and remediate persistent continuity
+- [Model-selection patterns](model-selection-patterns.md): Select tiers, evaluate the minimum qualified model, route exceptions, and control migrations
 
 ## Planned pattern groups
 
 - entry-point patterns;
 - context-management patterns;
-- model-selection patterns;
 - prompting patterns;
 - evaluation patterns;
 - integration patterns;
@@ -31,7 +31,7 @@ The pattern library is an engineering reference, not a substitute for current of
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities add setup, maintenance, permission, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities and stronger models add setup, maintenance, usage, permission, validation, and governance obligations.
 
 ## Public-repository content rule
 
