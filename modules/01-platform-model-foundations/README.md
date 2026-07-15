@@ -15,7 +15,7 @@ This module builds the framework for making those decisions together.
 
 ## Course-aligned lesson map
 
-Each completed lesson expands the preparation-course concepts with original explanations, generic professional examples, reusable prompts, labs, knowledge checks, flashcards, and engineering patterns.
+Each lesson expands the preparation-course concepts with original explanations, generic professional examples, reusable prompts, labs, knowledge checks, flashcards, and engineering patterns.
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. How Claude Behaves](lessons/02-how-claude-behaves.md)
@@ -31,7 +31,7 @@ Each completed lesson expands the preparation-course concepts with original expl
 - [x] [06. Context Management](lessons/06-context-management.md)
 - [x] [07. Platform Selection Exercise](lessons/07-platform-selection-exercise.md)
 - [x] [08. Module 1 Quiz Review](lessons/08-module-1-quiz.md)
-- [ ] 09. Key Takeaways
+- [x] [09. Key Takeaways](lessons/09-key-takeaways.md)
 - [ ] 10. Module Complete
 
 ## Learning objectives
@@ -60,7 +60,7 @@ By the end of this module, you should be able to:
 - create and validate a state-capsule handoff;
 - combine entry-point, capability, model, and context decisions for one scenario;
 - defend a configuration using an explicit benefit-versus-cost trade-off; and
-- explain why each quiz distractor is weaker than the best answer.
+- explain why every plausible distractor is weaker than the best answer.
 
 ## Current lesson resources
 
@@ -78,6 +78,7 @@ By the end of this module, you should be able to:
 - [Context Management](lessons/06-context-management.md)
 - [Platform Selection Exercise](lessons/07-platform-selection-exercise.md)
 - [Module 1 Quiz Review](lessons/08-module-1-quiz.md)
+- [Module 1 Key Takeaways](lessons/09-key-takeaways.md)
 
 ### Module 1 prompt notebooks
 
@@ -93,6 +94,7 @@ By the end of this module, you should be able to:
 - [Context Management prompts](../../prompts/module-01/06-context-management-prompts.md)
 - [Platform Selection Exercise prompts](../../prompts/module-01/07-platform-selection-exercise-prompts.md)
 - [Quiz and remediation prompts](../../prompts/module-01/08-module-1-quiz-prompts.md)
+- [Key Takeaways review prompts](../../prompts/module-01/09-key-takeaways-prompts.md)
 
 ### Engineering patterns
 
@@ -107,8 +109,22 @@ By the end of this module, you should be able to:
 - [lab.md](lab.md): Platform and model selection matrix
 - [flashcards.md](flashcards.md): Baseline recall prompts
 - [quiz.md](quiz.md): Eight additional original engineering-oriented scenario questions
+- [Master Cheat Sheet](../../docs/master-cheat-sheet.md): Repository-wide rapid review
 
-## Capability Layer summary
+## Five durable takeaways
+
+### 1. Select the entry point before writing the prompt
+
+| Work pattern | Starting entry point |
+|---|---|
+| One-off question or quick task | Chat |
+| Recurring work with stable context | Project |
+| Editable deliverable | Artifact |
+| Current multi-source investigation | Research |
+
+The entry point determines where the work lives, how context is reused, and how the result is handed off.
+
+### 2. Separate the capability responsibilities
 
 | Responsibility | Correct home |
 |---|---|
@@ -123,7 +139,7 @@ By the end of this module, you should be able to:
 
 > Standing instructions define how Claude behaves. Knowledge defines what Claude knows or analyzes.
 
-## Choosing Models summary
+### 3. Match the model to the task
 
 | Task profile | Certification starting tier |
 |---|---|
@@ -135,29 +151,15 @@ Production rule:
 
 > Use the fastest and least costly model that passes the validated quality threshold.
 
-A stronger model does not replace authoritative sources, Code Execution, schema validation, privacy controls, or human review.
+A stronger model does not replace authoritative sources, Code Execution, schema validation, privacy controls, context hygiene, or human review.
 
-## Context Management summary
-
-Context is a finite working budget. When a session loses coherence:
+### 4. Treat context as a budget
 
 ```text
 Restart   = begin a clean conversation
 Summarize = transfer validated operational state
 Persist   = move durable information into the correct long-lived layer
 ```
-
-Use this placement model:
-
-| State | Correct location |
-|---|---|
-| Current task detail | Current conversation |
-| Durable workstream rule | Project instructions |
-| Reused approved source | Project knowledge |
-| General recurring preference | Memory, when appropriate |
-| Reusable procedure | Skill |
-| Traceable decision | Decision log or formal record |
-| Current operational truth | Authoritative external system |
 
 > Reconstruct the smallest authoritative context required for the next action.
 
@@ -166,7 +168,21 @@ Context limit = depth of one conversation
 Usage limit   = quantity of Claude use over time
 ```
 
-## Integrated platform-selection summary
+### 5. Treat review as structural
+
+Claude remains probabilistic even when Projects, Skills, templates, and Memory are configured carefully.
+
+```text
+Candidate output
+      -> deterministic checks
+      -> source and evidence review
+      -> qualified human review where required
+      -> accept, revise, escalate, or reject
+```
+
+Module 1 determines the workflow design. Module 3 will determine whether the output is fit for use.
+
+## Integrated platform-selection sequence
 
 For every scenario, decide in this order:
 
@@ -176,7 +192,7 @@ For every scenario, decide in this order:
 4. **Context strategy:** current thread, Project instructions, Project knowledge, Memory, state capsule, or authoritative record.
 5. **Controls:** deterministic validation, source checks, escalation, and human review.
 
-Exercise mapping:
+## Exercise mapping
 
 ```text
 Recent competitor research       -> Research, Sonnet
@@ -192,15 +208,6 @@ The strongest model justification names the task signal, the benefit gained, and
 ## Quiz completion summary
 
 The learner scored **5/5** on the preparation-course Module 1 quiz.
-
-The questions confirmed correct reasoning across:
-
-- recurring Project workflows;
-- stable knowledge and standing instructions;
-- Code Execution for trustworthy calculations;
-- Haiku for clear high-volume classification;
-- context recovery through summarize and restart; and
-- Project-scoped separation of unrelated workstreams.
 
 The repository adds a separate ten-question original drill. Target at least **80 percent**, then explain every distractor before considering the objective complete.
 
@@ -255,10 +262,11 @@ Use this diagnostic checklist:
 - [x] I scored 5/5 on the preparation-course Module 1 quiz.
 - [ ] I scored at least 80 percent on the repository's ten-question Module 1 quiz.
 - [ ] I can explain why every quiz distractor is weaker than the correct answer.
+- [ ] I can teach back all five Module 1 takeaways without notes.
 
 ## Public-repository scenario policy
 
-Examples in this repository are fictional, generic, synthetic, or based on public information. Do not contribute client names, nonpublic agency details, proprietary work products, confidential data, credentials, or facts that could identify a real engagement.
+Examples in this repository are fictional, generic, synthetic, or based on public information. Do not contribute client names, nonpublic agency details, proprietary work products, confidential data, credentials, facts that identify a real engagement, or remembered live-exam questions.
 
 ## Official reading
 
@@ -267,11 +275,10 @@ Product capabilities, model versions, context sizes, and plan limits change. Use
 - [Claude Help Center](https://support.claude.com/en/)
 - [Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [Choosing the right model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)
-- [Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows)
 - [How large is the context window on paid Claude plans?](https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans)
 - [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)
-- [Usage limit best practices](https://support.claude.com/en/articles/9797557-usage-limit-best-practices)
+- [Use Claude's chat search and memory to build on previous context](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 
 ## Version-awareness note
 
-Model names, versions, defaults, pricing, effort settings, context-window sizes, automatic context management, Code Execution dependencies, Project retrieval, Memory, chat search, rolling usage windows, weekly pools, workspace administration, Enterprise billing, and retention can change. Treat current official documentation, product settings, and organization policy as authoritative.
+Model names, versions, defaults, pricing, effort settings, context-window sizes, automatic context management, Code Execution dependencies, Project retrieval, Memory, chat search, usage windows, weekly pools, workspace administration, Enterprise billing, and retention can change. Treat current official documentation, product settings, and organization policy as authoritative.
