@@ -2,7 +2,7 @@
 
 ## Why this domain matters
 
-A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding state, ignoring model behavior, using stale evidence, or failing to manage context. This domain establishes the platform mental model used by every later module.
+A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding model behavior, using stale evidence, mixing capability responsibilities, or failing to manage context. This domain establishes the platform mental model used by every later module.
 
 Four decisions set the quality ceiling for a Claude workflow:
 
@@ -22,11 +22,11 @@ We are building this module section by section from the certification preparatio
 - [x] 03. Core Entry Points
   - [x] [Entry Points](lessons/03-core-entry-points.md)
   - [x] [Worked Example](lessons/03a-core-entry-points-worked-example.md)
-- [ ] 04. Capability Layer
+- [x] 04. Capability Layer
   - [x] [Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
   - [x] [Memory](lessons/04a-capability-layer-memory.md)
   - [x] [Scenario](lessons/04b-capability-layer-scenario.md)
-  - [ ] Checkpoint
+  - [x] [Checkpoint](lessons/04c-capability-layer-checkpoint.md)
 - [ ] 05. Choosing Models
 - [ ] 06. Context Management
 - [ ] 07. Exercise
@@ -39,30 +39,27 @@ We are building this module section by section from the certification preparatio
 By the end of this module, you should be able to:
 
 - select the appropriate Claude entry point and feature set for a professional task;
-- explain why generative outputs vary and why fluency is not evidence of accuracy;
+- explain why generative outputs vary and why fluent confidence is not evidence of accuracy;
+- choose among Chat, Projects, Artifacts, and Research;
+- identify when recurring work has outgrown an ordinary Chat;
 - separate persistent context, reusable procedure, executed computation, and cross-session continuity;
 - decide when Projects, Skills, Code Execution, and Memory add value;
+- distinguish Project standing instructions from Project knowledge;
+- distinguish reusable Project knowledge from current-cycle source material;
 - explain why Skills reduce variance without eliminating review;
 - perform a basic trust and permission review for a Skill;
 - explain why successful code execution does not automatically validate inputs or methodology;
 - identify strong and weak Memory candidates;
 - distinguish Memory from Project configuration and authoritative records;
 - curate Memory for freshness, accuracy, scope, and sensitivity;
-- explain Project-scoped Memory boundaries;
-- explain what Incognito mode does and does not control;
-- review imported memories before persistence;
+- explain Project-scoped Memory and Incognito boundaries;
 - recognize memory-poisoning and persistent-state integrity risks;
-- redesign a recurring high-consequence workflow using capability layers;
+- redesign recurring high-consequence workflows using capability layers;
 - preserve verification and human accountability while reducing repeated effort;
-- measure both efficiency and quality after a workflow redesign;
+- map workflow components to standing instructions, knowledge, Skills, Code Execution, current inputs, and human review;
 - differentiate Haiku, Sonnet, and Opus by capability characteristics and task fit;
-- match model selection to quality, speed, cost, and volume requirements;
-- manage context limitations and continuity features across sessions;
-- distinguish context capacity, output limits, knowledge freshness, and application-managed state;
-- explain the roles of trusted configuration, user task content, tools, and retrieved knowledge;
-- interpret response metadata such as stop reasons and usage;
-- plan model and prompt migrations using regression tests; and
-- define the minimum observability needed for production use.
+- match model selection to quality, speed, cost, and volume requirements; and
+- manage context limitations and continuity across sessions.
 
 ## Current lesson resources
 
@@ -75,6 +72,7 @@ By the end of this module, you should be able to:
 - [Capability Layer, Skills and Code Execution](lessons/04-capability-layer-skills-code-execution.md)
 - [Capability Layer, Memory](lessons/04a-capability-layer-memory.md)
 - [Capability Layer scenario](lessons/04b-capability-layer-scenario.md)
+- [Capability Layer checkpoint](lessons/04c-capability-layer-checkpoint.md)
 
 ### Module 1 prompt notebooks
 
@@ -85,6 +83,7 @@ By the end of this module, you should be able to:
 - [Capability Layer prompts](../../prompts/module-01/04-capability-layer-skills-code-execution-prompts.md)
 - [Memory prompts](../../prompts/module-01/04a-capability-layer-memory-prompts.md)
 - [Capability Layer scenario prompts](../../prompts/module-01/04b-capability-layer-scenario-prompts.md)
+- [Capability Layer checkpoint prompts](../../prompts/module-01/04c-capability-layer-checkpoint-prompts.md)
 
 ### Engineering patterns
 
@@ -95,39 +94,51 @@ By the end of this module, you should be able to:
 
 - [notes.md](notes.md): Broader platform engineering concepts and decision patterns
 - [lab.md](lab.md): Platform and model selection matrix
-- [flashcards.md](flashcards.md): Twelve baseline recall prompts
-- [quiz.md](quiz.md): Eight original scenario questions
+- [flashcards.md](flashcards.md): Baseline recall prompts
+- [quiz.md](quiz.md): Original scenario questions
+
+## Capability Layer completion summary
+
+Use this placement model:
+
+| Responsibility | Correct home |
+|---|---|
+| Stable workstream behavior | Project standing instructions |
+| Curated reusable evidence | Project knowledge |
+| Current-cycle files or facts | Current conversation or task source input |
+| Repeatable ordered procedure | Skill |
+| Calculation, transformation, chart, or real file | Code Execution |
+| Appropriate cross-session continuity | Memory |
+| Authoritative operational state | External source of record |
+| Consequential final judgment | Qualified human review |
+
+The highest-value checkpoint distinction is:
+
+> Standing instructions define how Claude behaves. Knowledge defines what Claude knows or analyzes.
 
 ## Exam lens
 
-Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, source, quality, latency, cost, and governance requirements, not from selecting the most advanced option by default.
+Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, evidence, quality, latency, cost, and governance requirements, not from selecting the most advanced option by default.
 
-Use this diagnostic checklist throughout the module:
+Use this diagnostic checklist:
 
 1. How is Claude likely to behave on this task?
 2. Am I using the correct entry point?
-3. What stable context belongs in a Project?
-4. What reusable procedure belongs in a Skill?
-5. What calculation, transformation, chart, or file should use Code Execution?
-6. What continuity, if any, belongs in Memory?
-7. Is the Memory candidate recurring, stable, authorized, and properly scoped?
-8. Which decisions remain consequential, uncertain, or accountable to a human reviewer?
-9. Does the model fit the quality, speed, cost, and volume requirements?
-10. Is context being managed deliberately?
-11. What validation and human review does the consequence require?
-
-For repeated work, also ask:
-
-1. Does the task recur?
-2. Is the background context substantially stable?
-3. Is the output format consistent?
-
-If two or more are true, a Project is usually worth considering.
+3. What durable behavior belongs in Project standing instructions?
+4. What reusable evidence belongs in Project knowledge?
+5. What source material applies only to the current cycle?
+6. What reusable procedure belongs in a Skill?
+7. What calculation, transformation, chart, or file should use Code Execution?
+8. What continuity, if any, belongs in Memory?
+9. Which facts remain controlled by an authoritative external system?
+10. Which decisions remain consequential, uncertain, or accountable to a human reviewer?
+11. Does the model fit the quality, speed, cost, and volume requirements?
+12. Is context being managed deliberately?
 
 For computational work, ask:
 
 1. Are the inputs complete and authorized?
-2. Is the method correct?
+2. Is the method or interpretation correct?
 3. Did the operation execute successfully?
 4. Was the result independently validated?
 
@@ -140,44 +151,26 @@ For Memory, ask:
 5. Could untrusted content alter it?
 6. Can the user inspect, correct, and remove it?
 
-For a workflow redesign, ask:
-
-1. What repeated setup can be removed?
-2. Which controls must remain after automation?
-3. Are both time and quality being measured?
-4. Is an error-free period being interpreted as evidence rather than a guarantee?
-5. Who owns configuration, procedure, computation, review, and maintenance?
-
 ## Completion criteria
 
-- [ ] I can explain why repeated runs can differ without assuming that one is automatically wrong.
+- [ ] I can explain why repeated runs can differ without assuming one is automatically wrong.
 - [ ] I can separate confident language from factual evidence.
-- [ ] I can choose among Chat, Projects, Artifacts, and Research for a scenario.
-- [ ] I can explain why Project conversations share configuration but not complete thread context.
-- [ ] I can identify a recurring setup tax and estimate a Project's break-even point.
-- [ ] I can separate durable Project instructions, reusable knowledge, and session-specific input.
+- [ ] I can choose among Chat, Projects, Artifacts, and Research.
+- [ ] I can identify a recurring setup tax and estimate a Project's value.
+- [ ] I can distinguish standing instructions from Project knowledge.
+- [ ] I can distinguish Project knowledge from current-cycle source material.
 - [ ] I can distinguish Project context from a Skill procedure.
 - [ ] I can define invariants and allowed variation for a Skill.
-- [ ] I can identify the provenance, permission, and data-access questions required before enabling a Skill.
+- [ ] I can identify provenance, permission, and data-access questions before enabling a Skill.
 - [ ] I can explain when Code Execution should replace language-only calculation.
 - [ ] I can explain why executed code can still produce an invalid result.
 - [ ] I can distinguish Memory from Project instructions, Project knowledge, chat history, and a source of record.
-- [ ] I can identify what should and should not be stored in Memory.
-- [ ] I can perform a monthly Memory-curation review.
-- [ ] I can explain Project-scoped Memory boundaries.
-- [ ] I can explain why Incognito mode does not override organizational policy.
-- [ ] I can review imported memories for staleness, sensitivity, and scope.
-- [ ] I can describe a control against memory poisoning.
-- [ ] I can map a recurring workflow to Project, Skill, Code Execution, Memory, and human review responsibilities.
-- [ ] I can explain why verification should remain after a capability-layer redesign.
-- [ ] I can calculate time savings and percentage reduction for a redesigned workflow.
-- [ ] I can explain why several clean cycles do not prove future perfection.
-- [ ] I can separate context, procedure, computation, continuity, and authoritative records.
-- [ ] I can explain application state without claiming the model "remembers" by itself.
-- [ ] I can separate context, output, and knowledge freshness.
+- [ ] I can perform a Memory-curation review and describe a control against memory poisoning.
+- [ ] I can map a recurring workflow to Project, Skill, Code Execution, Memory, current inputs, and human review.
+- [ ] I can explain why verification remains after a capability-layer redesign.
+- [ ] I can classify every item in the Capability Layer checkpoint and explain the placement.
 - [ ] I can justify a model selection with measurable criteria.
-- [ ] I can explain why model updates require regression testing.
-- [ ] I completed the lab and scored at least 80% on the quiz.
+- [ ] I completed the module lab and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
 
@@ -192,12 +185,9 @@ Product capabilities and plan availability can change. Use official sources as t
 - [Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows)
 - [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
-- [Collaborate with Claude on Projects](https://www.anthropic.com/news/projects)
-- [Artifacts are now generally available](https://www.anthropic.com/news/artifacts)
-- [Claude takes research to new places](https://www.anthropic.com/news/research)
 - [Using the Messages API](https://platform.claude.com/docs/en/build-with-claude/working-with-messages)
 - [Stop reasons and fallback](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
 
 ## Version-awareness note
 
-Memory behavior, supported plans, Project scoping, Incognito behavior, import workflows, Skill administration, Code Execution availability, workspace administration, and retention can change. Treat the current official Help Center and organization policy as authoritative.
+Memory behavior, Project scoping, Incognito behavior, Skill administration, Code Execution availability, workspace administration, plan availability, and retention can change. Treat current official documentation and organization policy as authoritative.
