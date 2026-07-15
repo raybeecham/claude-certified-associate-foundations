@@ -28,6 +28,7 @@ These templates are study aids and starting points, not universal production pro
 10. [Context Management prompts](module-01/06-context-management-prompts.md)
 11. [Platform Selection Exercise prompts](module-01/07-platform-selection-exercise-prompts.md)
 12. [Module 1 quiz and remediation prompts](module-01/08-module-1-quiz-prompts.md)
+13. [Module 1 Key Takeaways prompts](module-01/09-key-takeaways-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -47,8 +48,8 @@ Before using a template:
 - justify the selected entry point, capability layers, model tier, and context strategy; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
-A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, engagement-identifying examples, or remembered live-exam questions in these prompts. Use fictional, generic, synthetic, or public scenarios.
+Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, engagement-identifying examples, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, or public scenarios.
