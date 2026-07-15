@@ -59,6 +59,8 @@ This playbook turns those concerns into a repeatable engineering method.
 6. Define acceptance criteria in the [Evaluation Canvas](worksheets/evaluation-canvas.md).
 7. Review risk and accountability in the [Governance Canvas](worksheets/governance-canvas.md).
 8. Run the appropriate checklist before prompting, publishing, or deploying.
+9. Review the [Public-Source Executive Briefing](case-studies/01-public-source-executive-briefing.md) for an end-to-end example.
+10. Use the [Postmortem](worksheets/postmortem.md) after pilots, releases, or failures.
 
 ## Repository structure
 
@@ -72,7 +74,8 @@ ai-systems-engineering/
 │   ├── workflow-design-canvas.md
 │   ├── prompt-planning-canvas.md
 │   ├── evaluation-canvas.md
-│   └── governance-canvas.md
+│   ├── governance-canvas.md
+│   └── postmortem.md
 ├── checklists/
 │   ├── before-you-prompt.md
 │   ├── before-you-publish.md
@@ -82,9 +85,12 @@ ai-systems-engineering/
 │   ├── workflow-over-prompts.md
 │   ├── deterministic-vs-generative.md
 │   └── context-as-working-memory.md
+├── patterns/
+│   └── README.md
 └── case-studies/
     ├── README.md
-    └── case-study-template.md
+    ├── case-study-template.md
+    └── 01-public-source-executive-briefing.md
 ```
 
 ## Design principles
@@ -135,6 +141,24 @@ The method applies across Claude, ChatGPT, Gemini, open-source models, and futur
 | Deliverable | Artifact, document, spreadsheet, slide deck, code repository |
 | Long-term continuity | Memory, profile, durable state store |
 | Validation | Tests, evaluators, source checks, human review |
+
+## Practical usage modes
+
+### Personal task
+
+Use the fast path:
+
+```text
+Outcome → evidence → workspace → model → prompt → review
+```
+
+### Recurring professional workflow
+
+Complete the Project, Workflow, Prompt, and Evaluation canvases.
+
+### Organizational deployment
+
+Complete every canvas, run the deployment checklist, define monitoring, and preserve rollback.
 
 ## Public-repository rule
 
