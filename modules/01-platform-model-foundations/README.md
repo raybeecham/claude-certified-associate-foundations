@@ -2,7 +2,7 @@
 
 ## Why this domain matters
 
-A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding model behavior, using stale evidence, mixing capability responsibilities, or failing to manage context. This domain establishes the platform mental model used by every later module.
+A strong prompt cannot compensate for selecting the wrong product surface, misunderstanding model behavior, using stale evidence, mixing capability responsibilities, selecting an underpowered or unnecessarily expensive model, or failing to manage context. This domain establishes the platform mental model used by every later module.
 
 Four decisions set the quality ceiling for a Claude workflow:
 
@@ -27,7 +27,7 @@ We are building this module section by section from the certification preparatio
   - [x] [Memory](lessons/04a-capability-layer-memory.md)
   - [x] [Scenario](lessons/04b-capability-layer-scenario.md)
   - [x] [Checkpoint](lessons/04c-capability-layer-checkpoint.md)
-- [ ] 05. Choosing Models
+- [x] [05. Choosing Models](lessons/05-choosing-models.md)
 - [ ] 06. Context Management
 - [ ] 07. Exercise
 - [ ] 08. Quiz
@@ -57,8 +57,11 @@ By the end of this module, you should be able to:
 - redesign recurring high-consequence workflows using capability layers;
 - preserve verification and human accountability while reducing repeated effort;
 - map workflow components to standing instructions, knowledge, Skills, Code Execution, current inputs, and human review;
-- differentiate Haiku, Sonnet, and Opus by capability characteristics and task fit;
-- match model selection to quality, speed, cost, and volume requirements; and
+- differentiate Haiku, Sonnet, and Opus by task fit;
+- match model selection to capability, speed, cost, usage, and volume requirements;
+- identify the minimum model that passes representative evaluations;
+- design model escalation and routing patterns;
+- explain why a stronger model does not replace grounding, computation, or review; and
 - manage context limitations and continuity across sessions.
 
 ## Current lesson resources
@@ -73,6 +76,7 @@ By the end of this module, you should be able to:
 - [Capability Layer, Memory](lessons/04a-capability-layer-memory.md)
 - [Capability Layer scenario](lessons/04b-capability-layer-scenario.md)
 - [Capability Layer checkpoint](lessons/04c-capability-layer-checkpoint.md)
+- [Choosing Models](lessons/05-choosing-models.md)
 
 ### Module 1 prompt notebooks
 
@@ -84,11 +88,13 @@ By the end of this module, you should be able to:
 - [Memory prompts](../../prompts/module-01/04a-capability-layer-memory-prompts.md)
 - [Capability Layer scenario prompts](../../prompts/module-01/04b-capability-layer-scenario-prompts.md)
 - [Capability Layer checkpoint prompts](../../prompts/module-01/04c-capability-layer-checkpoint-prompts.md)
+- [Choosing Models prompts](../../prompts/module-01/05-choosing-models-prompts.md)
 
 ### Engineering patterns
 
-- [Capability patterns](../../patterns/capability-patterns.md): Reusable designs for Projects, Skills, Code Execution, Memory, least privilege, and computational validation
+- [Capability patterns](../../patterns/capability-patterns.md): Project context, Skill procedures, Code Execution, Memory, least privilege, and computational validation
 - [Memory patterns](../../patterns/memory-patterns.md): Curation, scope separation, Incognito, import review, memory-poisoning defense, and remediation
+- [Model-selection patterns](../../patterns/model-selection-patterns.md): Tier selection, minimum-qualified-model evaluation, routing, migration, and version control
 
 ### Baseline module material
 
@@ -112,13 +118,40 @@ Use this placement model:
 | Authoritative operational state | External source of record |
 | Consequential final judgment | Qualified human review |
 
-The highest-value checkpoint distinction is:
+The highest-value distinction is:
 
 > Standing instructions define how Claude behaves. Knowledge defines what Claude knows or analyzes.
 
+## Choosing Models summary
+
+Use the certification heuristic:
+
+| Task profile | Starting tier |
+|---|---|
+| Structured, routine, high-volume work | Haiku |
+| Most professional drafting, synthesis, and analysis | Sonnet |
+| Complex, ambiguous, nuanced, or quality-sensitive work | Opus |
+
+Then apply the production rule:
+
+> Use the fastest and least costly model that passes the validated quality threshold.
+
+A stronger model does not replace:
+
+- authoritative sources;
+- Code Execution for calculations;
+- structured-output validation;
+- privacy and authorization controls;
+- human review; or
+- accountable final decisions.
+
+### Current product note
+
+The certification uses the Haiku, Sonnet, and Opus frame. As of July 14, 2026, current Anthropic documentation also lists Claude Fable 5 as a widely released tier above the current Opus tier. Treat that as a dated product note, not an exam memorization target.
+
 ## Exam lens
 
-Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, evidence, quality, latency, cost, and governance requirements, not from selecting the most advanced option by default.
+Expect scenarios in which several Claude surfaces, capabilities, or model approaches could technically work. The best answer usually follows from the use case's recurrence, persistence, procedure, computation, continuity, output, evidence, quality, latency, cost, volume, and governance requirements, not from selecting the most advanced option by default.
 
 Use this diagnostic checklist:
 
@@ -132,24 +165,21 @@ Use this diagnostic checklist:
 8. What continuity, if any, belongs in Memory?
 9. Which facts remain controlled by an authoritative external system?
 10. Which decisions remain consequential, uncertain, or accountable to a human reviewer?
-11. Does the model fit the quality, speed, cost, and volume requirements?
-12. Is context being managed deliberately?
+11. Is the task structured, balanced, or highly complex and ambiguous?
+12. Does the selected model fit the quality, speed, cost, and volume requirements?
+13. Has the model passed representative evaluation cases?
+14. Is context being managed deliberately?
 
-For computational work, ask:
+For model selection, ask:
 
-1. Are the inputs complete and authorized?
-2. Is the method or interpretation correct?
-3. Did the operation execute successfully?
-4. Was the result independently validated?
-
-For Memory, ask:
-
-1. Is this continuity rather than authoritative knowledge?
-2. What is the narrowest valid scope?
-3. When was the fact last confirmed?
-4. When should it be reviewed or deleted?
-5. Could untrusted content alter it?
-6. Can the user inspect, correct, and remove it?
+1. What is the minimum acceptable quality?
+2. Which severe failures matter most?
+3. What request volume and latency are expected?
+4. What cost or usage budget applies?
+5. Can routine cases use a lower tier?
+6. Which conditions should trigger escalation?
+7. What controls remain outside the model?
+8. Which exact model version and settings are being used?
 
 ## Completion criteria
 
@@ -169,7 +199,12 @@ For Memory, ask:
 - [ ] I can map a recurring workflow to Project, Skill, Code Execution, Memory, current inputs, and human review.
 - [ ] I can explain why verification remains after a capability-layer redesign.
 - [ ] I can classify every item in the Capability Layer checkpoint and explain the placement.
-- [ ] I can justify a model selection with measurable criteria.
+- [ ] I can distinguish Haiku, Sonnet, and Opus by task fit.
+- [ ] I can explain why Sonnet is the normal certification starting point for professional knowledge work.
+- [ ] I can identify cases that justify Haiku or Opus.
+- [ ] I can define an evaluation for selecting the minimum qualified model.
+- [ ] I can design escalation from Haiku to Sonnet or Opus using observable checks.
+- [ ] I can explain why a stronger model does not guarantee accuracy.
 - [ ] I completed the module lab and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
@@ -178,11 +213,14 @@ Examples in this repository are fictional, generic, synthetic, or based on publi
 
 ## Official reading
 
-Product capabilities and plan availability can change. Use official sources as the current authority.
+Product capabilities, model versions, and plan availability can change. Use official sources as the current authority.
 
 - [Claude Help Center](https://support.claude.com/en/)
-- [Intro to Claude](https://platform.claude.com/docs/en/intro)
 - [Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)
+- [Choosing the right model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)
+- [Model IDs and versioning](https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions)
+- [Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
+- [Introducing Claude Fable 5 and Claude Mythos 5](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5)
 - [Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows)
 - [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
 - [Using the Messages API](https://platform.claude.com/docs/en/build-with-claude/working-with-messages)
@@ -190,4 +228,4 @@ Product capabilities and plan availability can change. Use official sources as t
 
 ## Version-awareness note
 
-Memory behavior, Project scoping, Incognito behavior, Skill administration, Code Execution availability, workspace administration, plan availability, and retention can change. Treat current official documentation and organization policy as authoritative.
+Model names, versions, model-picker defaults, comparative capability, pricing, effort settings, plan availability, automatic switching, Memory behavior, Project scoping, Skill administration, Code Execution availability, workspace administration, and retention can change. Treat current official documentation, the actual product surface, and organization policy as authoritative.
