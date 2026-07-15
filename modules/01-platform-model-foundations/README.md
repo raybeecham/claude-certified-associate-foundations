@@ -30,7 +30,7 @@ Each completed lesson expands the preparation-course concepts with original expl
 - [x] [05. Choosing Models](lessons/05-choosing-models.md)
 - [x] [06. Context Management](lessons/06-context-management.md)
 - [x] [07. Platform Selection Exercise](lessons/07-platform-selection-exercise.md)
-- [ ] 08. Quiz
+- [x] [08. Module 1 Quiz Review](lessons/08-module-1-quiz.md)
 - [ ] 09. Key Takeaways
 - [ ] 10. Module Complete
 
@@ -58,8 +58,9 @@ By the end of this module, you should be able to:
 - recognize context degradation;
 - choose among restart, summarize, and persist;
 - create and validate a state-capsule handoff;
-- combine entry-point, capability, model, and context decisions for one scenario; and
-- defend a configuration using an explicit benefit-versus-cost trade-off.
+- combine entry-point, capability, model, and context decisions for one scenario;
+- defend a configuration using an explicit benefit-versus-cost trade-off; and
+- explain why each quiz distractor is weaker than the best answer.
 
 ## Current lesson resources
 
@@ -76,6 +77,7 @@ By the end of this module, you should be able to:
 - [Choosing Models](lessons/05-choosing-models.md)
 - [Context Management](lessons/06-context-management.md)
 - [Platform Selection Exercise](lessons/07-platform-selection-exercise.md)
+- [Module 1 Quiz Review](lessons/08-module-1-quiz.md)
 
 ### Module 1 prompt notebooks
 
@@ -90,6 +92,7 @@ By the end of this module, you should be able to:
 - [Choosing Models prompts](../../prompts/module-01/05-choosing-models-prompts.md)
 - [Context Management prompts](../../prompts/module-01/06-context-management-prompts.md)
 - [Platform Selection Exercise prompts](../../prompts/module-01/07-platform-selection-exercise-prompts.md)
+- [Quiz and remediation prompts](../../prompts/module-01/08-module-1-quiz-prompts.md)
 
 ### Engineering patterns
 
@@ -103,7 +106,7 @@ By the end of this module, you should be able to:
 - [notes.md](notes.md): Broader platform engineering concepts and decision patterns
 - [lab.md](lab.md): Platform and model selection matrix
 - [flashcards.md](flashcards.md): Baseline recall prompts
-- [quiz.md](quiz.md): Original scenario questions
+- [quiz.md](quiz.md): Eight additional original engineering-oriented scenario questions
 
 ## Capability Layer summary
 
@@ -186,6 +189,21 @@ One-off vendor response          -> Chat + Artifact, Sonnet
 
 The strongest model justification names the task signal, the benefit gained, and the cost accepted.
 
+## Quiz completion summary
+
+The learner scored **5/5** on the preparation-course Module 1 quiz.
+
+The questions confirmed correct reasoning across:
+
+- recurring Project workflows;
+- stable knowledge and standing instructions;
+- Code Execution for trustworthy calculations;
+- Haiku for clear high-volume classification;
+- context recovery through summarize and restart; and
+- Project-scoped separation of unrelated workstreams.
+
+The repository adds a separate ten-question original drill. Target at least **80 percent**, then explain every distractor before considering the objective complete.
+
 ## Exam lens
 
 Expect scenarios where several configurations could technically work. Select the answer that best matches:
@@ -234,8 +252,9 @@ Use this diagnostic checklist:
 - [ ] I can choose among restart, summarize, and persist.
 - [ ] I can create and validate a state capsule.
 - [ ] I matched all six Platform Selection scenarios and explained the signals.
-- [ ] I can justify Opus using an explicit quality-versus-speed trade-off.
-- [ ] I completed the module exercise and scored at least 80% on the quiz.
+- [x] I scored 5/5 on the preparation-course Module 1 quiz.
+- [ ] I scored at least 80 percent on the repository's ten-question Module 1 quiz.
+- [ ] I can explain why every quiz distractor is weaker than the correct answer.
 
 ## Public-repository scenario policy
 
