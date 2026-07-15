@@ -26,6 +26,7 @@ These templates are study aids and starting points, not universal production pro
 8. [Capability Layer checkpoint prompts](module-01/04c-capability-layer-checkpoint-prompts.md)
 9. [Choosing Models prompts](module-01/05-choosing-models-prompts.md)
 10. [Context Management prompts](module-01/06-context-management-prompts.md)
+11. [Platform Selection Exercise prompts](module-01/07-platform-selection-exercise-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -40,8 +41,9 @@ Before using a template:
 - define missing-data behavior;
 - constrain and validate tools;
 - create representative tests;
-- establish human review where the output is consequential; and
-- define how context will be checkpointed, summarized, persisted, or discarded.
+- establish human review where the output is consequential;
+- define how context will be checkpointed, summarized, persisted, or discarded; and
+- justify the selected entry point, capability layers, model tier, and context strategy.
 
 A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, or irreversible-action approval by itself.
 
