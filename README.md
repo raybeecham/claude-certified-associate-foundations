@@ -47,6 +47,57 @@ Delivery, monitoring, and improvement
 
 The certification teaches the platform concepts. The playbook turns them into a repeatable engineering practice.
 
+## Official exam guide at a glance
+
+The current official guide is **Version 1.0, effective July 2026**. Exam details and policies can change, so candidates should download and read the latest guide from the Anthropic Partner Academy before registering or scheduling.
+
+### Exam format
+
+| Field | Official guide |
+|---|---|
+| Credential | Claude Certified Associate - Foundations |
+| Exam code | `CCAO-F` |
+| Number of items | 60 |
+| Item format | Multiple-choice and multiple-response; each item states how many responses to select |
+| Time limit | 120 minutes |
+| Delivery | Proctored online and/or at a test center, according to program policy |
+| Passing score | Scaled score of 720 on a scale of 100-1,000 |
+| Exam fee | $99 USD |
+| Credential validity | 12 months from the award date |
+| Result reporting | Pass/fail, scaled score, and percent correct by domain |
+
+### Exam blueprint and repository crosswalk
+
+The official domain numbering differs from this repository's learning order. In particular, the material we studied first as **Module 1** maps to **Official Domain 3: Product and Model Selection**.
+
+| Official domain | Content domain | Weight | Repository coverage |
+|---:|---|---:|---|
+| 1 | Prompting and Task Execution | 14% | [Module 2](modules/02-prompting-task-execution/) |
+| 2 | Output Evaluation and Validation | 21% | [Module 3](modules/03-evaluating-validating-output/) |
+| 3 | Product and Model Selection | 12% | [Module 1](modules/01-platform-model-foundations/) |
+| 4 | Workflow Integration and Solution Design | 16% | [Module 4](modules/04-workflow-integration-solutions-design/) |
+| 5 | Configuration and Knowledge Management | 12% | [Module 5](modules/05-configuration-knowledge-management/) |
+| 6 | Governance, Risk, and Responsible Use | 15% | [Module 6](modules/06-governance-risk-responsible-use/) |
+| 7 | Troubleshooting and Optimization | 10% | [Module 7](modules/07-troubleshooting-optimization/) |
+|  | **Total** | **100%** |  |
+
+### What the weighting means for preparation
+
+- **Output Evaluation and Validation is the largest domain at 21%.** Be able to detect hallucinations, inconsistencies, bias, incomplete work, and unsupported claims, then choose the appropriate validation or human-review response.
+- **Workflow Integration and Solution Design is 16%.** Practice translating business requirements into useful Claude-supported workflows and communicating value and limitations to stakeholders.
+- **Governance, Risk, and Responsible Use is 15%.** Data sensitivity, privacy, organizational policy, appropriate-use judgment, and escalation are major exam themes.
+- **Prompting and Task Execution is 14%.** Know how to structure, decompose, iterate, and adapt prompts for different task types.
+- **Product and Model Selection and Configuration and Knowledge Management are each 12%.** Know when to use Chat, Projects, Research, Artifacts, model tiers, context strategies, instructions, knowledge sources, and connectors.
+- **Troubleshooting and Optimization is 10%.** Diagnose weak prompts and outputs, adjust the correct layer, and optimize for effectiveness and efficiency.
+
+The exam is scored against a total scaled passing standard. Domain percentages on the score report are diagnostic; they do not independently determine pass or fail. Build balanced readiness rather than ignoring the smaller domains.
+
+### Candidate and scope boundary
+
+The minimally qualified candidate is a professional Claude productivity user who can translate business objectives into effective interactions, configure Projects, evaluate and adapt outputs, recognize limitations, and escalate when necessary. The associate exam does **not** require API development, enterprise-scale agentic architecture, machine-learning engineering, or advanced software integration.
+
+The [AI Systems Engineering Playbook](ai-systems-engineering/) deliberately extends beyond the minimum exam scope. It is an optional applied track for readers who want to turn the certification concepts into a broader engineering practice.
+
 ## The AI Systems Engineering method
 
 Before writing a substantial prompt, work through these decisions:
