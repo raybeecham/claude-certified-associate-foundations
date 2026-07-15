@@ -4,10 +4,36 @@
 [![Docs](https://github.com/raybeecham/claude-certified-associate-foundations/actions/workflows/docs.yml/badge.svg)](https://github.com/raybeecham/claude-certified-associate-foundations/actions/workflows/docs.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-An independent, scenario-driven study repository for the **Claude Certified Associate - Foundations** certification.
+An independent, scenario-driven study repository for the **Claude Certified Associate - Foundations** certification, with a vendor-neutral **AI Systems Engineering Playbook** for applying the concepts to real workflows.
 
 > [!IMPORTANT]
 > This is an unofficial, community-maintained resource. It is not affiliated with, endorsed by, or sponsored by Anthropic. It contains original study material and does not reproduce proprietary course or exam questions. Always treat the official preparation course, current Anthropic documentation, certification policies, and exam guide as authoritative.
+
+## Two complementary tracks
+
+### Track 1: Certification
+
+The seven modules follow the Claude Certified Associate - Foundations preparation areas with original lessons, scenarios, prompts, labs, flashcards, and quizzes.
+
+### Track 2: AI Systems Engineering
+
+The [AI Systems Engineering Playbook](ai-systems-engineering/) turns the lessons into a vendor-neutral operating method:
+
+```text
+Business problem
+      ↓
+Workspace and capabilities
+      ↓
+Model and context strategy
+      ↓
+Workflow and prompt
+      ↓
+Evaluation and human review
+      ↓
+Delivery, monitoring, and improvement
+```
+
+Use the playbook for professional projects regardless of whether the implementation uses Claude, ChatGPT, Gemini, an open-source model, or a future platform.
 
 ## What is included
 
@@ -18,9 +44,10 @@ An independent, scenario-driven study repository for the **Claude Certified Asso
 | Flashcards | 84 | Fast recall and spaced-repetition prompts |
 | Practice exams | 2 | Balanced, 28-question exam simulations |
 | Hands-on labs | 7 | Applied exercises with acceptance criteria |
-| Case studies | 3 | Security, governance, and workflow design practice |
-| Prompt templates | 7 | Reusable task, evaluation, orchestration, and review patterns |
-| Engineering pattern library | Growing | Reusable Claude workflow and architecture patterns |
+| Case studies | 4 | Certification cases plus an end-to-end systems-engineering example |
+| Prompt notebooks and templates | Growing | Reusable task, evaluation, orchestration, and review patterns |
+| Engineering pattern library | Growing | Reusable workflow and architecture patterns |
+| AI Systems Engineering playbook | 1 | Vendor-neutral methodology, canvases, checklists, and mental models |
 | Study CLI | 1 | Offline quizzes, flashcards, practice exams, and local score tracking |
 
 ## Study domains
@@ -40,15 +67,27 @@ For each domain:
 1. Read the module overview and learning objectives.
 2. Work through `notes.md` and the course-aligned lessons.
 3. Practice with the module prompt notebooks and engineering patterns.
-4. Complete the module lab before viewing the model solution.
-5. Drill the flashcards until recall is consistent.
-6. Take the module quiz and explain why each distractor is wrong.
-7. Record weak areas in [the progress tracker](docs/progress-tracker.md).
-8. Revisit the official documentation linked from that module.
+4. Apply the lesson to the [AI Systems Engineering Playbook](ai-systems-engineering/).
+5. Complete the module lab before viewing the model solution.
+6. Drill the flashcards until recall is consistent.
+7. Take the module quiz and explain why each distractor is wrong.
+8. Record weak areas in [the progress tracker](docs/progress-tracker.md).
+9. Revisit the official documentation linked from that module.
 
 After all seven domains, complete both practice exams under timed, closed-note conditions.
 
-## Quick start
+## AI Systems Engineering quick start
+
+For a new project:
+
+1. Complete the [AI Project Canvas](ai-systems-engineering/worksheets/ai-project-canvas.md).
+2. Map the process with the [Workflow Design Canvas](ai-systems-engineering/worksheets/workflow-design-canvas.md).
+3. Design the prompt with the [Prompt Planning Canvas](ai-systems-engineering/worksheets/prompt-planning-canvas.md).
+4. Set the quality floor in the [Evaluation Canvas](ai-systems-engineering/worksheets/evaluation-canvas.md).
+5. Review risk and accountability in the [Governance Canvas](ai-systems-engineering/worksheets/governance-canvas.md).
+6. Run [Before You Prompt](ai-systems-engineering/checklists/before-you-prompt.md).
+
+## Repository quick start
 
 The repository is useful as plain Markdown. Python is only needed for the optional study CLI and checks.
 
@@ -97,10 +136,12 @@ These are study recommendations, not official passing requirements:
 - **Governed deployment:** Data handling, least privilege, human oversight, logging, and incident response are part of solution design.
 - **Security conscious:** Examples emphasize adversarial input, prompt injection, source integrity, and controlled tool use.
 - **Separation of concerns:** Context, procedure, computation, continuity, and authoritative records are designed independently.
+- **Workflow over prompts:** The system is designed before the final prompt is optimized.
 - **Public-safe examples:** Scenarios use fictional, generic, synthetic, or public information rather than identifiable nonpublic work.
 
 ## Documentation map
 
+- [AI Systems Engineering Playbook](ai-systems-engineering/)
 - [Certification overview](docs/certification-overview.md)
 - [Four-week study plan](docs/study-plan.md)
 - [Exam strategy](docs/exam-strategy.md)
