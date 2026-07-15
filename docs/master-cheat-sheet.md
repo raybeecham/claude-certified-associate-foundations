@@ -2,12 +2,99 @@
 
 ## 1. Platform and model foundations
 
-- Choose the product surface and model characteristics from task requirements.
-- Separate **context capacity**, **maximum output**, **knowledge freshness**, and **application state**.
-- Treat API conversations as application-managed state unless the product explicitly provides persistence.
-- Use system or durable configuration for trusted, reusable behavior. Use user content for the current task and data.
-- Test migrations with a representative regression suite.
-- Record model identifier, prompt version, tool version, source set, latency, token usage, stop reason, and outcome.
+### Select the entry point first
+
+| Work pattern | Starting entry point |
+|---|---|
+| One-off question or quick draft | Chat |
+| Recurring work with stable context | Project |
+| Editable deliverable | Artifact |
+| Current multi-source investigation | Research |
+
+Entry points can be combined. A recurring current-information workflow may use a Project, Research, and an Artifact.
+
+### Separate capability responsibilities
+
+| Responsibility | Correct home |
+|---|---|
+| Stable workstream behavior | Project standing instructions |
+| Curated reusable evidence | Project knowledge |
+| Current-cycle information | Current conversation or task input |
+| Repeatable ordered procedure | Skill |
+| Calculation, transformation, chart, or file | Code Execution |
+| Appropriate cross-session continuity | Memory |
+| Current operational truth | Authoritative external system |
+| Consequential final judgment | Qualified human review |
+
+Key distinction:
+
+```text
+Standing instructions = how Claude should behave
+Knowledge             = what Claude should know or analyze
+```
+
+### Select the model tier
+
+```text
+Haiku  = structured, routine, high-volume work
+Sonnet = balanced default for most professional work
+Opus   = complex, ambiguous, quality-sensitive reasoning
+```
+
+Production rule:
+
+> Use the fastest and least costly model that passes the validated quality threshold.
+
+A stronger model does not replace grounding, Code Execution, schema validation, privacy controls, context hygiene, or human review.
+
+### Manage context deliberately
+
+```text
+Restart   = begin a clean conversation
+Summarize = transfer validated operational state
+Persist   = move durable information into the correct long-lived layer
+```
+
+Use a state capsule containing objective, scope, decisions, authoritative sources, constraints, completed work, open questions, risks, next actions, and approvals.
+
+```text
+Context limit = depth of one conversation
+Usage limit   = quantity of Claude use over time
+```
+
+Reconstruct the smallest authoritative context required for the next action.
+
+### Account for generative behavior
+
+- Repeated runs can vary in wording, structure, and emphasis.
+- Fluent confidence is not evidence of accuracy.
+- Skills and templates reduce variance but do not eliminate it.
+- Code Execution verifies that a method ran, not that the method or inputs were correct.
+- Memory supports continuity, not authoritative knowledge management.
+- Review is part of the workflow, not an optional final polish.
+
+### Platform-selection sequence
+
+1. Entry point
+2. Capability layer
+3. Model tier
+4. Context strategy
+5. Validation, escalation, and human review
+
+### Platform anti-patterns
+
+- Writing the prompt before choosing the work environment
+- Re-entering stable context in every Chat
+- Using a Project as an uncontrolled document dump
+- Treating a Skill as a correctness guarantee
+- Producing consequential calculations through prose alone
+- Treating Memory as a source of truth
+- Continuing a degraded thread indefinitely
+- Choosing the strongest model without evaluation
+
+### Platform observability
+
+Record model identifier, prompt version, tool version, source set, latency, token usage, stop reason, validation results, human approval, and final outcome.
 
 ## 2. Prompting and task execution
 
