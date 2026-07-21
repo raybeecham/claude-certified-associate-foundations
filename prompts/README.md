@@ -36,6 +36,7 @@ These templates are study aids and starting points, not universal production pro
 2. [Component Stack prompts](module-02/02a-component-stack-prompts.md)
 3. [Worked Build prompts](module-02/02b-worked-build-prompts.md)
 4. [Task Decomposition prompts](module-02/03a-decomposition-prompts.md)
+5. [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
