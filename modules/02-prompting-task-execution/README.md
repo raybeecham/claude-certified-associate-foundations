@@ -8,7 +8,7 @@ Prompt quality begins with task definition. Clear instructions, evidence boundar
 
 > **Module thesis:** Prompts are not magic. Prompts are specifications.
 
-Module 1 established that an AI task is an engineering design problem before it is a prompting problem. Module 2 now focuses on the task specification inside that system.
+Module 1 established that an AI task is an engineering design problem before it is a prompting problem. Module 2 focuses on the task specification inside that system.
 
 ```text
 Business problem
@@ -32,9 +32,9 @@ Each lesson expands the preparation-course concepts with original explanations, 
 - [x] 02. Anatomy of an Effective Prompt
   - [x] [Component Stack](lessons/02a-component-stack.md)
   - [x] [Worked Build](lessons/02b-worked-build.md)
-- [ ] 03. Task Decomposition
+- [x] 03. Task Decomposition
   - [x] [Decomposition](lessons/03a-decomposition.md)
-  - [ ] Parallel Case
+  - [x] [Parallel Case](lessons/03b-parallel-case.md)
 - [ ] 04. Iterating to Improve Output
 - [ ] 05. Adapting Strategy by Task Type
   - [ ] Strategy
@@ -49,21 +49,19 @@ Each lesson expands the preparation-course concepts with original explanations, 
 
 By the end of this module, you should be able to:
 
-- create effective prompts for business and technical tasks using a repeatable component structure;
+- create effective prompts using a repeatable component structure;
 - define success criteria before iterating on wording;
 - convert a vague request into a testable task contract;
-- apply task decomposition to complex, multi-part requests;
+- apply sequential and parallel decomposition;
+- validate shared foundations before downstream work begins;
 - iterate diagnostically by repairing the component that failed;
 - adapt prompting strategy to analysis, research, drafting, brainstorming, extraction, classification, and planning;
-- use examples, delimiters, output schemas, and uncertainty behavior appropriately;
 - distinguish instructions from untrusted content; and
-- recognize when a failure belongs to evidence, model selection, context, evaluation, governance, or workflow design instead of prompt engineering.
+- recognize when a failure belongs outside prompt engineering.
 
 ## Four durable capabilities
 
 ### 1. Component-based prompting
-
-Build prompts from functional components rather than improvised prose.
 
 ```text
 Objective
@@ -78,19 +76,33 @@ Objective
 
 ### 2. Task decomposition
 
-Break overloaded work into stages, sequence dependencies, run independent work in parallel where appropriate, and integrate the results.
+Break overloaded work into inspectable stages.
 
 ```text
 Input → Process → Output → Validation
 ```
 
+Use sequential stages when outputs depend on prior results. Use a shared-foundation parallel pattern when several independent outputs consume the same approved evidence.
+
+```text
+Shared source
+    ↓
+Extract
+    ↓
+Validate
+    ↓
+Fan out into parallel tasks
+    ↓
+Fan in for consistency review
+```
+
 ### 3. Diagnostic iteration
 
-Do not merely ask for a better answer. Identify the failed quality dimension and revise the smallest responsible component.
+Identify the failed quality dimension and revise the smallest responsible component rather than merely asking for a better answer.
 
 ### 4. Task-strategy adaptation
 
-Analysis, research, drafting, brainstorming, extraction, classification, and planning require different evidence, structure, constraints, and evaluation methods.
+Different task types require different evidence, structure, constraints, and evaluation methods.
 
 ## Current lesson resources
 
@@ -100,6 +112,7 @@ Analysis, research, drafting, brainstorming, extraction, classification, and pla
 - [Component Stack](lessons/02a-component-stack.md)
 - [A Worked Build](lessons/02b-worked-build.md)
 - [Task Decomposition](lessons/03a-decomposition.md)
+- [Parallel Decomposition Case](lessons/03b-parallel-case.md)
 
 ### Prompt notebooks
 
@@ -107,6 +120,7 @@ Analysis, research, drafting, brainstorming, extraction, classification, and pla
 - [Component Stack prompts](../../prompts/module-02/02a-component-stack-prompts.md)
 - [Worked Build prompts](../../prompts/module-02/02b-worked-build-prompts.md)
 - [Task Decomposition prompts](../../prompts/module-02/03a-decomposition-prompts.md)
+- [Parallel Case prompts](../../prompts/module-02/03b-parallel-case-prompts.md)
 
 ### Engineering patterns
 
@@ -121,41 +135,27 @@ Analysis, research, drafting, brainstorming, extraction, classification, and pla
 
 ## Exam lens
 
-Look for the smallest prompt or task-design improvement that directly addresses the observed ambiguity.
+Look for the smallest prompt or task-design improvement that directly addresses the observed ambiguity. “Add more detail” is rarely sufficient.
 
-“Add more detail” is rarely sufficient. The best answer names the missing component, such as:
-
-- audience;
-- objective;
-- evidence boundary;
-- constraint;
-- decomposition step;
-- output contract;
-- example;
-- uncertainty behavior; or
-- evaluation criterion.
-
-Choose decomposition when a request contains multiple dependent tasks and intermediate results should be validated before downstream work continues.
+Choose sequential decomposition when later work depends on an intermediate result. Choose parallel decomposition only after the shared evidence or interpretation is validated and the branches no longer depend on one another.
 
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
 
 ## Completion criteria
 
 - [ ] I can explain why a prompt is a task specification rather than a magic phrase.
-- [ ] I can name and apply Role, Context, Task, Constraints, and Output Format.
-- [ ] I can write a task contract with objective, evidence, constraints, output, and success criteria.
-- [ ] I can explain when examples are more useful than additional prose.
-- [ ] I can separate untrusted data from authoritative instructions.
-- [ ] I can decompose sequential and parallel work.
+- [ ] I can apply Role, Context, Task, Constraints, and Output Format.
 - [ ] I can define Input, Process, Output, and Validation for every workflow stage.
+- [ ] I can distinguish sequential dependencies from parallel work.
+- [ ] I can design a shared-foundation fan-out/fan-in workflow.
+- [ ] I can prevent one upstream error from propagating into multiple deliverables.
 - [ ] I can diagnose which prompt component failed before revising.
 - [ ] I can adapt strategy to the task type.
-- [ ] I can specify safe tool-use and missing-data behavior.
 - [ ] I completed the prompt clinic and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute client names, confidential data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Official reading
 
