@@ -19,11 +19,12 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Memory patterns](memory-patterns.md): Minimize, curate, scope, import, protect, and remediate persistent continuity
 - [Model-selection patterns](model-selection-patterns.md): Select tiers, evaluate the minimum qualified model, route exceptions, and control migrations
 - [Context-management patterns](context-management-patterns.md): Budget context, detect drift, restart cleanly, transfer state, persist correctly, and plan around usage limits
+- [Task Specification Before Prompting](task-specification-before-prompting.md): Define objective, evidence, constraints, output, uncertainty, and success criteria before optimizing wording
 
 ## Planned pattern groups
 
 - entry-point patterns;
-- prompting patterns;
+- additional prompting patterns;
 - evaluation patterns;
 - integration patterns;
 - governance patterns; and
