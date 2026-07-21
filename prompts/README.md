@@ -33,6 +33,7 @@ These templates are study aids and starting points, not universal production pro
 ### Module 2: Prompting & Task Execution
 
 1. [Module Introduction prompts](module-02/01-module-introduction-prompts.md)
+2. [Worked Build prompts](module-02/02b-worked-build-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
