@@ -20,6 +20,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Model-selection patterns](model-selection-patterns.md): Select tiers, evaluate the minimum qualified model, route exceptions, and control migrations
 - [Context-management patterns](context-management-patterns.md): Budget context, detect drift, restart cleanly, transfer state, persist correctly, and plan around usage limits
 - [Task Specification Before Prompting](task-specification-before-prompting.md): Define objective, evidence, constraints, output, uncertainty, and success criteria before optimizing wording
+- [Failure Localization Pattern](failure-localization-pattern.md): Observe, classify, localize, modify, validate, and decide without rewriting blindly
 
 ## Planned pattern groups
 
