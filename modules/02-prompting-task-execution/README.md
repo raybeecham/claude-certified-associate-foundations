@@ -29,11 +29,11 @@ Evaluation and revision
 Each lesson expands the preparation-course concepts with original explanations, generic examples, prompt notebooks, exercises, knowledge checks, flashcards, and reusable engineering patterns.
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
-- [ ] 02. Anatomy of an Effective Prompt
-  - [ ] Component Stack
+- [x] 02. Anatomy of an Effective Prompt
+  - [x] [Component Stack](lessons/02a-component-stack.md)
   - [x] [Worked Build](lessons/02b-worked-build.md)
 - [ ] 03. Task Decomposition
-  - [ ] Decomposition
+  - [x] [Decomposition](lessons/03a-decomposition.md)
   - [ ] Parallel Case
 - [ ] 04. Iterating to Improve Output
 - [ ] 05. Adapting Strategy by Task Type
@@ -80,6 +80,10 @@ Objective
 
 Break overloaded work into stages, sequence dependencies, run independent work in parallel where appropriate, and integrate the results.
 
+```text
+Input → Process → Output → Validation
+```
+
 ### 3. Diagnostic iteration
 
 Do not merely ask for a better answer. Identify the failed quality dimension and revise the smallest responsible component.
@@ -93,12 +97,16 @@ Analysis, research, drafting, brainstorming, extraction, classification, and pla
 ### Lessons
 
 - [Module 2 Introduction](lessons/01-module-introduction.md)
+- [Component Stack](lessons/02a-component-stack.md)
 - [A Worked Build](lessons/02b-worked-build.md)
+- [Task Decomposition](lessons/03a-decomposition.md)
 
 ### Prompt notebooks
 
 - [Module 2 Introduction prompts](../../prompts/module-02/01-module-introduction-prompts.md)
+- [Component Stack prompts](../../prompts/module-02/02a-component-stack-prompts.md)
 - [Worked Build prompts](../../prompts/module-02/02b-worked-build-prompts.md)
+- [Task Decomposition prompts](../../prompts/module-02/03a-decomposition-prompts.md)
 
 ### Engineering patterns
 
@@ -127,15 +135,19 @@ Look for the smallest prompt or task-design improvement that directly addresses 
 - uncertainty behavior; or
 - evaluation criterion.
 
+Choose decomposition when a request contains multiple dependent tasks and intermediate results should be validated before downstream work continues.
+
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
 
 ## Completion criteria
 
 - [ ] I can explain why a prompt is a task specification rather than a magic phrase.
+- [ ] I can name and apply Role, Context, Task, Constraints, and Output Format.
 - [ ] I can write a task contract with objective, evidence, constraints, output, and success criteria.
 - [ ] I can explain when examples are more useful than additional prose.
 - [ ] I can separate untrusted data from authoritative instructions.
 - [ ] I can decompose sequential and parallel work.
+- [ ] I can define Input, Process, Output, and Validation for every workflow stage.
 - [ ] I can diagnose which prompt component failed before revising.
 - [ ] I can adapt strategy to the task type.
 - [ ] I can specify safe tool-use and missing-data behavior.
