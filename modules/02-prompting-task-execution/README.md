@@ -31,7 +31,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [ ] 02. Anatomy of an Effective Prompt
   - [ ] Component Stack
-  - [ ] Worked Build
+  - [x] [Worked Build](lessons/02b-worked-build.md)
 - [ ] 03. Task Decomposition
   - [ ] Decomposition
   - [ ] Parallel Case
@@ -93,10 +93,12 @@ Analysis, research, drafting, brainstorming, extraction, classification, and pla
 ### Lessons
 
 - [Module 2 Introduction](lessons/01-module-introduction.md)
+- [A Worked Build](lessons/02b-worked-build.md)
 
 ### Prompt notebooks
 
 - [Module 2 Introduction prompts](../../prompts/module-02/01-module-introduction-prompts.md)
+- [Worked Build prompts](../../prompts/module-02/02b-worked-build-prompts.md)
 
 ### Engineering patterns
 
