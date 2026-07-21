@@ -37,6 +37,7 @@ These templates are study aids and starting points, not universal production pro
 3. [Worked Build prompts](module-02/02b-worked-build-prompts.md)
 4. [Task Decomposition prompts](module-02/03a-decomposition-prompts.md)
 5. [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
+6. [Iterating to Improve Output prompts](module-02/04-iterating-to-improve-output-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
