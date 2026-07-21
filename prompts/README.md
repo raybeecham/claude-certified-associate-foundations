@@ -30,6 +30,10 @@ These templates are study aids and starting points, not universal production pro
 12. [Module 1 quiz and remediation prompts](module-01/08-module-1-quiz-prompts.md)
 13. [Module 1 Key Takeaways prompts](module-01/09-key-takeaways-prompts.md)
 
+### Module 2: Prompting & Task Execution
+
+1. [Module Introduction prompts](module-02/01-module-introduction-prompts.md)
+
 Additional notebooks will be added as the course-aligned lessons are completed.
 
 ## Usage discipline
