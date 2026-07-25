@@ -45,6 +45,10 @@ These templates are study aids and starting points, not universal production pro
 11. [Module 2 Key Takeaways prompts](module-02/07b-key-takeaways-prompts.md)
 12. [Module 2 completion and transition prompts](module-02/08-module-complete-prompts.md)
 
+### Module 3: Evaluating & Validating Claude's Output
+
+1. [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
+
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
 ## Usage discipline
@@ -62,6 +66,8 @@ Before using a template:
 - route exact arithmetic and counting to deterministic tools;
 - diagnose why plausible alternatives are weaker than the targeted intervention;
 - use the five Module 2 takeaways as a final design review;
+- treat fluent wording as unverified until it is checked against requirements and evidence;
+- match review depth to the consequences of error;
 - constrain and validate tools;
 - create representative tests;
 - establish human review where the output is consequential;
