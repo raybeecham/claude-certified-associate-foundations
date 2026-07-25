@@ -43,8 +43,9 @@ These templates are study aids and starting points, not universal production pro
 9. [Repair-the-Prompt prompts](module-02/06-repair-the-prompt-prompts.md)
 10. [Module 2 quiz and remediation prompts](module-02/07a-module-2-quiz-prompts.md)
 11. [Module 2 Key Takeaways prompts](module-02/07b-key-takeaways-prompts.md)
+12. [Module 2 completion and transition prompts](module-02/08-module-complete-prompts.md)
 
-Additional notebooks will be added as the course-aligned lessons are completed.
+Additional notebooks will be added as the remaining course-aligned modules are completed.
 
 ## Usage discipline
 
