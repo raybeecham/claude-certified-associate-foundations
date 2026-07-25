@@ -2,6 +2,8 @@
 
 Official Exam Domain 1 · **14% of the exam blueprint**
 
+> **Status:** Complete — 3 of 3 preparation-course checkpoints passed.
+
 ## Why this domain matters
 
 Prompt quality begins with task definition. Clear instructions, context, evidence boundaries, constraints, uncertainty behavior, and output contracts reduce ambiguity and make results easier to execute, evaluate, and integrate.
@@ -24,6 +26,20 @@ Candidate output
 Evaluation and revision
 ```
 
+## Course completion record
+
+```text
+3 of 3 checkpoints passed
+```
+
+- [x] Strategy checkpoint — all answers correct
+- [x] Repair the Prompt exercise — all stages correct
+- [x] Module 2 quiz — full marks, 5/5
+- [x] Five key takeaways reviewed
+- [x] Preparation-course Module 2 completed
+
+The course completion confirms coverage of the preparation objectives. Optional repository labs, the extended quiz, and transfer exercises remain available for deeper practice.
+
 ## Course-aligned lesson map
 
 Each lesson expands the preparation-course concepts with original explanations, generic examples, prompt notebooks, exercises, knowledge checks, flashcards, and reusable engineering patterns.
@@ -43,7 +59,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
 - [x] 07. Module 2 Quiz
   - [x] [Quiz](lessons/07a-module-2-quiz.md)
   - [x] [Takeaways](lessons/07b-key-takeaways.md)
-- [ ] 08. Module Complete
+- [x] [08. Module Complete](lessons/08-module-complete.md)
 
 ## Learning objectives
 
@@ -66,8 +82,7 @@ By the end of this module, you should be able to:
 - map each repair to the component it corrects;
 - reject decorative instructions that close no material specification gap;
 - route exact counting and arithmetic to deterministic tools;
-- reject plausible quiz distractors that do not address the observed failure;
-- apply the full framework across mixed scenario questions; and
+- reject plausible distractors that do not address the observed failure; and
 - recognize when a failure belongs outside prompt engineering.
 
 ## Four durable capabilities
@@ -75,6 +90,14 @@ By the end of this module, you should be able to:
 ### 1. Component-based prompting
 
 Build prompts from functional components rather than decorative prose.
+
+The course-aligned core is:
+
+```text
+Role + Context + Task + Constraints + Output Format
+```
+
+For higher-precision work, use the expanded task specification:
 
 ```text
 Business objective
@@ -96,12 +119,6 @@ Output contract
 Uncertainty behavior
       ↓
 Success criteria
-```
-
-The course-aligned core remains:
-
-```text
-Role + Context + Task + Constraints + Output Format
 ```
 
 A role is optional. Use it only when a defined professional perspective changes the reasoning, vocabulary, or output.
@@ -201,8 +218,6 @@ Preserve working elements
 
 ## Prompt repair workflow
 
-The repair exercise integrates the complete module.
-
 ```text
 Weak prompt
     ↓
@@ -236,8 +251,6 @@ Coding scheme → Classification rules → Labels → Code-based counts → Rank
 
 ## Integrated quiz reasoning
 
-The Module 2 quiz combines the major decisions:
-
 ```text
 Observe the symptom
       ↓
@@ -262,27 +275,11 @@ Use tools and validation where required
 
 ## Five key takeaways
 
-### 1. Structure drives quality, not cleverness
-
-A professional prompt succeeds because its functional components define the work, not because it sounds sophisticated.
-
-### 2. Context is the component people most often omit
-
-Generic output frequently reflects information that remained in the author's head rather than a model limitation.
-
-### 3. Decompose complex work into ordered, checkable stages
-
-Validate high-stakes shared foundations before allowing downstream or parallel production.
-
-### 4. Iterate on the component that failed
-
-Treat output deficiencies as diagnostic signals, make the smallest effective change, and stop at diminishing returns.
-
-### 5. Match strategy to task type
-
-Analysis needs control, research needs source discipline, drafting needs an audience contract, and brainstorming needs protected latitude.
-
-The five takeaways form one workflow:
+1. **Structure drives quality, not cleverness.** Functional components define the work.
+2. **Context is commonly omitted.** Generic output often reflects information that remained in the author's head.
+3. **Decompose complex work into ordered, checkable stages.** Validate upstream foundations before scaling downstream production.
+4. **Iterate on the component that failed.** Preserve working content and stop at diminishing returns.
+5. **Match strategy to task type.** Analysis needs control; brainstorming needs latitude.
 
 ```text
 Structure the task
@@ -295,6 +292,20 @@ Diagnose and repair failures
       ↓
 Calibrate strategy to the task type
 ```
+
+## Prompting and evaluation boundary
+
+Structured prompting improves consistency, but it does not guarantee factual correctness, reliable calculation, safe authority, policy compliance, or release readiness.
+
+```text
+Prompting specifies intended behavior
+                ↓
+Evaluation measures observed behavior
+                ↓
+Human review determines whether release is acceptable
+```
+
+Continue with [Module 3: Evaluating & Validating Claude's Output](../03-evaluating-validating-output/).
 
 ## Current lesson resources
 
@@ -311,6 +322,7 @@ Calibrate strategy to the task type
 - [Repair the Prompt](lessons/06-repair-the-prompt.md)
 - [Module 2 Quiz](lessons/07a-module-2-quiz.md)
 - [Module 2 Key Takeaways](lessons/07b-key-takeaways.md)
+- [Module 2 Complete](lessons/08-module-complete.md)
 
 ### Prompt notebooks
 
@@ -325,6 +337,7 @@ Calibrate strategy to the task type
 - [Repair-the-Prompt prompts](../../prompts/module-02/06-repair-the-prompt-prompts.md)
 - [Module 2 quiz and remediation prompts](../../prompts/module-02/07a-module-2-quiz-prompts.md)
 - [Module 2 Key Takeaways prompts](../../prompts/module-02/07b-key-takeaways-prompts.md)
+- [Module 2 completion and transition prompts](../../prompts/module-02/08-module-complete-prompts.md)
 
 ### Engineering patterns
 
@@ -341,45 +354,6 @@ Calibrate strategy to the task type
 - [quiz.md](quiz.md): Extended original scenario quiz
 
 ## Exam shortcuts
-
-### Task-strategy shortcut
-
-```text
-Analysis      → criteria and standards
-Research      → scope, sources, currency, citations
-Drafting      → audience, tone, purpose, format
-Brainstorming → goal, guardrails, volume, range
-```
-
-### Diagnosis shortcut
-
-```text
-Vague improvement verb       → Task
-Broad, uncontrolled topic    → Constraints
-No reader, purpose, or use   → Context
-Useful content, wrong shape  → Output format
-Prematurely filtered ideas   → Strategy mismatch or over-constraint
-```
-
-### Repair shortcut
-
-```text
-Generic output
-    ↓
-Compare with the real goal
-    ↓
-Identify missing result dimensions
-    ↓
-Map each dimension to a component
-    ↓
-Add only functional repairs
-    ↓
-Use tools for deterministic work
-    ↓
-Validate the result
-```
-
-### Quiz shortcut
 
 ```text
 Generic output          → add missing context and output requirements
@@ -409,45 +383,33 @@ For iteration questions, diagnose the symptom before revising. Preserve content 
 
 For task-strategy questions, identify the dominant task type, then ask where control is necessary and where latitude improves the result. Research also requires a source and currency decision; brainstorming normally requires divergence before convergence.
 
-For checkpoint questions, identify the dominant weakness rather than every possible weakness. Calibration can require adding a missing component or removing a constraint that damages the task.
-
-For repair exercises, compare the observed output with the author's real goal, identify every material specification gap, map each fix to a functional component, reject decorative fragments, route exact operations to deterministic tools, and assemble the minimum sufficient prompt.
-
-For quiz questions, use the output symptom to locate the dominant defect. Prefer the targeted, auditable intervention over model switching, vague effort language, unchanged retries, post-hoc justification, or unverified computation.
-
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, unclear authority, and unsafe tool permissions require changes elsewhere in the system.
 
 ## Completion criteria
+
+### Preparation-course record
+
+- [x] Strategy checkpoint completed with all answers correct.
+- [x] Repair the Prompt exercise completed with all stages correct.
+- [x] Module 2 quiz completed with full marks, 5/5.
+- [x] Five key takeaways reviewed.
+- [x] Preparation-course Module 2 completed, 3/3 checkpoints passed.
+
+### Transferable mastery checks
 
 - [ ] I can explain why a prompt is a task specification rather than a magic phrase.
 - [ ] I can apply Role, Context, Task, Constraints, and Output Format.
 - [ ] I can identify context the model cannot safely infer.
 - [ ] I can define Input, Process, Output, and Validation for every workflow stage.
 - [ ] I can distinguish sequential dependencies from parallel work.
-- [ ] I can design a shared-foundation fan-out/fan-in workflow.
-- [ ] I can prevent one upstream error from propagating into multiple deliverables.
 - [ ] I can diagnose which prompt component failed before revising.
 - [ ] I can apply the one-change rule and preserve working content.
-- [ ] I can test an iteration for both improvement and regression.
-- [ ] I can distinguish prompt failures from system failures.
 - [ ] I can recognize diminishing returns and stop iterating.
 - [ ] I can distinguish analysis, research, drafting, and brainstorming strategy.
-- [ ] I can identify what to tighten and what to loosen for each task type.
 - [ ] I can separate divergence from convergence during brainstorming.
-- [ ] I can specify source, citation, currency, and verification requirements for research.
-- [ ] I can decompose a hybrid task into task-appropriate stages.
-- [x] I completed the preparation-course strategy checkpoint with all answers correct.
-- [ ] I can distinguish under-specified, calibrated, and over-specified prompts.
-- [ ] I can identify one dominant weakness and one targeted repair.
-- [x] I completed all three stages of the preparation-course repair exercise correctly.
-- [ ] I can map prompt repairs to Role, Context, Task, Constraints, and Output Format.
-- [ ] I can distinguish a functional repair from a polished-sounding distractor.
-- [ ] I can define measurement rules before using code to count qualitative feedback.
-- [x] I completed the preparation-course Module 2 quiz with full marks (5/5).
-- [ ] I can explain why each quiz distractor is weaker than the targeted intervention.
-- [x] I reviewed the five Module 2 key takeaways.
+- [ ] I can route deterministic work to code or another appropriate tool.
 - [ ] I can apply all five takeaways to a new workflow without relying on memorized wording.
-- [ ] I completed the prompt clinic and scored at least 80% on the extended quiz.
+- [ ] I completed the optional prompt clinic and scored at least 80% on the extended quiz.
 
 ## Public-repository scenario policy
 
