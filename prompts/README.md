@@ -39,6 +39,7 @@ These templates are study aids and starting points, not universal production pro
 5. [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
 6. [Iterating to Improve Output prompts](module-02/04-iterating-to-improve-output-prompts.md)
 7. [Strategy by Task Type prompts](module-02/05a-strategy-by-task-type-prompts.md)
+8. [Strategy Checkpoint prompts](module-02/05b-strategy-checkpoint-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -52,6 +53,7 @@ Before using a template:
 - choose a narrow output contract;
 - define missing-data behavior;
 - match the control-latitude balance to the task type;
+- check for both under-specification and over-specification;
 - constrain and validate tools;
 - create representative tests;
 - establish human review where the output is consequential;
