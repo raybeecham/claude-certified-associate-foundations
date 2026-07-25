@@ -38,6 +38,7 @@ These templates are study aids and starting points, not universal production pro
 4. [Task Decomposition prompts](module-02/03a-decomposition-prompts.md)
 5. [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
 6. [Iterating to Improve Output prompts](module-02/04-iterating-to-improve-output-prompts.md)
+7. [Strategy by Task Type prompts](module-02/05a-strategy-by-task-type-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -50,6 +51,7 @@ Before using a template:
 - remove secrets and unauthorized data;
 - choose a narrow output contract;
 - define missing-data behavior;
+- match the control-latitude balance to the task type;
 - constrain and validate tools;
 - create representative tests;
 - establish human review where the output is consequential;
