@@ -4,7 +4,7 @@ Official Exam Domain 1 · **14% of the exam blueprint**
 
 ## Why this domain matters
 
-Prompt quality begins with task definition. Clear instructions, evidence boundaries, constraints, uncertainty behavior, and output contracts reduce ambiguity and make results easier to execute, evaluate, and integrate.
+Prompt quality begins with task definition. Clear instructions, context, evidence boundaries, constraints, uncertainty behavior, and output contracts reduce ambiguity and make results easier to execute, evaluate, and integrate.
 
 > **Module thesis:** Prompts are not magic. Prompts are specifications.
 
@@ -40,9 +40,9 @@ Each lesson expands the preparation-course concepts with original explanations, 
   - [x] [Strategy](lessons/05a-strategy-by-task-type.md)
   - [x] [Checkpoint](lessons/05b-strategy-checkpoint.md)
 - [x] [06. Exercise: Repair the Prompt](lessons/06-repair-the-prompt.md)
-- [ ] 07. Module 2 Quiz
+- [x] 07. Module 2 Quiz
   - [x] [Quiz](lessons/07a-module-2-quiz.md)
-  - [ ] Takeaways
+  - [x] [Takeaways](lessons/07b-key-takeaways.md)
 - [ ] 08. Module Complete
 
 ## Learning objectives
@@ -50,7 +50,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
 By the end of this module, you should be able to:
 
 - create effective prompts using a repeatable component structure;
-- define success criteria before iterating on wording;
+- supply the context and evidence that cannot be safely inferred;
 - convert a vague request into a testable task contract;
 - apply sequential and parallel decomposition;
 - validate shared foundations before downstream work begins;
@@ -67,24 +67,44 @@ By the end of this module, you should be able to:
 - reject decorative instructions that close no material specification gap;
 - route exact counting and arithmetic to deterministic tools;
 - reject plausible quiz distractors that do not address the observed failure;
-- apply the full framework across mixed scenario questions;
-- distinguish instructions from untrusted content; and
+- apply the full framework across mixed scenario questions; and
 - recognize when a failure belongs outside prompt engineering.
 
 ## Four durable capabilities
 
 ### 1. Component-based prompting
 
+Build prompts from functional components rather than decorative prose.
+
 ```text
-Objective
-  + context
-  + evidence
-  + constraints
-  + process
-  + output contract
-  + uncertainty behavior
-  + success criteria
+Business objective
+      ↓
+Role or operating frame
+      ↓
+Context and audience
+      ↓
+Authorized evidence
+      ↓
+Task
+      ↓
+Required process
+      ↓
+Constraints
+      ↓
+Output contract
+      ↓
+Uncertainty behavior
+      ↓
+Success criteria
 ```
+
+The course-aligned core remains:
+
+```text
+Role + Context + Task + Constraints + Output Format
+```
+
+A role is optional. Use it only when a defined professional perspective changes the reasoning, vocabulary, or output.
 
 ### 2. Task decomposition
 
@@ -94,7 +114,23 @@ Break overloaded work into inspectable stages.
 Input → Process → Output → Validation
 ```
 
-Use sequential stages when outputs depend on prior results. Use a shared-foundation parallel pattern when several independent outputs consume the same approved evidence.
+Use sequential stages when later work depends on earlier results.
+
+```text
+Requirements
+      ↓
+Derive criteria
+      ↓
+Validate criteria
+      ↓
+Score options
+      ↓
+Analyze trade-offs
+      ↓
+Recommend
+```
+
+Use a shared-foundation parallel pattern when several independent deliverables consume the same approved evidence.
 
 ```text
 Shared source
@@ -139,7 +175,7 @@ Hybrid tasks should usually be decomposed:
 Research → Validate → Analyze → Brainstorm → Evaluate → Draft → Review
 ```
 
-### Prompt calibration
+## Prompt calibration
 
 Prompt quality can fail in both directions.
 
@@ -163,7 +199,7 @@ Make one targeted repair
 Preserve working elements
 ```
 
-### Prompt repair
+## Prompt repair workflow
 
 The repair exercise integrates the complete module.
 
@@ -185,22 +221,22 @@ Correct model and tool execution
 Validation
 ```
 
-A strong repair does four things:
+A strong repair:
 
 1. identifies what the output failed to provide;
 2. maps each missing result dimension to its responsible component;
 3. removes decorative or misplaced instructions; and
 4. specifies how the repaired output will be validated.
 
-For quantitative feedback analysis, the task specification must also define the measurement design before deterministic counting begins:
+For quantitative feedback analysis, define the measurement design before deterministic counting begins:
 
 ```text
 Coding scheme → Classification rules → Labels → Code-based counts → Ranked findings
 ```
 
-### Integrated quiz reasoning
+## Integrated quiz reasoning
 
-The Module 2 quiz combines all of the major decisions:
+The Module 2 quiz combines the major decisions:
 
 ```text
 Observe the symptom
@@ -216,8 +252,6 @@ Reject unrelated complexity
 Use tools and validation where required
 ```
 
-The five assessed capabilities are:
-
 | Capability | Core decision |
 |---|---|
 | Component specification | What information or output requirement is missing? |
@@ -225,6 +259,42 @@ The five assessed capabilities are:
 | Diagnostic iteration | What already works, and which component alone should change? |
 | Task-strategy fit | Where should control be tightened or latitude preserved? |
 | Verified computation | Which operations require code or deterministic validation? |
+
+## Five key takeaways
+
+### 1. Structure drives quality, not cleverness
+
+A professional prompt succeeds because its functional components define the work, not because it sounds sophisticated.
+
+### 2. Context is the component people most often omit
+
+Generic output frequently reflects information that remained in the author's head rather than a model limitation.
+
+### 3. Decompose complex work into ordered, checkable stages
+
+Validate high-stakes shared foundations before allowing downstream or parallel production.
+
+### 4. Iterate on the component that failed
+
+Treat output deficiencies as diagnostic signals, make the smallest effective change, and stop at diminishing returns.
+
+### 5. Match strategy to task type
+
+Analysis needs control, research needs source discipline, drafting needs an audience contract, and brainstorming needs protected latitude.
+
+The five takeaways form one workflow:
+
+```text
+Structure the task
+      ↓
+Supply missing context
+      ↓
+Decompose dependent work
+      ↓
+Diagnose and repair failures
+      ↓
+Calibrate strategy to the task type
+```
 
 ## Current lesson resources
 
@@ -240,6 +310,7 @@ The five assessed capabilities are:
 - [Strategy Checkpoint](lessons/05b-strategy-checkpoint.md)
 - [Repair the Prompt](lessons/06-repair-the-prompt.md)
 - [Module 2 Quiz](lessons/07a-module-2-quiz.md)
+- [Module 2 Key Takeaways](lessons/07b-key-takeaways.md)
 
 ### Prompt notebooks
 
@@ -253,6 +324,7 @@ The five assessed capabilities are:
 - [Strategy Checkpoint prompts](../../prompts/module-02/05b-strategy-checkpoint-prompts.md)
 - [Repair-the-Prompt prompts](../../prompts/module-02/06-repair-the-prompt-prompts.md)
 - [Module 2 quiz and remediation prompts](../../prompts/module-02/07a-module-2-quiz-prompts.md)
+- [Module 2 Key Takeaways prompts](../../prompts/module-02/07b-key-takeaways-prompts.md)
 
 ### Engineering patterns
 
@@ -268,7 +340,9 @@ The five assessed capabilities are:
 - [flashcards.md](flashcards.md): Baseline recall prompts
 - [quiz.md](quiz.md): Extended original scenario quiz
 
-## Task-strategy exam shortcut
+## Exam shortcuts
+
+### Task-strategy shortcut
 
 ```text
 Analysis      → criteria and standards
@@ -277,9 +351,7 @@ Drafting      → audience, tone, purpose, format
 Brainstorming → goal, guardrails, volume, range
 ```
 
-Do not choose the prompt with the most constraints automatically. Choose the prompt that constrains validity while preserving useful variation.
-
-## Checkpoint diagnosis shortcut
+### Diagnosis shortcut
 
 ```text
 Vague improvement verb       → Task
@@ -289,14 +361,7 @@ Useful content, wrong shape  → Output format
 Prematurely filtered ideas   → Strategy mismatch or over-constraint
 ```
 
-A strong checkpoint answer names:
-
-1. the dominant weakness;
-2. the likely output symptom;
-3. one targeted repair; and
-4. what should remain unchanged.
-
-## Repair-the-prompt shortcut
+### Repair shortcut
 
 ```text
 Generic output
@@ -314,16 +379,7 @@ Use tools for deterministic work
 Validate the result
 ```
 
-For evidence-heavy quantitative tasks:
-
-```text
-Quote       → illustrates the finding
-Count       → establishes frequency
-Code        → calculates deterministically
-Human       → approves consequential priorities
-```
-
-## Module 2 quiz shortcut
+### Quiz shortcut
 
 ```text
 Generic output          → add missing context and output requirements
@@ -333,7 +389,7 @@ Need creative range     → preserve latitude and filter later
 Suspect calculation     → use code and deterministic validation
 ```
 
-Reject these common distractors unless they directly fit the diagnosed problem:
+Reject common distractors unless they directly fit the diagnosed problem:
 
 - switch to a stronger model;
 - ask the model to try harder;
@@ -359,12 +415,13 @@ For repair exercises, compare the observed output with the author's real goal, i
 
 For quiz questions, use the output symptom to locate the dominant defect. Prefer the targeted, auditable intervention over model switching, vague effort language, unchanged retries, post-hoc justification, or unverified computation.
 
-Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
+Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, unclear authority, and unsafe tool permissions require changes elsewhere in the system.
 
 ## Completion criteria
 
 - [ ] I can explain why a prompt is a task specification rather than a magic phrase.
 - [ ] I can apply Role, Context, Task, Constraints, and Output Format.
+- [ ] I can identify context the model cannot safely infer.
 - [ ] I can define Input, Process, Output, and Validation for every workflow stage.
 - [ ] I can distinguish sequential dependencies from parallel work.
 - [ ] I can design a shared-foundation fan-out/fan-in workflow.
@@ -388,6 +445,8 @@ Also recognize when prompt revision is not the right intervention. Missing evide
 - [ ] I can define measurement rules before using code to count qualitative feedback.
 - [x] I completed the preparation-course Module 2 quiz with full marks (5/5).
 - [ ] I can explain why each quiz distractor is weaker than the targeted intervention.
+- [x] I reviewed the five Module 2 key takeaways.
+- [ ] I can apply all five takeaways to a new workflow without relying on memorized wording.
 - [ ] I completed the prompt clinic and scored at least 80% on the extended quiz.
 
 ## Public-repository scenario policy
@@ -400,5 +459,7 @@ Product behavior and prompting recommendations change. Verify current guidance b
 
 - [Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
 - [Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
+- [Create and edit files with Claude](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude)
+- [AI Fluency: Description](https://www.anthropic.com/ai-fluency/description)
 - [Enable and use web search](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)
 - [Claude features and capabilities](https://support.claude.com/en/collections/18031719-features-and-capabilities)
