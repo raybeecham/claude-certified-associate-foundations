@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 2 · **21% of the exam blueprint**
 
-> **Status:** In progress — Module 3 is the next active module.
+> **Status:** In progress — Module 3 is the active module.
 
 ## Why this domain matters
 
@@ -28,7 +28,7 @@ Edit, release, escalate, or reject
 
 ## Course-aligned lesson map
 
-- [ ] 01. Module Introduction
+- [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [ ] 02. Discernment: Accuracy & Completeness
 - [ ] 03. Hallucinations, Inconsistencies & Bias
 - [ ] 04. Fact-Checking & Grounding
@@ -60,6 +60,31 @@ Choose a usable output format
               ↓
 Triage: release, edit, verify, escalate, or reject
 ```
+
+## Introduction foundation
+
+Professional AI use contains an accountability asymmetry:
+
+```text
+Immediate, visible benefit
+          ↓
+Faster drafting and synthesis
+
+Delayed, less visible risk
+          ↓
+Rework, poor decisions, credibility loss, or harm
+```
+
+A polished output can contain one plausible unsupported claim among many correct statements. The reviewer must therefore evaluate evidence and consequence rather than relying on tone, confidence, or surface coherence.
+
+The introduction anchors the module in two AI Fluency competencies:
+
+```text
+Discernment → How should this output be evaluated?
+Diligence   → What responsibility must be satisfied before it is used?
+```
+
+It also introduces **verification debt**: unresolved validation work that accumulates when AI-assisted generation exceeds the workflow's review capacity.
 
 ## Four durable capabilities
 
@@ -103,7 +128,7 @@ Material consequence → stronger validation
 High consequence     → qualified human review is non-negotiable
 ```
 
-Human review is not a ceremonial final glance. It must be performed by someone with the authority, expertise, context, and time needed to detect and correct consequential errors.
+Human review is not a ceremonial final glance. It must be performed by someone with the authority, expertise, context, evidence access, and time needed to detect and correct consequential errors.
 
 ### 4. Adaptation and triage
 
@@ -138,12 +163,22 @@ By the end of this module, you should be able to:
 
 ## Current module resources
 
+### Lessons
+
+- [Module Introduction](lessons/01-module-introduction.md)
+
+### Prompt notebooks
+
+- [Module Introduction prompts](../../prompts/module-03/01-module-introduction-prompts.md)
+
+### Existing module files
+
 - [notes.md](notes.md): Exam-focused evaluation concepts and decision rules
 - [lab.md](lab.md): Applied evaluation exercise with acceptance criteria
 - [flashcards.md](flashcards.md): Baseline active-recall cards
 - [quiz.md](quiz.md): Extended original scenario quiz
 
-Course-aligned lessons and prompt notebooks will be added as each section is completed.
+Additional course-aligned lessons and notebooks will be added as each section is completed.
 
 ## Module 2 to Module 3 bridge
 
@@ -184,6 +219,10 @@ The strongest answer usually establishes criteria and tests before changing the 
 
 ## Completion criteria
 
+- [x] I completed the Module 3 introduction.
+- [ ] I can explain the accountability asymmetry in professional AI use.
+- [ ] I can distinguish Discernment from Diligence.
+- [ ] I can identify verification debt in a workflow.
 - [ ] I can assess accuracy and completeness against a defined purpose.
 - [ ] I can identify hallucinations, contradictions, unsupported claims, and biased framing.
 - [ ] I can verify claim-to-source support, authority, scope, and currency.
@@ -200,9 +239,16 @@ The strongest answer usually establishes criteria and tests before changing the 
 
 Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
+## Educational-use notice
+
+This repository is an unofficial educational resource and does not constitute legal, financial, medical, compliance, or other professional advice. Product behavior, interfaces, policies, and documentation can change. Current authoritative terms, policies, documentation, and organizational requirements control when conflicts exist.
+
 ## Official reading
 
 Product behavior and evaluation recommendations can change. Verify current official guidance before relying on implementation-specific details.
 
+- [AI Fluency Framework overview](https://www.anthropic.com/ai-fluency/overview)
+- [AI Fluency: Discernment](https://www.anthropic.com/ai-fluency/discernment)
+- [AI Fluency: Diligence](https://www.anthropic.com/ai-fluency/due-dilligence)
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
 - [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
