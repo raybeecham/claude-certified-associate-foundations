@@ -37,7 +37,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
   - [x] [Parallel Case](lessons/03b-parallel-case.md)
 - [x] [04. Iterating to Improve Output](lessons/04-iterating-to-improve-output.md)
 - [ ] 05. Adapting Strategy by Task Type
-  - [ ] Strategy
+  - [x] [Strategy](lessons/05a-strategy-by-task-type.md)
   - [ ] Checkpoint
 - [ ] 06. Exercise: Repair the Prompt
 - [ ] 07. Module 2 Quiz
@@ -57,7 +57,8 @@ By the end of this module, you should be able to:
 - iterate diagnostically by repairing the component that failed;
 - preserve working content and test for regressions;
 - recognize when iteration has converged;
-- adapt prompting strategy to analysis, research, drafting, brainstorming, extraction, classification, and planning;
+- adapt the control-latitude balance to analysis, research, drafting, and brainstorming;
+- decompose hybrid tasks that combine several task modes;
 - distinguish instructions from untrusted content; and
 - recognize when a failure belongs outside prompt engineering.
 
@@ -110,7 +111,24 @@ Change one significant variable at a time when practical, preserve validated con
 
 ### 4. Task-strategy adaptation
 
-Different task types require different evidence, structure, constraints, and evaluation methods.
+The component stack remains stable, but the control-latitude balance changes with the task.
+
+| Task type | Tighten | Loosen |
+|---|---|---|
+| Analysis | Criteria, standards, evidence, scope, ambiguity handling | Phrasing |
+| Research | Question, sources, time boundary, citations, verification | Search path and synthesis approach |
+| Drafting | Audience, purpose, facts, tone, length, format | Word choice and sentence construction |
+| Brainstorming | Goal, hard guardrails, volume, diversity dimensions | Direction, novelty, and combinations |
+
+Use this rule:
+
+> Tighten what determines validity. Loosen what benefits from variation.
+
+Hybrid tasks should usually be decomposed:
+
+```text
+Research → Validate → Analyze → Brainstorm → Evaluate → Draft → Review
+```
 
 ## Current lesson resources
 
@@ -122,6 +140,7 @@ Different task types require different evidence, structure, constraints, and eva
 - [Task Decomposition](lessons/03a-decomposition.md)
 - [Parallel Decomposition Case](lessons/03b-parallel-case.md)
 - [Iterating to Improve Output](lessons/04-iterating-to-improve-output.md)
+- [Strategy by Task Type](lessons/05a-strategy-by-task-type.md)
 
 ### Prompt notebooks
 
@@ -131,11 +150,13 @@ Different task types require different evidence, structure, constraints, and eva
 - [Task Decomposition prompts](../../prompts/module-02/03a-decomposition-prompts.md)
 - [Parallel Case prompts](../../prompts/module-02/03b-parallel-case-prompts.md)
 - [Iteration prompts](../../prompts/module-02/04-iterating-to-improve-output-prompts.md)
+- [Task Strategy prompts](../../prompts/module-02/05a-strategy-by-task-type-prompts.md)
 
 ### Engineering patterns
 
 - [Task Specification Before Prompting](../../patterns/task-specification-before-prompting.md)
 - [Failure Localization Pattern](../../patterns/failure-localization-pattern.md)
+- [Task Strategy Fit Pattern](../../patterns/task-strategy-fit-pattern.md)
 
 ### Existing module files
 
@@ -144,6 +165,17 @@ Different task types require different evidence, structure, constraints, and eva
 - [flashcards.md](flashcards.md): Baseline recall prompts
 - [quiz.md](quiz.md): Original scenario questions
 
+## Task-strategy exam shortcut
+
+```text
+Analysis      → criteria and standards
+Research      → scope, sources, currency, citations
+Drafting      → audience, tone, purpose, format
+Brainstorming → goal, guardrails, volume, range
+```
+
+Do not choose the prompt with the most constraints automatically. Choose the prompt that constrains validity while preserving useful variation.
+
 ## Exam lens
 
 Look for the smallest prompt or task-design improvement that directly addresses the observed ambiguity. “Add more detail” is rarely sufficient.
@@ -151,6 +183,8 @@ Look for the smallest prompt or task-design improvement that directly addresses 
 Choose sequential decomposition when later work depends on an intermediate result. Choose parallel decomposition only after the shared evidence or interpretation is validated and the branches no longer depend on one another.
 
 For iteration questions, diagnose the symptom before revising. Preserve content that already passes, change the smallest responsible component, compare the new output against explicit criteria, and stop when further prompting offers only marginal value.
+
+For task-strategy questions, identify the dominant task type, then ask where control is necessary and where latitude improves the result. Research also requires a source and currency decision; brainstorming normally requires divergence before convergence.
 
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
 
@@ -167,7 +201,11 @@ Also recognize when prompt revision is not the right intervention. Missing evide
 - [ ] I can test an iteration for both improvement and regression.
 - [ ] I can distinguish prompt failures from system failures.
 - [ ] I can recognize diminishing returns and stop iterating.
-- [ ] I can adapt strategy to the task type.
+- [ ] I can distinguish analysis, research, drafting, and brainstorming strategy.
+- [ ] I can identify what to tighten and what to loosen for each task type.
+- [ ] I can separate divergence from convergence during brainstorming.
+- [ ] I can specify source, citation, currency, and verification requirements for research.
+- [ ] I can decompose a hybrid task into task-appropriate stages.
 - [ ] I completed the prompt clinic and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
@@ -180,3 +218,5 @@ Product behavior and prompting recommendations change. Verify current guidance b
 
 - [Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
 - [Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
+- [Enable and use web search](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)
+- [Claude features and capabilities](https://support.claude.com/en/collections/18031719-features-and-capabilities)
