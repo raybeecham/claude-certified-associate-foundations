@@ -42,6 +42,7 @@ These templates are study aids and starting points, not universal production pro
 8. [Strategy Checkpoint prompts](module-02/05b-strategy-checkpoint-prompts.md)
 9. [Repair-the-Prompt prompts](module-02/06-repair-the-prompt-prompts.md)
 10. [Module 2 quiz and remediation prompts](module-02/07a-module-2-quiz-prompts.md)
+11. [Module 2 Key Takeaways prompts](module-02/07b-key-takeaways-prompts.md)
 
 Additional notebooks will be added as the course-aligned lessons are completed.
 
@@ -59,6 +60,7 @@ Before using a template:
 - map each proposed repair to a material output requirement;
 - route exact arithmetic and counting to deterministic tools;
 - diagnose why plausible alternatives are weaker than the targeted intervention;
+- use the five Module 2 takeaways as a final design review;
 - constrain and validate tools;
 - create representative tests;
 - establish human review where the output is consequential;
