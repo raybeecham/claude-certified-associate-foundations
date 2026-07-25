@@ -39,7 +39,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
 - [x] 05. Adapting Strategy by Task Type
   - [x] [Strategy](lessons/05a-strategy-by-task-type.md)
   - [x] [Checkpoint](lessons/05b-strategy-checkpoint.md)
-- [ ] 06. Exercise: Repair the Prompt
+- [x] [06. Exercise: Repair the Prompt](lessons/06-repair-the-prompt.md)
 - [ ] 07. Module 2 Quiz
   - [ ] Quiz
   - [ ] Takeaways
@@ -62,6 +62,10 @@ By the end of this module, you should be able to:
 - identify the dominant prompt weakness rather than listing every possible flaw;
 - make one targeted repair while preserving working elements;
 - distinguish under-specification from over-specification;
+- recover the real decision need from a weak prompt and disappointing output;
+- map each repair to the component it corrects;
+- reject decorative instructions that close no material specification gap;
+- route exact counting and arithmetic to deterministic tools;
 - distinguish instructions from untrusted content; and
 - recognize when a failure belongs outside prompt engineering.
 
@@ -157,6 +161,41 @@ Make one targeted repair
 Preserve working elements
 ```
 
+### Prompt repair
+
+The repair exercise integrates the complete module.
+
+```text
+Weak prompt
+    ↓
+Disappointing output
+    ↓
+Actual decision need
+    ↓
+Specification gaps
+    ↓
+Component-mapped repairs
+    ↓
+Minimum sufficient prompt
+    ↓
+Correct model and tool execution
+    ↓
+Validation
+```
+
+A strong repair does four things:
+
+1. identifies what the output failed to provide;
+2. maps each missing result dimension to its responsible component;
+3. removes decorative or misplaced instructions; and
+4. specifies how the repaired output will be validated.
+
+For quantitative feedback analysis, the task specification must also define the measurement design before deterministic counting begins:
+
+```text
+Coding scheme → Classification rules → Labels → Code-based counts → Ranked findings
+```
+
 ## Current lesson resources
 
 ### Lessons
@@ -169,6 +208,7 @@ Preserve working elements
 - [Iterating to Improve Output](lessons/04-iterating-to-improve-output.md)
 - [Strategy by Task Type](lessons/05a-strategy-by-task-type.md)
 - [Strategy Checkpoint](lessons/05b-strategy-checkpoint.md)
+- [Repair the Prompt](lessons/06-repair-the-prompt.md)
 
 ### Prompt notebooks
 
@@ -180,6 +220,7 @@ Preserve working elements
 - [Iteration prompts](../../prompts/module-02/04-iterating-to-improve-output-prompts.md)
 - [Task Strategy prompts](../../prompts/module-02/05a-strategy-by-task-type-prompts.md)
 - [Strategy Checkpoint prompts](../../prompts/module-02/05b-strategy-checkpoint-prompts.md)
+- [Repair-the-Prompt prompts](../../prompts/module-02/06-repair-the-prompt-prompts.md)
 
 ### Engineering patterns
 
@@ -223,6 +264,33 @@ A strong checkpoint answer names:
 3. one targeted repair; and
 4. what should remain unchanged.
 
+## Repair-the-prompt shortcut
+
+```text
+Generic output
+    ↓
+Compare with the real goal
+    ↓
+Identify missing result dimensions
+    ↓
+Map each dimension to a component
+    ↓
+Add only functional repairs
+    ↓
+Use tools for deterministic work
+    ↓
+Validate the result
+```
+
+For evidence-heavy quantitative tasks:
+
+```text
+Quote       → illustrates the finding
+Count       → establishes frequency
+Code        → calculates deterministically
+Human       → approves consequential priorities
+```
+
 ## Exam lens
 
 Look for the smallest prompt or task-design improvement that directly addresses the observed ambiguity. “Add more detail” is rarely sufficient.
@@ -234,6 +302,8 @@ For iteration questions, diagnose the symptom before revising. Preserve content 
 For task-strategy questions, identify the dominant task type, then ask where control is necessary and where latitude improves the result. Research also requires a source and currency decision; brainstorming normally requires divergence before convergence.
 
 For checkpoint questions, identify the dominant weakness rather than every possible weakness. Calibration can require adding a missing component or removing a constraint that damages the task.
+
+For repair exercises, compare the observed output with the author's real goal, identify every material specification gap, map each fix to a functional component, reject decorative fragments, route exact operations to deterministic tools, and assemble the minimum sufficient prompt.
 
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
 
@@ -258,6 +328,10 @@ Also recognize when prompt revision is not the right intervention. Missing evide
 - [x] I completed the preparation-course strategy checkpoint with all answers correct.
 - [ ] I can distinguish under-specified, calibrated, and over-specified prompts.
 - [ ] I can identify one dominant weakness and one targeted repair.
+- [x] I completed all three stages of the preparation-course repair exercise correctly.
+- [ ] I can map prompt repairs to Role, Context, Task, Constraints, and Output Format.
+- [ ] I can distinguish a functional repair from a polished-sounding distractor.
+- [ ] I can define measurement rules before using code to count qualitative feedback.
 - [ ] I completed the prompt clinic and scored at least 80% on the quiz.
 
 ## Public-repository scenario policy
