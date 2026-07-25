@@ -41,7 +41,7 @@ Each lesson expands the preparation-course concepts with original explanations, 
   - [x] [Checkpoint](lessons/05b-strategy-checkpoint.md)
 - [x] [06. Exercise: Repair the Prompt](lessons/06-repair-the-prompt.md)
 - [ ] 07. Module 2 Quiz
-  - [ ] Quiz
+  - [x] [Quiz](lessons/07a-module-2-quiz.md)
   - [ ] Takeaways
 - [ ] 08. Module Complete
 
@@ -66,6 +66,8 @@ By the end of this module, you should be able to:
 - map each repair to the component it corrects;
 - reject decorative instructions that close no material specification gap;
 - route exact counting and arithmetic to deterministic tools;
+- reject plausible quiz distractors that do not address the observed failure;
+- apply the full framework across mixed scenario questions;
 - distinguish instructions from untrusted content; and
 - recognize when a failure belongs outside prompt engineering.
 
@@ -196,6 +198,34 @@ For quantitative feedback analysis, the task specification must also define the 
 Coding scheme → Classification rules → Labels → Code-based counts → Ranked findings
 ```
 
+### Integrated quiz reasoning
+
+The Module 2 quiz combines all of the major decisions:
+
+```text
+Observe the symptom
+      ↓
+Identify the task type
+      ↓
+Locate the dominant defect
+      ↓
+Choose the smallest effective intervention
+      ↓
+Reject unrelated complexity
+      ↓
+Use tools and validation where required
+```
+
+The five assessed capabilities are:
+
+| Capability | Core decision |
+|---|---|
+| Component specification | What information or output requirement is missing? |
+| Decomposition | Which dependent stages require checkable intermediate results? |
+| Diagnostic iteration | What already works, and which component alone should change? |
+| Task-strategy fit | Where should control be tightened or latitude preserved? |
+| Verified computation | Which operations require code or deterministic validation? |
+
 ## Current lesson resources
 
 ### Lessons
@@ -209,6 +239,7 @@ Coding scheme → Classification rules → Labels → Code-based counts → Rank
 - [Strategy by Task Type](lessons/05a-strategy-by-task-type.md)
 - [Strategy Checkpoint](lessons/05b-strategy-checkpoint.md)
 - [Repair the Prompt](lessons/06-repair-the-prompt.md)
+- [Module 2 Quiz](lessons/07a-module-2-quiz.md)
 
 ### Prompt notebooks
 
@@ -221,6 +252,7 @@ Coding scheme → Classification rules → Labels → Code-based counts → Rank
 - [Task Strategy prompts](../../prompts/module-02/05a-strategy-by-task-type-prompts.md)
 - [Strategy Checkpoint prompts](../../prompts/module-02/05b-strategy-checkpoint-prompts.md)
 - [Repair-the-Prompt prompts](../../prompts/module-02/06-repair-the-prompt-prompts.md)
+- [Module 2 quiz and remediation prompts](../../prompts/module-02/07a-module-2-quiz-prompts.md)
 
 ### Engineering patterns
 
@@ -234,7 +266,7 @@ Coding scheme → Classification rules → Labels → Code-based counts → Rank
 - [notes.md](notes.md): Domain study notes
 - [lab.md](lab.md): Prompt clinic and applied exercise
 - [flashcards.md](flashcards.md): Baseline recall prompts
-- [quiz.md](quiz.md): Original scenario questions
+- [quiz.md](quiz.md): Extended original scenario quiz
 
 ## Task-strategy exam shortcut
 
@@ -291,6 +323,26 @@ Code        → calculates deterministically
 Human       → approves consequential priorities
 ```
 
+## Module 2 quiz shortcut
+
+```text
+Generic output          → add missing context and output requirements
+Complex evaluation      → derive, validate, score, compare, recommend
+Mostly correct draft    → revise only the failed constraints
+Need creative range     → preserve latitude and filter later
+Suspect calculation     → use code and deterministic validation
+```
+
+Reject these common distractors unless they directly fit the diagnosed problem:
+
+- switch to a stronger model;
+- ask the model to try harder;
+- increase the response length;
+- repeat the unchanged prompt;
+- rewrite every component;
+- recommend before establishing criteria; or
+- trust arithmetic because the surrounding prose is fluent.
+
 ## Exam lens
 
 Look for the smallest prompt or task-design improvement that directly addresses the observed ambiguity. “Add more detail” is rarely sufficient.
@@ -304,6 +356,8 @@ For task-strategy questions, identify the dominant task type, then ask where con
 For checkpoint questions, identify the dominant weakness rather than every possible weakness. Calibration can require adding a missing component or removing a constraint that damages the task.
 
 For repair exercises, compare the observed output with the author's real goal, identify every material specification gap, map each fix to a functional component, reject decorative fragments, route exact operations to deterministic tools, and assemble the minimum sufficient prompt.
+
+For quiz questions, use the output symptom to locate the dominant defect. Prefer the targeted, auditable intervention over model switching, vague effort language, unchanged retries, post-hoc justification, or unverified computation.
 
 Also recognize when prompt revision is not the right intervention. Missing evidence, unsuitable models, degraded context, unreliable calculations, absent validation, and unclear authority require changes elsewhere in the system.
 
@@ -332,7 +386,9 @@ Also recognize when prompt revision is not the right intervention. Missing evide
 - [ ] I can map prompt repairs to Role, Context, Task, Constraints, and Output Format.
 - [ ] I can distinguish a functional repair from a polished-sounding distractor.
 - [ ] I can define measurement rules before using code to count qualitative feedback.
-- [ ] I completed the prompt clinic and scored at least 80% on the quiz.
+- [x] I completed the preparation-course Module 2 quiz with full marks (5/5).
+- [ ] I can explain why each quiz distractor is weaker than the targeted intervention.
+- [ ] I completed the prompt clinic and scored at least 80% on the extended quiz.
 
 ## Public-repository scenario policy
 
