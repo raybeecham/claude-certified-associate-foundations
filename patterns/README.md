@@ -23,12 +23,13 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Failure Localization Pattern](failure-localization-pattern.md): Observe, classify, localize, modify, validate, and decide without rewriting blindly
 - [Task Strategy Fit Pattern](task-strategy-fit-pattern.md): Match control and creative latitude to analysis, research, drafting, brainstorming, and hybrid tasks
 - [Prompt Calibration Pattern](prompt-calibration-pattern.md): Distinguish under-specification from over-specification and target the minimum sufficient task contract
+- [Three-Reference Discernment Pattern](three-reference-discernment-pattern.md): Evaluate requirements, source support, professional standards, accuracy, completeness, stakes, and release disposition
 
 ## Planned pattern groups
 
 - entry-point patterns;
 - additional prompting patterns;
-- evaluation patterns;
+- additional evaluation patterns;
 - integration patterns;
 - governance patterns; and
 - troubleshooting patterns.
