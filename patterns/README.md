@@ -24,6 +24,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Task Strategy Fit Pattern](task-strategy-fit-pattern.md): Match control and creative latitude to analysis, research, drafting, brainstorming, and hybrid tasks
 - [Prompt Calibration Pattern](prompt-calibration-pattern.md): Distinguish under-specification from over-specification and target the minimum sufficient task contract
 - [Three-Reference Discernment Pattern](three-reference-discernment-pattern.md): Evaluate requirements, source support, professional standards, accuracy, completeness, stakes, and release disposition
+- [Failure Signature Review Pattern](failure-signature-review-pattern.md): Detect hallucinations, contradictions, bias, silent omissions, and unverified capability claims through targeted evidence and system checks
 
 ## Planned pattern groups
 
