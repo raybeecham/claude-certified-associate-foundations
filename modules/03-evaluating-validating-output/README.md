@@ -6,7 +6,7 @@ Associate Persona · Official Exam Domain 2 · **21% of the exam blueprint**
 
 ## Why this domain matters
 
-A plausible output is not evidence of a reliable result. Evaluation determines whether an answer is accurate, complete, grounded, internally consistent, appropriate for its audience, and safe to use.
+A plausible output is not evidence of a reliable result. Evaluation determines whether an answer is accurate, complete, grounded, internally consistent, appropriately framed, suitable for its audience, and safe to use.
 
 Module 2 focused on specifying intended behavior. Module 3 focuses on inspecting observed behavior.
 
@@ -24,13 +24,13 @@ Human-review decision
 Edit, release, escalate, or reject
 ```
 
-> **Module thesis:** Fluency is not proof. An output must be evaluated against evidence, requirements, audience needs, and the consequences of error.
+> **Module thesis:** Fluency is not proof. An output must be evaluated against evidence, requirements, internal consistency, audience needs, and the consequences of error.
 
 ## Course-aligned lesson map
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Discernment: Accuracy & Completeness](lessons/02-discernment-accuracy-completeness.md)
-- [ ] 03. Hallucinations, Inconsistencies & Bias
+- [x] [03. Hallucinations, Inconsistencies & Bias](lessons/03-hallucinations-inconsistencies-bias.md)
 - [ ] 04. Fact-Checking & Grounding
 - [ ] 05. Diligence: When Review Is Non-Negotiable
 - [ ] 06. Editing & Adapting for Audience
@@ -145,36 +145,102 @@ Needs human override
 
 The verdict must be scoped to the intended audience and use. A discussion starter may be ready for an internal meeting but not ready for a client, regulator, or final operational decision.
 
+## Failure-pattern foundation
+
+Plausible language does not reveal whether a claim is supported, a document is internally consistent, the framing is fair, the evidence set is complete, or an external action occurred.
+
+### Beginner version
+
+Ask:
+
+```text
+Did Claude add anything the evidence does not support?
+                         ↓
+Does one part disagree with another?
+                         ↓
+Does the framing unfairly favor one conclusion?
+                         ↓
+Did it skip an important source, option, risk, or condition?
+                         ↓
+Did it claim an action without a verified tool result?
+```
+
+These questions map to:
+
+| Failure family | Meaning |
+|---|---|
+| Hallucination | A claim is presented with more support than the evidence justifies |
+| Inconsistency | Parts of the output, or the output and evidence, cannot all be correct |
+| Bias | Selection, framing, emphasis, or scrutiny is uneven relative to criteria and evidence |
+| Completeness failure | A material source, requirement, option, condition, or risk is absent |
+| Capability hallucination | An external action is claimed without verified execution and external-state confirmation |
+
+### Road-trip analogy
+
+A generated route can fail even when it looks polished:
+
+- a nonexistent road is a hallucination;
+- conflicting directions are an inconsistency;
+- favoring the scenic route despite a fastest-route objective is bias;
+- omitting a road closure is a completeness failure; and
+- claiming the hotel was booked without a booking capability or receipt is a capability hallucination.
+
+### High-value signatures
+
+```text
+Precise but uncited       → verify provenance
+Confident but conditional → calibrate uncertainty
+Repeated fact disagrees   → consistency check
+Preferred answer echoed   → bias challenge
+Important source absent   → coverage check
+Action claimed complete   → tool and external-state verification
+```
+
+### Durable action boundary
+
+Claude capabilities vary by product surface, connected tools, permissions, and approvals. The stable rule is:
+
+> An external action is verified only when the required capability was available, the action was invoked successfully, and the resulting external state or artifact confirms completion.
+
+A conversational statement is not an action receipt.
+
 ## Four durable capabilities
 
 ### 1. Discernment
 
-Evaluate what the output says and what it leaves out.
+Evaluate what the output says, what it contradicts, and what it leaves out.
 
 Key questions:
 
-- Is each material claim accurate?
+- Is each material claim accurate and supported?
 - Is the response complete enough for its intended purpose?
 - Are assumptions, inferences, and facts distinguished?
 - Does the answer contradict itself or the supplied evidence?
-- Could framing, omissions, or generalizations introduce bias?
+- Could framing, omissions, or unequal scrutiny introduce bias?
+- Did the output claim an external action without confirmation?
 
-The lesson uses this repeatable protocol:
+The combined discernment protocol is:
 
 ```text
 Define purpose and stakes
           ↓
-Check requirements
+Check requirements and coverage
           ↓
-Check source support
+Inventory material claims and actions
           ↓
-Check professional standards
+Check source support and professional standards
           ↓
-Review accuracy
+Review accuracy and completeness
           ↓
-Review completeness
+Scan hallucination signatures
           ↓
-Assign and document a verdict
+Compare repeated facts
+          ↓
+Challenge favored conclusions
+          ↓
+Confirm external actions
+          ↓
+Assign and document a disposition
 ```
 
 ### 2. Grounding
@@ -193,11 +259,11 @@ Scope and date
 Verified, qualified, unsupported, or conflicting
 ```
 
-Grounding includes checking whether a cited source actually supports the claim, whether the source is authoritative for the question, and whether its scope and currency are appropriate.
+Grounding includes checking whether a cited source exists, whether it supports the full claim, whether it is authoritative for the question, and whether scope, conditions, and currency are appropriate.
 
 ### 3. Diligence
 
-Match the depth of review to the consequences of error.
+Match review depth to the consequences of error.
 
 ```text
 Low consequence      → proportionate review
@@ -221,7 +287,7 @@ Escalate
 Reject
 ```
 
-The three-way lesson verdict maps into the wider module triage model:
+The earlier three-way lesson verdict maps into the wider triage model:
 
 | Lesson verdict | Wider module action |
 |---|---|
@@ -237,10 +303,15 @@ By the end of this module, you should be able to:
 - assess accuracy and completeness against an explicit purpose;
 - evaluate output against requirements, source material, and professional standards;
 - separate visible inaccuracies from material omissions;
+- detect plausible-but-unsupported claims and fabricated specifics;
+- calibrate language certainty to evidence strength;
+- identify internal, source, temporal, and arithmetic inconsistencies;
+- identify confirmation, selection, framing, and omission bias;
+- distinguish fair treatment from false balance;
+- verify source and requirement coverage across document batches;
+- verify claimed external actions using tool and system records;
 - calibrate review depth to consequence, reversibility, uncertainty, and evidence quality;
-- identify hallucinations, contradictions, unsupported claims, and biased framing;
 - verify material claims against authoritative and current evidence;
-- distinguish grounded fact from inference, assumption, and uncertainty;
 - determine when human review is required and what qualifies as meaningful review;
 - adapt accurate content for different audiences without changing its meaning;
 - choose output formats that make the result easier to inspect and use;
@@ -255,15 +326,18 @@ By the end of this module, you should be able to:
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Discernment: Accuracy and Completeness](lessons/02-discernment-accuracy-completeness.md)
+- [Hallucinations, Inconsistencies, and Bias](lessons/03-hallucinations-inconsistencies-bias.md)
 
 ### Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-03/01-module-introduction-prompts.md)
 - [Accuracy and Completeness prompts](../../prompts/module-03/02-discernment-accuracy-completeness-prompts.md)
+- [Failure Patterns prompts](../../prompts/module-03/03-hallucinations-inconsistencies-bias-prompts.md)
 
 ### Engineering patterns
 
 - [Three-Reference Discernment Pattern](../../patterns/three-reference-discernment-pattern.md)
+- [Failure Signature Review Pattern](../../patterns/failure-signature-review-pattern.md)
 
 ### Existing module files
 
@@ -315,7 +389,30 @@ For verdict questions:
 - choose **needs revision** when bounded defects can be corrected and rechecked; and
 - choose **needs human override** when the stakes, uncertainty, missing authority, missing evidence, or severity of defects require qualified human ownership.
 
-Do not confuse a citation, confident tone, polished structure, or a generally correct answer with complete professional fitness.
+## Failure-pattern exam shortcut
+
+```text
+Precise number with no source  → fabricated-specific risk
+Citation exists but mismatches → claim-support failure
+Absolute answer in conditional domain → certainty mismatch
+Repeated fact has two values   → inconsistency
+Prompt assumes conclusion      → confirmation-bias risk
+Required file absent           → completeness failure
+Action claimed without receipt → capability hallucination
+```
+
+For scenario questions:
+
+1. identify the visible signature;
+2. determine whether the defect is support, consistency, framing, coverage, or capability;
+3. select the authoritative evidence or system record needed;
+4. use deterministic checks for repeated values and arithmetic;
+5. neutralize prompts that assume the conclusion;
+6. verify all required sources and criteria were covered;
+7. require qualified human review where stakes or authority demand it; and
+8. choose release, edit, verify, escalate, or reject.
+
+Do not confuse precision, confidence, repetition, citations, volume, or a claimed action with proof.
 
 ## Exam lens
 
@@ -323,27 +420,34 @@ For scenario questions:
 
 1. identify what property needs evaluation;
 2. determine the intended purpose and stakes;
-3. check requirements, sources, and professional standards;
-4. distinguish factual accuracy from completeness, consistency, bias, audience fit, and format;
-5. choose the least subjective reliable check;
-6. escalate when the consequences exceed the model's authority or the available evidence; and
-7. do not confuse confidence, polish, or citations alone with correctness.
+3. check requirements, sources, professional standards, and coverage;
+4. distinguish accuracy from completeness, consistency, bias, audience fit, and format;
+5. identify high-risk signatures rather than reading every line with equal suspicion;
+6. choose the least subjective reliable check;
+7. escalate when consequences exceed the model's authority or the available evidence; and
+8. do not confuse confidence, polish, precision, citations, or action language with correctness.
 
-The strongest answer usually establishes criteria and tests before changing the prompt. Match the grader to the property being measured. Exact labels favor deterministic checks, while nuanced policy, domain expertise, or high-impact judgment requires qualified human review.
+The strongest answer usually establishes criteria and tests before changing the prompt. Exact labels, repeated values, schemas, and arithmetic favor deterministic checks. Nuanced professional judgment, contested evidence, or high-impact decisions require qualified human review.
 
 ## Completion criteria
 
 - [x] I completed the Module 3 introduction.
 - [x] I completed the Discernment: Accuracy and Completeness lesson.
+- [x] I completed the Hallucinations, Inconsistencies, and Bias lesson.
 - [ ] I can explain the accountability asymmetry in professional AI use.
 - [ ] I can distinguish Discernment from Diligence.
 - [ ] I can identify verification debt in a workflow.
 - [ ] I can apply the three evaluation references.
 - [ ] I can review accuracy and completeness separately.
+- [ ] I can identify plausible unsupported claims and fabricated specifics.
+- [ ] I can calibrate certainty to evidence strength.
+- [ ] I can build a repeated-fact consistency matrix.
+- [ ] I can identify confirmation, selection, framing, and omission bias.
+- [ ] I can distinguish bias control from false balance.
+- [ ] I can verify source and requirement coverage.
+- [ ] I can verify a claimed external action using tool and system evidence.
 - [ ] I can calibrate review depth to the stakes.
 - [ ] I can distinguish ready to use, needs revision, and needs human override.
-- [ ] I can assess accuracy and completeness against a defined purpose.
-- [ ] I can identify hallucinations, contradictions, unsupported claims, and biased framing.
 - [ ] I can verify claim-to-source support, authority, scope, and currency.
 - [ ] I can explain when human review is non-negotiable.
 - [ ] I can adapt an output for an audience without distorting its meaning.
@@ -371,3 +475,5 @@ Product behavior and evaluation recommendations can change. Verify current offic
 - [AI Fluency: Diligence](https://www.anthropic.com/ai-fluency/due-dilligence)
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
 - [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
+- [Claude capability hallucinations](https://support.claude.com/en/articles/8241188-claude-is-producing-links-that-don-t-work-and-falsely-claiming-that-it-has-sent-emails-or-produced-external-documents-what-s-going-on)
+- [Manage Claude's tool access](https://support.claude.com/en/articles/13730515-manage-claude-s-tool-access)
