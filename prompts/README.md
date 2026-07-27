@@ -49,6 +49,7 @@ These templates are study aids and starting points, not universal production pro
 
 1. [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
 2. [Discernment: Accuracy and Completeness prompts](module-03/02-discernment-accuracy-completeness-prompts.md)
+3. [Hallucinations, Inconsistencies, and Bias prompts](module-03/03-hallucinations-inconsistencies-bias-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
@@ -70,6 +71,11 @@ Before using a template:
 - treat fluent wording as unverified until it is checked against requirements and evidence;
 - evaluate against requirements, source material, and professional standards;
 - review accuracy and completeness separately;
+- scan precise details for provenance;
+- compare repeated facts for inconsistency;
+- challenge preferred conclusions and unequal scrutiny;
+- verify source and requirement coverage;
+- verify claimed external actions through tools and authoritative system state;
 - match review depth to the consequences of error;
 - constrain and validate tools;
 - create representative tests;
