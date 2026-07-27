@@ -29,7 +29,7 @@ Edit, release, escalate, or reject
 ## Course-aligned lesson map
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
-- [ ] 02. Discernment: Accuracy & Completeness
+- [x] [02. Discernment: Accuracy & Completeness](lessons/02-discernment-accuracy-completeness.md)
 - [ ] 03. Hallucinations, Inconsistencies & Bias
 - [ ] 04. Fact-Checking & Grounding
 - [ ] 05. Diligence: When Review Is Non-Negotiable
@@ -86,6 +86,65 @@ Diligence   → What responsibility must be satisfied before it is used?
 
 It also introduces **verification debt**: unresolved validation work that accumulates when AI-assisted generation exceeds the workflow's review capacity.
 
+## Accuracy and completeness foundation
+
+Discernment begins by checking the output against three stable references:
+
+```text
+Requirements
+    +
+Source material
+    +
+Professional standards
+    ↓
+Accuracy review
+    +
+Completeness review
+    ↓
+Stakes-calibrated verdict
+```
+
+### Beginner version
+
+Ask:
+
+```text
+Did it do what I asked?
+        ↓
+Does it match the evidence?
+        ↓
+Would it be acceptable in the real setting where it will be used?
+```
+
+Then separate two questions:
+
+```text
+Accuracy     → Is what is present correct?
+Completeness → Is anything important missing?
+```
+
+An output can be accurate but incomplete. A project summary may correctly state a target date while omitting the approval dependency that determines whether the date is realistic.
+
+### Grocery-order analogy
+
+Reviewing AI output is like checking a grocery delivery:
+
+- requirements are the order list;
+- source material is the receipt and product labels; and
+- professional standards include basic quality and safety expectations.
+
+Receiving the correct pasta does not make the delivery complete when the sauce is missing. Correct visible statements do not compensate for omitted decision-critical information.
+
+### Three-way verdict
+
+```text
+Ready to use
+Needs revision
+Needs human override
+```
+
+The verdict must be scoped to the intended audience and use. A discussion starter may be ready for an internal meeting but not ready for a client, regulator, or final operational decision.
+
 ## Four durable capabilities
 
 ### 1. Discernment
@@ -99,6 +158,24 @@ Key questions:
 - Are assumptions, inferences, and facts distinguished?
 - Does the answer contradict itself or the supplied evidence?
 - Could framing, omissions, or generalizations introduce bias?
+
+The lesson uses this repeatable protocol:
+
+```text
+Define purpose and stakes
+          ↓
+Check requirements
+          ↓
+Check source support
+          ↓
+Check professional standards
+          ↓
+Review accuracy
+          ↓
+Review completeness
+          ↓
+Assign and document a verdict
+```
 
 ### 2. Grounding
 
@@ -144,12 +221,23 @@ Escalate
 Reject
 ```
 
+The three-way lesson verdict maps into the wider module triage model:
+
+| Lesson verdict | Wider module action |
+|---|---|
+| Ready to use | Release for the stated use |
+| Needs revision | Edit or verify, then re-evaluate |
+| Needs human override | Escalate, reconstruct, or reject |
+
 ## Learning objectives
 
 By the end of this module, you should be able to:
 
 - distinguish fluent output from verified output;
 - assess accuracy and completeness against an explicit purpose;
+- evaluate output against requirements, source material, and professional standards;
+- separate visible inaccuracies from material omissions;
+- calibrate review depth to consequence, reversibility, uncertainty, and evidence quality;
 - identify hallucinations, contradictions, unsupported claims, and biased framing;
 - verify material claims against authoritative and current evidence;
 - distinguish grounded fact from inference, assumption, and uncertainty;
@@ -166,10 +254,16 @@ By the end of this module, you should be able to:
 ### Lessons
 
 - [Module Introduction](lessons/01-module-introduction.md)
+- [Discernment: Accuracy and Completeness](lessons/02-discernment-accuracy-completeness.md)
 
 ### Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-03/01-module-introduction-prompts.md)
+- [Accuracy and Completeness prompts](../../prompts/module-03/02-discernment-accuracy-completeness-prompts.md)
+
+### Engineering patterns
+
+- [Three-Reference Discernment Pattern](../../patterns/three-reference-discernment-pattern.md)
 
 ### Existing module files
 
@@ -204,25 +298,50 @@ Pass, revise, escalate, or fail
 
 A vague requirement cannot be evaluated reliably. Conversely, a strong prompt does not remove the need to inspect the result.
 
+## Accuracy and completeness exam shortcut
+
+```text
+Requirements           → Did it do all requested work?
+Source material        → Does the evidence support each material claim?
+Professional standards → Is the result fit for real use?
+Accuracy               → Is what is present correct?
+Completeness           → Is anything material missing?
+Stakes                 → How much review is required?
+```
+
+For verdict questions:
+
+- choose **ready to use** only when requirements, evidence, standards, and review depth all pass for the stated use;
+- choose **needs revision** when bounded defects can be corrected and rechecked; and
+- choose **needs human override** when the stakes, uncertainty, missing authority, missing evidence, or severity of defects require qualified human ownership.
+
+Do not confuse a citation, confident tone, polished structure, or a generally correct answer with complete professional fitness.
+
 ## Exam lens
 
 For scenario questions:
 
 1. identify what property needs evaluation;
-2. determine what evidence or reviewer can evaluate it;
-3. distinguish factual accuracy from completeness, consistency, bias, audience fit, and format;
-4. choose the least subjective reliable check;
-5. escalate when the consequences exceed the model's authority or the available evidence; and
-6. do not confuse confidence, polish, or citations alone with correctness.
+2. determine the intended purpose and stakes;
+3. check requirements, sources, and professional standards;
+4. distinguish factual accuracy from completeness, consistency, bias, audience fit, and format;
+5. choose the least subjective reliable check;
+6. escalate when the consequences exceed the model's authority or the available evidence; and
+7. do not confuse confidence, polish, or citations alone with correctness.
 
 The strongest answer usually establishes criteria and tests before changing the prompt. Match the grader to the property being measured. Exact labels favor deterministic checks, while nuanced policy, domain expertise, or high-impact judgment requires qualified human review.
 
 ## Completion criteria
 
 - [x] I completed the Module 3 introduction.
+- [x] I completed the Discernment: Accuracy and Completeness lesson.
 - [ ] I can explain the accountability asymmetry in professional AI use.
 - [ ] I can distinguish Discernment from Diligence.
 - [ ] I can identify verification debt in a workflow.
+- [ ] I can apply the three evaluation references.
+- [ ] I can review accuracy and completeness separately.
+- [ ] I can calibrate review depth to the stakes.
+- [ ] I can distinguish ready to use, needs revision, and needs human override.
 - [ ] I can assess accuracy and completeness against a defined purpose.
 - [ ] I can identify hallucinations, contradictions, unsupported claims, and biased framing.
 - [ ] I can verify claim-to-source support, authority, scope, and currency.
