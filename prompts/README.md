@@ -48,6 +48,7 @@ These templates are study aids and starting points, not universal production pro
 ### Module 3: Evaluating & Validating Claude's Output
 
 1. [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
+2. [Discernment: Accuracy and Completeness prompts](module-03/02-discernment-accuracy-completeness-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
@@ -67,6 +68,8 @@ Before using a template:
 - diagnose why plausible alternatives are weaker than the targeted intervention;
 - use the five Module 2 takeaways as a final design review;
 - treat fluent wording as unverified until it is checked against requirements and evidence;
+- evaluate against requirements, source material, and professional standards;
+- review accuracy and completeness separately;
 - match review depth to the consequences of error;
 - constrain and validate tools;
 - create representative tests;
