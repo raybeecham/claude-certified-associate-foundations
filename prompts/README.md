@@ -55,6 +55,7 @@ These templates are study aids and starting points, not universal production pro
 6. [Editing and Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
 7. [Choosing Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
 8. [Triage the Output Set prompts](module-03/08a-triage-output-set-prompts.md)
+9. [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned sections are completed.
 
@@ -91,12 +92,15 @@ Before using a template:
 - distinguish output condition from intended-use risk;
 - choose ready to use, needs revision, or needs human override;
 - state the controlling reason and required next action;
-- avoid treating roughness as risk or polish as approval;
+- review your own Discernment and Diligence behavior after meaningful tasks;
+- replace vague intentions such as `verify everything` with claim-level sources, tests, reviewers, and release blockers;
+- turn reflection into one observable next-conversation habit;
+- avoid placing confidential conversation text in reflection notes;
 - retain code, parameters, sources, review, and approval evidence; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
-A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, reflective judgment, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, engagement-identifying examples, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, or public scenarios.
+Do not place client names, nonpublic organizational details, proprietary work products, confidential data, credentials, engagement-identifying examples, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
