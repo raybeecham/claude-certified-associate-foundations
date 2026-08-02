@@ -12,7 +12,7 @@ This lesson develops five decisions:
 
 1. how to identify tasks that require human review;
 2. how to calibrate review using stakes, reversibility, audience, and regulatory exposure;
-3. which output classes should be placed behind fixed do-not-ship gates;
+3. which output classes belong behind fixed do-not-ship gates;
 4. when to stop iterating with Claude and escalate to a qualified person; and
 5. what meaningful human review must actually include.
 
@@ -20,7 +20,7 @@ This lesson develops five decisions:
 
 # Plain-English explanation
 
-Claude can help write, summarize, compare, calculate, and organize information. But Claude cannot accept professional accountability for what you send, file, publish, or act on.
+Claude can help write, summarize, compare, calculate, and organize information. But Claude cannot accept professional accountability for what you send, file, publish, approve, or act on.
 
 A beginner can decide whether human review is mandatory by asking four questions:
 
@@ -64,17 +64,15 @@ Polished draft
 Cleared for release
 ```
 
-An internal brainstorming note may be comparable to moving an aircraft inside a hangar: low consequence and easy to stop.
+An internal brainstorming note is comparable to moving an aircraft inside a hangar: low consequence and easy to stop.
 
-A filed regulatory report, final client deliverable, or public legal statement is comparable to takeoff: once released, the consequences can be difficult or impossible to reverse.
-
-The lesson is:
+A filed regulatory report, final client deliverable, or public legal statement is comparable to takeoff: once released, the consequences may be difficult or impossible to reverse.
 
 > Preflight requirements are based on risk, not on whether the aircraft looks convincing from the gate.
 
 ---
 
-# Diligence means precommitting the review rule
+# Precommit the review rule
 
 A weak workflow asks after generation:
 
@@ -96,13 +94,13 @@ What evidence and checks are required?
 Who has authority to release it?
 ```
 
-Precommitment prevents three common errors:
+Precommitment reduces:
 
-1. **fluency bias** — a polished draft receives less scrutiny than policy requires;
-2. **deadline bias** — time pressure silently lowers the review standard; and
-3. **ownership diffusion** — everyone assumes someone else checked the important parts.
+- **fluency bias:** polished output receives less scrutiny than policy requires;
+- **deadline bias:** time pressure silently lowers the standard; and
+- **ownership diffusion:** everyone assumes someone else checked the important parts.
 
-A review policy should be attached to the **use case**, not improvised for each individual output.
+The review rule should attach to the **use case**, not be improvised for each output.
 
 ---
 
@@ -117,17 +115,14 @@ Ask:
 Possible consequences include:
 
 - financial loss;
-- legal exposure;
-- regulatory findings;
+- legal or regulatory exposure;
 - safety harm;
-- denial of benefits or services;
-- reputational damage;
+- denial of rights, benefits, or services;
 - breach of contract;
+- reputational damage;
 - incorrect executive decisions;
 - loss of client trust; and
 - downstream rework.
-
-### Review rule
 
 ```text
 Higher consequence of error
@@ -135,21 +130,13 @@ Higher consequence of error
 Stronger evidence, validation, and human review
 ```
 
-High-cost errors require human review even when the output appears highly confident and cites sources.
-
-### Beginner example
-
-A typo in a private brainstorming note may have almost no consequence. A wrong revenue figure in a board presentation may change a decision and become part of the official record.
-
-The prose could look equally polished in both cases. The stakes are not equal.
-
----
+High-cost errors require human review even when the output sounds confident and contains citations.
 
 ## Threshold 2: Reversibility
 
 Ask:
 
-> If this is wrong, can we undo the action easily and completely?
+> If this is wrong, can the communication or action be undone easily and completely?
 
 ### More reversible
 
@@ -157,7 +144,7 @@ Ask:
 - an internal working note;
 - a sandbox calculation;
 - a proposed agenda;
-- a private list of brainstorming ideas; and
+- a private brainstorm; and
 - a recommendation that has not triggered action.
 
 ### Less reversible
@@ -165,14 +152,11 @@ Ask:
 - a sent client deliverable;
 - a filed report;
 - a public statement;
-- a signed agreement;
-- an employment or benefits decision;
+- a signed position;
 - a payment or transfer;
-- deletion or modification of records;
+- deletion or alteration of official records;
 - a production change; and
-- a communication that affects legal rights or obligations.
-
-### Review rule
+- a decision affecting rights, access, employment, benefits, or eligibility.
 
 ```text
 Harder to reverse
@@ -180,28 +164,20 @@ Harder to reverse
 Higher release threshold
 ```
 
-A draft that can be corrected before anyone relies on it does not require the same control as an external action that creates lasting consequences.
-
----
-
 ## Threshold 3: Audience
 
 Ask:
 
-> Who will see, rely on, or act on the output?
+> Who will see, rely on, approve, or act on the output?
 
-Audience changes the review requirement.
-
-| Audience | Typical posture |
+| Audience | Typical review posture |
 |---|---|
-| Individual working notes | Light, proportionate review |
+| Private working notes | Light, proportionate review |
 | Internal peer discussion | Requirement and obvious-error review |
-| Management or executive audience | Stronger evidence, clarity, and completeness review |
+| Management or executive | Stronger evidence, clarity, and completeness review |
 | Client or partner | Formal human review and approval |
 | Public audience | Publication, legal, brand, and factual review as applicable |
 | Regulator, auditor, court, or oversight body | Qualified review, authoritative evidence, and documented approval |
-
-### Review rule
 
 ```text
 Wider or more authoritative audience
@@ -209,30 +185,23 @@ Wider or more authoritative audience
 Stronger review and approval requirements
 ```
 
-An output that is appropriate as an internal discussion starter may be unacceptable as a final client or regulatory deliverable.
-
----
-
 ## Threshold 4: Regulatory exposure
 
 Ask:
 
 > Does a law, regulation, contract, policy, standard, or professional duty govern this output or its use?
 
-Regulatory exposure includes more than formal government filings. It may also arise from:
+Exposure may arise from:
 
 - contractual reporting duties;
-- audit requirements;
-- financial-control procedures;
+- audit and financial-control procedures;
 - privacy and data-handling rules;
 - records-retention requirements;
 - accessibility obligations;
 - industry standards;
 - professional licensing duties;
 - security controls; and
-- organizational approval policies.
-
-### Review rule
+- organizational approval policy.
 
 ```text
 Governed use case
@@ -240,17 +209,13 @@ Governed use case
 Apply the controlling rule and required reviewer
 ```
 
-AI assistance does not remove or dilute the governing obligation.
-
-A model cannot grant legal authority, professional approval, or policy compliance to its own output.
+AI assistance does not remove the governing obligation. A model cannot grant legal authority, professional approval, or policy compliance to its own output.
 
 ---
 
 # Risk posture: green, yellow, and red
 
-The four thresholds should not be reduced to a simplistic score. A single severe condition can require escalation.
-
-A useful qualitative model is:
+Do not reduce the thresholds to a simplistic average. One severe condition can control the gate.
 
 | Posture | Typical characteristics | Review action |
 |---|---|---|
@@ -258,52 +223,31 @@ A useful qualitative model is:
 | **Yellow** | Material decision support, management audience, partial external use, moderate consequence | Structured evidence review and identified human approver |
 | **Red** | High stakes, hard to reverse, external or regulatory audience, sensitive or controlled domain | Qualified human review is mandatory before release |
 
-> The most severe applicable threshold controls the release gate.
-
-Do not average a red condition away because the other three appear low risk.
+> The most severe credible threshold controls the minimum review requirement.
 
 ---
 
 # The do-not-ship-without-review list
 
-The preparation material identifies four classes that should be placed behind fixed human-review gates.
+The course-aligned core identifies four fixed classes.
 
 ## 1. Final client deliverables
 
-Examples:
+Examples include final reports, presentations, formal recommendations, assessments, contractual deliverables, and externally shared analyses.
 
-- final presentations;
-- formal recommendations;
-- assessments;
-- reports;
-- contractual deliverables;
-- externally shared analyses; and
-- client communications that represent an organizational position.
+Typical controls:
 
-Required controls may include:
-
+- requirement coverage;
 - factual and source verification;
 - completeness review;
-- brand and tone review;
-- subject-matter review;
+- calculation reproducibility;
 - confidentiality review;
-- approval by the accountable owner; and
-- confirmation that calculations and citations are reproducible.
+- subject-matter review; and
+- approval by the accountable owner.
 
 ## 2. Audit-critical or financially material calculations
 
-Examples:
-
-- financial statements;
-- forecasts used for decisions;
-- pricing models;
-- material budgets;
-- audit schedules;
-- regulatory financial reports;
-- cost or savings claims; and
-- calculations used to authorize payment.
-
-Required controls may include:
+Examples include financial statements, forecasts, pricing models, audit schedules, regulatory reports, material budgets, and calculations used to authorize payment.
 
 ```text
 Authoritative inputs
@@ -323,61 +267,39 @@ Fluent explanation does not validate arithmetic.
 
 ## 3. Regulated, confidential, or highly sensitive data
 
-Examples may include:
+Examples may include personal information, protected health information, controlled government information, privileged legal material, trade secrets, nonpublic financial data, security-sensitive architecture, credentials, and regulated case records.
 
-- personal information;
-- protected health information;
-- controlled government information;
-- privileged legal material;
-- trade secrets;
-- nonpublic financial data;
-- security-sensitive architecture;
-- credentials and secrets; and
-- regulated research or case records.
+Human review must confirm both content and handling:
 
-Human review must confirm both the **content** and the **handling process**:
-
-- was use authorized;
-- was the correct environment selected;
-- was access limited appropriately;
-- were retention and disclosure rules followed;
-- was sensitive content minimized; and
-- is the intended recipient authorized to receive it?
+- authorized use;
+- approved environment;
+- least-necessary data scope;
+- access restrictions;
+- retention and disclosure requirements;
+- recipient authorization; and
+- required logging or traceability.
 
 A factually correct answer can still be unsafe because the data was handled or disclosed improperly.
 
 ## 4. Public or legal communications with lasting consequences
 
-Examples:
+Examples include press statements, public incident communications, legal notices, contract positions, statements to regulators, testimony, compliance claims, and communications that may create reliance or waive rights.
 
-- press statements;
-- public incident communications;
-- legal notices;
-- contract positions;
-- statements to regulators;
-- testimony or declarations;
-- public claims about performance or compliance; and
-- communications that may create reliance or waive rights.
+Prompt quality does not substitute for legal, communications, executive, compliance, or policy approval.
 
-These require review by people with the appropriate authority and expertise. Prompt quality does not substitute for legal, communications, executive, compliance, or policy approval.
+## Engineering extension
 
----
-
-# Engineering extension: additional common mandatory-review gates
-
-Organizations often add fixed review gates for:
+Organizations commonly add mandatory gates for:
 
 - safety-critical recommendations;
 - medical or benefits decisions;
-- employment, promotion, discipline, or hiring decisions;
-- security changes with production impact;
+- hiring, promotion, discipline, or employment decisions;
+- production-impacting security changes;
 - irreversible tool actions;
-- decisions affecting access, rights, or eligibility;
-- high-impact risk classifications;
-- material scientific or technical claims; and
+- decisions affecting access, rights, or eligibility; and
 - outputs that combine incomplete evidence with consequential action.
 
-These extensions should be defined by organizational policy and applicable law, not invented by the model during a conversation.
+These gates should be established by organizational policy and applicable law, not invented by the model during a conversation.
 
 ---
 
@@ -385,15 +307,16 @@ These extensions should be defined by organizational policy and applicable law, 
 
 Human review is not meaningful merely because a person opened the document or clicked approve.
 
-A qualified review requires the reviewer to have:
+A qualified reviewer needs:
 
-1. **Expertise** — enough subject knowledge to detect material errors.
-2. **Authority** — the power to approve, reject, or escalate the output.
-3. **Context** — understanding of the purpose, audience, and consequences.
-4. **Evidence access** — ability to inspect sources, calculations, and records.
-5. **Time and attention** — enough capacity to perform more than a surface scan.
-6. **Independence where needed** — freedom to challenge the draft and its author.
-7. **A defined review standard** — criteria, checklist, or policy against which to judge the output.
+1. **Expertise** to detect material errors.
+2. **Authority** to approve, reject, or escalate.
+3. **Context** about purpose, audience, and consequence.
+4. **Evidence access** to sources, calculations, and records.
+5. **Time and attention** for more than a surface scan.
+6. **Independence where needed** to challenge the draft.
+7. **A defined standard** such as criteria, a checklist, or policy.
+8. **Intervention rights** before release or action.
 
 ```text
 Human present
@@ -401,52 +324,197 @@ Human present
 Meaningful human review
 ```
 
-## A meaningful-review record
+## Meaningful-review record
 
-For material outputs, record:
+| Field | Example content |
+|---|---|
+| Output and version | Report v1.4 |
+| Intended use | Final client decision briefing |
+| Reviewer | Named role or person |
+| Reviewer qualifications | Domain expertise and approval authority |
+| Evidence reviewed | Source package, calculations, claim ledger |
+| Material changes | Corrected figure, added condition, narrowed conclusion |
+| Unresolved limitations | Missing source, conflicting evidence, unknown assumption |
+| Disposition | Release / Edit / Verify / Escalate / Reject |
+| Approval record | Workflow approval, signed review, ticket, or system record |
 
-| Field | Example |
-|---| and decision-making.
-- **Audience:** Executive.
-- **Regulatory or governance exposure:** Material.
+---
+
+# Accountability stays with the releasing human or organization
+
+```text
+Model assists
+      ↓
+Human validates and approves
+      ↓
+Organization releases and owns the consequences
+```
+
+When you approve, send, publish, file, or act on AI-assisted work, you adopt the output for that use.
+
+The model does not become the accountable author, approver, regulated professional, or decision owner.
+
+---
+
+# Iteration versus escalation
+
+Prompt iteration is useful while the remaining defect is prompt-fixable.
+
+## Continue iterating when
+
+- the failed component is known;
+- relevant evidence is available;
+- one targeted change is likely to help;
+- each round produces measurable improvement;
+- no mandatory review gate is being bypassed; and
+- consequences remain contained.
+
+## Escalate when
+
+- the last rounds produce only cosmetic changes;
+- the same defect persists;
+- new rounds introduce regressions;
+- the required evidence is unavailable;
+- the model lacks authority;
+- professional interpretation or accountable judgment is required;
+- the output belongs to a mandatory-review class; or
+- an irreversible action is approaching.
+
+```text
+Prompt problem     → targeted iteration
+Evidence problem   → obtain evidence
+Tool problem       → repair workflow
+Authority problem  → escalate
+Judgment problem   → qualified human review
+```
+
+More prompting cannot manufacture missing authority, unavailable evidence, or professional accountability.
+
+## Flat improvement curve
+
+Track improvement against acceptance criteria rather than the number of words changed.
+
+```text
+Round 1 → major substantive gain
+Round 2 → useful correction
+Round 3 → small improvement
+Round 4 → cosmetic change
+Round 5 → cosmetic change or regression
+```
+
+When the curve flattens, the right next step may be a fresh reviewer rather than another prompt.
+
+---
+
+# Three escalation scenarios
+
+## Scenario A: the fast yes
+
+Claude drafts a private internal agenda for a routine meeting.
+
+- **Stakes:** Low.
+- **Reversibility:** Easy to edit.
+- **Audience:** Internal.
+- **Regulatory exposure:** None identified.
 
 ### Decision
 
-Recompute the figures and require authorized financial review.
+Perform a basic check and use it. Specialist escalation would be disproportionate.
 
-The polished appearance does not affect the gate.
+Diligence does not mean sending every low-risk draft to an expert.
 
-## Scenario C: proposal iteration has plateaued
+## Scenario B: the deceptive looks-fine output
 
-A team has revised an external proposal five times. The last three rounds change sentence rhythm and minor wording but do not improve the argument, evidence, or fit to the client's priorities.
+Claude produces a clean financial summary for a board presentation.
+
+- **Stakes:** High because the figures influence governance and decisions.
+- **Reversibility:** Correction after presentation may not undo reliance.
+- **Audience:** Executive or board.
+- **Regulatory or control exposure:** Material.
+
+### Decision
+
+Recompute material figures deterministically and require authorized financial review.
+
+The clean appearance is irrelevant to the gate.
+
+## Scenario C: the slow creep
+
+A team has revised an external proposal five times. Rounds three through five change wording but do not improve evidence, argument quality, or fit to the client's priorities.
 
 - **Stakes:** Material external deliverable.
-- **Reversibility:** Corrections after delivery may damage credibility.
+- **Reversibility:** Errors may damage trust after delivery.
 - **Audience:** Client.
 - **Iteration signal:** Diminishing returns.
 
 ### Decision
 
-Stop prompting. Obtain a fresh review from a colleague with relevant context and authority.
+Stop prompting and obtain a fresh review from a colleague with relevant context and authority.
 
-The escalation trigger is the flat improvement curve, not an obvious error.
+The escalation signal is the flat improvement curve, not a visible factual error.
 
 ---
 
-# A pre-release review gate
+# Practical example: board-deck financial summary
 
-Use a written gate for material outputs.
+## Generated draft
+
+```text
+Operating costs declined 14% year over year, producing $3.2 million in annualized savings. The program is on track to exceed its full-year target.
+```
+
+The slide is concise, visually clean, and internally coherent.
+
+## Diligence review
+
+### Stakes
+
+The figures affect executive oversight and resource decisions.
+
+**Result:** High.
+
+### Reversibility
+
+The deck can be edited before presentation, but reliance during the meeting may be difficult to undo.
+
+**Result:** Material to High.
+
+### Audience
+
+Board or executive audience.
+
+**Result:** High.
+
+### Regulatory or control exposure
+
+The figures may connect to governed financial reporting or internal controls.
+
+**Result:** Material to High.
+
+## Required gate
+
+1. Trace the inputs to the authoritative workbook or ledger.
+2. Recompute the 14% reduction and $3.2 million savings deterministically.
+3. Check whether `annualized` assumptions are valid.
+4. Verify the full-year target and time period.
+5. Review the narrative for unsupported certainty.
+6. Obtain qualified financial and accountable-owner approval.
+
+## Disposition
+
+```text
+Verify and escalate before release.
+```
+
+A polished slide cannot pass this gate on appearance alone.
+
+---
+
+# Pre-release review gate
 
 ## Step 1: Classify the use
 
-Record:
-
-- purpose;
-- audience;
-- decision or action supported;
-- data sensitivity;
-- governing requirements; and
-- whether the output is draft, advisory, or final.
+Record purpose, audience, decision, data sensitivity, governing requirements, and whether the output is draft, advisory, or final.
 
 ## Step 2: Assess the thresholds
 
@@ -459,30 +527,15 @@ Record:
 
 ## Step 3: Apply automatic gates
 
-Check whether the output falls into a do-not-ship category.
+Check whether the output belongs to a do-not-ship category.
 
-## Step 4: Define the required reviewer
+## Step 4: Define the reviewer
 
-Record:
-
-- name or role;
-- required expertise;
-- authority;
-- evidence access;
-- review scope; and
-- approval method.
+Record role, expertise, authority, evidence access, review scope, and approval method.
 
 ## Step 5: Complete validation
 
-Examples:
-
-- source audit;
-- deterministic recomputation;
-- privacy or sensitivity check;
-- bias and completeness review;
-- professional-standard check;
-- external-state confirmation; and
-- conflict or uncertainty resolution.
+Possible checks include source audit, deterministic recomputation, privacy review, completeness and bias review, professional-standard review, and external-state confirmation.
 
 ## Step 6: Record disposition
 
@@ -496,15 +549,7 @@ Reject
 
 ## Step 7: Preserve evidence
 
-Where required, retain:
-
-- reviewed version;
-- source package;
-- calculations;
-- reviewer comments;
-- approval record;
-- known limitations; and
-- release date and audience.
+Where required, retain the reviewed version, source package, calculations, reviewer comments, approval record, known limitations, release date, and audience.
 
 ---
 
@@ -546,53 +591,53 @@ Disposition:
 
 # Common anti-patterns
 
-## Anti-pattern 1: Review only when the draft looks wrong
+## Review only when the draft looks wrong
 
 **Failure:** Fluent high-risk errors bypass review.
 
-**Repair:** Trigger review from precommitted risk thresholds.
+**Repair:** Trigger review from precommitted use-case rules.
 
-## Anti-pattern 2: Treating citations as sufficient for high-stakes release
+## Treating citations as sufficient
 
-**Failure:** Traceability is mistaken for correctness, calculation validity, or approval.
+**Failure:** Traceability is mistaken for correctness, calculation validity, professional fitness, or approval.
 
-**Repair:** Add independent verification and qualified review.
+**Repair:** Add independent validation and qualified review.
 
-## Anti-pattern 3: Rubber-stamp human review
+## Rubber-stamp review
 
-**Failure:** A reviewer is present but lacks time, expertise, evidence, or authority.
+**Failure:** The reviewer lacks expertise, evidence, time, authority, or intervention rights.
 
-**Repair:** Define reviewer qualifications and intervention rights.
+**Repair:** Define reviewer qualifications and required actions.
 
-## Anti-pattern 4: Averaging the risk thresholds
+## Averaging away a red condition
 
-**Failure:** One decisive high-risk condition is diluted by several low-risk conditions.
+**Failure:** One decisive high-risk threshold is diluted by several low-risk conditions.
 
 **Repair:** Use the highest credible consequence and automatic gates.
 
-## Anti-pattern 5: Escalating every AI-assisted output
+## Escalating every output
 
-**Failure:** Low-stakes routine work loses the efficiency benefit.
+**Failure:** Low-stakes work loses the efficiency benefit.
 
-**Repair:** Use proportionate review and preserve mandatory gates for material work.
+**Repair:** Use proportionate review for green work.
 
-## Anti-pattern 6: Iterating after authority or evidence has run out
+## Iterating after evidence or authority runs out
 
 **Failure:** Additional prompts create cosmetic variation but cannot resolve the real gap.
 
-**Repair:** Obtain the missing evidence, fix the workflow, or escalate to a qualified owner.
+**Repair:** Obtain evidence, repair the workflow, or escalate.
 
-## Anti-pattern 7: Reviewing after the irreversible action
+## Reviewing after the irreversible action
 
 **Failure:** The output is sent, filed, published, or executed before approval.
 
-**Repair:** Place the gate technically and procedurally before the action.
+**Repair:** Place the gate technically and procedurally before action.
 
-## Anti-pattern 8: Transferring accountability to the model
+## Transferring accountability to the model
 
-**Failure:** The author treats AI origin as an excuse for an unsupported or harmful output.
+**Failure:** AI origin is treated as an excuse for an unsupported or harmful result.
 
-**Repair:** Assign a named human or organizational owner for release.
+**Repair:** Assign a named human or organizational release owner.
 
 ---
 
@@ -600,28 +645,26 @@ Disposition:
 
 For Diligence and human-review scenarios:
 
-1. identify the intended use and audience;
+1. identify intended use and audience;
 2. evaluate stakes, reversibility, audience, and regulatory exposure;
 3. check for an automatic do-not-ship category;
 4. distinguish traceability from verification and approval;
-5. determine what reviewer expertise and authority are required;
-6. place the review before any irreversible action;
-7. use deterministic verification for material calculations;
-8. stop iterating when the remaining gap is evidence, authority, or professional judgment;
+5. determine reviewer expertise and authority;
+6. place review before irreversible action;
+7. use deterministic checks for material calculations;
+8. stop iterating when the blocker is evidence, authority, expertise, or professional judgment;
 9. preserve accountability with the releasing human or organization; and
 10. choose release, edit, verify, escalate, or reject.
 
 ```text
-Low-stakes internal draft        → proportionate review
-Final client deliverable         → qualified review
-Audit-critical calculation       → deterministic verification + finance review
-Regulated or sensitive content   → policy controls + authorized review
-Public or legal communication    → qualified review before release
-Iteration improvement has stalled → escalate for fresh human judgment
-Irreversible action              → approval gate before execution
+Low-stakes internal draft         → proportionate review
+Final client deliverable          → qualified review
+Audit-critical calculation        → deterministic verification + finance review
+Regulated or sensitive content    → policy controls + authorized review
+Public or legal communication     → qualified review before release
+Iteration improvement has stalled → fresh human judgment
+Irreversible action               → approval gate before execution
 ```
-
-Do not choose `send because it looks accurate` when the risk thresholds require review.
 
 ---
 
@@ -629,51 +672,51 @@ Do not choose `send because it looks accurate` when the risk thresholds require 
 
 ## Question 1
 
-Why should mandatory-review categories be defined before the draft is created?
+Why define mandatory-review categories in advance?
 
-**Answer:** Precommitment prevents deadline pressure, confidence, convenience, or polished wording from weakening the review standard at release time.
+**Answer:** Precommitment prevents deadlines, convenience, confidence, or polished wording from weakening the standard at release time.
 
 ## Question 2
 
-A final client report is well cited and contains no visible errors. Does it still require human review?
+A final client report is well cited and has no visible errors. Does it still require human review?
 
-**Answer:** Yes. Final external use triggers a review gate because citations and polish do not establish complete correctness, professional fitness, or release authority.
+**Answer:** Yes. Final external use triggers the gate because citations and polish do not establish complete correctness, professional fitness, or release authority.
 
 ## Question 3
 
-What is the difference between reversibility and stakes?
+What is the difference between stakes and reversibility?
 
 **Answer:** Stakes measure the consequence if the output is wrong. Reversibility measures whether the resulting action or communication can be effectively undone.
 
 ## Question 4
 
-What makes human review meaningful?
+What makes review meaningful?
 
 **Answer:** The reviewer has relevant expertise, authority, context, evidence access, adequate time, independence, and the ability to change or stop the output.
 
 ## Question 5
 
-When should iteration stop and escalation begin?
+When should iteration stop?
 
-**Answer:** When improvement has plateaued or the remaining gap requires unavailable evidence, authority, professional expertise, or a consequential judgment that prompting cannot supply.
+**Answer:** When improvement plateaus or the remaining gap requires missing evidence, authority, expertise, or accountable professional judgment.
 
 ## Question 6
 
-Why is `reviewed by a human` an incomplete control description?
+Why is `reviewed by a human` an incomplete control?
 
-**Answer:** It does not identify what was reviewed, whether the reviewer was qualified, what evidence was available, or whether the person could intervene.
+**Answer:** It does not identify what was reviewed, whether the reviewer was qualified, which evidence was available, or whether the person could intervene.
 
 ## Question 7
 
-Can a low-stakes output be used quickly without specialist escalation?
+Can low-stakes work proceed without specialist escalation?
 
-**Answer:** Yes. Diligence requires proportionate review, not universal escalation. Routine internal, reversible, non-regulated work can often proceed after a basic check.
+**Answer:** Yes. Diligence requires proportionate review, not universal escalation.
 
 ## Question 8
 
 Who owns an AI-assisted output after release?
 
-**Answer:** The human or organization that approves, sends, publishes, or acts on it retains accountability.
+**Answer:** The human or organization that approves, sends, publishes, or acts on it.
 
 ---
 
@@ -683,7 +726,7 @@ Who owns an AI-assisted output after release?
 
 **Q:** What are the four Diligence thresholds?
 
-**A:** Stakes, reversibility, audience, and regulatory, contractual, or policy exposure.
+**A:** Stakes, reversibility, audience, and regulatory, contractual, policy, or professional exposure.
 
 ## Flashcard 2
 
@@ -693,15 +736,15 @@ Who owns an AI-assisted output after release?
 
 ## Flashcard 3
 
-**Q:** What outputs should never rely on a Claude draft alone?
+**Q:** Which outputs require fixed review gates?
 
-**A:** Final external deliverables, audit-critical or material calculations, regulated or highly sensitive work, public or legal communications, consequential decisions affecting people, and irreversible actions.
+**A:** Final external deliverables, audit-critical or material calculations, regulated or highly sensitive work, public or legal communications, consequential decisions, and irreversible actions.
 
 ## Flashcard 4
 
 **Q:** What makes human review substantive?
 
-**A:** Expertise, authority, context, evidence access, adequate time, independence, and the ability to intervene.
+**A:** Expertise, authority, context, evidence access, time, independence, and intervention rights.
 
 ## Flashcard 5
 
@@ -717,15 +760,15 @@ Who owns an AI-assisted output after release?
 
 ## Flashcard 7
 
-**Q:** When must the review gate occur?
+**Q:** When must the gate occur?
 
 **A:** Before the irreversible send, filing, publication, approval, deletion, or system action.
 
 ## Flashcard 8
 
-**Q:** Who retains accountability for released AI-assisted work?
+**Q:** Who retains accountability?
 
-**A:** The human or organization that releases or acts on it.
+**A:** The human or organization that releases or acts on the output.
 
 ---
 
@@ -744,8 +787,6 @@ Who owns an AI-assisted output after release?
 10. Record the disposition and approval evidence.
 ```
 
-The central rule is:
-
 > Review depth follows consequence, not confidence. When the cost of error, difficulty of reversal, audience, or governing obligations cross the threshold, qualified human review is mandatory.
 
 ## Educational-use notice
@@ -762,7 +803,7 @@ Official references:
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
 - [Use Claude for Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)
 
-Anthropic's current Help Center notes that Claude for Excel is not recommended for final client deliverables without human review, audit-critical calculations without verification, replacing financial judgment, or highly sensitive and regulated models without appropriate controls. Product features and guidance can change; verify current official documentation and organizational policy before implementation.
+Anthropic's current Help Center notes that Claude for Excel is not recommended for final client deliverables without human review, audit-critical calculations without verification, replacing financial judgment, or highly sensitive and regulated models without appropriate controls. Product guidance can change; verify current official documentation and organizational policy before implementation.
 
 ## Related material
 
