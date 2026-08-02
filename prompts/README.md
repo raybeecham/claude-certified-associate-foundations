@@ -53,6 +53,7 @@ These templates are study aids and starting points, not universal production pro
 4. [Fact-Checking and Grounding prompts](module-03/04-fact-checking-grounding-prompts.md)
 5. [Diligence and Human Review prompts](module-03/05-diligence-human-review-prompts.md)
 6. [Editing and Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
+7. [Choosing Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
@@ -91,14 +92,19 @@ Before using a template:
 - distinguish selective omission from misleading omission;
 - compare candidate drafts against common criteria rather than polish;
 - review disclosure before external adaptation;
+- choose inline, artifact, structured, or code-executed paths by consumer and purpose;
+- separate presentation format from computation method;
+- use code execution for material calculations, transformations, and charts;
+- validate schema structure separately from semantic correctness;
+- de-duplicate, label, and prune inputs before processing;
+- retain code, parameters, source versions, row counts, and reconciliation evidence;
 - confirm the released artifact is the reviewed version;
 - constrain and validate tools;
 - create representative tests;
-- establish human review where the output is consequential;
-- define how context will be checkpointed, summarized, persisted, or discarded; and
+- establish human review where the output is consequential; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
-A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, professional approval, disclosure authorization, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, professional approval, disclosure authorization, correct code logic, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
