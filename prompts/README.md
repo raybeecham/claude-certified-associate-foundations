@@ -54,8 +54,9 @@ These templates are study aids and starting points, not universal production pro
 5. [Diligence and Human Review prompts](module-03/05-diligence-human-review-prompts.md)
 6. [Editing and Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
 7. [Choosing Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
+8. [Triage the Output Set prompts](module-03/08a-triage-output-set-prompts.md)
 
-Additional notebooks will be added as the remaining course-aligned modules are completed.
+Additional notebooks will be added as the remaining course-aligned sections are completed.
 
 ## Usage discipline
 
@@ -67,7 +68,6 @@ Before using a template:
 - choose a narrow output contract;
 - define missing-data behavior;
 - match the control-latitude balance to the task type;
-- check for under-specification and over-specification;
 - route exact arithmetic and counting to deterministic tools;
 - treat fluent wording as unverified until checked against requirements and evidence;
 - evaluate requirements, source material, and professional standards;
@@ -78,33 +78,24 @@ Before using a template:
 - verify source and requirement coverage;
 - permit explicit `unknown`, `not covered`, and `conflicting` outcomes;
 - require precise, auditable claim-to-source locations;
-- treat repeated-run agreement as stability evidence, not factual proof;
 - validate consequential claims against authoritative sources;
 - recompute material calculations deterministically;
-- assess stakes, reversibility, audience, and regulatory exposure;
+- assess stakes, reversibility, audience, and governing obligations;
 - identify automatic do-not-ship review gates;
-- define reviewer expertise, authority, evidence access, time, and intervention rights;
 - place approval before irreversible actions;
-- stop iteration when evidence, authority, or professional judgment is the blocker;
 - preserve human and organizational accountability for release;
-- define the audience contract before adapting a verified draft;
-- preserve facts, figures, uncertainty, risks, dependencies, and obligations across versions;
-- distinguish selective omission from misleading omission;
-- compare candidate drafts against common criteria rather than polish;
-- review disclosure before external adaptation;
+- define the audience contract and preserve factual invariants;
 - choose inline, artifact, structured, or code-executed paths by consumer and purpose;
-- separate presentation format from computation method;
-- use code execution for material calculations, transformations, and charts;
-- validate schema structure separately from semantic correctness;
+- validate structure separately from semantic correctness;
 - de-duplicate, label, and prune inputs before processing;
-- retain code, parameters, source versions, row counts, and reconciliation evidence;
-- confirm the released artifact is the reviewed version;
-- constrain and validate tools;
-- create representative tests;
-- establish human review where the output is consequential; and
+- distinguish output condition from intended-use risk;
+- choose ready to use, needs revision, or needs human override;
+- state the controlling reason and required next action;
+- avoid treating roughness as risk or polish as approval;
+- retain code, parameters, sources, review, and approval evidence; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
-A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, professional approval, disclosure authorization, correct code logic, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
