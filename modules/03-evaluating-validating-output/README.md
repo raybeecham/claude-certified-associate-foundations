@@ -2,11 +2,11 @@
 
 Associate Persona · Official Exam Domain 2 · **21% of the exam blueprint**
 
-> **Status:** In progress — Module 3 is the active module.
+> **Status:** In progress — all teaching, exercise, quiz, and takeaway sections are complete. Module Complete remains open.
 
 ## Module thesis
 
-> Fluency is not proof. Accuracy alone is not delivery readiness, and responsible use requires evidence, proportionate review, appropriate presentation, and explicit release judgment.
+> Fluency is not proof. Accuracy alone is not delivery readiness, and responsible use requires evidence, proportionate review, appropriate presentation, reproducible computation, and explicit release judgment.
 
 ```text
 Prompt specification
@@ -25,7 +25,7 @@ Format and execution selection
         ↓
 Triage and self-assessment
         ↓
-Quiz synthesis
+Quiz and takeaway synthesis
 ```
 
 ## Course-aligned lesson map
@@ -40,36 +40,37 @@ Quiz synthesis
 - [x] 08. Exercise: Triage the Output Set
   - [x] [Exercise — 4/4 correct](lessons/08a-triage-output-set.md)
   - [x] [Optional Self-Assessment](lessons/08b-self-assessment.md)
-- [ ] 09. Module 3 Quiz
+- [x] 09. Module 3 Quiz
   - [x] [Quiz — Full marks, 7/7](lessons/09a-module-3-quiz.md)
-  - [ ] Takeaways
+  - [x] [Key Takeaways](lessons/09b-key-takeaways.md)
 - [ ] 10. Module Complete
 
-## Learning progression
+## Completion record
 
 ```text
-Inspect accuracy and completeness
-              ↓
-Detect hallucinations, inconsistencies, and bias
-              ↓
-Verify claims against authoritative evidence
-              ↓
-Determine when qualified human review is mandatory
-              ↓
-Adapt verified content for the audience
-              ↓
-Choose the output container and computation method
-              ↓
-Triage the output and review your own behavior
-              ↓
-Integrate the framework under quiz conditions
+Triage exercise: 4/4 correct
+Module 3 quiz: Full marks — 7/7
+Optional self-assessment: Complete
+Key takeaways: Reviewed
 ```
 
 ---
 
-# Evaluation framework
+# Six durable takeaways
 
-## 1. Accuracy and completeness
+## 1. Accountability stays with the releasing human or organization
+
+```text
+Model assists
+      ↓
+Human evaluates and approves
+      ↓
+Organization releases and owns the consequences
+```
+
+AI assistance does not transfer professional duty, approval authority, data-handling obligations, or responsibility to correct errors.
+
+## 2. Evaluate against three references
 
 ```text
 Requirements
@@ -77,15 +78,18 @@ Requirements
 Source material
     +
 Professional standards
-    ↓
-Accuracy review
-    +
-Completeness review
 ```
 
-Accuracy asks whether what is present is correct. Completeness asks whether anything material is missing.
+Then review accuracy and completeness separately:
 
-## 2. Failure signatures
+```text
+Accuracy     → Is what is present correct?
+Completeness → Is anything material missing?
+```
+
+Review depth is calibrated to consequence, reversibility, audience, uncertainty, and governing obligations.
+
+## 3. Plausible is not verified
 
 ```text
 Precise but uncited       → verify provenance
@@ -96,19 +100,18 @@ Important source absent   → coverage check
 Action claimed complete   → verify tool and external state
 ```
 
-## 3. Grounding and fact-checking
+A polished statement may still be unsupported, incomplete, inconsistent, biased, or unexecuted.
 
-```text
-Evidence boundary
-      ↓
-Permission for unknown
-      ↓
-Claim-to-source mapping
-      ↓
-Independent validation
-      ↓
-Deterministic checks and qualified review
-```
+## 4. Build verification into the prompt
+
+Use:
+
+- explicit permission for `unknown` or `not covered`;
+- a defined evidence boundary;
+- auditable source locations;
+- quote-first analysis for long or consequential material;
+- controlled support statuses; and
+- required independent checks.
 
 ```text
 Citation present
@@ -116,30 +119,27 @@ Citation present
 Claim supported
 ```
 
-## 4. Diligence
+## 5. Know review thresholds in advance
 
 ```text
 Stakes              → What happens if it is wrong?
 Reversibility       → Can the action be undone?
 Audience            → Who will see or rely on it?
-Regulatory exposure → What rule, contract, policy, or duty applies?
+Regulatory exposure → What rule, contract, policy, standard, or duty applies?
 ```
 
 Mandatory-review classes include final external deliverables, audit-critical calculations, regulated or sensitive work, public or legal communications, consequential decisions, and irreversible actions.
 
-## 5. Audience adaptation
+Meaningful review requires expertise, authority, context, evidence access, time, independence, and intervention rights.
+
+## 6. Pick the format by reliability
 
 ```text
-Facts, figures, uncertainty, risks, and obligations → remain invariant
-Selection, depth, tone, order, and format           → adapt to audience
+Inline, artifact, structured → presentation and delivery
+Code execution               → computation and processing
 ```
 
-## 6. Output format and execution
-
-```text
-Inline, artifact, and structured output → delivery and presentation
-Code execution                          → computation and processing
-```
+Use code execution for material calculations, but remember:
 
 ```text
 Executed successfully
@@ -148,75 +148,71 @@ Correct logic
       ≠
 Correct data
       ≠
+Correct interpretation
+      ≠
 Release approval
 ```
 
-## 7. Triage
+---
+
+# Integrated evaluation workflow
 
 ```text
-Output condition
-      +
-Intended-use risk
-      ↓
-Ready to use / Needs revision / Needs human override
+1. Define the task and intended use
+          ↓
+2. Check requirements, sources, and professional standards
+          ↓
+3. Review accuracy and completeness
+          ↓
+4. Scan failure signatures
+          ↓
+5. Ground and independently verify material claims
+          ↓
+6. Apply Diligence thresholds and review gates
+          ↓
+7. Adapt for the audience without changing the facts
+          ↓
+8. Select the output container and computation method
+          ↓
+9. Triage: release, edit, verify, escalate, or reject
+          ↓
+10. Record approval, limitations, and correction ownership
 ```
 
-The triage exercise was completed with **4 of 4 classifications correct**.
-
-## 8. Self-assessment
+## Integrated release question
 
 ```text
-Discernment → Did the response actually fit the question and requirements?
-Diligence   → Was the output checked before use at a level appropriate to the stakes?
+Is the output correct enough,
+complete enough,
+supported enough,
+reviewed enough,
+appropriate enough,
+and reproducible enough
+for this exact use?
 ```
-
-The optional reflection documented a shift from generic prompting toward explicit specification and verification.
 
 ---
 
-# Module 3 quiz result
-
-```text
-Full marks — 7 of 7
-```
-
-The quiz demonstrated command of seven judgment domains:
-
-| Domain | Governing distinction |
-|---|---|
-| Accuracy and completeness | Correct visible content does not prove full coverage |
-| Hallucination detection | Precise unsupported details require provenance |
-| Grounded prompting | Restrict sources, permit unknowns, require citations |
-| Internal consistency | Recompute and reconcile numeric contradictions |
-| Audience adaptation | Preserve truth while changing depth and presentation |
-| Numeric reliability | Execute material calculations and review logic |
-| Input curation | De-duplicate, label, and prune before rerunning |
-
-## Quiz shortcut
+# Exam shortcuts
 
 ```text
 Accurate figures, missing factor → completeness review
 Precise claim, no source         → fabricated-specific risk
-Document-only task               → source restriction + unknown + citation
+Document-only task               → restrict sources + permit unknown + cite
 Subtotal mismatch                → execute and reconcile
 Two audiences                    → truth-preserving variants
 Exact multi-variable math        → code execution + logic review
 Overlapping sources              → curate inputs first
+High-stakes external use         → qualified human review
 ```
 
-## Quiz reasoning sequence
+For scenario questions:
 
-```text
-Observe the scenario
-      ↓
-Identify what remains unproven
-      ↓
-Select the evidence, computation, adaptation, or review control
-      ↓
-Reject irrelevant complexity
-      ↓
-State the next responsible action
-```
+1. identify the intended use and audience;
+2. determine what property remains unproven;
+3. select the smallest evidence, computation, adaptation, or review control that establishes it;
+4. reject alternatives based only on confidence, polish, repetition, model tier, formatting, or schema validity; and
+5. conclude with release, edit, verify, escalate, or reject.
 
 ---
 
@@ -234,6 +230,7 @@ State the next responsible action
 - [Exercise: Triage the Output Set](lessons/08a-triage-output-set.md)
 - [Self-Assessment: Score Your Own Conversation](lessons/08b-self-assessment.md)
 - [Module 3 Quiz](lessons/09a-module-3-quiz.md)
+- [Module 3 Key Takeaways](lessons/09b-key-takeaways.md)
 
 ## Prompt notebooks
 
@@ -247,6 +244,7 @@ State the next responsible action
 - [Triage Output Set prompts](../../prompts/module-03/08a-triage-output-set-prompts.md)
 - [Self-Assessment prompts](../../prompts/module-03/08b-self-assessment-prompts.md)
 - [Module 3 quiz and remediation prompts](../../prompts/module-03/09a-module-3-quiz-prompts.md)
+- [Module 3 Key Takeaways prompts](../../prompts/module-03/09b-key-takeaways-prompts.md)
 
 ## Engineering patterns
 
@@ -266,49 +264,23 @@ State the next responsible action
 
 ---
 
-# Exam lens
-
-For scenario questions:
-
-1. identify intended use and audience;
-2. compare the output with requirements and evidence;
-3. separate accuracy from completeness;
-4. detect unsupported precision, contradictions, bias, and omissions;
-5. define the evidence boundary and strongest source;
-6. use deterministic computation for material math;
-7. preserve factual invariants across audience versions;
-8. curate duplicate or contradictory inputs;
-9. apply stakes, reversibility, audience, and governing obligations;
-10. choose the smallest responsible intervention; and
-11. conclude with release, edit, verify, escalate, or reject.
-
-Do not confuse confidence, polish, citations, schema validity, execution success, or a stronger model with proof.
-
----
-
 # Completion criteria
 
-- [x] I completed the Module 3 introduction.
-- [x] I completed Accuracy and Completeness.
-- [x] I completed Hallucinations, Inconsistencies, and Bias.
-- [x] I completed Fact-Checking and Grounding.
-- [x] I completed Diligence and Human Review.
-- [x] I completed Editing and Audience Adaptation.
-- [x] I completed Choosing Output Formats.
+- [x] I completed all Module 3 teaching sections.
 - [x] I completed the Triage exercise with 4/4 correct.
 - [x] I completed the optional self-assessment.
 - [x] I completed the Module 3 quiz with full marks, 7/7.
-- [ ] I completed the Module 3 takeaways.
+- [x] I reviewed the six Module 3 takeaways.
 - [ ] I can apply the three evaluation references consistently.
 - [ ] I can review accuracy and completeness separately.
-- [ ] I can identify hallucinations, contradictions, omissions, and biased framing.
+- [ ] I can detect hallucinations, contradictions, omissions, and biased framing.
 - [ ] I can distinguish citation presence from actual support.
 - [ ] I can validate material claims and calculations independently.
 - [ ] I can apply the four Diligence thresholds.
 - [ ] I can define meaningful human-review qualifications.
 - [ ] I can preserve invariant content across audience versions.
 - [ ] I can distinguish presentation format from computation method.
-- [ ] I can curate an input package and preserve reproducibility evidence.
+- [ ] I can curate inputs and preserve reproducibility evidence.
 - [ ] I can triage an output and state the controlling next action.
 - [ ] I completed the repository evaluation lab and scored at least 80% on the extended quiz.
 
@@ -329,7 +301,6 @@ Product behavior can change. Verify current official documentation.
 - [AI Fluency Framework overview](https://www.anthropic.com/ai-fluency/overview)
 - [AI Fluency: Discernment](https://www.anthropic.com/ai-fluency/discernment)
 - [AI Fluency: Diligence](https://www.anthropic.com/ai-fluency/due-dilligence)
-- [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
 - [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
-- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
-- [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
+- [Create and edit files with Claude](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude)
+- [Use Claude for Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)
