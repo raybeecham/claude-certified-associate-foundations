@@ -52,6 +52,7 @@ These templates are study aids and starting points, not universal production pro
 3. [Hallucinations, Inconsistencies, and Bias prompts](module-03/03-hallucinations-inconsistencies-bias-prompts.md)
 4. [Fact-Checking and Grounding prompts](module-03/04-fact-checking-grounding-prompts.md)
 5. [Diligence and Human Review prompts](module-03/05-diligence-human-review-prompts.md)
+6. [Editing and Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
@@ -65,41 +66,39 @@ Before using a template:
 - choose a narrow output contract;
 - define missing-data behavior;
 - match the control-latitude balance to the task type;
-- check for both under-specification and over-specification;
-- map each proposed repair to a material output requirement;
+- check for under-specification and over-specification;
 - route exact arithmetic and counting to deterministic tools;
-- diagnose why plausible alternatives are weaker than the targeted intervention;
-- use the five Module 2 takeaways as a final design review;
 - treat fluent wording as unverified until checked against requirements and evidence;
-- evaluate against requirements, source material, and professional standards;
+- evaluate requirements, source material, and professional standards;
 - review accuracy and completeness separately;
 - scan precise details for provenance;
 - compare repeated facts for inconsistency;
 - challenge preferred conclusions and unequal scrutiny;
 - verify source and requirement coverage;
-- verify claimed external actions through tools and authoritative system state;
 - permit explicit `unknown`, `not covered`, and `conflicting` outcomes;
-- define whether the task is closed-source, open research, or mixed;
 - require precise, auditable claim-to-source locations;
-- extract evidence before analysis when the source is long or consequential;
-- treat Best-of-N agreement as stability evidence, not factual proof;
+- treat repeated-run agreement as stability evidence, not factual proof;
 - validate consequential claims against authoritative sources;
 - recompute material calculations deterministically;
 - assess stakes, reversibility, audience, and regulatory exposure;
-- identify automatic do-not-ship review gates before generation;
+- identify automatic do-not-ship review gates;
 - define reviewer expertise, authority, evidence access, time, and intervention rights;
 - place approval before irreversible actions;
 - stop iteration when evidence, authority, or professional judgment is the blocker;
 - preserve human and organizational accountability for release;
-- match review depth to the consequences of error;
+- define the audience contract before adapting a verified draft;
+- preserve facts, figures, uncertainty, risks, dependencies, and obligations across versions;
+- distinguish selective omission from misleading omission;
+- compare candidate drafts against common criteria rather than polish;
+- review disclosure before external adaptation;
+- confirm the released artifact is the reviewed version;
 - constrain and validate tools;
 - create representative tests;
 - establish human review where the output is consequential;
-- define how context will be checkpointed, summarized, persisted, or discarded;
-- justify the selected entry point, capability layers, model tier, and context strategy; and
+- define how context will be checkpointed, summarized, persisted, or discarded; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
-A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, professional approval, or irreversible-action authorization by itself.
+A prompt cannot enforce identity, authorization, data isolation, persistent-state integrity, legal authority, correct model selection, reliable context transfer, factual accuracy, professional approval, disclosure authorization, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
