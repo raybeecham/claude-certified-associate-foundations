@@ -4,9 +4,9 @@ Associate Persona · Official Exam Domain 2 · **21% of the exam blueprint**
 
 > **Status:** In progress — Module 3 is the active module.
 
-## Why this domain matters
+## Module thesis
 
-A plausible output is not evidence of a reliable result. Evaluation determines whether an answer is accurate, complete, grounded, internally consistent, appropriate for its audience, delivered in a usable format, and safe to release.
+> Fluency is not proof. Accuracy alone is not delivery readiness, and responsible use requires evidence, proportionate review, appropriate presentation, and explicit release judgment.
 
 ```text
 Prompt specification
@@ -24,9 +24,9 @@ Audience adaptation
 Format and execution selection
         ↓
 Triage and self-assessment
+        ↓
+Quiz synthesis
 ```
-
-> **Module thesis:** Fluency is not proof, accuracy alone is not delivery readiness, and responsible use requires reviewing both the output and your own behavior.
 
 ## Course-aligned lesson map
 
@@ -41,7 +41,7 @@ Triage and self-assessment
   - [x] [Exercise — 4/4 correct](lessons/08a-triage-output-set.md)
   - [x] [Optional Self-Assessment](lessons/08b-self-assessment.md)
 - [ ] 09. Module 3 Quiz
-  - [ ] Quiz
+  - [x] [Quiz — Full marks, 7/7](lessons/09a-module-3-quiz.md)
   - [ ] Takeaways
 - [ ] 10. Module Complete
 
@@ -60,16 +60,16 @@ Adapt verified content for the audience
               ↓
 Choose the output container and computation method
               ↓
-Triage the output
+Triage the output and review your own behavior
               ↓
-Review your own Discernment and Diligence behavior
+Integrate the framework under quiz conditions
 ```
 
 ---
 
-# Evaluation foundations
+# Evaluation framework
 
-## Accuracy and completeness
+## 1. Accuracy and completeness
 
 ```text
 Requirements
@@ -85,7 +85,7 @@ Completeness review
 
 Accuracy asks whether what is present is correct. Completeness asks whether anything material is missing.
 
-## Failure signatures
+## 2. Failure signatures
 
 ```text
 Precise but uncited       → verify provenance
@@ -96,7 +96,7 @@ Important source absent   → coverage check
 Action claimed complete   → verify tool and external state
 ```
 
-## Grounding
+## 3. Grounding and fact-checking
 
 ```text
 Evidence boundary
@@ -116,7 +116,7 @@ Citation present
 Claim supported
 ```
 
-## Diligence
+## 4. Diligence
 
 ```text
 Stakes              → What happens if it is wrong?
@@ -125,14 +125,16 @@ Audience            → Who will see or rely on it?
 Regulatory exposure → What rule, contract, policy, or duty applies?
 ```
 
-## Audience adaptation
+Mandatory-review classes include final external deliverables, audit-critical calculations, regulated or sensitive work, public or legal communications, consequential decisions, and irreversible actions.
+
+## 5. Audience adaptation
 
 ```text
 Facts, figures, uncertainty, risks, and obligations → remain invariant
 Selection, depth, tone, order, and format           → adapt to audience
 ```
 
-## Output format and execution
+## 6. Output format and execution
 
 ```text
 Inline, artifact, and structured output → delivery and presentation
@@ -149,109 +151,71 @@ Correct data
 Release approval
 ```
 
----
-
-# Triage foundation
-
-Triage evaluates two different axes:
+## 7. Triage
 
 ```text
 Output condition
       +
 Intended-use risk
       ↓
-Verdict and next action
+Ready to use / Needs revision / Needs human override
 ```
 
-| Verdict | Use |
-|---|---|
-| **Ready to use** | Adequate for the stated low-risk use, possibly after light editing |
-| **Needs revision** | A bounded defect can be repaired, verified, and re-evaluated |
-| **Needs human override** | Consequence, authority, uncertainty, or governing obligations require qualified human control |
+The triage exercise was completed with **4 of 4 classifications correct**.
 
-## Course exercise result
-
-```text
-4 of 4 classifications correct
-```
-
-The exercise demonstrated:
-
-- proportionate use of a low-stakes internal draft;
-- deterministic repair of an inconsistent total;
-- source validation for untraceable statistics; and
-- mandatory qualified review for a regulatory submission.
-
-> The roughest-looking output may be the lowest risk. The cleanest-looking output may carry the strongest review gate.
-
----
-
-# Self-assessment foundation
-
-The optional self-assessment asks whether the learner applied the module's behavioral indicators to a real conversation.
+## 8. Self-assessment
 
 ```text
 Discernment → Did the response actually fit the question and requirements?
 Diligence   → Was the output checked before use at a level appropriate to the stakes?
 ```
 
-## Recorded reflection
-
-> My prompts were very generic initially, but I have since learned the different factors to consider, how to request the output more clearly, and why I need to verify the result before relying on it.
-
-## Indicator comparison
-
-| Indicator | Evidence in the reflection | Assessment |
-|---|---|---|
-| **Discernment** | The learner now considers task specification and whether the result fits the intended request | Developing into a deliberate strength |
-| **Diligence** | The learner explicitly recognizes the need to verify output before use | Developing into a deliberate strength |
-
-## Strong behavior
-
-The learner has shifted from casual, generic prompting toward a structured workflow that considers context, constraints, evidence, output requirements, and evaluation.
-
-## Next tightening action
-
-Convert the general intention to `verify everything` into explicit controls:
-
-```text
-Material claim
-      ↓
-Authoritative source or test
-      ↓
-Recorded result
-      ↓
-Review threshold
-      ↓
-Release or escalation decision
-```
-
-This self-assessment is optional and qualitative. It is not scored.
+The optional reflection documented a shift from generic prompting toward explicit specification and verification.
 
 ---
 
-# Integrated protocol
+# Module 3 quiz result
 
 ```text
-1. Define the intended task and use
-          ↓
-2. Specify context, evidence, constraints, and output
-          ↓
-3. Evaluate requirements, accuracy, and completeness
-          ↓
-4. Detect hallucinations, contradictions, bias, and omissions
-          ↓
-5. Ground and validate material claims
-          ↓
-6. Apply Diligence thresholds and review gates
-          ↓
-7. Adapt for audience without changing the facts
-          ↓
-8. Select the output modality and computation method
-          ↓
-9. Triage: ready, revise, or human override
-          ↓
-10. Reflect on Discernment and Diligence behavior
+Full marks — 7 of 7
+```
+
+The quiz demonstrated command of seven judgment domains:
+
+| Domain | Governing distinction |
+|---|---|
+| Accuracy and completeness | Correct visible content does not prove full coverage |
+| Hallucination detection | Precise unsupported details require provenance |
+| Grounded prompting | Restrict sources, permit unknowns, require citations |
+| Internal consistency | Recompute and reconcile numeric contradictions |
+| Audience adaptation | Preserve truth while changing depth and presentation |
+| Numeric reliability | Execute material calculations and review logic |
+| Input curation | De-duplicate, label, and prune before rerunning |
+
+## Quiz shortcut
+
+```text
+Accurate figures, missing factor → completeness review
+Precise claim, no source         → fabricated-specific risk
+Document-only task               → source restriction + unknown + citation
+Subtotal mismatch                → execute and reconcile
+Two audiences                    → truth-preserving variants
+Exact multi-variable math        → code execution + logic review
+Overlapping sources              → curate inputs first
+```
+
+## Quiz reasoning sequence
+
+```text
+Observe the scenario
+      ↓
+Identify what remains unproven
+      ↓
+Select the evidence, computation, adaptation, or review control
+      ↓
+Reject irrelevant complexity
+      ↓
+State the next responsible action
 ```
 
 ---
@@ -269,6 +233,7 @@ This self-assessment is optional and qualitative. It is not scored.
 - [Choosing Output Formats](lessons/07-choosing-output-formats.md)
 - [Exercise: Triage the Output Set](lessons/08a-triage-output-set.md)
 - [Self-Assessment: Score Your Own Conversation](lessons/08b-self-assessment.md)
+- [Module 3 Quiz](lessons/09a-module-3-quiz.md)
 
 ## Prompt notebooks
 
@@ -281,6 +246,7 @@ This self-assessment is optional and qualitative. It is not scored.
 - [Choosing Output Formats prompts](../../prompts/module-03/07-choosing-output-formats-prompts.md)
 - [Triage Output Set prompts](../../prompts/module-03/08a-triage-output-set-prompts.md)
 - [Self-Assessment prompts](../../prompts/module-03/08b-self-assessment-prompts.md)
+- [Module 3 quiz and remediation prompts](../../prompts/module-03/09a-module-3-quiz-prompts.md)
 
 ## Engineering patterns
 
@@ -300,29 +266,23 @@ This self-assessment is optional and qualitative. It is not scored.
 
 ---
 
-# Exam shortcuts
-
-```text
-Low-risk provisional draft       → ready with proportionate editing
-Internal contradiction           → revise and recompute
-Untraceable precise claim        → revise and validate sources
-Regulatory or consequential use  → qualified human override
-Response sounds good             → still compare with the actual question
-Output will be used              → verify at a level matched to the stakes
-Generic promise to verify        → define sources, tests, reviewers, and blockers
-```
+# Exam lens
 
 For scenario questions:
 
 1. identify intended use and audience;
-2. assess the output against requirements and evidence;
-3. identify bounded defects;
-4. apply stakes, reversibility, audience, and governing obligations;
-5. recognize automatic human-review gates;
-6. separate appearance from risk;
-7. choose ready to use, needs revision, or needs human override;
-8. state the required next action; and
-9. distinguish Discernment behavior from Diligence behavior.
+2. compare the output with requirements and evidence;
+3. separate accuracy from completeness;
+4. detect unsupported precision, contradictions, bias, and omissions;
+5. define the evidence boundary and strongest source;
+6. use deterministic computation for material math;
+7. preserve factual invariants across audience versions;
+8. curate duplicate or contradictory inputs;
+9. apply stakes, reversibility, audience, and governing obligations;
+10. choose the smallest responsible intervention; and
+11. conclude with release, edit, verify, escalate, or reject.
+
+Do not confuse confidence, polish, citations, schema validity, execution success, or a stronger model with proof.
 
 ---
 
@@ -335,27 +295,28 @@ For scenario questions:
 - [x] I completed Diligence and Human Review.
 - [x] I completed Editing and Audience Adaptation.
 - [x] I completed Choosing Output Formats.
-- [x] I completed the Triage the Output Set exercise with 4/4 correct.
-- [x] I completed the optional Triage self-assessment.
-- [ ] I can apply the three evaluation references.
-- [ ] I can distinguish output condition from use risk.
-- [ ] I can distinguish ready to use, needs revision, and needs human override.
-- [ ] I can identify bounded defects suitable for revision.
-- [ ] I can recognize mandatory human-review gates.
-- [ ] I can state a controlling reason and next action.
-- [ ] I can distinguish Discernment from Diligence in my own workflow.
-- [ ] I can convert a general verification intention into explicit controls.
+- [x] I completed the Triage exercise with 4/4 correct.
+- [x] I completed the optional self-assessment.
+- [x] I completed the Module 3 quiz with full marks, 7/7.
+- [ ] I completed the Module 3 takeaways.
+- [ ] I can apply the three evaluation references consistently.
+- [ ] I can review accuracy and completeness separately.
+- [ ] I can identify hallucinations, contradictions, omissions, and biased framing.
+- [ ] I can distinguish citation presence from actual support.
 - [ ] I can validate material claims and calculations independently.
+- [ ] I can apply the four Diligence thresholds.
+- [ ] I can define meaningful human-review qualifications.
 - [ ] I can preserve invariant content across audience versions.
-- [ ] I can distinguish format validity from semantic correctness.
-- [ ] I completed the Module 3 quiz and takeaways.
+- [ ] I can distinguish presentation format from computation method.
+- [ ] I can curate an input package and preserve reproducibility evidence.
+- [ ] I can triage an output and state the controlling next action.
 - [ ] I completed the repository evaluation lab and scored at least 80% on the extended quiz.
 
 ---
 
 # Public-repository scenario policy
 
-Examples and reflections must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential conversation text, client data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples, questions, and reflections must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential conversation text, client data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
@@ -369,3 +330,6 @@ Product behavior can change. Verify current official documentation.
 - [AI Fluency: Discernment](https://www.anthropic.com/ai-fluency/discernment)
 - [AI Fluency: Diligence](https://www.anthropic.com/ai-fluency/due-dilligence)
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
+- [Reduce hallucinations](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
+- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
+- [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
