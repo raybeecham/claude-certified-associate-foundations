@@ -23,10 +23,10 @@ Audience adaptation
         ↓
 Format and execution selection
         ↓
-Release, edit, verify, escalate, or reject
+Triage disposition
 ```
 
-> **Module thesis:** Fluency is not proof, accuracy alone is not delivery readiness, and presentation format is not verification.
+> **Module thesis:** Fluency is not proof, accuracy alone is not delivery readiness, and appearance is not the same axis as risk.
 
 ## Course-aligned lesson map
 
@@ -38,7 +38,7 @@ Release, edit, verify, escalate, or reject
 - [x] [06. Editing & Adapting for Audience](lessons/06-editing-adapting-audience.md)
 - [x] [07. Choosing Output Formats](lessons/07-choosing-output-formats.md)
 - [ ] 08. Exercise: Triage the Output Set
-  - [ ] Exercise
+  - [x] [Exercise — 4/4 correct](lessons/08a-triage-output-set.md)
   - [ ] Self-Assessment
 - [ ] 09. Module 3 Quiz
   - [ ] Quiz
@@ -60,14 +60,14 @@ Adapt verified content for the audience
               ↓
 Choose the output container and computation method
               ↓
-Triage: release, edit, verify, escalate, or reject
+Triage: ready, revise, or human override
 ```
 
 ---
 
-# Foundations
+# Evaluation foundations
 
-## 1. Accuracy and completeness
+## Accuracy and completeness
 
 ```text
 Requirements
@@ -79,13 +79,9 @@ Professional standards
 Accuracy review
     +
 Completeness review
-    ↓
-Stakes-calibrated verdict
 ```
 
-Accuracy asks whether what appears is correct. Completeness asks whether anything material is missing.
-
-## 2. Failure patterns
+## Failure signatures
 
 ```text
 Precise but uncited       → verify provenance
@@ -96,7 +92,7 @@ Important source absent   → coverage check
 Action claimed complete   → verify tool and external state
 ```
 
-## 3. Fact-checking and grounding
+## Grounding
 
 ```text
 Evidence boundary
@@ -105,90 +101,32 @@ Permission for unknown
       ↓
 Claim-to-source mapping
       ↓
-Support classification
-      ↓
 Independent validation
       ↓
 Deterministic checks and qualified review
 ```
 
-```text
-Citation present
-      ≠
-Claim supported
-```
-
-## 4. Diligence and review gates
+## Diligence
 
 ```text
 Stakes              → What happens if it is wrong?
 Reversibility       → Can the action be undone?
 Audience            → Who will see or rely on it?
-Regulatory exposure → What law, contract, policy, standard, or duty applies?
+Regulatory exposure → What rule, contract, policy, or duty applies?
 ```
 
-Mandatory-review classes include final external deliverables, audit-critical calculations, regulated or sensitive work, public or legal communications, consequential decisions, and irreversible actions.
-
-## 5. Editing and audience adaptation
+## Audience adaptation
 
 ```text
 Facts, figures, uncertainty, risks, and obligations → remain invariant
 Selection, depth, tone, order, and format           → adapt to audience
 ```
 
-Use separate clarity, tone, formatting, invariant, and disclosure reviews.
-
-## 6. Output formats and execution
-
-The output container and computation method solve different problems.
+## Output format and execution
 
 ```text
 Inline, artifact, and structured output → delivery and presentation
 Code execution                          → computation and processing
-```
-
-### Inline
-
-Use for immediate contextual guidance inside the conversation.
-
-### Artifact or reusable file
-
-Use for standalone content that must be edited, reused, versioned, shared, or formally reviewed.
-
-```text
-Artifact created
-      ≠
-Deliverable approved
-```
-
-### Structured output
-
-Use defined fields or schemas for consistent extraction, comparison, validation, and machine consumption.
-
-```text
-Valid schema
-      ≠
-Valid meaning
-```
-
-### Code-executed path
-
-Use for material calculations, filtering, transformations, charts, reconciliation, and processed files.
-
-```text
-Inspect inputs
-      ↓
-Define business rules
-      ↓
-Review critical logic
-      ↓
-Execute
-      ↓
-Reconcile outputs
-      ↓
-Retain code and parameters
-      ↓
-Apply required human review
 ```
 
 ```text
@@ -201,71 +139,75 @@ Correct data
 Release approval
 ```
 
-### Input curation
-
-Before processing:
-
-1. de-duplicate exact and near-duplicate sources;
-2. identify authoritative and superseded versions;
-3. label approved, draft, raw, processed, current, and reference inputs;
-4. prune irrelevant content;
-5. restrict sensitive material; and
-6. inspect schema, units, currencies, dates, identifiers, and missing values.
-
 ---
 
-# Output modality matrix
+# Triage foundation
 
-| Requirement | Inline | Artifact/file | Structured | Code-executed path |
-|---|---:|---:|---:|---:|
-| Quick conversational answer | Strong | Weak | Optional | If computation needed |
-| Standalone deliverable | Weak | Strong | Optional | If processing needed |
-| Repeated editing and reuse | Weak | Strong | Moderate | Produces reusable results |
-| Machine consumption | Weak | Moderate | Strong | Often produces structured files |
-| Exact aggregation | Weak | Weak alone | Weak alone | Strongest path |
-| Chart from data | Weak | Strong destination | Strong source table | Required for computed chart |
-| Formal version and approval | Weak | Strong | Moderate | Retain code and output artifacts |
-
-Modalities may be combined:
+Triage evaluates two different axes:
 
 ```text
-Code-executed analysis
-        ↓
-Structured result table
-        ↓
-Chart
-        ↓
-Standalone report
-        ↓
-Inline executive summary
+Output condition
+      +
+Intended-use risk
+      ↓
+Verdict and next action
 ```
 
----
+## Three exercise verdicts
 
-# Four durable capabilities
+| Verdict | Use |
+|---|---|
+| **Ready to use** | Adequate for the stated low-risk use, possibly after light editing |
+| **Needs revision** | A bounded defect can be repaired, verified, and re-evaluated |
+| **Needs human override** | Consequence, authority, uncertainty, or governing obligations require qualified human control |
 
-## Discernment
+## Mapping to the wider module
 
-Evaluate what the output says, what it contradicts, and what it leaves out.
+| Exercise verdict | Wider actions |
+|---|---|
+| Ready to use | Release for the stated use |
+| Needs revision | Edit and/or Verify |
+| Needs human override | Escalate, reconstruct, or Reject |
 
-## Grounding
-
-Trace material claims to authoritative evidence and inspect actual support.
-
-## Diligence
-
-Match review depth to consequence and place qualified review before irreversible release or action.
-
-## Adaptation and triage
-
-Preserve verified content, select a usable format, and choose:
+## Course exercise result
 
 ```text
-Release
-Edit
-Verify
-Escalate
-Reject
+4 of 4 classifications correct
+```
+
+The completed classifications demonstrated:
+
+- proportionate use of a low-stakes internal draft;
+- deterministic repair of an inconsistent total;
+- source validation for untraceable statistics; and
+- mandatory qualified review for a regulatory submission.
+
+> The roughest-looking output may be the lowest risk. The cleanest-looking output may carry the strongest review gate.
+
+---
+
+# Triage protocol
+
+```text
+1. Define intended use and audience
+          ↓
+2. Assess output condition
+          ↓
+3. Apply requirements, sources, and professional standards
+          ↓
+4. Apply stakes, reversibility, audience, and governing obligations
+          ↓
+5. Identify the controlling issue
+          ↓
+6. Choose ready, revise, or human override
+          ↓
+7. State the next action and owner
+```
+
+Use this sentence structure:
+
+```text
+[VERDICT] because [CONTROLLING REASON]; next, [REQUIRED ACTION].
 ```
 
 ---
@@ -281,6 +223,7 @@ Reject
 - [Diligence: When Human Review Is Non-Negotiable](lessons/05-diligence-human-review.md)
 - [Editing and Adapting Output for Your Audience](lessons/06-editing-adapting-audience.md)
 - [Choosing Output Formats](lessons/07-choosing-output-formats.md)
+- [Exercise: Triage the Output Set](lessons/08a-triage-output-set.md)
 
 ## Prompt notebooks
 
@@ -291,6 +234,7 @@ Reject
 - [Diligence and Human Review prompts](../../prompts/module-03/05-diligence-human-review-prompts.md)
 - [Editing and Audience Adaptation prompts](../../prompts/module-03/06-editing-adapting-audience-prompts.md)
 - [Choosing Output Formats prompts](../../prompts/module-03/07-choosing-output-formats-prompts.md)
+- [Triage Output Set prompts](../../prompts/module-03/08a-triage-output-set-prompts.md)
 
 ## Engineering patterns
 
@@ -301,40 +245,34 @@ Reject
 - [Audience Adaptation Pattern](../../patterns/audience-adaptation-pattern.md)
 - [Output Format and Reliability Pattern](../../patterns/output-format-reliability-pattern.md)
 
-## Existing module files
+## Existing extended practice
 
-- [notes.md](notes.md): Exam-focused evaluation concepts and decision rules
-- [lab.md](lab.md): Applied evaluation exercise with acceptance criteria
-- [flashcards.md](flashcards.md): Baseline active-recall cards
-- [quiz.md](quiz.md): Extended original scenario quiz
+- [notes.md](notes.md)
+- [lab.md](lab.md)
+- [flashcards.md](flashcards.md)
+- [quiz.md](quiz.md)
 
 ---
 
 # Exam shortcuts
 
 ```text
-Quick contextual guidance        → inline
-Standalone editable deliverable  → artifact or file
-Machine-consumed records         → structured schema
-Material numeric calculation     → code execution
-Chart from uploaded data         → execute + validate result table
-Dirty source package             → curate before generation
-Successful code with wrong rule  → review logic and reconcile
+Low-risk provisional draft       → ready with proportionate editing
+Internal contradiction           → revise and recompute
+Untraceable precise claim        → revise and validate sources
+Regulatory or consequential use  → qualified human override
 ```
 
 For scenario questions:
 
-1. identify consumer and downstream use;
-2. distinguish conversational from standalone output;
-3. identify editability, reuse, and machine-readability needs;
-4. separate presentation format from computation method;
-5. use code execution for exact material calculations and charts;
-6. validate code logic, inputs, units, filters, and reconciliations;
-7. validate structured syntax and semantic meaning separately;
-8. curate inputs through de-duplication, labeling, and pruning;
-9. preserve provenance and reproducibility evidence;
-10. apply audience adaptation and review gates; and
-11. choose release, edit, verify, escalate, or reject.
+1. identify intended use and audience;
+2. assess the output against requirements and evidence;
+3. identify bounded defects;
+4. apply stakes, reversibility, audience, and governing obligations;
+5. recognize automatic human-review gates;
+6. separate appearance from risk;
+7. choose ready to use, needs revision, or needs human override; and
+8. state the required next action.
 
 ---
 
@@ -347,20 +285,18 @@ For scenario questions:
 - [x] I completed Diligence and Human Review.
 - [x] I completed Editing and Audience Adaptation.
 - [x] I completed Choosing Output Formats.
+- [x] I completed the Triage the Output Set exercise with 4/4 correct.
+- [ ] I completed the Triage self-assessment.
 - [ ] I can apply the three evaluation references.
-- [ ] I can review accuracy and completeness separately.
-- [ ] I can identify hallucinations, contradictions, omissions, and biased framing.
-- [ ] I can distinguish citation presence from actual support.
+- [ ] I can distinguish output condition from use risk.
+- [ ] I can distinguish ready to use, needs revision, and needs human override.
+- [ ] I can identify bounded defects suitable for revision.
+- [ ] I can recognize mandatory human-review gates.
+- [ ] I can state a controlling reason and next action.
 - [ ] I can validate material claims and calculations independently.
-- [ ] I can apply the four Diligence thresholds.
-- [ ] I can define meaningful human-review qualifications.
 - [ ] I can preserve invariant content across audience versions.
-- [ ] I can distinguish inline, artifact, structured, and code-executed paths.
-- [ ] I can separate format validity from semantic correctness.
-- [ ] I can curate an input package.
-- [ ] I can define and audit a reproducibility package.
-- [ ] I can triage an output into release, edit, verify, escalate, or reject.
-- [ ] I completed the preparation-course exercise, quiz, and takeaways.
+- [ ] I can distinguish format validity from semantic correctness.
+- [ ] I completed the Module 3 quiz and takeaways.
 - [ ] I completed the repository evaluation lab and scored at least 80% on the extended quiz.
 
 ---
