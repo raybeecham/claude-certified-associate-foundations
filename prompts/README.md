@@ -50,6 +50,7 @@ These templates are study aids and starting points, not universal production pro
 1. [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
 2. [Discernment: Accuracy and Completeness prompts](module-03/02-discernment-accuracy-completeness-prompts.md)
 3. [Hallucinations, Inconsistencies, and Bias prompts](module-03/03-hallucinations-inconsistencies-bias-prompts.md)
+4. [Fact-Checking and Grounding prompts](module-03/04-fact-checking-grounding-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned modules are completed.
 
@@ -76,6 +77,13 @@ Before using a template:
 - challenge preferred conclusions and unequal scrutiny;
 - verify source and requirement coverage;
 - verify claimed external actions through tools and authoritative system state;
+- permit explicit `unknown`, `not covered`, and `conflicting` outcomes;
+- define whether the task is closed-source, open research, or mixed;
+- require precise, auditable claim-to-source locations;
+- extract evidence before analysis when the source is long or consequential;
+- treat Best-of-N agreement as stability evidence, not factual proof;
+- validate consequential claims against authoritative sources;
+- recompute material calculations deterministically;
 - match review depth to the consequences of error;
 - constrain and validate tools;
 - create representative tests;
