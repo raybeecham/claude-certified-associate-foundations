@@ -27,6 +27,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Failure Signature Review Pattern](failure-signature-review-pattern.md): Detect hallucinations, contradictions, bias, silent omissions, and unverified capability claims through targeted evidence and system checks
 - [Grounded Verification Pattern](grounded-verification-pattern.md): Define evidence boundaries, permit unknowns, map claims to sources, validate authoritatively, recompute deterministically, and record release disposition
 - [Human Review Gate Pattern](human-review-gate-pattern.md): Precommit risk thresholds, define qualified reviewers, place approval before irreversible actions, and escalate when prompting reaches its limits
+- [Audience Adaptation Pattern](audience-adaptation-pattern.md): Preserve verified invariants while adapting selection, depth, tone, order, format, and disclosure for the intended audience
 
 ## Planned pattern groups
 
