@@ -8,9 +8,20 @@ Associate Persona · Official Exam Domain 4 · **16% of the exam blueprint**
 
 A useful AI response is not yet a reliable workflow.
 
-Workflow integration determines how a business objective becomes a repeatable process with clear inputs, responsibilities, decision points, tools, state, validation, human review, and recovery behavior.
+There is a difference between:
 
-Production quality comes from the surrounding system as much as the model. A sound design assigns each responsibility to the component best suited for it and makes side effects, state, retries, approvals, and failures explicit.
+```text
+I use Claude
+      ↓
+Personal productivity habit
+
+Our workflow uses Claude
+      ↓
+Repeatable team process with defined stages,
+responsibilities, controls, and outcomes
+```
+
+Workflow integration determines how a business objective becomes a repeatable process with clear inputs, responsibilities, decision points, tools, state, validation, human review, and recovery behavior.
 
 ```text
 Business requirement
@@ -30,13 +41,13 @@ Value and limitation communication
 Validated workflow
 ```
 
-> **Module thesis:** Do not ask whether Claude can participate in a workflow. Ask which responsibilities should be delegated to Claude, which should remain deterministic or human-controlled, and how the complete process will be validated and improved.
+> **Module thesis:** Workflow value comes from deciding what to delegate—not from automating everything.
 
 ---
 
 # Course-aligned roadmap
 
-- [ ] 01. Module Introduction
+- [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [ ] 02. Analyzing Requirements & Use Cases
 - [ ] 03. Research, Planning & Process Optimization
 - [ ] 04. Solution Design, Development & Iteration
@@ -48,7 +59,7 @@ Validated workflow
   - [ ] Takeaways
 - [ ] 09. Module Complete
 
-No course lesson files are marked complete until the corresponding preparation-course material is supplied and converted into original public-safe study content.
+No later lesson is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
 
 ## Learning progression
 
@@ -110,9 +121,133 @@ The transition question is:
 
 ---
 
+# Introduction foundation
+
+## Personal use versus workflow integration
+
+A personal interaction usually depends on one person's live judgment. A team workflow must make that judgment explicit and repeatable.
+
+| Dimension | Personal use | Designed workflow |
+|---|---|---|
+| Trigger | Individual decides | Defined event, request, or stage |
+| Inputs | Selected informally | Authorized input contract |
+| Prompt | Adapted conversationally | Versioned task specification |
+| State | Often held in conversation | Persisted in a durable system |
+| Validation | User judgment | Defined checks and acceptance criteria |
+| Approval | Often the same user | Assigned reviewer and approver |
+| Failure handling | Manual retry | Timeout, retry, fallback, escalation, rollback |
+| Accountability | Individual | Named role or organization |
+| Measurement | Subjective usefulness | Stage and business outcomes |
+
+```text
+Repeated prompting
+      ≠
+Designed workflow
+```
+
+## Delegation as the anchor
+
+Delegation assigns each workflow responsibility to the component best suited for it.
+
+| Mode | Appropriate responsibility |
+|---|---|
+| **AI-appropriate** | Interpretation, classification, synthesis, drafting, or options under bounded criteria |
+| **Human-retained** | Authority, accountability, professional judgment, exceptions, consequential approval |
+| **Collaborative** | Claude prepares or analyzes while a human evaluates and decides |
+| **Deterministic** | Exact calculations, schemas, fixed rules, routing, authorization checks |
+| **Tool-owned** | Controlled retrieval, transformation, external actions, system interaction |
+| **Storage-owned** | Authoritative records, durable state, checkpoints, logs, version history |
+
+```text
+Probabilistic language work → model
+Exact rule or calculation   → deterministic component
+External action             → controlled tool
+Durable state               → storage or system of record
+Authority and accountability → human or organization
+```
+
+## Task delegation versus decision delegation
+
+A workflow may safely delegate preparation without delegating authority.
+
+```text
+Claude extracts, summarizes, classifies, or drafts
+                    ↓
+Human evaluates evidence and consequences
+                    ↓
+Authorized person approves or rejects
+                    ↓
+Controlled tool executes any side effect
+```
+
+```text
+Generate recommendation
+      ≠
+Authorize action
+```
+
+The farther a stage moves from reversible preparation toward consequential action, the stronger its deterministic controls, validation, review, and approval requirements become.
+
+## Two-team lesson
+
+Two teams can use the same product on the same process and receive opposite outcomes.
+
+The safer design:
+
+- delegates clause extraction and draft redlining;
+- retains lawyer review and final decision authority;
+- preserves evidence and proposed changes; and
+- validates the work before release.
+
+The unsafe design:
+
+- treats classification as sufficient for approval;
+- lets the model accept supposedly low-risk clauses;
+- removes qualified review from consequential decisions; and
+- discovers the error only after an obligation is created.
+
+The controlling distinction is:
+
+```text
+Useful AI task
+      ≠
+Safe AI-owned decision
+```
+
+---
+
+# Delegation-first workflow review
+
+```text
+1. Define the business outcome
+          ↓
+2. Map the current stages and owners
+          ↓
+3. Identify decisions, calculations, actions, and state
+          ↓
+4. Mark each stage AI-appropriate, human-retained,
+   collaborative, deterministic, tool-owned, or storage-owned
+          ↓
+5. Add validation and approval boundaries
+          ↓
+6. Define failure, fallback, and escalation behavior
+          ↓
+7. Measure workflow and business outcomes
+```
+
+## Stage inventory
+
+| Stage | Current owner | Input | Work | Output | Consequence if wrong | Candidate delegation |
+|---|---|---|---|---|---|---|
+| Stage name | Role/system | Source | Activity | Result | Low/material/high | AI/Human/Collaborative/Deterministic/Tool/Storage |
+
+The inventory makes work visible. It does not automatically decide the final architecture.
+
+---
+
 # Durable engineering foundation
 
-The existing repository material provides an engineering foundation that will be mapped to the supplied course sections as they arrive.
+The existing repository material provides an engineering foundation that will be mapped to later course sections as they arrive.
 
 ## Requirements and use-case analysis
 
@@ -135,8 +270,6 @@ A technology capability is not a use case until it is connected to a real outcom
 
 ## Workflow-pattern selection
 
-Potential patterns include:
-
 | Pattern | Appropriate when |
 |---|---|
 | Interactive chat | A human remains continuously engaged and the task is contextual or exploratory |
@@ -146,55 +279,32 @@ Potential patterns include:
 
 Prefer the simplest pattern that satisfies the requirements.
 
-## Responsibility partitioning
-
-A reliable workflow separates responsibilities among:
-
-- **Model:** interpretation, classification, synthesis, drafting, and judgment under bounded criteria;
-- **Deterministic logic:** calculations, schemas, exact business rules, validation, routing, and authorization checks;
-- **Tools:** controlled retrieval, transformation, external actions, and system interaction;
-- **Storage:** authoritative records, workflow state, checkpoints, logs, and durable context;
-- **Human:** objective setting, exception handling, professional judgment, approval, and accountability.
-
-```text
-Probabilistic judgment → model
-Exact rule or calculation → deterministic component
-External capability → controlled tool
-Durable state → storage or system of record
-Authority and accountability → human or organization
-```
-
 ## Tool contracts
 
 A tool contract should define:
 
 - purpose;
 - inputs and types;
-- required versus optional fields;
+- required and optional fields;
 - allowed values;
-- authorization and permissions;
+- permissions;
 - expected output;
-- error behavior;
-- timeouts;
+- errors and timeouts;
 - retry policy;
-- idempotency requirements;
+- idempotency;
 - side effects;
 - approval boundary; and
 - audit evidence.
-
-The model should not be expected to infer operational guarantees that the tool contract does not provide.
 
 ## Reliability controls
 
 A production workflow may need:
 
-- input validation;
-- schema validation;
+- input and schema validation;
 - deterministic calculations;
-- source and provenance checks;
+- provenance checks;
 - human approval gates;
 - idempotency keys;
-- timeout handling;
 - bounded retries;
 - fallback paths;
 - rollback or compensation;
@@ -203,41 +313,13 @@ A production workflow may need:
 - monitoring and alerts; and
 - incident ownership.
 
-## State and context
+## State and observability
 
-Long-running workflow state should not exist only inside a prompt or conversation.
+Long-running workflow state should not live only inside a prompt.
 
-Store durable state in an appropriate system:
+Persist task identifiers, stages, completed actions, approved inputs, versions, tool results, pending approvals, retry counts, exceptions, and final dispositions in an appropriate system.
 
-- task identifier;
-- current stage;
-- completed actions;
-- approved inputs;
-- output versions;
-- tool results;
-- pending approvals;
-- retry count;
-- unresolved exceptions; and
-- final disposition.
-
-## Observability
-
-Measure more than final success.
-
-Track stage-level outcomes such as:
-
-- input accepted or rejected;
-- retrieval coverage;
-- tool success and latency;
-- validation pass rate;
-- human-review rate;
-- escalation reasons;
-- retry and fallback frequency;
-- release-blocking defects;
-- correction rate; and
-- business outcome.
-
-A workflow that fails silently or cannot explain its decisions is difficult to improve and unsafe to scale.
+Measure stage-level outcomes such as input rejection, retrieval coverage, tool success, validation pass rate, review rate, escalation reasons, retries, fallbacks, correction rate, and business outcome.
 
 ---
 
@@ -245,37 +327,42 @@ A workflow that fails silently or cannot explain its decisions is difficult to i
 
 By the end of this module, you should be able to:
 
+- distinguish personal AI use from repeatable workflow integration;
+- explain Delegation as the module's anchoring competency;
+- separate task assistance from decision authority;
+- classify stages as AI-appropriate, human-retained, collaborative, deterministic, tool-owned, or storage-owned;
 - translate a business objective into workflow requirements and acceptance criteria;
-- distinguish a technology capability from a viable use case;
 - analyze stakeholders, inputs, decisions, constraints, risks, and governing obligations;
-- research and document the current-state process before proposing automation;
-- identify bottlenecks, handoffs, duplicated work, missing evidence, and unsuitable automation targets;
-- choose among interactive chat, fixed workflow, API-backed application, and bounded-agent patterns;
+- research and document the current process before proposing automation;
+- identify bottlenecks and unsuitable automation targets;
+- choose an appropriate workflow pattern;
 - partition model, deterministic, tool, storage, and human responsibilities;
-- design precise tool contracts;
-- place validation and human approval at the correct boundaries;
-- handle retries, idempotency, timeouts, fallback, rollback, and compensation;
+- design tool contracts and approval boundaries;
+- handle retries, idempotency, timeouts, fallback, and rollback;
 - persist long-running state outside the prompt;
 - instrument stage-level outcomes;
 - iterate using observed failures and acceptance criteria;
-- apply Delegation criteria to determine what Claude should and should not own;
-- communicate expected value without overstating capability;
-- communicate limitations, dependencies, uncertainty, and human responsibilities;
-- redesign an existing workflow using the minimum necessary complexity; and
-- prefer the simplest architecture that satisfies the requirements.
+- communicate value without overstating capability; and
+- redesign a workflow using the minimum necessary complexity.
 
 ---
 
 # Current module resources
 
-The repository already contains extended engineering material that will remain available while the course-aligned lessons are developed.
+## Course-aligned lessons
+
+- [Module Introduction](lessons/01-module-introduction.md)
+
+## Prompt notebooks
+
+- [Module Introduction prompts](../../prompts/module-04/01-module-introduction-prompts.md)
+
+## Existing extended practice
 
 - [notes.md](notes.md): Workflow-integration concepts and exam-focused decisions
 - [lab.md](lab.md): Applied workflow-design exercise
 - [flashcards.md](flashcards.md): Active-recall review
 - [quiz.md](quiz.md): Original extended scenario quiz
-
-Course-aligned lessons and Module 4 prompt notebooks will be added as each supplied section is completed.
 
 ---
 
@@ -283,51 +370,44 @@ Course-aligned lessons and Module 4 prompt notebooks will be added as each suppl
 
 Workflow scenarios often tempt the learner to place too much responsibility on the model.
 
-Prefer:
+For introductory scenarios:
 
-- deterministic components for authorization, exact calculations, schema validation, and fixed business rules;
-- controlled tools for external actions;
-- storage or systems of record for durable state;
-- human approval for consequential or irreversible decisions; and
-- bounded model autonomy with explicit criteria, permissions, and stopping rules.
-
-For scenario questions:
-
-1. identify the actual business objective;
-2. clarify the current process and acceptance criteria;
-3. determine which stages require probabilistic judgment;
-4. assign exact rules and calculations to deterministic components;
-5. identify external tools and their permission boundaries;
-6. store durable state outside the prompt;
-7. place validation before downstream side effects;
-8. place approval before irreversible actions;
-9. define retries, fallback, and failure ownership;
-10. instrument stage-level outcomes; and
-11. select the least complex workflow that meets the requirement.
+1. identify the business objective;
+2. distinguish personal productivity from a repeatable team process;
+3. map the stages;
+4. separate task assistance from decision authority;
+5. identify AI, human, collaborative, deterministic, tool, and storage responsibilities;
+6. retain human accountability for consequential decisions;
+7. place validation before side effects;
+8. design failure and escalation paths;
+9. measure business outcomes rather than prompt volume; and
+10. prefer the simplest qualified workflow.
 
 ```text
-Model asked to authorize action    → move authority to deterministic or human control
-Long-running state in prompt       → persist externally
-Retry may repeat a side effect     → require idempotency
-Tool failure has no recovery path  → define timeout, retry, fallback, and owner
-Workflow succeeds only on average  → inspect stage-level failures
-Complex agent for fixed process    → simplify to a deterministic workflow
+One person uses a strong prompt      → productivity habit
+Team repeats controlled stages       → workflow integration
+Claude drafts, human decides          → collaborative delegation
+Claude approves consequential action → over-delegation
+Exact fixed rule assigned to model    → deterministic logic
+No failure path                       → add fallback and escalation
 ```
 
 ---
 
 # Completion criteria
 
-- [ ] I completed the Module 4 introduction.
-- [ ] I can analyze requirements and distinguish viable use cases from attractive capabilities.
+- [x] I completed the Module 4 introduction.
+- [ ] I can distinguish personal use from workflow integration.
+- [ ] I can explain Delegation and its responsibility modes.
+- [ ] I can separate task delegation from decision authority.
+- [ ] I can analyze requirements and viable use cases.
 - [ ] I can research and map a current-state workflow.
-- [ ] I can identify process-optimization opportunities and unsuitable automation targets.
+- [ ] I can identify unsuitable automation targets.
 - [ ] I can create a component responsibility matrix.
 - [ ] I can design a clear tool contract.
 - [ ] I can identify where idempotency is required.
-- [ ] I can place meaningful validation and human-approval gates.
-- [ ] I can describe state management, observability, fallback, and rollback.
-- [ ] I can apply Delegation criteria to workflow stages.
+- [ ] I can place validation and human-approval gates.
+- [ ] I can describe state, observability, fallback, and rollback.
 - [ ] I can communicate value and limitations without overclaiming.
 - [ ] I completed the workflow-redesign exercise.
 - [ ] I completed the Module 4 quiz and takeaways.
@@ -343,9 +423,6 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 
 This repository is an unofficial educational resource. It does not constitute architecture, security, legal, compliance, operational, or other professional advice.
 
-## Official reading
+## Source note
 
-Product capabilities and recommendations can change. Verify current official documentation before relying on implementation-specific behavior.
-
-- [Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)
-- [Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
+The introduction was supplied on August 2, 2026. Product capabilities, terms, policies, and documentation can change. Current official Anthropic terms, policies, and documentation control if they conflict with course or repository material.
