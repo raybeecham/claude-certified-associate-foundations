@@ -58,6 +58,7 @@ These templates are study aids and starting points, not universal production pro
 9. [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
 10. [Module 3 quiz and remediation prompts](module-03/09a-module-3-quiz-prompts.md)
 11. [Module 3 Key Takeaways prompts](module-03/09b-key-takeaways-prompts.md)
+12. [Module 3 completion and transition prompts](module-03/10-module-complete-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -94,10 +95,11 @@ Before using a template:
 - state the controlling reason and required next action;
 - review your own Discernment and Diligence behavior after meaningful tasks;
 - identify what property remains unproven in each scenario;
-- choose the smallest intervention that establishes that property; and
+- choose the smallest intervention that establishes that property;
+- transition verified tasks into workflows by assigning model, code, tool, storage, review, and approval responsibilities; and
 - reject distractors based only on confidence, polish, repetition, model tier, formatting, or schema validity.
 
-A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, reflective judgment, or irreversible-action approval by itself.
+A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, reflective judgment, workflow authority, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
