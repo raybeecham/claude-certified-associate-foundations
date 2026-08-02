@@ -56,6 +56,7 @@ These templates are study aids and starting points, not universal production pro
 7. [Choosing Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
 8. [Triage the Output Set prompts](module-03/08a-triage-output-set-prompts.md)
 9. [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
+10. [Module 3 quiz and remediation prompts](module-03/09a-module-3-quiz-prompts.md)
 
 Additional notebooks will be added as the remaining course-aligned sections are completed.
 
@@ -68,7 +69,6 @@ Before using a template:
 - remove secrets and unauthorized data;
 - choose a narrow output contract;
 - define missing-data behavior;
-- match the control-latitude balance to the task type;
 - route exact arithmetic and counting to deterministic tools;
 - treat fluent wording as unverified until checked against requirements and evidence;
 - evaluate requirements, source material, and professional standards;
@@ -93,9 +93,9 @@ Before using a template:
 - choose ready to use, needs revision, or needs human override;
 - state the controlling reason and required next action;
 - review your own Discernment and Diligence behavior after meaningful tasks;
-- replace vague intentions such as `verify everything` with claim-level sources, tests, reviewers, and release blockers;
-- turn reflection into one observable next-conversation habit;
-- avoid placing confidential conversation text in reflection notes;
+- map quiz scenarios to the property that remains unproven;
+- choose the smallest intervention that establishes that property;
+- reject distractors that rely on confidence, polish, repetition, model tier, or formatting;
 - retain code, parameters, sources, review, and approval evidence; and
 - analyze why plausible alternatives are weaker rather than memorizing answer wording.
 
