@@ -23,10 +23,10 @@ Audience adaptation
         ↓
 Format and execution selection
         ↓
-Triage disposition
+Triage and self-assessment
 ```
 
-> **Module thesis:** Fluency is not proof, accuracy alone is not delivery readiness, and appearance is not the same axis as risk.
+> **Module thesis:** Fluency is not proof, accuracy alone is not delivery readiness, and responsible use requires reviewing both the output and your own behavior.
 
 ## Course-aligned lesson map
 
@@ -37,9 +37,9 @@ Triage disposition
 - [x] [05. Diligence: When Review Is Non-Negotiable](lessons/05-diligence-human-review.md)
 - [x] [06. Editing & Adapting for Audience](lessons/06-editing-adapting-audience.md)
 - [x] [07. Choosing Output Formats](lessons/07-choosing-output-formats.md)
-- [ ] 08. Exercise: Triage the Output Set
+- [x] 08. Exercise: Triage the Output Set
   - [x] [Exercise — 4/4 correct](lessons/08a-triage-output-set.md)
-  - [ ] Self-Assessment
+  - [x] [Optional Self-Assessment](lessons/08b-self-assessment.md)
 - [ ] 09. Module 3 Quiz
   - [ ] Quiz
   - [ ] Takeaways
@@ -60,7 +60,9 @@ Adapt verified content for the audience
               ↓
 Choose the output container and computation method
               ↓
-Triage: ready, revise, or human override
+Triage the output
+              ↓
+Review your own Discernment and Diligence behavior
 ```
 
 ---
@@ -80,6 +82,8 @@ Accuracy review
     +
 Completeness review
 ```
+
+Accuracy asks whether what is present is correct. Completeness asks whether anything material is missing.
 
 ## Failure signatures
 
@@ -104,6 +108,12 @@ Claim-to-source mapping
 Independent validation
       ↓
 Deterministic checks and qualified review
+```
+
+```text
+Citation present
+      ≠
+Claim supported
 ```
 
 ## Diligence
@@ -153,21 +163,11 @@ Intended-use risk
 Verdict and next action
 ```
 
-## Three exercise verdicts
-
 | Verdict | Use |
 |---|---|
 | **Ready to use** | Adequate for the stated low-risk use, possibly after light editing |
 | **Needs revision** | A bounded defect can be repaired, verified, and re-evaluated |
 | **Needs human override** | Consequence, authority, uncertainty, or governing obligations require qualified human control |
-
-## Mapping to the wider module
-
-| Exercise verdict | Wider actions |
-|---|---|
-| Ready to use | Release for the stated use |
-| Needs revision | Edit and/or Verify |
-| Needs human override | Escalate, reconstruct, or Reject |
 
 ## Course exercise result
 
@@ -175,7 +175,7 @@ Verdict and next action
 4 of 4 classifications correct
 ```
 
-The completed classifications demonstrated:
+The exercise demonstrated:
 
 - proportionate use of a low-stakes internal draft;
 - deterministic repair of an inconsistent total;
@@ -186,28 +186,72 @@ The completed classifications demonstrated:
 
 ---
 
-# Triage protocol
+# Self-assessment foundation
+
+The optional self-assessment asks whether the learner applied the module's behavioral indicators to a real conversation.
 
 ```text
-1. Define intended use and audience
-          ↓
-2. Assess output condition
-          ↓
-3. Apply requirements, sources, and professional standards
-          ↓
-4. Apply stakes, reversibility, audience, and governing obligations
-          ↓
-5. Identify the controlling issue
-          ↓
-6. Choose ready, revise, or human override
-          ↓
-7. State the next action and owner
+Discernment → Did the response actually fit the question and requirements?
+Diligence   → Was the output checked before use at a level appropriate to the stakes?
 ```
 
-Use this sentence structure:
+## Recorded reflection
+
+> My prompts were very generic initially, but I have since learned the different factors to consider, how to request the output more clearly, and why I need to verify the result before relying on it.
+
+## Indicator comparison
+
+| Indicator | Evidence in the reflection | Assessment |
+|---|---|---|
+| **Discernment** | The learner now considers task specification and whether the result fits the intended request | Developing into a deliberate strength |
+| **Diligence** | The learner explicitly recognizes the need to verify output before use | Developing into a deliberate strength |
+
+## Strong behavior
+
+The learner has shifted from casual, generic prompting toward a structured workflow that considers context, constraints, evidence, output requirements, and evaluation.
+
+## Next tightening action
+
+Convert the general intention to `verify everything` into explicit controls:
 
 ```text
-[VERDICT] because [CONTROLLING REASON]; next, [REQUIRED ACTION].
+Material claim
+      ↓
+Authoritative source or test
+      ↓
+Recorded result
+      ↓
+Review threshold
+      ↓
+Release or escalation decision
+```
+
+This self-assessment is optional and qualitative. It is not scored.
+
+---
+
+# Integrated protocol
+
+```text
+1. Define the intended task and use
+          ↓
+2. Specify context, evidence, constraints, and output
+          ↓
+3. Evaluate requirements, accuracy, and completeness
+          ↓
+4. Detect hallucinations, contradictions, bias, and omissions
+          ↓
+5. Ground and validate material claims
+          ↓
+6. Apply Diligence thresholds and review gates
+          ↓
+7. Adapt for audience without changing the facts
+          ↓
+8. Select the output modality and computation method
+          ↓
+9. Triage: ready, revise, or human override
+          ↓
+10. Reflect on Discernment and Diligence behavior
 ```
 
 ---
@@ -224,6 +268,7 @@ Use this sentence structure:
 - [Editing and Adapting Output for Your Audience](lessons/06-editing-adapting-audience.md)
 - [Choosing Output Formats](lessons/07-choosing-output-formats.md)
 - [Exercise: Triage the Output Set](lessons/08a-triage-output-set.md)
+- [Self-Assessment: Score Your Own Conversation](lessons/08b-self-assessment.md)
 
 ## Prompt notebooks
 
@@ -235,6 +280,7 @@ Use this sentence structure:
 - [Editing and Audience Adaptation prompts](../../prompts/module-03/06-editing-adapting-audience-prompts.md)
 - [Choosing Output Formats prompts](../../prompts/module-03/07-choosing-output-formats-prompts.md)
 - [Triage Output Set prompts](../../prompts/module-03/08a-triage-output-set-prompts.md)
+- [Self-Assessment prompts](../../prompts/module-03/08b-self-assessment-prompts.md)
 
 ## Engineering patterns
 
@@ -261,6 +307,9 @@ Low-risk provisional draft       → ready with proportionate editing
 Internal contradiction           → revise and recompute
 Untraceable precise claim        → revise and validate sources
 Regulatory or consequential use  → qualified human override
+Response sounds good             → still compare with the actual question
+Output will be used              → verify at a level matched to the stakes
+Generic promise to verify        → define sources, tests, reviewers, and blockers
 ```
 
 For scenario questions:
@@ -271,8 +320,9 @@ For scenario questions:
 4. apply stakes, reversibility, audience, and governing obligations;
 5. recognize automatic human-review gates;
 6. separate appearance from risk;
-7. choose ready to use, needs revision, or needs human override; and
-8. state the required next action.
+7. choose ready to use, needs revision, or needs human override;
+8. state the required next action; and
+9. distinguish Discernment behavior from Diligence behavior.
 
 ---
 
@@ -286,13 +336,15 @@ For scenario questions:
 - [x] I completed Editing and Audience Adaptation.
 - [x] I completed Choosing Output Formats.
 - [x] I completed the Triage the Output Set exercise with 4/4 correct.
-- [ ] I completed the Triage self-assessment.
+- [x] I completed the optional Triage self-assessment.
 - [ ] I can apply the three evaluation references.
 - [ ] I can distinguish output condition from use risk.
 - [ ] I can distinguish ready to use, needs revision, and needs human override.
 - [ ] I can identify bounded defects suitable for revision.
 - [ ] I can recognize mandatory human-review gates.
 - [ ] I can state a controlling reason and next action.
+- [ ] I can distinguish Discernment from Diligence in my own workflow.
+- [ ] I can convert a general verification intention into explicit controls.
 - [ ] I can validate material claims and calculations independently.
 - [ ] I can preserve invariant content across audience versions.
 - [ ] I can distinguish format validity from semantic correctness.
@@ -303,7 +355,7 @@ For scenario questions:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples and reflections must be fictional, generic, synthetic, public, or explicitly authorized. Do not contribute confidential conversation text, client data, proprietary work products, credentials, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
@@ -313,7 +365,7 @@ This repository is an unofficial educational resource and does not constitute le
 
 Product behavior can change. Verify current official documentation.
 
-- [Artifacts](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
-- [Create and edit files](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude)
-- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
-- [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
+- [AI Fluency Framework overview](https://www.anthropic.com/ai-fluency/overview)
+- [AI Fluency: Discernment](https://www.anthropic.com/ai-fluency/discernment)
+- [AI Fluency: Diligence](https://www.anthropic.com/ai-fluency/due-dilligence)
+- [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests)
