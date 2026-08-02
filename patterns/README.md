@@ -26,6 +26,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Three-Reference Discernment Pattern](three-reference-discernment-pattern.md): Evaluate requirements, source support, professional standards, accuracy, completeness, stakes, and release disposition
 - [Failure Signature Review Pattern](failure-signature-review-pattern.md): Detect hallucinations, contradictions, bias, silent omissions, and unverified capability claims through targeted evidence and system checks
 - [Grounded Verification Pattern](grounded-verification-pattern.md): Define evidence boundaries, permit unknowns, map claims to sources, validate authoritatively, recompute deterministically, and record release disposition
+- [Human Review Gate Pattern](human-review-gate-pattern.md): Precommit risk thresholds, define qualified reviewers, place approval before irreversible actions, and escalate when prompting reaches its limits
 
 ## Planned pattern groups
 
