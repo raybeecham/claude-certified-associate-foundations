@@ -57,23 +57,21 @@ These templates are study aids and starting points, not universal production pro
 8. [Triage the Output Set prompts](module-03/08a-triage-output-set-prompts.md)
 9. [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
 10. [Module 3 quiz and remediation prompts](module-03/09a-module-3-quiz-prompts.md)
+11. [Module 3 Key Takeaways prompts](module-03/09b-key-takeaways-prompts.md)
 
-Additional notebooks will be added as the remaining course-aligned sections are completed.
+Additional notebooks will be added as later course-aligned modules are completed.
 
 ## Usage discipline
 
 Before using a template:
 
-- define success criteria;
+- define success criteria and intended use;
 - identify authoritative and untrusted inputs;
 - remove secrets and unauthorized data;
-- choose a narrow output contract;
-- define missing-data behavior;
-- route exact arithmetic and counting to deterministic tools;
-- treat fluent wording as unverified until checked against requirements and evidence;
+- define missing-data and uncertainty behavior;
 - evaluate requirements, source material, and professional standards;
 - review accuracy and completeness separately;
-- scan precise details for provenance;
+- scan precise claims for provenance;
 - compare repeated facts for inconsistency;
 - challenge preferred conclusions and unequal scrutiny;
 - verify source and requirement coverage;
@@ -86,18 +84,18 @@ Before using a template:
 - place approval before irreversible actions;
 - preserve human and organizational accountability for release;
 - define the audience contract and preserve factual invariants;
-- choose inline, artifact, structured, or code-executed paths by consumer and purpose;
+- distinguish presentation format from computation method;
+- use code execution for material calculations and review the logic;
 - validate structure separately from semantic correctness;
 - de-duplicate, label, and prune inputs before processing;
+- retain code, parameters, source versions, row counts, reconciliation, review, and approval evidence;
 - distinguish output condition from intended-use risk;
-- choose ready to use, needs revision, or needs human override;
+- choose release, edit, verify, escalate, or reject;
 - state the controlling reason and required next action;
 - review your own Discernment and Diligence behavior after meaningful tasks;
-- map quiz scenarios to the property that remains unproven;
-- choose the smallest intervention that establishes that property;
-- reject distractors that rely on confidence, polish, repetition, model tier, or formatting;
-- retain code, parameters, sources, review, and approval evidence; and
-- analyze why plausible alternatives are weaker rather than memorizing answer wording.
+- identify what property remains unproven in each scenario;
+- choose the smallest intervention that establishes that property; and
+- reject distractors based only on confidence, polish, repetition, model tier, formatting, or schema validity.
 
 A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, meaningful human review, reflective judgment, or irreversible-action approval by itself.
 
