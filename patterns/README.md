@@ -30,6 +30,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Project Configuration Slot Selection Pattern](project-configuration-slot-selection-pattern.md): Place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct configuration layer, then pair mechanisms without duplicating authority
 - [Connector and Knowledge Boundary Pattern](connector-and-knowledge-boundary-pattern.md): Connect only required sources, document exact connector capabilities, classify source authority and freshness, curate uploads, and place approval before external consequence
 - [Persistent Instruction Precision Pattern](persistent-instruction-precision-pattern.md): Convert recurring behavioral requirements into precise, observable, tested instructions with evidence, failure, conflict, and enforcement boundaries
+- [Configuration Maintenance Lifecycle Pattern](configuration-maintenance-lifecycle-pattern.md): Treat instructions, knowledge, Skills, connectors, and Memory as versioned assets with review cadence, drift detection, regression testing, rollback, reset safeguards, revocation, and retirement
 
 ## Planned pattern groups
 
