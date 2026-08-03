@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 5 · **12% of the exam blueprint**
 
-> **Status:** In progress — all teaching sections are complete. Module 5 quiz, takeaways, and completion remain open. Module 4's final completion checkpoint remains open.
+> **Status:** In progress — teaching and quiz are complete. Takeaways and Module Complete remain open. Module 4's final completion checkpoint remains open.
 
 ## Module thesis
 
@@ -34,15 +34,26 @@ Configured baseline
 - [x] [04. System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 - [x] [05. Maintaining Configurations](lessons/05-maintaining-configurations.md)
 - [ ] 06. Module 5 Quiz
-  - [ ] Quiz
+  - [x] [Quiz — Full marks, 5/5](lessons/06a-module-5-quiz.md)
   - [ ] Takeaways
 - [ ] 07. Module Complete
 
 ---
 
+# Completion record
+
+```text
+Module 5 teaching sections: Complete
+Module 5 quiz:              Full marks — 5 of 5
+Key takeaways:              Open
+Module complete:            Open
+```
+
+---
+
 # Integrated configuration framework
 
-## 1. Use the correct configuration layer
+## 1. Put each need in the correct layer
 
 | Need | Primary home |
 |---|---|
@@ -64,9 +75,25 @@ Access → connector
 Authority → deterministic and human controls
 ```
 
-Give each responsibility one authoritative home, then pair mechanisms when one business need contains different responsibility types.
+Give each responsibility one authoritative home, then pair mechanisms when one need contains several responsibility types.
 
-## 2. Govern connectors and uploaded knowledge
+## 2. Bound Projects and continuity deliberately
+
+Use a separate bounded Project when workstreams materially differ in purpose, users, sources, permissions, disclosure boundaries, or continuity.
+
+```text
+Scoped continuity
+      ≠
+Authorization boundary
+      ≠
+Confidentiality control
+      ≠
+System of record
+```
+
+Project separation supports contextual scope. It does not replace identity, permissions, disclosure review, or authoritative records.
+
+## 3. Govern connectors and uploaded knowledge
 
 ```text
 Connected or uploaded
@@ -80,9 +107,18 @@ Current
 Authorized for external action
 ```
 
-Every connector needs a capability contract covering identity, source scope, read tools, draft tools, write tools, unsupported actions, approval boundaries, owner, review date, and revocation.
+Every connector needs a capability contract covering:
 
-Every maintained source needs owner, authority, scope, effective and review dates, version, refresh type, conflicts, replacement, sensitivity, and permitted use.
+- connected identity;
+- source scope;
+- read and retrieval tools;
+- draft capabilities;
+- write or external-action capabilities;
+- unsupported actions;
+- approval boundaries;
+- owner;
+- review date; and
+- revocation.
 
 ```text
 Retrieve
@@ -98,9 +134,11 @@ Human review and approval
 Controlled execution, if supported
 ```
 
-Remove, archive, or clearly label duplicate and superseded sources. Distinguish synced sources, static uploads, live retrieval, and historical archives.
+Every maintained source needs owner, authority, scope, effective and review dates, version, refresh type, conflicts, replacement, sensitivity, and permitted use.
 
-## 3. Write precise persistent instructions
+Remove, archive, or label duplicate and superseded sources. Distinguish synced sources, static uploads, live retrieval, and historical archives.
+
+## 4. Write persistent instructions that are observable
 
 A durable instruction defines:
 
@@ -109,19 +147,18 @@ A durable instruction defines:
 | Trigger | When does the rule apply? |
 | Required behavior | What should Claude do? |
 | Evidence boundary | What may it rely on? |
-| Failure behavior | What happens when the rule cannot be satisfied? |
+| Failure behavior | What happens when the requirement cannot be met? |
 | Observable output | How can a reviewer verify it? |
 
 ```text
 Vague:
-Make reports good and accurate.
+Write clear and professional notes.
 
 Precise:
-Cite the supplied source and location for material claims.
-State the source or reviewed calculation for figures.
-Label unsupported figures `unverified`.
-List unresolved gaps.
-Do not describe a draft as approved.
+Record each decision as a separate bullet.
+List each action as owner — due date — status.
+Label missing owners `owner TBD`.
+Put unresolved questions in a final section.
 ```
 
 Apply the two-reader test: two competent readers should interpret a material instruction the same way.
@@ -134,9 +171,7 @@ Send capability technically disabled
 
 Persistent guidance does not replace identity, authorization, permissions, deterministic controls, professional approval, or external-action restrictions.
 
-## 4. Maintain the configured baseline
-
-Configurations silently drift when processes, sources, procedures, permissions, people, and product behavior change.
+## 5. Maintain the configured baseline
 
 ```text
 Configured baseline
@@ -157,77 +192,55 @@ Use recurring and event-triggered reviews.
 | Stable reference workspace | Quarterly |
 | Archived workspace | Annual review or retirement |
 
-Review immediately after policy changes, source replacement, Skill changes, permission changes, team turnover, product migration, repeated regressions, incidents, or growth into shared infrastructure.
-
-## 5. Maintain each component differently
-
-### Instructions
-
-Check terminology, process, format, evidence rules, reviewers, conflicts, and observable tests.
-
-### Knowledge
-
-Check authority, effective dates, duplicates, supersession, scope, sensitivity, refresh behavior, and ownership.
-
-### Skills
-
-Track owner, distribution method, version, enabled audience, trigger description, dependencies, tests, and rollback.
-
-- Anthropic-built Skills are maintained by Anthropic.
-- Organization-provisioned Skills are maintained by organization owners.
-- Directly shared Skills can update automatically for recipients when the owner updates the shared Skill.
-- Personally uploaded custom Skills require the owner to edit, replace, or re-upload their own copy.
+Review instructions, knowledge, Skills, connectors, Memory, owners, permissions, tests, rollback, and retirement conditions.
 
 ```text
-Slight recurring format drift
+No visible error
       ≠
-Prompting problem by default
+Configuration still correct
 ```
-
-It may be an outdated Skill, changed dependency, trigger issue, or configuration conflict.
-
-### Connectors
-
-Review identity, source scope, enabled tools, permissions, administrator approval, current need, offboarding, failures, and revocation.
-
-### Memory
-
-Review, correct, add, or delete entries. Export approved context before major migration or reset where appropriate. Reset is destructive and should be used only when selective repair is insufficient.
-
-```text
-More remembered context
-      ≠
-Better continuity
-```
-
-Memory does not replace instructions, authoritative knowledge, workflow state, or a system of record.
 
 ---
 
-# Worked degraded-Project example
-
-A recurring report Project begins producing subtly wrong output.
-
-The review finds:
-
-1. an instruction uses a retired metric name;
-2. knowledge contains two template versions;
-3. a custom Skill still uses the old section order; and
-4. Memory names a stakeholder who has left.
+# Module 5 quiz result
 
 ```text
-Version and update instruction
-      ↓
-Remove or archive obsolete template
-      ↓
-Replace and regression-test Skill
-      ↓
-Delete stale Memory entry
-      ↓
-Rerun representative reports
+Full marks — 5 of 5
 ```
 
-The correct fix is maintenance of the reusable baseline, not increasingly elaborate one-time prompts.
+The original public-safe quiz demonstrated command of:
+
+1. choosing Skills for repeatable procedures;
+2. separating sensitive workstreams into bounded Projects;
+3. respecting connector capability boundaries;
+4. converting vague instructions into observable rules; and
+5. diagnosing stale instructions and Memory as configuration drift.
+
+## Quiz shortcut
+
+```text
+Repeatable multi-step method → Skill
+Different sensitive workstream → separate bounded Project
+Connector cannot perform action → capability boundary
+Vague standing rule → precise observable instruction
+Output drifts without prompt change → inspect configuration
+```
+
+## Quiz reasoning sequence
+
+```text
+Identify the configuration concern
+      ↓
+Select the correct layer or component
+      ↓
+Check authority, scope, precision, and capability
+      ↓
+Identify what remains uncontrolled or stale
+      ↓
+Choose the smallest responsible repair
+      ↓
+Reject stronger-model and one-time-prompt distractors
+```
 
 ---
 
@@ -246,30 +259,18 @@ The correct fix is maintenance of the reusable baseline, not increasingly elabor
 10. Record the result and next review date
 ```
 
-## Maintenance decision table
-
-| Condition | Action |
-|---|---|
-| Minor isolated error | Edit and retest |
-| Controlling source replaced | Replace and rerun coverage tests |
-| Skill procedure changed | Update or re-upload, version, and test |
-| Access no longer needed | Disable or revoke |
-| Memory entry stale | Correct or delete |
-| Memory broadly misleading | Export approved context, then consider reset |
-| New version regresses | Roll back |
-| Workspace no longer needed | Retire and revoke dependencies |
-
 ---
 
 # Current module resources
 
-## Course-aligned lessons
+## Lessons
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Configuring Projects](lessons/02-configuring-projects.md)
 - [Connectors and Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
 - [System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 - [Maintaining Configurations](lessons/05-maintaining-configurations.md)
+- [Module 5 Quiz](lessons/06a-module-5-quiz.md)
 
 ## Prompt notebooks
 
@@ -278,6 +279,7 @@ The correct fix is maintenance of the reusable baseline, not increasingly elabor
 - [Connectors and Uploaded Knowledge prompts](../../prompts/module-05/03-connectors-uploaded-knowledge-prompts.md)
 - [System-Level Instructions prompts](../../prompts/module-05/04-system-level-instructions-prompts.md)
 - [Maintaining Configurations prompts](../../prompts/module-05/05-maintaining-configurations-prompts.md)
+- [Module 5 quiz and remediation prompts](../../prompts/module-05/06a-module-5-quiz-prompts.md)
 
 ## Engineering patterns
 
@@ -286,7 +288,7 @@ The correct fix is maintenance of the reusable baseline, not increasingly elabor
 - [Persistent Instruction Precision Pattern](../../patterns/persistent-instruction-precision-pattern.md)
 - [Configuration Maintenance Lifecycle Pattern](../../patterns/configuration-maintenance-lifecycle-pattern.md)
 
-## Existing extended practice
+## Extended practice
 
 - [notes.md](notes.md)
 - [lab.md](lab.md)
@@ -298,46 +300,45 @@ The correct fix is maintenance of the reusable baseline, not increasingly elabor
 # Exam lens
 
 ```text
-Output degrades without prompt change     → inspect configuration drift
-Old metric appears in every report         → update standing instruction
-Several template versions conflict         → retain one controlling source
-Personal Skill uses old procedure          → update or re-upload and retest
-Shared Skill owner publishes an update     → recipients receive updated shared version
-Former stakeholder persists in Memory      → edit or delete entry
-Memory broadly misleads future work        → export, then consider reset
-Unused connector remains authorized        → revoke or disable
-Change breaks known cases                  → roll back
+Multi-step procedure                    → Skill
+Workspace-specific behavior             → Project instructions
+Stable reference                         → Project knowledge
+Evolving continuity                      → scoped Memory
+Distinct sensitive workstream            → separate bounded Project
+Connector cannot perform requested action → respect capability contract
+Vague instruction                        → define observable behavior
+Output drifts without prompt change       → inspect stale configuration
 ```
 
-For maintenance scenarios:
+For Module 5 scenarios:
 
-1. identify the affected component;
-2. determine ownership and distribution model;
-3. compare it with current operating reality;
-4. inspect source, permission, and version drift;
-5. choose the smallest sufficient repair;
-6. preserve approved information before destructive actions;
-7. rerun regression tests;
-8. document approval and release;
-9. monitor for recurrence; and
-10. set the next review date.
+1. identify the configuration concern;
+2. select the smallest correct layer;
+3. separate access from authority;
+4. respect connector and action boundaries;
+5. make persistent behavior precise and testable;
+6. keep sensitive workstreams bounded;
+7. maintain authoritative sources and procedures;
+8. detect quiet drift across all components;
+9. pair natural-language guidance with enforceable controls; and
+10. choose the smallest sufficient repair.
 
 ---
 
 # Completion criteria
 
 - [x] I completed all Module 5 teaching sections.
+- [x] I completed the Module 5 quiz with full marks, 5/5.
+- [ ] I completed the Module 5 takeaways.
 - [ ] I can place behavior, facts, procedures, continuity, access, controls, and state correctly.
+- [ ] I can separate sensitive workstreams and define Project boundaries.
 - [ ] I can create connector and source capability registers.
 - [ ] I can curate uploaded knowledge and manage supersession.
 - [ ] I can write precise persistent instructions and apply the two-reader test.
 - [ ] I can distinguish instructions from enforceable controls.
 - [ ] I can establish recurring and event-triggered maintenance.
 - [ ] I can version and test instructions, knowledge, Skills, connectors, and Memory.
-- [ ] I can distinguish shared-skill updates from owner-managed personal uploads.
 - [ ] I can choose edit, replace, revoke, reset, rollback, or retirement appropriately.
-- [ ] I can preserve approved context before destructive changes.
-- [ ] I completed the Module 5 quiz and takeaways.
 - [ ] I completed the knowledge lab and scored at least 80% on the extended quiz.
 
 ---
@@ -348,8 +349,4 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute architecture, security, privacy, records-management, compliance, legal, or operational advice.
-
-## Source note
-
-The Maintaining Configurations course material was supplied on August 3, 2026. Product behavior can change. Current official Anthropic documentation and organizational policy control if they conflict with course or repository material.
+This repository is an unofficial educational resource. It does not constitute architecture, security, privacy, records-management, compliance, legal, financial, or operational advice.
