@@ -17,7 +17,7 @@ Verified research and executed analysis
       ↓
 Process planning and optimization
       ↓
-Solution design and iteration
+Evidence-driven solution iteration
       ↓
 Delegation mapping
       ↓
@@ -33,7 +33,7 @@ Validated workflow
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Analyzing Requirements & Use Cases](lessons/02-analyzing-requirements-use-cases.md)
 - [x] [03. Research, Planning & Process Optimization](lessons/03-research-planning-process-optimization.md)
-- [ ] 04. Solution Design, Development & Iteration
+- [x] [04. Solution Design, Development & Iteration](lessons/04-solution-design-development-iteration.md)
 - [ ] 05. Delegation Mapping
 - [ ] 06. Communicating Value & Limitations
 - [ ] 07. Exercise: Redesign a Workflow
@@ -46,17 +46,16 @@ No later lesson is marked complete until its preparation-course material is supp
 
 ---
 
-# Foundation 1: Personal use versus workflow integration
+# Foundation 1: Workflow integration and Delegation
 
 ```text
 I use Claude
       ↓
-One person supplies context, reviews, and adapts
+Personal productivity
 
 Our workflow uses Claude
       ↓
-A team follows repeatable stages with defined
-inputs, controls, ownership, state, and outcomes
+Repeatable stages, inputs, controls, ownership, state, and outcomes
 ```
 
 ```text
@@ -65,16 +64,13 @@ Repeated prompting
 Designed workflow
 ```
 
-## Delegation modes
-
-| Mode | Appropriate responsibility |
+| Responsibility | Appropriate owner |
 |---|---|
-| AI-appropriate | Interpretation, classification, synthesis, drafting, and options under bounded criteria |
-| Human-retained | Authority, accountability, professional judgment, exceptions, and approval |
-| Collaborative | Claude prepares or analyzes while a human evaluates and decides |
-| Deterministic | Exact calculations, schemas, fixed rules, routing, and authorization checks |
-| Tool-owned | Controlled retrieval, transformation, external actions, and system interaction |
-| Storage-owned | Authoritative records, durable state, checkpoints, logs, and version history |
+| Interpretation, synthesis, drafting, options | Model under bounded criteria |
+| Exact calculation, schema, fixed rule | Deterministic component |
+| Retrieval or external side effect | Controlled tool |
+| Durable state and authoritative record | Storage or system of record |
+| Professional judgment, approval, accountability | Human or organization |
 
 ```text
 Generate recommendation
@@ -84,12 +80,12 @@ Authorize action
 
 ---
 
-# Foundation 2: Requirements and use-case analysis
+# Foundation 2: Requirements and use cases
 
 ```text
 Messy inputs
       ↓
-Candidate requirements
+Atomic candidate requirements
       ↓
 Traceability and classification
       ↓
@@ -100,18 +96,7 @@ Human clarification and approval
 Requirement baseline
 ```
 
-## Requirement classes
-
-| Class | Meaning |
-|---|---|
-| Explicit | Directly stated in the source |
-| Implied | Inferred from criteria, dependencies, or cross-references |
-| Ambiguous | Supports multiple material interpretations |
-| Missing | Needed for a buildable or testable task but absent |
-| Conflicting | Relevant sources disagree |
-| Assumption | Temporary premise pending confirmation |
-| Constraint | Limits the solution or method |
-| Acceptance criterion | Defines observable completion |
+Requirement classes include explicit, implied, ambiguous, missing, conflicting, assumption, constraint, and acceptance criterion.
 
 ```text
 Extracted fact
@@ -121,27 +106,11 @@ Implied requirement
 Analyst assumption
 ```
 
-Every material requirement should have an exact source location, owner, status, and completion test.
-
-## Use-case viability
-
-```text
-Measurable business outcome
-+ user and current process
-+ repeatable task
-+ authorized inputs
-+ bounded AI contribution
-+ retained human authority
-+ deterministic controls
-+ acceptance criteria
-+ risk and escalation
-```
+A viable use case connects a measurable outcome, user, current process, repeatable task, authorized inputs, bounded AI contribution, retained human authority, deterministic controls, acceptance criteria, and escalation path.
 
 ---
 
 # Foundation 3: Research, planning, and process optimization
-
-Planning combines three responsibilities that require different controls.
 
 ```text
 Research and synthesis
@@ -153,8 +122,6 @@ Human judgment and authority
 Defensible plan
 ```
 
-## Research-path selection
-
 | Need | Preferred path |
 |---|---|
 | Straightforward current fact | Web search |
@@ -164,140 +131,155 @@ Defensible plan
 | Exact metric or transformation | Code execution |
 | Missing organizational constraint | Human clarification |
 
-Current official Claude guidance describes web search as suited to straightforward current lookups and Research as the deeper path for more comprehensive investigation. Product availability can change.
-
-## Synthesis versus calculation
-
-```text
-Evidence and trade-off synthesis → Claude with verified sources
-Material calculation             → code execution or deterministic analytics
-Risk appetite and approval       → accountable human
-```
-
 ```text
 Plausible number in prose
       ≠
 Computed result
 ```
 
-Material planning values such as growth, throughput, utilization, backlog burn rate, cost, and headcount should be calculated over actual data.
+Material planning calculations should be executed over actual data, reviewed, and reconciled. Claude can synthesize scenarios and trade-offs; accountable humans retain budget, risk, feasibility, and approval decisions.
 
-## Code-execution trust boundary
-
-```text
-Inspect data and schema
-      ↓
-Define rules and assumptions
-      ↓
-Review critical logic
-      ↓
-Execute
-      ↓
-Inspect intermediate results
-      ↓
-Reconcile
-      ↓
-Synthesize scenarios
-      ↓
-Human decision and approval
-```
-
-```text
-Code executed
-      ≠
-Logic correct
-      ≠
-Data complete
-      ≠
-Forecast valid
-      ≠
-Decision approved
-```
-
-## Capacity-planning example
-
-```text
-Curate four quarters of workload and staffing data
-      ↓
-Compute volume growth and throughput
-      ↓
-Build baseline, conservative, and stress scenarios
-      ↓
-Claude synthesizes recommendation and trade-offs
-      ↓
-Operations lead weighs budget, hiring, and risk
-      ↓
-Authorized staffing decision
-```
-
-Claude may improve the analysis and recommendation. It does not authorize hiring.
-
-## Process optimization
-
-Map the current process before adding automation:
-
-- triggers;
-- inputs;
-- stages;
-- owners;
-- waiting time;
-- calculations;
-- handoffs;
-- rework;
-- state;
-- approvals;
-- exceptions; and
-- failure paths.
-
-Then identify the controlling bottleneck:
-
-```text
-Retrieval
-Synthesis
-Calculation
-Handoff
-Review
-State
-Authority
-```
-
-```text
-Automating a broken process
-      =
-Producing defects faster
-```
-
-Target the actual bottleneck and measure the business outcome.
+Map the current process before optimizing it. Identify whether the controlling bottleneck is retrieval, synthesis, calculation, handoff, review, state, or authority.
 
 ---
 
-# Integrated planning protocol
+# Foundation 4: Solution design, development, and iteration
+
+Claude contributes most effectively through an explicit learning loop.
 
 ```text
-1. Define the decision and accountable owner
-2. Establish the requirement baseline
-3. Map evidence, data, constraints, and stakeholders
-4. Select web search, Research, closed-source, internal, or code path
-5. Curate and label inputs
-6. Separate synthesis questions from calculation questions
-7. Execute and reconcile material analysis
-8. Record assumptions and sensitivity
-9. Build scenarios and trade-offs
-10. Retain human judgment for feasibility, risk, and approval
-11. Optimize the controlling process bottleneck
-12. Measure stage performance and business outcomes
+Stable design context
+      ↓
+Meaningfully different options
+      ↓
+Prototype hypothesis
+      ↓
+Smallest useful prototype
+      ↓
+Observed evidence and feedback
+      ↓
+Bounded refinement
+      ↓
+Acceptance and regression tests
+      ↓
+Continue / accept / redesign / escalate / stop
 ```
 
-## Planning evidence table
+## Stable design context
 
-| Planning input | Type | Source or method | Validation | Sensitivity | Decision impact |
-|---|---|---|---|---|---|
-| Workload growth | Computed | Code-executed analysis | Reconcile | Medium | Capacity forecast |
-| Budget ceiling | Human constraint | Approved budget | Owner confirmation | High | Feasible scenario |
-| Productivity ramp | Assumption | Historical cohorts | Sensitivity review | High | Staffing timing |
-| Market availability | Research finding | Current sources | Scope and currency | Medium | Hiring risk |
+Preserve:
 
-This makes facts, calculations, assumptions, and human constraints visible.
+- approved requirements;
+- users and use cases;
+- source and data definitions;
+- constraints;
+- prior decisions and rationale;
+- acceptance criteria;
+- known risks;
+- unresolved questions; and
+- version history.
+
+Projects can support continuity through project knowledge, project instructions, and related conversations. Product behavior can change, so verify current official documentation.
+
+## Prototype scope
+
+A prototype should test the highest-risk assumptions and core user task with the minimum necessary features.
+
+Record:
+
+- included and excluded scope;
+- test data;
+- prohibited uses;
+- acceptance criteria;
+- failure criteria; and
+- required reviewers.
+
+```text
+Minimum useful prototype
+      ≠
+Production-ready solution
+```
+
+## Feedback classification
+
+| Class | Example |
+|---|---|
+| Requirement | Missing region filter |
+| Correctness | Total does not reconcile |
+| Usability | User cannot locate a control |
+| Accessibility | Meaning depends on color alone |
+| Performance | Large input is too slow |
+| Privacy or disclosure | Sensitive field is exposed |
+| Preference | Different chart requested |
+| New requirement | Printed output needs approval block |
+
+Prioritize release-blocking defects over preferences.
+
+## Controlled refinement
+
+```text
+Observed problem
+      ↓
+Likely cause
+      ↓
+Bounded change
+      ↓
+Expected improvement
+      ↓
+Preserved requirements
+      ↓
+Regression and acceptance tests
+```
+
+## Dashboard example
+
+```text
+Cycle 1: Show five verified metrics
+Cycle 2: Add region filter and computed totals
+Cycle 3: Add direction-aware deltas and print layout
+```
+
+The prototype can be created and refined through natural-language requests, but the team must still verify data mappings, totals, accessibility, disclosure, and sharing behavior.
+
+A working artifact does not establish security, scale, persistence, operational support, or deployment approval.
+
+## Iteration stopping rules
+
+Continue when the next bounded change can produce meaningful evidence.
+
+Stop or escalate when:
+
+- the learning objective is met;
+- changes become cosmetic;
+- requirements conflict;
+- evidence or authority is missing;
+- architecture, security, accessibility, or data concerns exceed prototype scope; or
+- production engineering is required.
+
+```text
+More iterations
+      ≠
+More progress
+```
+
+---
+
+# Integrated workflow protocol
+
+```text
+1. Define the business outcome and accountable owner
+2. Establish the requirement baseline
+3. Select and validate research and data inputs
+4. Execute and reconcile material calculations
+5. Map the current workflow and bottleneck
+6. Generate meaningfully different solution options
+7. Define the prototype hypothesis and scope
+8. Build the smallest useful prototype
+9. Gather and classify evidence and feedback
+10. Make bounded changes and run regression tests
+11. Record decisions, limitations, and version history
+12. Accept, continue, redesign, escalate, or stop
+```
 
 ---
 
@@ -308,17 +290,20 @@ This makes facts, calculations, assumptions, and human constraints visible.
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Analyzing Requirements and Use Cases](lessons/02-analyzing-requirements-use-cases.md)
 - [Research, Planning, and Process Optimization](lessons/03-research-planning-process-optimization.md)
+- [Solution Design, Development, and Iteration](lessons/04-solution-design-development-iteration.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-04/01-module-introduction-prompts.md)
 - [Requirements Analysis prompts](../../prompts/module-04/02-analyzing-requirements-use-cases-prompts.md)
-- [Research, Planning, and Process Optimization prompts](../../prompts/module-04/03-research-planning-process-optimization-prompts.md)
+- [Research and Planning prompts](../../prompts/module-04/03-research-planning-process-optimization-prompts.md)
+- [Solution Design and Iteration prompts](../../prompts/module-04/04-solution-design-development-iteration-prompts.md)
 
 ## Engineering patterns
 
 - [Requirements Traceability and Pressure-Test Pattern](../../patterns/requirements-traceability-pressure-test-pattern.md)
 - [Verified Planning Workflow Pattern](../../patterns/verified-planning-workflow-pattern.md)
+- [Evidence-Driven Prototype Iteration Pattern](../../patterns/evidence-driven-prototype-iteration-pattern.md)
 
 ## Existing extended practice
 
@@ -332,26 +317,27 @@ This makes facts, calculations, assumptions, and human constraints visible.
 # Exam lens
 
 ```text
-Quick current lookup        → web search
-Deep multi-source inquiry   → Research
-Exact trend or forecast     → code execution
-Trade-off synthesis         → Claude + verified evidence
-Risk, budget, or approval   → human
-Messy current process       → map before automating
+Need several approaches           → ideate bounded alternatives
+Need to test one idea             → smallest useful prototype
+Feedback received                 → classify and prioritize
+Change requested                  → expected effect + regression tests
+Iterations lose prior decisions   → stabilize context
+Prototype demo succeeds           → production-readiness review still required
+Cosmetic rounds with no gain      → stop or escalate
 ```
 
-For planning scenarios:
+For solution-design scenarios:
 
-1. identify the decision and owner;
-2. distinguish research, supplied evidence, computation, synthesis, and judgment;
-3. match research depth to the question;
-4. preserve source authority, scope, and currency;
-5. execute material calculations over actual data;
-6. review logic, data, assumptions, and reconciliation;
-7. use Claude for synthesis, scenarios, and trade-offs;
-8. retain human authority for feasibility and approval;
-9. identify the real process bottleneck; and
-10. choose the least complex improvement that changes the outcome.
+1. preserve the requirement baseline;
+2. generate options before committing;
+3. define what the prototype must prove;
+4. keep scope bounded;
+5. gather observable feedback;
+6. distinguish defects from preferences;
+7. refine through controlled changes;
+8. rerun affected and preserved tests;
+9. retain human authority over requirements and acceptance; and
+10. distinguish prototype success from deployment approval.
 
 ---
 
@@ -360,17 +346,17 @@ For planning scenarios:
 - [x] I completed the Module 4 introduction.
 - [x] I completed Analyzing Requirements and Use Cases.
 - [x] I completed Research, Planning, and Process Optimization.
+- [x] I completed Solution Design, Development, and Iteration.
 - [ ] I can distinguish personal use from workflow integration.
-- [ ] I can explain Delegation and its responsibility modes.
 - [ ] I can build and pressure-test a traceable requirement register.
-- [ ] I can distinguish web search, Research, source analysis, code execution, and human clarification.
-- [ ] I can separate synthesis from material calculation.
+- [ ] I can separate research, computation, synthesis, and human judgment.
 - [ ] I can define a reproducible planning analysis.
-- [ ] I can create an assumption register and sensitivity scenarios.
-- [ ] I can map a current process and identify the controlling bottleneck.
-- [ ] I can retain human ownership of risk, feasibility, and approval.
-- [ ] I can create a component responsibility matrix.
-- [ ] I can design tool, state, validation, and approval boundaries.
+- [ ] I can create a stable design context.
+- [ ] I can define a bounded prototype hypothesis and acceptance criteria.
+- [ ] I can classify feedback and prioritize release-blocking issues.
+- [ ] I can write controlled change requests with regression tests.
+- [ ] I can distinguish prototype acceptance from production approval.
+- [ ] I can apply Delegation criteria to workflow stages.
 - [ ] I can communicate value and limitations without overclaiming.
 - [ ] I completed the workflow-redesign exercise.
 - [ ] I completed the Module 4 quiz and takeaways.
@@ -380,14 +366,14 @@ For planning scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential planning data, workforce records, internal budgets, proprietary processes, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential requirements, datasets, prototypes, internal systems, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute workforce, financial, operational, architecture, legal, compliance, or other professional advice.
+This repository is an unofficial educational resource. It does not constitute product, software, architecture, security, accessibility, legal, compliance, or operational advice.
 
 ## Official reading
 
-- [When to use web search, extended thinking, and research](https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research)
-- [Tool use with Claude](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)
-- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
+- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)
+- [How can I create and manage projects?](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects)
+- [Publish and share artifacts](https://support.claude.com/en/articles/9547008-publish-and-share-artifacts)
