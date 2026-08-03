@@ -93,6 +93,7 @@ These templates are study aids and starting points, not universal production pro
 6. [Ethical Implications prompts](module-06/06-ethical-implications-prompts.md)
 7. [Module 6 quiz and remediation prompts](module-06/07a-module-6-quiz-prompts.md)
 8. [Module 6 Key Takeaways prompts](module-06/07b-key-takeaways-prompts.md)
+9. [Module 6 completion and transition prompts](module-06/08-module-complete-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -126,6 +127,8 @@ Before using a template:
 - preserve qualified human review, intervention authority, explanation, correction, and appeal paths;
 - escalate when scale, potential harm, vulnerable groups, disputed fairness criteria, or decision authority exceed the team’s standing;
 - reject stronger-model fixes when the root cause is governance, permissions, data approval, accountability, or workflow design;
+- preserve governance boundaries during troubleshooting and optimization;
+- separate the approved constraints from the observed performance failure;
 - test representative and edge cases and monitor actual outcome differences;
 - preserve evidence, exceptions, approvals, ethical reasoning, rationale, and review dates; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
