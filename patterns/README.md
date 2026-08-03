@@ -35,6 +35,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Delegation Boundary Mapping Pattern](delegation-boundary-mapping-pattern.md): Map atomic work, assess reversibility, stakes, and accountability, assign model/code/tool/storage/human ownership, and place review before consequence
 - [Capability, Value, and Limitation Communication Pattern](capability-value-limitation-communication-pattern.md): Describe bounded AI tasks, support value claims with scoped evidence, preserve material limitations across audiences, and operationalize human oversight
 - [Project Configuration Slot Selection Pattern](project-configuration-slot-selection-pattern.md): Place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct configuration layer, then pair mechanisms without duplicating authority
+- [Connector and Knowledge Boundary Pattern](connector-and-knowledge-boundary-pattern.md): Connect only required sources, document exact connector capabilities, classify source authority and freshness, curate uploads, and place approval before external consequence
 
 ## Planned pattern groups
 
