@@ -29,6 +29,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Human Review Gate Pattern](human-review-gate-pattern.md): Precommit risk thresholds, define qualified reviewers, place approval before irreversible actions, and escalate when prompting reaches its limits
 - [Audience Adaptation Pattern](audience-adaptation-pattern.md): Preserve verified invariants while adapting selection, depth, tone, order, format, and disclosure for the intended audience
 - [Output Format and Reliability Pattern](output-format-reliability-pattern.md): Match inline, artifact, structured, and code-executed paths to consumer, reuse, machine-readability, computation, and release requirements
+- [Requirements Traceability and Pressure-Test Pattern](requirements-traceability-pressure-test-pattern.md): Convert messy source material into atomic, traceable requirements, classify uncertainty, challenge completeness, and approve a baseline before workflow design
 
 ## Planned pattern groups
 
