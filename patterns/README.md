@@ -26,12 +26,13 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Verified Planning Workflow Pattern](verified-planning-workflow-pattern.md): Combine current research, executed quantitative analysis, explicit assumptions, scenario synthesis, human judgment, and process optimization into a defensible plan
 - [Evidence-Driven Prototype Iteration Pattern](evidence-driven-prototype-iteration-pattern.md): Preserve stable design context, test bounded hypotheses, classify feedback, refine through controlled changes, and separate prototype success from production readiness
 - [Delegation Boundary Mapping Pattern](delegation-boundary-mapping-pattern.md): Map atomic work, assess reversibility, stakes, and accountability, assign model/code/tool/storage/human ownership, and place review before consequence
-- [Capability, Value, and Limitation Communication Pattern](capability-value-limitation-communication-pattern.md): Describe bounded AI tasks, support value claims with scoped evidence, preserve material limitations across audiences, and operationalize human oversight
+- [Capability, Value, and Limitation Communication Pattern](capability-value-and-limitation-communication-pattern.md): Describe bounded AI tasks, support value claims with scoped evidence, preserve material limitations across audiences, and operationalize human oversight
 - [Project Configuration Slot Selection Pattern](project-configuration-slot-selection-pattern.md): Place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct configuration layer, then pair mechanisms without duplicating authority
 - [Connector and Knowledge Boundary Pattern](connector-and-knowledge-boundary-pattern.md): Connect only required sources, document exact connector capabilities, classify source authority and freshness, curate uploads, and place approval before external consequence
 - [Persistent Instruction Precision Pattern](persistent-instruction-precision-pattern.md): Convert recurring behavioral requirements into precise, observable, tested instructions with evidence, failure, conflict, and enforcement boundaries
 - [Configuration Maintenance Lifecycle Pattern](configuration-maintenance-lifecycle-pattern.md): Treat instructions, knowledge, Skills, connectors, and Memory as versioned assets with review cadence, drift detection, regression testing, rollback, reset safeguards, revocation, and retirement
 - [Use-Case Appropriateness Classification Pattern](use-case-appropriateness-classification-pattern.md): Screen uses through reversibility, consequence, human element, and accountability; identify the load-bearing criterion; and make the gate part of the classification
+- [Skill Trust and Feature-Risk Pattern](skill-trust-and-feature-risk-pattern.md): Establish source and ownership, inspect the bundle, calculate effective reach, test proportionality and least privilege, and choose enable, escalate, or decline
 
 ## Planned pattern groups
 
@@ -39,13 +40,13 @@ The pattern library is an engineering reference, not a substitute for current of
 - additional prompting patterns;
 - additional evaluation patterns;
 - integration patterns;
-- governance patterns; and
+- additional governance patterns; and
 - troubleshooting patterns.
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, and longer sessions add setup, maintenance, permission, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, longer sessions, executable bundles, and broad permissions add setup, maintenance, validation, and governance obligations.
 
 ## Public-repository content rule
 
-Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, proprietary workflows, credentials, or facts that identify a nonpublic engagement.
+Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, proprietary workflows, credentials, private Skill bundles, internal security findings, or facts that identify a nonpublic engagement.
