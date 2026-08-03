@@ -18,14 +18,33 @@ Copy this file into private notes or update it in a personal branch. Do not comm
 
 | Exam | Date | Score | Time | Critical misses | Retest date |
 |---|---|---:|---:|---|---|
-| Practice Exam 1 | | | | | |
-| Practice Exam 2 | | | | | |
+| Practice Exam 1 — balanced, 28 questions | | | | | |
+| Practice Exam 2 — balanced, 28 questions | | | | | |
+| Practice Exam 3 — blueprint-weighted, 60 questions | | | | | |
+
+## Practice Exam 3 domain breakdown
+
+| Official domain | Correct | Total | Percentage | Priority |
+|---|---:|---:|---:|---|
+| Prompting and Task Execution | | 8 | | |
+| Output Evaluation and Validation | | 13 | | |
+| Product and Model Selection | | 7 | | |
+| Workflow Integration and Solution Design | | 10 | | |
+| Configuration and Knowledge Management | | 7 | | |
+| Governance, Risk, and Responsible Use | | 9 | | |
+| Troubleshooting and Optimization | | 6 | | |
 
 ## Weak-area log
 
 | Date | Domain | Concept | Error type | Correct rule | Example | Resolved |
 |---|---|---|---|---|---|---|
-| | | | Knowledge / reading / judgment / execution | | | ☐ |
+| | | | Knowledge / reading / judgment / layering / execution | | | ☐ |
+
+## Reasoning-error log
+
+| Question | Selected | Correct | Controlling clue | Why distractor was attractive | Scenario change that makes distractor correct |
+|---:|---|---|---|---|---|
+| | | | | | |
 
 ## Lab evidence
 
@@ -48,4 +67,6 @@ Copy this file into private notes or update it in a personal branch. Do not comm
 - [ ] I can explain source authority, freshness, and least privilege.
 - [ ] I can identify high-impact uses requiring meaningful human oversight.
 - [ ] I can troubleshoot by evidence and controlled experiments.
+- [ ] I can identify the controlling domain in a mixed scenario.
+- [ ] I can explain why the strongest distractor solves the wrong layer.
 - [ ] I verified volatile facts in current official sources.
