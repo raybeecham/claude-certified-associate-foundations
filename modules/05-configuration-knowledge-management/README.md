@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 5 · **12% of the exam blueprint**
 
-> **Status:** In progress — teaching, quiz, and takeaways are complete. Module Complete remains open. Module 4's final completion checkpoint also remains open.
+> **Status:** Complete — teaching, quiz, takeaways, and the module checkpoint are complete. Module 6: Governance is up next.
 
 ## Module thesis
 
@@ -36,17 +36,18 @@ Configured baseline
 - [x] 06. Module 5 Quiz
   - [x] [Quiz — Full marks, 5/5](lessons/06a-module-5-quiz.md)
   - [x] [Key Takeaways](lessons/06b-key-takeaways.md)
-- [ ] 07. Module Complete
+- [x] [07. Module Complete — checkpoint passed](lessons/07-module-complete.md)
 
 ---
 
 # Completion record
 
 ```text
+Course checkpoint:          1 of 1 passed
 Module 5 teaching sections: Complete
 Module 5 quiz:              Full marks — 5 of 5
 Key takeaways:              Complete
-Module complete:            Open
+Module complete:            Complete
 ```
 
 ---
@@ -54,8 +55,6 @@ Module complete:            Open
 # Five durable takeaways
 
 ## 1. Configuration is leverage
-
-A configured environment reduces repeated setup and turns individual prompting habits into visible, reusable team expectations.
 
 ```text
 Set up once
@@ -67,7 +66,7 @@ Review and maintain
 Continue to trust
 ```
 
-Configuration improves consistency and inspectability, but it does not guarantee factual accuracy or replace qualified review.
+A configured baseline reduces repeated setup and turns individual prompting habits into visible, reusable team expectations.
 
 ## 2. Match each need to the right mechanism
 
@@ -89,17 +88,10 @@ Procedure → Skill
 Continuity → Memory
 Access → connector
 Authority → deterministic and human controls
+State → system of record
 ```
 
 Give each responsibility one authoritative home, then pair mechanisms when one business need contains several responsibility types.
-
-```text
-Scoped continuity
-      ≠
-Authoritative record
-      ≠
-Permission boundary
-```
 
 ## 3. Know each connector's boundary
 
@@ -115,48 +107,17 @@ Action supported
 Action approved
 ```
 
-Maintain a connector capability contract with identity, source scope, read and draft tools, write or external-action tools, unsupported actions, approval boundaries, owner, review date, and revocation path.
-
-```text
-Retrieve
-  ↓
-Read
-  ↓
-Analyze
-  ↓
-Draft
-  ↓
-Human review
-  ↓
-Approval
-  ↓
-Controlled execution, if supported
-```
-
-A stronger model does not expand connector permissions or unsupported capabilities.
+Maintain a connector capability contract covering identity, source scope, read and draft tools, write or external-action tools, unsupported actions, approval boundaries, owner, review date, and revocation.
 
 ## 4. Write instructions precisely
 
 A durable instruction defines:
 
-| Element | Question |
-|---|---|
-| Trigger | When does the rule apply? |
-| Required behavior | What should Claude do? |
-| Evidence boundary | What may it rely on? |
-| Failure behavior | What happens when the requirement cannot be met? |
-| Observable output | How can a reviewer verify it? |
-
-```text
-Vague:
-Write clear and professional notes.
-
-Precise:
-Record each decision as a separate bullet.
-List every action as owner — due date — status.
-Label missing owners `owner TBD`.
-Put unresolved questions in a final section.
-```
+- trigger;
+- required behavior;
+- evidence boundary;
+- failure behavior; and
+- observable output.
 
 Apply the two-reader test: two competent readers should interpret a material instruction the same way.
 
@@ -167,8 +128,6 @@ Instruction precise
       ≠
 Instruction technically enforced
 ```
-
-High-stakes guardrails still require permissions, deterministic checks, controlled tools, human review, and approval gates.
 
 ## 5. Maintain configurations or quality decays
 
@@ -182,15 +141,7 @@ Silent configuration drift
 Output quality degradation
 ```
 
-Use recurring and event-triggered reviews. A monthly review is a practical baseline for active Projects, adjusted for change rate and consequence.
-
-Review:
-
-- instructions for outdated terminology, process, format, evidence rules, and reviewers;
-- knowledge for authority, freshness, duplicates, supersession, scope, and ownership;
-- Skills for owner, distribution, version, trigger behavior, dependencies, tests, and rollback;
-- connectors for identity, permissions, tools, business need, offboarding, and revocation; and
-- Memory for accuracy, relevance, and proper authority placement.
+Review instructions, knowledge, Skills, connectors, and Memory on cadence and after material events.
 
 ```text
 No visible error
@@ -214,34 +165,21 @@ The original public-safe quiz demonstrated command of:
 4. converting vague instructions into observable rules; and
 5. diagnosing stale instructions and Memory as configuration drift.
 
-## Quiz shortcut
-
-```text
-Repeatable multi-step method → Skill
-Different sensitive workstream → separate bounded Project
-Connector cannot perform action → capability boundary
-Vague standing rule → precise observable instruction
-Output drifts without prompt change → inspect configuration
-```
-
 ---
 
-# Integrated configuration review
+# Module completion capability
 
-Before relying on a configured workspace, ask:
+The learner can now:
 
-```text
-1. Is the Project purpose still current?
-2. Is every need in the correct mechanism?
-3. Are sources authoritative, current, and in scope?
-4. Are connector capabilities and permissions explicit?
-5. Are standing instructions precise and testable?
-6. Are consequential actions protected by real controls?
-7. Are Skills, Memory, and access still accurate?
-8. Is ownership and the next review date recorded?
-```
-
-A failed question identifies the next maintenance or redesign task.
+- distinguish using Claude from operating a configured environment;
+- place behavior, facts, procedures, continuity, access, authority, and state correctly;
+- create bounded Project configurations;
+- govern connector capabilities and uploaded knowledge;
+- write precise, testable persistent instructions;
+- distinguish natural-language guidance from enforceable controls;
+- detect quiet drift across instructions, knowledge, Skills, connectors, and Memory;
+- version, test, approve, roll back, reset, revoke, and retire configuration components; and
+- preserve ownership, review cadence, and evidence for material changes.
 
 ---
 
@@ -262,6 +200,53 @@ A failed question identifies the next maintenance or redesign task.
 
 ---
 
+# Associate path progress
+
+| Module | Capability | Status |
+|---|---|---|
+| M1 — Product & Model Selection | Choose the appropriate entry point, model, and features | Complete |
+| M2 — Prompting | Structure and adapt prompts for the task | Complete |
+| M3 — Output Evaluation | Validate output and identify mandatory human review | Complete |
+| M4 — Workflow Integration | Map and redesign workflows using Delegation criteria | Complete |
+| **M5 — Configuration** | Configure and maintain Projects, instructions, knowledge, Skills, connectors, and Memory | **Complete** |
+| **M6 — Governance** | Apply use-case, data, policy, and ethics judgment responsibly | **Up next** |
+| M7 — Troubleshooting | Diagnose underperformance and optimize workflows | Later |
+| M8 — Course Summary & Next Steps | Consolidate learning and prepare for the exam | Final synthesis |
+
+---
+
+# Transition to Module 6
+
+Module 5 asked:
+
+```text
+How should Claude's recurring environment be configured and maintained?
+```
+
+Module 6 asks:
+
+```text
+Should this use case proceed,
+what data and policy boundaries apply,
+and what responsible-use judgment is required?
+```
+
+```text
+Configured workspace
+      ↓
+Defined users, sources, procedures, access, and controls
+      ↓
+Use-case and data assessment
+      ↓
+Policy, risk, and ethics judgment
+      ↓
+Responsible governance decision
+```
+
+Configuration makes behavior repeatable. Governance determines whether that repeatable behavior is appropriate, permitted, accountable, and responsible.
+
+---
+
 # Current module resources
 
 ## Lessons
@@ -273,6 +258,7 @@ A failed question identifies the next maintenance or redesign task.
 - [Maintaining Configurations](lessons/05-maintaining-configurations.md)
 - [Module 5 Quiz](lessons/06a-module-5-quiz.md)
 - [Module 5 Key Takeaways](lessons/06b-key-takeaways.md)
+- [Module Complete](lessons/07-module-complete.md)
 
 ## Prompt notebooks
 
@@ -283,6 +269,7 @@ A failed question identifies the next maintenance or redesign task.
 - [Maintaining Configurations prompts](../../prompts/module-05/05-maintaining-configurations-prompts.md)
 - [Module 5 quiz and remediation prompts](../../prompts/module-05/06a-module-5-quiz-prompts.md)
 - [Module 5 Key Takeaways prompts](../../prompts/module-05/06b-key-takeaways-prompts.md)
+- [Module 5 completion and transition prompts](../../prompts/module-05/07-module-complete-prompts.md)
 
 ## Engineering patterns
 
@@ -300,56 +287,26 @@ A failed question identifies the next maintenance or redesign task.
 
 ---
 
-# Exam lens
-
-```text
-Repeated setup in every chat            → configure a stable baseline
-Multi-step reusable procedure           → Skill
-Project-specific source material        → Project knowledge
-Standing behavior rule                  → Project instruction
-Selected prior context                  → scoped Memory
-External source or action               → connector with defined capability
-Vague instruction                       → make observable and testable
-Quiet recurring regression              → inspect configuration drift
-Old source or stakeholder persists      → update knowledge or Memory
-Connector cannot perform action         → respect the capability boundary
-```
-
-For Module 5 scenarios:
-
-1. identify whether the need is behavior, fact, procedure, continuity, access, authority, or state;
-2. choose the smallest correct mechanism;
-3. preserve one authoritative home;
-4. distinguish access from authority;
-5. document connector capabilities and unsupported actions;
-6. make persistent instructions precise and observable;
-7. pair guidance with enforceable controls;
-8. inspect configuration before blaming prompting or model tier;
-9. maintain on cadence and after material events; and
-10. edit, replace, revoke, reset, roll back, or retire according to the defect.
-
----
-
 # Completion criteria
 
 - [x] I completed all Module 5 teaching sections.
 - [x] I completed the Module 5 quiz with full marks, 5/5.
 - [x] I completed the Module 5 takeaways.
-- [ ] I can place behavior, facts, procedures, continuity, access, controls, and state correctly.
-- [ ] I can create connector and source capability registers.
-- [ ] I can curate uploaded knowledge and manage supersession.
-- [ ] I can write precise persistent instructions and apply the two-reader test.
-- [ ] I can distinguish instructions from enforceable controls.
-- [ ] I can establish recurring and event-triggered maintenance.
-- [ ] I can version and test instructions, knowledge, Skills, connectors, and Memory.
-- [ ] I can choose edit, replace, revoke, reset, rollback, or retirement appropriately.
-- [ ] I completed the knowledge lab and scored at least 80% on the extended quiz.
+- [x] I passed the Module 5 checkpoint.
+- [x] I can place behavior, facts, procedures, continuity, access, controls, and state correctly.
+- [x] I can create connector and source capability registers.
+- [x] I can curate uploaded knowledge and manage supersession.
+- [x] I can write precise persistent instructions and apply the two-reader test.
+- [x] I can distinguish instructions from enforceable controls.
+- [x] I can establish recurring and event-triggered maintenance.
+- [x] I can version and test instructions, knowledge, Skills, connectors, and Memory.
+- [x] I can choose edit, replace, revoke, reset, rollback, or retirement appropriately.
 
 ---
 
 # Product-verification note
 
-This module was reviewed against official Anthropic Help Center material available on August 3, 2026. Current documentation describes Projects as self-contained workspaces with knowledge and instructions, Skills as reusable procedures that load when relevant, connectors as permission-bound integrations with connector-specific capabilities, and project memory as a separate continuity space. Product availability and behavior can change, and current official documentation controls.
+This module was reviewed against official Anthropic Help Center material available on August 3, 2026. Product availability and behavior can change, and current official documentation controls.
 
 # Public-repository scenario policy
 
@@ -357,4 +314,4 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute architecture, security, privacy, records-management, compliance, legal, financial, or operational advice.
+This repository is an unofficial educational resource. It does not constitute architecture, security, privacy, records-management, compliance, legal, financial, ethics, or operational advice.
