@@ -63,6 +63,7 @@ These templates are study aids and starting points, not universal production pro
 ### Module 4: Workflow Integration & Solution Design
 
 1. [Module Introduction prompts](module-04/01-module-introduction-prompts.md)
+2. [Analyzing Requirements and Use Cases prompts](module-04/02-analyzing-requirements-use-cases-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -70,49 +71,34 @@ Additional notebooks will be added as later course-aligned modules are completed
 
 Before using a template:
 
-- define the business outcome and intended use before choosing an AI capability;
-- distinguish a personal productivity habit from a repeatable workflow;
+- define the business outcome and intended decision before selecting a capability;
+- distinguish personal productivity from a repeatable workflow;
+- inventory sources and establish the controlling-source hierarchy;
+- convert broad needs into actors, triggers, inputs, outputs, owners, and acceptance criteria;
+- extract atomic requirements into a structured register rather than a narrative summary;
+- preserve exact source traceability;
+- distinguish explicit, implied, ambiguous, missing, conflicting, assumed, and constrained requirements;
+- pressure-test the first extraction for omissions, hidden conditions, conflicts, duplicates, and testability;
+- preserve unresolved uncertainty instead of filling gaps with confident prose;
+- distinguish a product capability from a viable use case with measurable value and human ownership;
 - map workflow stages, owners, inputs, outputs, decisions, state, and side effects;
 - separate task assistance from decision authority;
 - classify responsibilities as AI-appropriate, human-retained, collaborative, deterministic, tool-owned, or storage-owned;
-- define success criteria and intended use;
 - identify authoritative and untrusted inputs;
 - remove secrets and unauthorized data;
-- define missing-data and uncertainty behavior;
-- evaluate requirements, source material, and professional standards;
-- review accuracy and completeness separately;
-- scan precise claims for provenance;
-- compare repeated facts for inconsistency;
-- challenge preferred conclusions and unequal scrutiny;
-- verify source and requirement coverage;
 - permit explicit `unknown`, `not covered`, and `conflicting` outcomes;
-- require precise, auditable claim-to-source locations;
-- validate consequential claims against authoritative sources;
-- recompute material calculations deterministically;
+- validate consequential claims and calculations independently;
 - assess stakes, reversibility, audience, and governing obligations;
-- identify automatic do-not-ship review gates;
 - place approval before irreversible actions;
-- preserve human and organizational accountability for release;
-- define the audience contract and preserve factual invariants;
+- preserve human and organizational accountability;
 - distinguish presentation format from computation method;
-- use code execution for material calculations and review the logic;
-- validate structure separately from semantic correctness;
-- de-duplicate, label, and prune inputs before processing;
-- retain code, parameters, source versions, row counts, reconciliation, review, and approval evidence;
-- persist long-running workflow state outside the prompt;
+- persist long-running state outside the prompt;
 - define retries, idempotency, fallback, rollback, escalation, and failure ownership;
-- measure stage quality and business outcomes rather than prompt volume;
-- distinguish output condition from intended-use risk;
-- choose release, edit, verify, escalate, or reject;
-- state the controlling reason and required next action;
-- review your own Discernment and Diligence behavior after meaningful tasks;
-- identify what property remains unproven in each scenario;
-- choose the smallest intervention that establishes that property;
-- transition verified tasks into workflows by assigning model, code, tool, storage, review, and approval responsibilities; and
-- reject distractors based only on confidence, polish, repetition, model tier, formatting, or schema validity.
+- measure stage quality and business outcomes rather than prompt volume; and
+- choose the smallest intervention and workflow that establish the required property.
 
-A prompt cannot enforce identity, authorization, data isolation, legal authority, factual accuracy, professional approval, disclosure authorization, correct code logic, durable workflow state, meaningful human review, workflow authority, or irreversible-action approval by itself.
+A prompt cannot enforce source authority, requirement approval, identity, authorization, data isolation, legal authority, factual accuracy, correct code logic, durable state, meaningful human review, workflow authority, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, proprietary work products, confidential workflows, credentials, system identifiers, engagement-identifying examples, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential solicitations, proposal materials, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
