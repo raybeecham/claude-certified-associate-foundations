@@ -2,37 +2,32 @@
 
 Associate Persona · Official Exam Domain 5 · **12% of the exam blueprint**
 
-> **Status:** Roadmap staged — Module 4's final completion checkpoint remains open. No Module 5 lesson is marked complete yet.
+> **Status:** In progress — Module 5 is the active module. Module 4's final completion checkpoint remains open.
 
-## Why this domain matters
+## Module thesis
 
-A useful Claude interaction can depend heavily on configuration that the user no longer sees in the immediate prompt.
-
-Projects, uploaded knowledge, connectors, reusable instructions, and maintained procedures can make work more consistent. They can also become hidden operational dependencies when their ownership, authority, scope, freshness, access, and maintenance rules are unclear.
+> Set up the right context, instructions, procedures, and access once; benefit across repeated conversations; then maintain the configuration so it remains accurate, authorized, scoped, and owned.
 
 ```text
-Business or workflow need
-        ↓
-Configuration boundary
-        ↓
-Project instructions and knowledge
-        ↓
-Connectors and uploaded sources
-        ↓
-Reusable instructions and procedures
-        ↓
-Maintenance, testing, and change control
-        ↓
-Reliable configured workspace
-```
+Using Claude
+      ↓
+Current prompt and individual judgment
 
-> **Module thesis:** Configuration should make correct behavior easier to repeat without hiding stale knowledge, conflicting instructions, excessive access, or unowned dependencies.
+Operating Claude
+      ↓
+Configured baseline
++ governed knowledge
++ reusable procedures
++ scoped access
++ human controls
++ lifecycle maintenance
+```
 
 ---
 
 # Course-aligned roadmap
 
-- [ ] 01. Module Introduction
+- [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [ ] 02. Configuring Projects
 - [ ] 03. Connectors & Uploaded Knowledge
 - [ ] 04. System-Level Instructions That Stick
@@ -42,50 +37,28 @@ Reliable configured workspace
   - [ ] Takeaways
 - [ ] 07. Module Complete
 
-No course lesson file is marked complete until the corresponding preparation-course material is supplied and converted into original public-safe study content.
-
-## Learning progression
-
-```text
-Understand configuration as part of the workflow
-              ↓
-Configure a Project around a bounded purpose
-              ↓
-Select connectors and uploaded knowledge deliberately
-              ↓
-Design durable instructions with clear scope and precedence
-              ↓
-Test, maintain, version, and retire configurations
-              ↓
-Demonstrate configuration judgment under quiz conditions
-```
+No later lesson is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
 
 ---
 
 # Module 4 to Module 5 bridge
 
-Module 4 mapped who or what should perform each workflow responsibility.
+Module 4 assigned workflow responsibilities to models, code, tools, storage, and humans.
 
-```text
-Workflow stage
-      ↓
-Model / deterministic / tool / storage / human owner
-      ↓
-Validation, review, approval, and recovery
-```
-
-Module 5 asks how the model-facing configuration and knowledge environment should be established and maintained.
+Module 5 asks how the model-facing environment should be configured and maintained so those assignments remain repeatable.
 
 ```text
 Approved workflow responsibility
       ↓
 Configured instructions and knowledge
       ↓
-Scoped access and retrieval
+Scoped access and reusable procedures
       ↓
 Source authority, freshness, and conflict handling
       ↓
-Testing and lifecycle maintenance
+Testing and maintenance
+      ↓
+Reliable configured workspace
 ```
 
 The transition question is:
@@ -94,76 +67,153 @@ The transition question is:
 
 ---
 
-# Durable engineering foundation
+# Foundation 1: Using versus operating Claude
 
-The repository already contains extended configuration and knowledge-management material. It will be mapped to the supplied course sections as they arrive.
+## Personal use
 
-## Configuration layers
+A person supplies the context, prompt, sources, format, and review decisions for the current conversation.
 
-A reliable design separates several different concerns:
+## Operating model
 
-| Layer | Purpose |
-|---|---|
-| User request | The immediate task and current constraints |
-| Project instructions | Durable behavior for one bounded workspace |
-| Project knowledge | Project-specific source material and background |
-| Skill or reusable procedure | Repeatable method, template, checklist, script, or resource package |
-| Connector | Controlled access to an external system or repository |
-| Uploaded file | Explicit source supplied for the current work or workspace |
-| Memory or continuity feature | Selective cross-conversation continuity where supported and appropriate |
-| Deterministic control | Rules, authorization, validation, routing, and exact calculations outside prompt text |
+A team maintains an approved starting environment containing:
+
+- bounded purpose;
+- intended users;
+- standing instructions;
+- approved knowledge;
+- reusable procedures;
+- scoped connectors;
+- selected continuity;
+- output contracts;
+- review and approval gates;
+- testing;
+- ownership; and
+- maintenance cadence.
 
 ```text
-Immediate task                    → current request
-Workspace-specific behavior       → Project instructions
-Workspace-specific evidence       → Project knowledge
-Reusable procedure                → Skill
-External system access            → connector
-Exact rule or authorization       → deterministic control
+Good prompt today
+      ≠
+Reliable configured baseline tomorrow
 ```
 
-Configuration layers should not be treated as interchangeable.
+## Team capability
 
-## Project configuration
+Configuration turns individual prompting habits and unstated expertise into visible, reusable expectations.
 
-A Project should have a bounded purpose and an explicit operating contract.
+```text
+Individual knowledge and prompting habits
+      ↓
+Explicit instructions, sources, procedures, and controls
+      ↓
+More consistent team capability
+```
 
-Define:
+Consistency does not require identical wording. It requires consistent source boundaries, requirements, output contracts, uncertainty behavior, and review obligations.
 
-- project objective;
-- intended users;
+---
+
+# Foundation 2: Configuration layers
+
+| Layer | Primary role |
+|---|---|
+| Current request | Immediate task and current constraints |
+| Project instructions | Durable behavior for one bounded workspace |
+| Project knowledge | Workspace-specific evidence and background |
+| Skill or reusable procedure | Repeatable method, checklist, template, script, or resource |
+| Connector | Controlled access to an external system |
+| Uploaded file | Explicit source supplied for current work or workspace |
+| Scoped memory | Selective continuity where supported and appropriate |
+| Deterministic control | Authorization, validation, routing, and exact rules outside prompt text |
+
+```text
+Immediate task              → current request
+Workspace behavior          → Project instructions
+Workspace evidence          → Project knowledge
+Reusable procedure          → Skill
+External system access      → connector
+Explicit source             → uploaded file
+Selective continuity        → scoped memory
+Authorization or exact rule → deterministic control
+```
+
+Configuration layers are not interchangeable.
+
+Common errors include:
+
+- placing temporary details into permanent instructions;
+- placing reusable procedures only in one Project;
+- treating connector access as source authority;
+- storing secrets in instructions or knowledge;
+- using memory as a system of record;
+- encoding authorization only in natural language; and
+- adding every available document instead of the minimum relevant set.
+
+```text
+Available context
+      ≠
+Appropriate configuration
+```
+
+---
+
+# Foundation 3: The configured baseline
+
+A bounded configuration should define:
+
+- purpose;
+- users;
 - approved use cases;
 - prohibited uses;
-- standing instructions;
-- knowledge sources;
+- instructions;
+- knowledge categories;
 - source authority order;
-- expected output formats;
+- connector scope;
+- output contract;
 - uncertainty behavior;
-- review and approval requirements;
+- review and approval gates;
 - data-handling constraints;
 - owner;
-- review date; and
+- version;
+- review cadence;
+- rollback path; and
 - retirement conditions.
+
+The baseline should answer:
+
+```text
+What is this workspace for?
+Who may use it?
+What may Claude know?
+What should Claude do consistently?
+What must remain human or deterministic?
+Which sources control?
+Who reviews the result?
+Who maintains the configuration?
+```
 
 A Project should not become an unbounded container for every document and task in a department.
 
-## Knowledge-source register
+---
 
-Every maintained source should have visible governance metadata.
+# Foundation 4: Knowledge governance
+
+## Source register
+
+Every maintained source should have visible metadata.
 
 | Field | Purpose |
 |---|---|
 | Source ID | Stable reference |
 | Title and location | Discoverability |
-| Source type | Policy, procedure, reference, data, example, template |
-| Authority | Controlling, advisory, historical, draft, superseded |
-| Owner | Person or function responsible for the source |
-| Effective date | When it became applicable |
+| Source type | Policy, procedure, data, reference, template, example |
+| Authority | Controlling, advisory, draft, historical, superseded |
+| Owner | Responsible person or function |
+| Effective date | Applicability start |
 | Review or expiration date | Freshness control |
 | Scope | Users, regions, systems, decisions, or cases covered |
 | Sensitivity | Access and handling requirement |
-| Conflicts | Known disagreements with other sources |
-| Replacement | New controlling source when superseded |
+| Conflicts | Known disagreements |
+| Replacement | Controlling successor when superseded |
 
 ```text
 Available source
@@ -175,24 +225,35 @@ Controlling source
 Current source
 ```
 
-## Connectors and uploaded knowledge
+## Conflict handling
 
-Connector or file availability does not establish that every retrieved item should influence the answer.
+When sources disagree:
 
-A retrieval design should define:
+1. identify the exact conflict;
+2. compare authority, scope, effective date, and version;
+3. determine whether one source supersedes another;
+4. preserve the unresolved conflict when authority is unclear;
+5. obtain resolution from the authorized owner; and
+6. update the register and affected configuration.
 
-- which systems are permitted;
-- which identities and permissions apply;
-- which source types are authoritative;
-- what date or version limits apply;
-- what minimum evidence is required;
-- how conflicts are surfaced;
-- how sensitive fields are handled;
-- what results may be retained;
-- what actions are read-only versus state-changing; and
-- what human approval is required.
+---
 
-Use the smallest relevant and permitted source set.
+# Foundation 5: Connectors, files, access, and secrets
+
+Connector or file availability does not establish that every retrieved item should affect the answer.
+
+Define:
+
+- permitted systems;
+- identity and permissions;
+- authoritative source types;
+- date and version limits;
+- minimum evidence;
+- conflict behavior;
+- sensitive-field handling;
+- retention rules;
+- read-only versus state-changing access; and
+- required human approval.
 
 ```text
 More connected data
@@ -200,31 +261,51 @@ More connected data
 Better context
 ```
 
-## Instruction design and precedence
+Apply least privilege:
 
-Durable instructions should be:
+- grant only required systems, folders, records, and actions;
+- separate read access from write or external-action authority;
+- review inherited access and shared-workspace exposure;
+- define revocation and offboarding; and
+- retain audit evidence where required.
 
-- specific enough to guide behavior;
-- narrow enough to avoid unrelated interference;
-- consistent with higher-authority policy and platform controls;
-- explicit about source boundaries and uncertainty;
-- testable through representative scenarios;
-- versioned and owned; and
-- separated from secrets or sensitive credentials.
+Keep credentials and secrets out of prompts, instructions, repositories, uploaded knowledge, and source files.
 
-Potential instruction conflicts should be visible rather than silently reconciled.
+---
+
+# Foundation 6: Scoped memory and continuity
+
+Continuity can reduce repeated explanation but should remain selective.
+
+Ask:
+
+- Is the information stable?
+- Is retention appropriate?
+- Is scope clear?
+- Is it useful across future work?
+- Can the user inspect and correct it?
+- Would staleness create a material error?
+- Does an authoritative system belong elsewhere?
+
+Memory does not replace:
+
+- Project knowledge;
+- source provenance;
+- a system of record;
+- workflow state;
+- authorization;
+- access control; or
+- professional approval.
 
 ```text
-Instruction present
+Helpful continuity
       ≠
-Instruction appropriate
-      ≠
-Instruction consistently enforceable
+Authoritative record
 ```
 
-Prompts and instructions cannot replace identity, authorization, data isolation, professional authority, or external approval controls.
+---
 
-## Configuration maintenance
+# Foundation 7: Maintenance lifecycle
 
 Configuration is a lifecycle, not a one-time setup.
 
@@ -239,145 +320,176 @@ Release
   ↓
 Monitor
   ↓
-Review sources and behavior
+Review instructions, sources, access, and behavior
   ↓
-Update, rollback, or retire
+Update, roll back, or retire
 ```
 
 Maintain:
 
-- configuration version;
-- change owner;
-- reason for change;
-- affected workflows;
-- source additions and removals;
-- instruction changes;
-- test cases and results;
-- reviewer and approval;
-- rollout date;
-- rollback path;
-- known limitations; and
-- next review date.
+- owner;
+- purpose;
+- users;
+- version;
+- effective date;
+- source and instruction inventory;
+- connector and access inventory;
+- known limitations;
+- test suite and results;
+- last and next review date;
+- rollback path; and
+- retirement conditions.
 
-## Conflict and freshness handling
+```text
+Configuration created
+      ≠
+Configuration governed
+```
 
-When sources disagree:
+## Common decay modes
 
-1. identify the exact conflicting claims;
-2. compare authority, scope, effective date, and version;
-3. determine whether one source supersedes another;
-4. preserve unresolved conflict when authority is unclear;
-5. ask the authorized owner to resolve it; and
-6. record the resolution and affected configuration.
-
-When a source is stale or outside scope, exclude it or label the limitation explicitly.
-
-## Access and secret boundaries
-
-Apply least privilege to connectors and knowledge access.
-
-- Grant only the systems, folders, records, and actions required.
-- Keep credentials and secrets out of prompts, instructions, repositories, and uploaded knowledge.
-- Separate read access from write or external-action authority.
-- Review inherited access and shared-workspace exposure.
-- Define offboarding and revocation behavior.
-- Retain audit evidence where required.
-
-## Caching and reusable context
-
-Caching can reduce repeated processing for stable reusable prefixes, but it does not solve:
-
-- source staleness;
-- excessive access;
-- instruction conflict;
-- incorrect business rules;
-- sensitive-data handling;
-- invalid assumptions; or
-- missing human approval.
-
-Use caching only when the content is sufficiently stable, reusable, permitted, and appropriately invalidated.
+- stale standing instruction;
+- superseded knowledge;
+- outdated Skill or template;
+- excessive connector access;
+- unrelated files accumulating in a Project;
+- missing source owner;
+- unstaffed review gate;
+- unsupported operational dependency; and
+- ceremonial maintenance with no recorded result.
 
 ---
 
-# Learning objectives
+# Practical operating example
 
-By the end of this module, you should be able to:
+A fictional team creates recurring policy briefings.
 
-- explain why configuration is part of workflow design rather than a convenience layer;
-- configure a Project around a bounded purpose and use case;
-- distinguish Project instructions, Project knowledge, Skills, connectors, uploaded files, and deterministic controls;
-- define a governed source register;
-- select authoritative, current, relevant, and permitted knowledge;
-- apply least privilege to connectors and retrieval;
-- separate read access from write or external-action authority;
-- design durable instructions with clear scope and conflict behavior;
-- recognize that instructions cannot enforce identity, authorization, or professional approval;
-- test configuration behavior with representative and adversarial scenarios;
-- resolve or surface source conflicts;
-- detect stale, superseded, or out-of-scope knowledge;
-- version, approve, monitor, update, rollback, and retire configurations;
-- keep secrets and credentials out of prompts and knowledge stores; and
-- use caching only for appropriate stable context.
+## Weak model
+
+Each analyst uses a blank chat, chooses different sources, applies different cutoff dates, and remembers different review steps.
+
+## Configured model
+
+The team maintains:
+
+- a bounded briefing Project;
+- approved source categories and authority order;
+- standing instructions for cutoff date, citation, uncertainty, and format;
+- a reusable briefing procedure;
+- read-only connector access to approved repositories;
+- a review gate before distribution;
+- a source register; and
+- a monthly configuration review.
+
+```text
+Configured baseline
+      +
+Current task inputs
+      +
+Human review
+      ↓
+More consistent recurring output
+```
+
+Configuration does not guarantee factual accuracy. It makes the expected process more repeatable, inspectable, and maintainable.
 
 ---
 
-# Existing module resources
+# Operating principles
 
-The repository already contains extended practice material that remains available while the course-aligned lessons are developed.
+1. **Configure stable recurring requirements, not every temporary preference.**
+2. **Keep evidence and procedure distinct.**
+3. **Make hidden dependencies visible.**
+4. **Apply least privilege.**
+5. **Keep secrets outside prompt content.**
+6. **Treat maintenance as planned work.**
+7. **Version and test material changes.**
+8. **Roll back or retire configurations that no longer serve their purpose.**
+
+---
+
+# Integrated configuration protocol
+
+```text
+1. Define the bounded purpose and users
+2. Identify recurring behavior, evidence, procedures, and access
+3. Place each concern in the correct configuration layer
+4. Establish source authority, freshness, and conflict rules
+5. Apply least privilege and separate read from action authority
+6. Define uncertainty, output, review, and approval behavior
+7. Test representative and adversarial cases
+8. Approve and version the configuration
+9. Monitor behavior, sources, access, and operational dependency
+10. Review on cadence and after material events
+11. Update, roll back, or retire
+```
+
+---
+
+# Current module resources
+
+## Course-aligned lessons
+
+- [Module Introduction](lessons/01-module-introduction.md)
+
+## Prompt notebooks
+
+- [Module Introduction prompts](../../prompts/module-05/01-module-introduction-prompts.md)
+
+## Existing extended practice
 
 - [notes.md](notes.md): Configuration, source governance, access, and maintenance concepts
 - [lab.md](lab.md): Applied configuration and knowledge-management exercise
 - [flashcards.md](flashcards.md): Active-recall review
 - [quiz.md](quiz.md): Original extended scenario quiz
 
-Course-aligned lessons and Module 5 prompt notebooks will be added as each supplied section is completed.
-
 ---
 
 # Exam lens
 
-Configuration scenarios often test whether the learner places content in the correct layer and maintains appropriate authority and access boundaries.
-
 ```text
 One bounded workspace needs stable behavior → Project instructions
-Workspace needs approved source material     → Project knowledge
+Workspace needs approved evidence           → Project knowledge
 Procedure should work across contexts        → Skill
-Current external information is needed       → connector or retrieval path
+Current external information is needed       → connector or retrieval
 Exact authorization or fixed rule            → deterministic control
 Source is stale or conflicting               → surface, resolve, or exclude
 More files are available                     → still select minimum relevant evidence
 Secret appears in instructions                → remove and use approved secret handling
+Configuration has no owner or review date     → not governed
+Memory is treated as official record          → move authority to system of record
 ```
 
-For scenario questions:
+For introductory scenarios:
 
-1. identify the workspace purpose and user;
-2. distinguish instruction, knowledge, procedure, access, and authority;
-3. select the smallest relevant configuration layer;
-4. establish source authority, scope, and freshness;
+1. distinguish using from operating Claude;
+2. identify the bounded workspace purpose;
+3. place instructions, evidence, procedures, access, continuity, and authority correctly;
+4. establish source authority and freshness;
 5. apply least privilege;
-6. keep secrets outside prompt and knowledge content;
-7. define conflict and uncertainty behavior;
-8. test representative and adversarial cases;
-9. version and approve material changes; and
-10. define monitoring, rollback, and retirement.
+6. keep secrets outside prompts and knowledge;
+7. define review and approval gates;
+8. test representative behavior;
+9. assign ownership and maintenance cadence; and
+10. define rollback and retirement.
 
 ---
 
 # Completion criteria
 
-- [ ] I completed the Module 5 introduction.
+- [x] I completed the Module 5 introduction.
+- [ ] I can explain the difference between using and operating Claude.
+- [ ] I can explain how configuration creates leverage and team consistency.
 - [ ] I can configure a Project around a bounded purpose.
-- [ ] I can distinguish Project instructions, Project knowledge, Skills, connectors, and uploaded files.
+- [ ] I can distinguish Project instructions, Project knowledge, Skills, connectors, uploaded files, memory, and deterministic controls.
 - [ ] I can build and maintain a source register.
 - [ ] I can select authoritative, current, relevant, and permitted evidence.
 - [ ] I can resolve or surface conflicting sources.
-- [ ] I can apply least privilege to knowledge and connector access.
+- [ ] I can apply least privilege to connector and knowledge access.
 - [ ] I can keep credentials and secrets outside prompts and repositories.
 - [ ] I can design durable instructions with clear scope and precedence.
 - [ ] I can test and maintain configuration behavior.
 - [ ] I can version, approve, roll back, and retire configurations.
-- [ ] I can explain when retrieval and caching help and what they do not solve.
 - [ ] I completed the Module 5 quiz and takeaways.
 - [ ] I completed the knowledge lab and scored at least 80% on the extended quiz.
 
@@ -391,10 +503,6 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 
 This repository is an unofficial educational resource. It does not constitute architecture, security, privacy, records-management, compliance, legal, or operational advice.
 
-## Official reading
+## Source note
 
-Product capabilities and recommendations can change. Verify current official documentation before relying on implementation-specific behavior.
-
-- [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)
-- [Context management](https://platform.claude.com/docs/en/build-with-claude/context-windows)
-- [Skills for enterprise](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise)
+The Module 5 introduction was supplied on August 3, 2026. Product capabilities, terms, policies, and documentation can change. Current official documentation controls if it conflicts with course or repository material.
