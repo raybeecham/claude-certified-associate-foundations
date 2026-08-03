@@ -100,6 +100,7 @@ These templates are study aids and starting points. Adapt them to the use case, 
 1. [Diagnosing Underperformance prompts](module-07/01-diagnosing-underperformance-prompts.md)
 2. [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
 3. [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
+4. [Module 7 quiz and remediation prompts](module-07/04a-module-7-quiz-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -110,24 +111,24 @@ Before using a template:
 - preserve governance boundaries during troubleshooting and optimization;
 - define expected and observed behavior before changing anything;
 - diagnose specification, context, capability, configuration, and task-fit causes in that order;
+- treat first-response failure as evidence for under-specification, not proof without testing;
+- test model or feature mismatch by holding the task, evidence, and evaluation set constant;
 - build a minimal reproducible case and change one variable at a time;
 - translate vague reactions into observable defects and testable instructions;
 - identify the lever that actually controls the defect;
+- promote recurring corrections only after representative validation;
+- place rules in instructions, references in governed knowledge, procedures in Skills or workflows, and exact logic in deterministic controls;
 - observe one complete recurring workflow cycle before proposing optimization;
 - record repetition, correction, variance, handoffs, waiting, rework, and required controls;
-- classify reusable fixes as rules, references, procedures, deterministic controls, or one-time details;
-- place rules in instructions, references in governed knowledge, procedures in Skills or workflows, and exact logic in code, queries, schemas, or technical gates;
-- consolidate steps only when permissions, data boundaries, independent review, testability, and rollback remain intact;
-- select the primary metric and guardrail metrics before changing the workflow;
+- target the measured bottleneck rather than general speed;
+- select primary and guardrail metrics before changing the workflow;
 - retain the baseline during a guarded pilot;
 - test representative users, normal cases, edge cases, and governance constraints;
-- measure net improvement across time, quality, consistency, cost, maintenance, and downstream effort;
-- reject optimizations that merely shift work, weaken controls, or standardize an unvalidated workaround;
-- define rollback, ownership, versioning, review cadence, and stop conditions;
-- reject stronger-model fixes when the root cause is elsewhere; and
+- reject interventions that merely shift work, add capacity, or weaken controls;
+- define rollback, ownership, versioning, review cadence, and stop conditions; and
 - use fictional, synthetic, public, or authorized scenarios in public study materials.
 
-A prompt rewrite, model upgrade, longer context, extra tool, or fewer workflow steps cannot substitute for correct diagnosis, correct configuration placement, representative testing, measurable improvement, or accountable human review.
+A prompt rewrite, model upgrade, longer context, extra tool, or additional reviewer cannot substitute for correct diagnosis, durable configuration, measurable bottleneck removal, representative testing, or accountable human review.
 
 ## Public-repository content rule
 
