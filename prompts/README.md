@@ -81,6 +81,7 @@ These templates are study aids and starting points, not universal production pro
 5. [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
 6. [Module 5 quiz and remediation prompts](module-05/06a-module-5-quiz-prompts.md)
 7. [Module 5 Key Takeaways prompts](module-05/06b-key-takeaways-prompts.md)
+8. [Module 5 completion and transition prompts](module-05/07-module-complete-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -103,18 +104,15 @@ Before using a template:
 - inventory instructions, knowledge, Skills, connectors, and Memory as versioned operational assets;
 - schedule recurring and event-triggered reviews;
 - inspect the full configured baseline when output drifts without a prompt change;
-- distinguish Anthropic, organization-provisioned, shared, directory-installed, and personal Skill distribution paths;
-- update or re-upload owner-managed personal Skills when procedures change;
+- distinguish Skill ownership and distribution paths before assuming update behavior;
 - review Memory for accuracy, relevance, and appropriate authority placement;
-- export approved context before destructive Memory changes where appropriate;
-- treat reset as irreversible and use it only when selective repair is insufficient;
+- preserve approved context before destructive Memory changes where appropriate;
 - recertify connector identity, permissions, tools, business need, offboarding, and revocation;
 - choose edit, replace, disable, revoke, reset, rollback, or retirement according to the defect;
 - rerun representative and adversarial tests after material change;
 - reject distractors based only on stronger models, more careful one-time prompting, or connecting more sources;
-- preserve rollback paths and release evidence;
 - keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration; and
-- preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication.
+- transition from configuration to governance by evaluating use-case, data, policy, ethics, accountability, and approval conditions.
 
 A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, connector permissions, secret handling, factual accuracy, correct business rules, professional approval, durable state, confidentiality, or irreversible-action authorization.
 
