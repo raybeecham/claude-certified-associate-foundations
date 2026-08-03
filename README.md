@@ -146,15 +146,16 @@ Always ask:
 | Resource | Count | Purpose |
 |---|---:|---|
 | Study domains | 7 | Coverage of the certification preparation areas |
-| Scenario questions | 56 | Original multiple-choice questions with rationales |
+| CLI scenario question bank | 56 | Original single-choice questions used by module quizzes and balanced exams |
+| Blueprint-weighted simulation items | 60 | Original multiple-choice and multiple-response items in full-length Practice Exam 3 |
 | Flashcards | 84 | Fast recall and spaced-repetition practice |
-| Practice exams | 2 | Balanced, 28-question exam simulations |
+| Practice exams | 3 | Two balanced 28-question simulations plus one blueprint-weighted 60-question simulation |
 | Hands-on labs | 7 | Applied exercises with acceptance criteria |
 | Case studies | 4 | Certification cases plus an end-to-end systems-engineering example |
 | Prompt notebooks and templates | Growing | Reusable task, evaluation, orchestration, and review patterns |
 | Engineering pattern library | Growing | Reusable workflow and architecture patterns |
 | AI Systems Engineering Playbook | 1 | Methodology, canvases, checklists, mental models, and case studies |
-| Study CLI | 1 | Offline quizzes, flashcards, practice exams, and local score tracking |
+| Study CLI | 1 | Offline quizzes, flashcards, two balanced practice exams, and local score tracking |
 
 ## Certification study domains
 
@@ -180,7 +181,7 @@ For each domain:
 8. Record weak areas in the [progress tracker](docs/progress-tracker.md).
 9. Revisit the current official documentation linked from that module.
 
-After all seven domains, complete both practice exams under timed, closed-note conditions.
+After all seven domains, complete all three practice exams under timed, closed-note conditions. Practice Exams 1 and 2 can be run through the CLI; Practice Exam 3 is a Markdown-based full simulation because it includes multiple-response items.
 
 ## AI Systems Engineering quick start
 
@@ -210,7 +211,7 @@ Outcome → Evidence → Workspace → Model → Prompt → Review
 ├── prompts/                  # Prompt notebooks and reusable templates
 ├── patterns/                 # Engineering patterns
 ├── case-studies/             # Applied certification scenarios
-├── practice-exams/           # Two full exam simulations
+├── practice-exams/           # Three exam simulations, including a 60-item weighted exam
 ├── docs/                     # Study plan, strategy, cheat sheet, glossary
 ├── data/                     # Machine-readable questions and flashcards
 ├── tools/                    # Offline study CLI
@@ -233,6 +234,8 @@ python -m tools.study_cli practice --exam 1
 python -m tools.study_cli stats
 ```
 
+The CLI currently runs balanced Practice Exams 1 and 2. Take the multiple-response, blueprint-weighted [Practice Exam 3](practice-exams/practice-exam-03-blueprint-weighted.md) directly in Markdown.
+
 Run the validation suite:
 
 ```bash
@@ -252,7 +255,7 @@ mkdocs serve
 These are study recommendations, not official passing requirements:
 
 - Score at least **80%** on every module quiz.
-- Score at least **80%** on both practice exams on separate attempts.
+- Score at least **80%** on all three practice exams on separate attempts.
 - Explain the correct answer and every distractor without relying on memorized wording.
 - Complete all seven labs and document your design decisions.
 - Resolve every miss involving privacy, grounding, human review, tool permissions, or high-impact use.
