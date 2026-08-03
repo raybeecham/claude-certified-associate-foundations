@@ -75,6 +75,7 @@ These templates are study aids and starting points, not universal production pro
 ### Module 5: Configuration & Knowledge Management
 
 1. [Module Introduction prompts](module-05/01-module-introduction-prompts.md)
+2. [Configuring Projects prompts](module-05/02-configuring-projects-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -83,25 +84,23 @@ Additional notebooks will be added as later course-aligned sections are complete
 Before using a template:
 
 - distinguish a one-time prompt from a maintained operating baseline;
-- define the bounded purpose, users, approved uses, and prohibited uses of a configured workspace;
-- place immediate tasks, workspace behavior, evidence, reusable procedures, external access, continuity, and authority in the correct layer;
-- keep temporary facts out of permanent instructions;
-- keep reusable methods distinct from workspace-specific knowledge;
+- define the bounded purpose, users, approved uses, and prohibited uses;
+- classify recurring needs as behavior, fact, procedure, continuity, access, exact control, or durable state;
+- place behavior in Project instructions, facts in Project knowledge, reusable procedures in Skills, and selected continuity in scoped Memory;
+- pair mechanisms when one need contains different responsibility types;
+- assign one authoritative home to each configuration item;
 - treat connector availability as access, not authority;
 - use the minimum relevant, permitted, authoritative, and current source set;
 - record source owner, authority, effective date, review date, scope, sensitivity, conflicts, and replacement;
-- surface source conflicts rather than silently reconciling them;
-- apply least privilege and separate read access from write or external-action authority;
-- keep secrets and credentials out of prompts, instructions, repositories, uploaded files, and knowledge stores;
-- use memory for selective continuity rather than authoritative records or workflow state;
-- assign an owner, version, test suite, review cadence, rollback path, and retirement condition to material configurations;
-- test representative and adversarial cases before release;
-- monitor instruction drift, stale knowledge, excessive access, unowned procedures, and unsupported operational dependency;
-- update, roll back, or retire configurations when they no longer match the approved workflow;
-- preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication; and
-- measure semantic and control consistency rather than requiring identical wording.
+- treat Memory as continuity rather than authority, a security guarantee, or durable state;
+- apply least privilege and separate read access from write authority;
+- keep secrets out of prompts, instructions, repositories, files, knowledge, Skills, and Memory;
+- assign an owner, version, tests, review cadence, rollback path, and retirement condition;
+- test cross-project bleed, stale knowledge, conflicting instructions, and excessive sharing;
+- update, roll back, or retire configurations when they no longer match the approved workflow; and
+- preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication.
 
-A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, secret handling, correct business rules, complete data, professional approval, durable state, workflow accountability, or irreversible-action authorization.
+A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, secret handling, correct business rules, complete data, professional approval, durable state, confidentiality, workflow accountability, or irreversible-action authorization.
 
 ## Public-repository content rule
 
