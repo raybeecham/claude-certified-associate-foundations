@@ -91,6 +91,7 @@ These templates are study aids and starting points, not universal production pro
 4. [Data Sensitivity, Privacy & Feature Controls prompts](module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
 5. [Organizational Policies and Diligence prompts](module-06/05-organizational-policies-diligence-prompts.md)
 6. [Ethical Implications prompts](module-06/06-ethical-implications-prompts.md)
+7. [Module 6 quiz and remediation prompts](module-06/07a-module-6-quiz-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -102,31 +103,32 @@ Before using a template:
 - define the bounded use case, users, affected parties, accountable owner, and controlling policy version;
 - assess reversibility, consequence of error, human creativity or empathy, and accountability;
 - identify the load-bearing criterion and define the who / what / when gate;
+- preserve non-transferable human responsibility for consequential decisions;
 - establish Skill or feature publisher, owner, version, contents, effective reach, and proportionality;
+- treat a recommendation, internal label, or product name as insufficient evidence of trust;
 - apply least privilege and choose Enable, Escalate, or Decline under the correct authority;
 - define the minimum necessary data and classify it before upload or retrieval;
-- distinguish direct identifiers from indirect re-identification risk;
-- treat Incognito, Memory, sandboxing, retention, and export as bounded controls rather than processing authorization;
+- separate processing authorization from history, Memory, retention, export, and deletion controls;
+- treat Incognito and sandboxing as bounded controls rather than permission to process prohibited data;
 - translate policy requirements into observable behavior, controls, evidence, ownership, and escalation;
 - audit actual and planned use against the current controlling policy;
 - bound governance audits to authorized and necessary evidence;
 - record Diligence gaps with scope, consequence, root cause, containment, corrective action, owner, due date, and closure test;
-- separate immediate containment from sustainable remediation;
+- separate immediate containment from sustainable remediation and verified closure;
+- inspect workflow friction, incentives, staffing, configuration, and technical controls rather than blaming individuals by default;
 - manage exceptions with authority, scope, risk, compensating controls, monitoring, and expiration;
-- verify closure and re-audit after policy, feature, data, ownership, or workflow changes;
-- identify all affected parties, including people with limited power or recourse;
+- identify affected parties, including people excluded before a human sees their case;
 - inspect prompt framing, sources, labels, criteria, examples, generated wording, and downstream use for bias;
-- define what fair treatment means for the specific task rather than assuming identical processing is sufficient;
+- define a task-specific fairness standard rather than assuming identical processing is sufficient;
 - determine disclosure from policy, audience expectations, materiality, and risk of misleading authorship or expertise claims;
 - preserve qualified human review, intervention authority, explanation, correction, and appeal paths;
 - escalate when scale, potential harm, vulnerable groups, disputed fairness criteria, or decision authority exceed the team’s standing;
+- reject stronger-model fixes when the root cause is governance, permissions, data approval, accountability, or workflow design;
 - test representative and edge cases and monitor actual outcome differences;
-- threat-model prompt injection, exfiltration, malicious dependencies, and unauthorized action;
-- pair guidance with technical controls, human approval, monitoring, logging, and incident response;
 - preserve evidence, exceptions, approvals, ethical reasoning, rationale, and review dates; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt, policy acknowledgment, publisher label, Incognito session, sandbox, audit, disclosure statement, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, fair outcomes, professional accountability, recourse, durable state, or irreversible-action approval.
+A prompt, policy acknowledgment, publisher label, Incognito session, sandbox, audit, disclosure statement, model tier, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, fair outcomes, professional accountability, recourse, durable state, or irreversible-action approval.
 
 ## Public-repository content rule
 
