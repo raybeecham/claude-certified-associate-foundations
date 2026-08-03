@@ -2,11 +2,11 @@
 
 Associate Persona · Official Exam Domain 4 · **16% of the exam blueprint**
 
-> **Status:** In progress — Module 4 is the active module.
+> **Status:** In progress — teaching, exercise, and quiz are complete. Takeaways and Module Complete remain open.
 
 ## Module thesis
 
-> Workflow value comes from deciding what to delegate, validating what is produced, and describing the resulting capability without overstatement.
+> Workflow value comes from deciding what to delegate, validating what is produced, recognizing when a helper becomes infrastructure, and communicating capability without overstatement.
 
 ```text
 Business need
@@ -23,9 +23,7 @@ Delegation mapping and control boundaries
       ↓
 Accurate value and limitation communication
       ↓
-Workflow redesign exercise
-      ↓
-Validated workflow
+Workflow redesign and quiz synthesis
 ```
 
 ---
@@ -40,245 +38,178 @@ Validated workflow
 - [x] [06. Communicating Value & Limitations](lessons/06-communicating-value-limitations.md)
 - [x] [07. Exercise: Redesign a Workflow — all six correct](lessons/07-redesign-a-workflow.md)
 - [ ] 08. Module 4 Quiz
-  - [ ] Quiz
+  - [x] [Quiz — Full marks, 5/5](lessons/08a-module-4-quiz.md)
   - [ ] Takeaways
 - [ ] 09. Module Complete
 
-No later lesson is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
+---
+
+# Completion record
+
+```text
+Workflow redesign exercise: All six correct
+Module 4 quiz:             Full marks — 5 of 5
+Key takeaways:             Open
+Module complete:           Open
+```
 
 ---
 
-# Integrated workflow model
+# Integrated workflow framework
 
-## 1. Workflow integration
-
-```text
-I use Claude
-      ≠
-Our workflow uses Claude
-```
-
-A designed workflow defines stages, authorized inputs, responsibilities, state, validation, review, failure behavior, approval, and measurable outcomes.
-
-| Responsibility | Appropriate owner |
-|---|---|
-| Interpretation, synthesis, drafting, options | Model under bounded criteria |
-| Exact calculation, schema, fixed rule | Deterministic component or code execution |
-| Retrieval or external side effect | Controlled tool |
-| Durable state and authoritative record | Storage or system of record |
-| Professional judgment, approval, accountability | Human or organization |
+## 1. Requirements must be testable
 
 ```text
-Generate recommendation
-      ≠
-Authorize action
+Messy input
+      ↓
+Atomic requirement
+      ↓
+Exact traceability
+      ↓
+Ambiguity and gap review
+      ↓
+Measurable acceptance criterion
 ```
 
-## 2. Requirements and use cases
+A requirement is not ready when two competent implementers could build materially different solutions from it.
 
 ```text
-Messy inputs
+Large number of users
       ↓
-Atomic candidate requirements
-      ↓
-Traceability and classification
-      ↓
-Pressure-test
-      ↓
-Human clarification and approval
-      ↓
-Requirement baseline
+Clarify concurrency, duration, response time,
+transaction rate, and acceptable failure behavior
 ```
 
-Requirement classes include explicit, implied, ambiguous, missing, conflicting, assumption, constraint, and acceptance criterion.
+## 2. Research, computation, and judgment require different controls
 
 ```text
-Extracted fact
-      ≠
-Implied requirement
-      ≠
-Analyst assumption
+Current evidence       → web search, Research, or approved sources
+Exact material figures → code execution or deterministic analytics
+Trade-off synthesis    → Claude using verified evidence
+Risk and approval      → accountable human
 ```
-
-A viable use case connects a measurable outcome, a real user and process, authorized inputs, a bounded AI contribution, retained human authority, deterministic controls, acceptance criteria, and escalation.
-
-## 3. Research, planning, and optimization
-
-```text
-Research and synthesis
-      +
-Executed computation
-      +
-Human judgment and authority
-      ↓
-Defensible plan
-```
-
-| Need | Preferred path |
-|---|---|
-| Straightforward current fact | Web search |
-| Deeper multi-source investigation | Research |
-| Supplied-document question | Closed-source analysis |
-| Internal operational truth | Approved internal system |
-| Exact metric or transformation | Code execution |
-| Missing organizational constraint | Human clarification |
 
 ```text
 Plausible number in prose
       ≠
-Computed result
+Computed and reconciled result
 ```
 
-Map the current process before optimizing it. Target the controlling bottleneck rather than adding Claude everywhere.
-
-## 4. Solution iteration
+## 3. Prototype success is not production readiness
 
 ```text
-Stable design context
+Personal helper
       ↓
-Meaningfully different options
+Used repeatedly by several people
       ↓
-Prototype hypothesis
+Supports official reporting or decisions
       ↓
-Smallest useful prototype
+Operational dependency
       ↓
-Observed evidence and feedback
-      ↓
-Bounded refinement
-      ↓
-Acceptance and regression tests
-      ↓
-Continue / accept / redesign / escalate / stop
+Engineering, architecture, security,
+support, monitoring, recovery, and governance review
 ```
 
+A helper that others depend on has crossed an escalation boundary even when its original prototype worked well.
+
 ```text
-Minimum useful prototype
+Useful artifact
       ≠
-Production-ready solution
+Supported operational system
 ```
 
-Classify feedback before acting. Prioritize correctness, security, accessibility, disclosure, and release-blocking defects over preference.
+## 4. Delegation follows reversibility, stakes, and accountability
 
-## 5. Delegation mapping
-
-```text
-Reversibility
-+ Stakes
-+ Accountability
-↓
-Minimum responsible delegation posture
-```
-
-| Mode | Typical responsibility |
+| Mode | Appropriate responsibility |
 |---|---|
-| AI-appropriate | Bounded extraction, classification, synthesis, or drafting |
-| AI with code execution | Exact calculations, transformations, and reconciliation |
+| AI-appropriate | Bounded extraction, classification, synthesis, drafting |
+| Code-executed | Exact calculations, transformations, reconciliation |
 | Collaborative | Claude prepares; qualified human evaluates and decides |
-| Human-retained | Authority, professional judgment, exceptions, approval, binding action |
-| Deterministic | Fixed rules, schemas, routing, authorization checks |
-| Tool-owned | Controlled retrieval or external side effect |
-| Storage-owned | Durable workflow state and authoritative records |
+| Human-retained | Professional approval, risk acceptance, signing, commitment |
+| Deterministic | Fixed rules, schema validation, authorization checks |
+| Tool-owned | Controlled retrieval or external action |
+| Storage-owned | Durable state and authoritative records |
 
 ```text
-Map the work first.
-Assign features second.
+High-quality draft
+      ≠
+Authority to approve
+      ≠
+Permission to execute
 ```
 
-Over-delegation signals include AI approving its own work, classification automatically triggering consequence, generated arithmetic, ceremonial review, or hidden irreversible actions.
-
-## 6. Communicating value and limitations
+## 5. Stakeholder trust requires bounded claims
 
 ```text
 What Claude does
       +
 What Claude does not do
       +
-What value has been observed
+Observed value and scope
       +
-What limitations and controls remain
+Known limitations
+      +
+Human review and approval
       ↓
 Credible workflow description
 ```
 
-Adapt depth and vocabulary for each audience. Preserve capability boundaries, verified metrics, uncertainty, limitations, human gates, and approval authority.
-
-```text
-Audience adaptation
-      ≠
-Risk concealment
-```
+Avoid broad claims such as `fully automated` or `Claude handles contract review`. Name the exact AI tasks and the retained human decisions.
 
 ---
 
 # Workflow redesign exercise
 
-## Completion record
-
 ```text
-Strong map — all six steps correct
+Result: All six classifications correct
 ```
 
-The fictional expense-report workflow was mapped as follows:
+| Expense workflow stage | Delegation | Feature/control |
+|---|---|---|
+| Extract receipt line items | Automated | Skill plus validation |
+| Compare with travel policy | Collaborative | Skill plus human exception review |
+| Calculate totals and limits | Automated | Code execution plus reconciliation |
+| Draft exception explanation | Collaborative | AI draft, approver adjustment |
+| Approve or reject report | Human-retained | Authorized financial approval |
+| Submit for payment | Human-retained before controlled execution | Approved external action |
 
-| Step | Delegation | Feature | Governing reason |
-|---|---|---|---|
-| Extract receipt line items and amounts | Automated | Skill | Mechanical, reversible, reviewable |
-| Compare expenses with travel policy | Collaborative | Skill | Repeatable procedure with human review for ambiguity and exceptions |
-| Total report and calculate policy variance | Automated | Code execution | Exact numeric work must be computed and reconciled |
-| Draft exception summary | Collaborative | Neither required by default | AI drafts from verified findings; approver confirms context |
-| Approve or reject report | Human-retained | None | Financial accountability and authority do not delegate |
-| Submit approved report for payment | Human-retained before controlled execution | Controlled system | Financially material external action |
+---
 
-## Feature selections
+# Module 4 quiz result
 
 ```text
-Best Skill step:
-Step 2 — policy comparison
-
-Best code-execution step:
-Step 3 — totals and policy-limit calculations
+Full marks — 5 of 5
 ```
 
-Step 1 can also use a document-processing Skill. Step 2 most clearly demonstrates a maintained policy procedure.
+The quiz demonstrated command of:
 
-## Why the map is defensible
+1. ambiguity and testability in requirements;
+2. code-executed quantitative planning;
+3. the prototype-to-infrastructure escalation boundary;
+4. human-retained approval and irreversible action; and
+5. accurate stakeholder communication.
+
+## Quiz shortcut
 
 ```text
-Procedure → Skill
-Calculation → Code execution
-Drafting → AI or collaborative
-Approval → Human-retained
-External financial action → Approval before controlled execution
+Unquantified requirement      → clarify and make testable
+Plan depends on exact figures → code execution + reconciliation
+Helper becomes depended on    → escalate toward production engineering
+Approval or signature         → human-retained
+Stakeholder trust             → bounded task + evidence + limits + human gate
 ```
 
-The exercise preserves four critical separations:
-
-1. procedure versus calculation;
-2. assistance versus authority;
-3. approval versus external execution; and
-4. reversible preparation versus financial consequence.
-
-## Audit evidence
-
-A defensible workflow retains:
-
-- source receipts;
-- extracted line-item records;
-- policy version and cited rules;
-- policy flags and exception classifications;
-- calculation code and outputs;
-- human review rationale;
-- approval record; and
-- payment-submission identifier.
+## Quiz reasoning sequence
 
 ```text
-Mapped delegation
-      +
-Operational controls
-      +
-Retained evidence
-      =
-Audit-ready workflow design
+Identify the controlling property
+      ↓
+Ask what remains unproven or uncontrolled
+      ↓
+Select the smallest responsible intervention
+      ↓
+Reject stronger-model, polished-prose,
+or hidden-automation distractors
 ```
 
 ---
@@ -287,27 +218,27 @@ Audit-ready workflow design
 
 ```text
 1. Define the business outcome and accountable owner
-2. Establish the requirement baseline
-3. Select and validate research and data inputs
+2. Establish atomic, traceable, testable requirements
+3. Select authoritative research and data inputs
 4. Execute and reconcile material calculations
-5. Map the current workflow and controlling bottleneck
-6. Generate options and prototype highest-risk assumptions
-7. Gather evidence, refine through bounded changes, and regression-test
-8. Decompose the workflow into atomic steps
-9. Assess reversibility, stakes, accountability, and side effects
-10. Assign model, code, deterministic, tool, storage, and human ownership
-11. Place qualified review before consequential or irreversible action
-12. Test handoffs, exceptions, failures, retries, and recovery
-13. Retain source, calculation, review, approval, and external-action evidence
-14. Measure workflow value and scope the claim
-15. Communicate capability, exclusions, controls, and limitations accurately
+5. Map the current process and controlling bottleneck
+6. Prototype the highest-risk assumptions
+7. Classify feedback and regression-test changes
+8. Detect when a prototype becomes operational infrastructure
+9. Decompose the workflow into atomic stages
+10. Assess reversibility, stakes, accountability, and side effects
+11. Assign model, code, deterministic, tool, storage, and human ownership
+12. Place qualified approval before consequential or irreversible action
+13. Retain evidence for sources, calculations, review, approval, and execution
+14. Measure value under a defined scope and quality standard
+15. Communicate capability, exclusions, limitations, and controls accurately
 ```
 
 ---
 
 # Current module resources
 
-## Course-aligned lessons
+## Lessons
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Analyzing Requirements and Use Cases](lessons/02-analyzing-requirements-use-cases.md)
@@ -316,6 +247,7 @@ Audit-ready workflow design
 - [Delegation Mapping](lessons/05-delegation-mapping.md)
 - [Communicating Value and Limitations](lessons/06-communicating-value-limitations.md)
 - [Exercise: Redesign a Workflow](lessons/07-redesign-a-workflow.md)
+- [Module 4 Quiz](lessons/08a-module-4-quiz.md)
 
 ## Prompt notebooks
 
@@ -326,6 +258,7 @@ Audit-ready workflow design
 - [Delegation Mapping prompts](../../prompts/module-04/05-delegation-mapping-prompts.md)
 - [Communicating Value and Limitations prompts](../../prompts/module-04/06-communicating-value-limitations-prompts.md)
 - [Redesign a Workflow prompts](../../prompts/module-04/07-redesign-a-workflow-prompts.md)
+- [Module 4 quiz and remediation prompts](../../prompts/module-04/08a-module-4-quiz-prompts.md)
 
 ## Engineering patterns
 
@@ -335,7 +268,7 @@ Audit-ready workflow design
 - [Delegation Boundary Mapping Pattern](../../patterns/delegation-boundary-mapping-pattern.md)
 - [Capability, Value, and Limitation Communication Pattern](../../patterns/capability-value-limitation-communication-pattern.md)
 
-## Existing extended practice
+## Extended practice
 
 - [notes.md](notes.md)
 - [lab.md](lab.md)
@@ -347,59 +280,50 @@ Audit-ready workflow design
 # Exam lens
 
 ```text
-Mechanical extraction               → automate with validation
-Repeatable policy procedure          → Skill
-Ambiguous policy interpretation      → collaborative review
-Exact totals and limits              → code execution
-Draft explanatory note               → collaborative
-Financial approval                   → human-retained
-Payment submission                   → approval before controlled action
-Previous stage succeeded             → still assess next stage independently
+Vague requirement                → quantify and clarify
+Exact trend or throughput        → code execution
+Shared relied-on artifact        → engineering escalation
+Approval, signing, commitment    → human-retained
+Broad AI capability claim        → bounded task and human-gate statement
 ```
 
-For redesign scenarios:
+For Module 4 scenarios:
 
-1. map atomic stages;
-2. assess reversibility, stakes, accountability, and side effects;
-3. assign Skills to repeatable procedures;
-4. assign code execution to material calculations;
-5. keep ambiguous judgment collaborative;
-6. keep approval human-retained;
+1. identify the business outcome and intended use;
+2. test requirements for ambiguity and measurability;
+3. separate synthesis from exact computation;
+4. recognize dependency and escalation boundaries;
+5. map every stage independently;
+6. retain human authority for consequential decisions;
 7. expose irreversible actions;
-8. place approval before external consequence;
-9. define exception and failure routes; and
-10. retain reconstructable evidence.
+8. distinguish prototype success from production readiness;
+9. support value claims with scoped evidence; and
+10. communicate limits and oversight explicitly.
 
 ---
 
 # Completion criteria
 
-- [x] I completed the Module 4 introduction.
-- [x] I completed Analyzing Requirements and Use Cases.
-- [x] I completed Research, Planning, and Process Optimization.
-- [x] I completed Solution Design, Development, and Iteration.
-- [x] I completed Delegation Mapping.
-- [x] I completed Communicating Value and Limitations.
-- [x] I completed the Redesign a Workflow exercise with all six steps correct.
-- [ ] I can distinguish personal use from workflow integration.
-- [ ] I can build and pressure-test a traceable requirement register.
-- [ ] I can separate research, computation, synthesis, and human judgment.
-- [ ] I can define a bounded prototype and controlled iteration loop.
-- [ ] I can classify workflow stages by reversibility, stakes, and accountability.
-- [ ] I can assign Skills and code execution to appropriate stages.
+- [x] I completed all Module 4 teaching sections.
+- [x] I completed the workflow-redesign exercise with all six correct.
+- [x] I completed the Module 4 quiz with full marks, 5/5.
+- [ ] I completed the Module 4 takeaways.
+- [ ] I can identify ambiguous and untestable requirements.
+- [ ] I can separate research, computation, synthesis, and judgment.
+- [ ] I can recognize when a helper has become infrastructure.
+- [ ] I can classify stages by reversibility, stakes, and accountability.
+- [ ] I can assign Skills, code, deterministic logic, tools, storage, and humans appropriately.
 - [ ] I can detect over-delegation and ceremonial review.
 - [ ] I can place approval before irreversible action.
-- [ ] I can support value claims with scoped evidence.
-- [ ] I can adapt messages without hiding limitations or controls.
-- [ ] I completed the Module 4 quiz and takeaways.
+- [ ] I can communicate bounded capability, evidence, limitations, and oversight.
 - [ ] I completed the workflow lab and scored at least 80% on the extended quiz.
 
 ---
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential receipts, financial records, expense data, internal policies, contracts, client identities, pilot metrics, approval records, proprietary workflows, credentials, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential vendor briefs, internal datasets, production dependencies, contracts, legal decisions, client identities, metrics, approval records, proprietary workflows, credentials, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute accounting, tax, legal, financial-control, risk, compliance, employment, architecture, security, or operational advice.
+This repository is an unofficial educational resource. It does not constitute legal, architecture, security, risk, compliance, financial, employment, or operational advice.
