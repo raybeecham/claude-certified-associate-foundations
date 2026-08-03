@@ -2,16 +2,9 @@
 
 This directory converts certification concepts into reusable workflow-design patterns.
 
-A pattern describes:
+A pattern describes the problem, context, recommended design, controls, failure modes, and a compact decision rule.
 
-- the problem being solved;
-- the context in which the problem appears;
-- the recommended design;
-- trade-offs and controls;
-- common failure modes; and
-- a compact decision rule.
-
-The pattern library is an engineering reference, not a substitute for current official product documentation. Feature availability, model behavior, permissions, pricing, context limits, and plan details can change.
+The pattern library is an engineering reference, not a substitute for current official product documentation. Feature availability, permissions, pricing, context limits, and plan details can change.
 
 ## Available patterns
 
@@ -36,6 +29,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Capability, Value, and Limitation Communication Pattern](capability-value-limitation-communication-pattern.md): Describe bounded AI tasks, support value claims with scoped evidence, preserve material limitations across audiences, and operationalize human oversight
 - [Project Configuration Slot Selection Pattern](project-configuration-slot-selection-pattern.md): Place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct configuration layer, then pair mechanisms without duplicating authority
 - [Connector and Knowledge Boundary Pattern](connector-and-knowledge-boundary-pattern.md): Connect only required sources, document exact connector capabilities, classify source authority and freshness, curate uploads, and place approval before external consequence
+- [Persistent Instruction Precision Pattern](persistent-instruction-precision-pattern.md): Convert recurring behavioral requirements into precise, observable, tested instructions with evidence, failure, conflict, and enforcement boundaries
 
 ## Planned pattern groups
 
@@ -48,7 +42,7 @@ The pattern library is an engineering reference, not a substitute for current of
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, and longer sessions add setup, maintenance, usage, permission, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, and longer sessions add setup, maintenance, permission, validation, and governance obligations.
 
 ## Public-repository content rule
 
