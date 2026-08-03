@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 7
 
-> **Status:** In progress — all Module 7 teaching sections are complete. Quiz, Key Takeaways, and Module Complete remain open.
+> **Status:** In progress — all teaching sections and the Module 7 quiz are complete. Key Takeaways and Module Complete remain open.
 
 ## Module thesis
 
@@ -28,9 +28,18 @@ Measured adoption, revision, or rollback
 - [x] [02. Adjusting Approach from Feedback](lessons/02-adjusting-approach-from-feedback.md)
 - [x] [03. Optimizing Workflows](lessons/03-optimizing-workflows.md)
 - [ ] 04. Module 7 Quiz
-  - [ ] Module 7 Quiz
+  - [x] [Module 7 Quiz — Full marks, 5/5](lessons/04a-module-7-quiz.md)
   - [ ] Key Takeaways
 - [ ] 05. Module Complete
+
+## Completion record
+
+```text
+Module 7 teaching sections: Complete
+Module 7 quiz:              Full marks — 5 of 5
+Key Takeaways:              Open
+Module Complete:            Open
+```
 
 ## 1. Diagnose the failure
 
@@ -70,7 +79,11 @@ Representative validation
 Local fix or durable promotion
 ```
 
-A reaction describes how the output feels. An instruction defines what must change.
+```text
+Reaction
+      ≠
+Instruction
+```
 
 | Reaction | Specific adjustment | Lever |
 |---|---|---|
@@ -80,16 +93,9 @@ A reaction describes how the output feels. An instruction defines what must chan
 | Same field missing repeatedly | Add it to the maintained procedure | Skill or workflow |
 | Test records included | Add exact exclusion and verification | Code, query, or control |
 
-```text
-Correct correction
-+ wrong layer
-=
-fragile repair
-```
-
 ## 3. Instrument and optimize the recurring workflow
 
-Run one complete cycle while recording every manual step:
+Observe one full cycle and record:
 
 - repeated context entry;
 - recurring corrections;
@@ -97,10 +103,8 @@ Run one complete cycle while recording every manual step:
 - duplicate research or calculation;
 - handoffs and waiting;
 - verification;
-- user-to-user variation; and
+- operator-to-operator variance; and
 - rework.
-
-This creates the optimization backlog.
 
 ### Three friction signals
 
@@ -110,73 +114,30 @@ This creates the optimization backlog.
 | Correction | Same output defect repaired every cycle | Configuration or deterministic control |
 | Variance | Different operators get different results | Shared procedure, knowledge, and validation |
 
-```text
-Repeated manual effort
-      ≠
-Unavoidable work
-```
+Required human review, privacy checks, approvals, and segregation of duties remain controls rather than removable friction.
 
-Required human review, privacy checks, approvals, and segregation of duties are controls—not removable friction.
+## Rule–reference–procedure placement
 
-## Rule–reference–procedure placement test
-
-| Type | Question | Correct home |
-|---|---|---|
-| Rule | What must always be true? | Project or standing instruction |
-| Reference | What source material does every run need? | Governed knowledge or source |
-| Procedure | What ordered method must be followed? | Skill or workflow |
-| Deterministic logic | What exact calculation, filter, or gate must execute? | Code, query, schema, or technical control |
-| One-time detail | What applies only to this run? | Current prompt |
+| Type | Correct home |
+|---|---|
+| Rule | Project or standing instruction |
+| Reference | Governed knowledge or source |
+| Procedure | Skill or workflow |
+| Deterministic logic | Code, query, schema, or technical control |
+| One-time detail | Current prompt |
 
 ```text
 Rule      → instruction
 Reference → knowledge
 Procedure → Skill or workflow
-Exact rule → deterministic control
+Exact logic → deterministic control
 ```
 
-## Consolidate carefully
+## Measure and pilot
 
-Combine steps only when the change preserves:
+Select the target metric before changing the workflow. Possible metrics include time per cycle, revision rounds, consistency, verified accuracy, defect rate, latency, cost, approval time, and user effort.
 
-- permission boundaries;
-- independent approval;
-- data scope;
-- failure visibility;
-- testability; and
-- rollback.
-
-```text
-Fewer steps
-      ≠
-Better workflow automatically
-```
-
-## Measure the improvement
-
-Select the metric before changing the workflow.
-
-Possible primary metrics:
-
-- time per cycle;
-- revision rounds;
-- consistency across users;
-- verified accuracy;
-- defect rate;
-- latency;
-- cost;
-- approval time; and
-- user effort.
-
-Use guardrails for quality, safety, privacy, fairness, accountability, and maintenance burden.
-
-```text
-Fastest workflow
-      ≠
-Best workflow
-```
-
-## Guarded rollout
+Use quality, safety, privacy, fairness, accountability, and maintenance burden as guardrails.
 
 ```text
 Baseline retained
@@ -190,31 +151,40 @@ Quality and governance checked
 Adopt / revise / revert
 ```
 
-A single successful run is not proof. Keep the old approach available until the optimized version survives representative and edge-case testing.
+A single improved run is not proof.
 
-## Diminishing returns
+## Module 7 quiz result
 
-Stop when:
+```text
+Full marks — 5 of 5
+```
 
-- the target metric is met;
-- further gains are marginal;
-- complexity or maintenance exceeds benefit;
-- risk increases; or
-- additional tuning becomes its own recurring friction.
+The original public-safe quiz demonstrated command of:
 
-## Worked workflow audit
+1. recognizing first-response under-specification;
+2. diagnosing a model or feature mismatch;
+3. applying the cheapest-fix-first diagnostic sequence;
+4. promoting recurring corrections into durable configuration; and
+5. targeting the measured workflow bottleneck.
 
-A fictional weekly reporting process takes about 45 minutes per analyst.
+### Quiz shortcut
 
-| Friction | Classification | Placement |
-|---|---|---|
-| Background repasted each run | Reference | Shared Project knowledge |
-| Report format rebuilt manually | Procedure | Shared Skill |
-| Verification varies by analyst | Rule and control | Standing instruction plus release check |
+```text
+Wrong on first response
+→ inspect specification
 
-After a guarded pilot, the cycle falls to about 25 minutes, one revision round is removed, and format and verification become consistent.
+Persistently shallow on a speed-oriented route
+→ test model fit
 
-The gain is adopted only after source authority, data boundaries, review gates, and rollback are confirmed.
+Cause unknown
+→ run the diagnostic sequence
+
+Same correction every cycle
+→ validate and promote
+
+Measured bottleneck is variance
+→ standardize the procedure
+```
 
 ## Integrated Module 7 protocol
 
@@ -230,7 +200,7 @@ The gain is adopted only after source authority, data boundaries, review gates, 
 9. Select primary and guardrail metrics
 10. Pilot with the baseline retained
 11. Test representative and edge cases
-12. Measure net time, quality, consistency, cost, and governance impact
+12. Measure quality, consistency, time, cost, and governance impact
 13. Adopt, revise, revert, or stop optimizing
 14. Assign ownership, versioning, rollback, monitoring, and review cadence
 ```
@@ -242,12 +212,14 @@ The gain is adopted only after source authority, data boundaries, review gates, 
 - [Diagnosing Underperforming Prompts and Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
 - [Adjusting Approach from Feedback and Results](lessons/02-adjusting-approach-from-feedback.md)
 - [Optimizing Workflows for Efficiency and Effectiveness](lessons/03-optimizing-workflows.md)
+- [Module 7 Quiz](lessons/04a-module-7-quiz.md)
 
 ### Prompt notebooks
 
 - [Diagnosing Underperformance prompts](../../prompts/module-07/01-diagnosing-underperformance-prompts.md)
 - [Adjusting Approach from Feedback prompts](../../prompts/module-07/02-adjusting-approach-from-feedback-prompts.md)
 - [Optimizing Workflows prompts](../../prompts/module-07/03-optimizing-workflows-prompts.md)
+- [Module 7 quiz and remediation prompts](../../prompts/module-07/04a-module-7-quiz-prompts.md)
 
 ### Engineering patterns
 
@@ -266,25 +238,21 @@ The gain is adopted only after source authority, data boundaries, review gates, 
 
 ```text
 Weak output                              → diagnose before rewriting
-Vague critique                           → convert reaction into instruction
+Wrong on first response                  → inspect specification
+Specific shallow output                  → inspect model or feature fit
+Cause not yet known                      → run the diagnostic sequence
 Same correction every cycle             → validate and promote
-Repeated context                         → governed reference or Project knowledge
-Recurring rule                           → standing instruction
-Multi-step repeatable method             → Skill or workflow
-Exact calculation or exclusion           → deterministic control
-Different users, different results       → standardize procedure and validation
+Different users, different formats       → standardize procedure and validation
 Optimization has no baseline             → cannot prove improvement
-One improved run                         → pilot representative cycles
 Review gate called friction              → preserve required governance
 Speed improves but accuracy falls        → optimization failed
-Target metric reached                    → stop tuning and monitor
 ```
 
 ## Completion criteria
 
-- [x] I completed Diagnosing Underperforming Prompts & Outputs.
-- [x] I completed Adjusting Approach from Feedback.
-- [x] I completed Optimizing Workflows.
+- [x] I completed all Module 7 teaching sections.
+- [x] I completed the Module 7 quiz with full marks, 5/5.
+- [ ] I completed the Module 7 Key Takeaways.
 - [ ] I can classify the common underperformance causes.
 - [ ] I can convert vague feedback into an observable defect and testable instruction.
 - [ ] I can identify repetition, correction, variance, and required controls.
@@ -292,9 +260,7 @@ Target metric reached                    → stop tuning and monitor
 - [ ] I can choose the metric that reflects the workflow's purpose.
 - [ ] I can design a guarded pilot with a baseline and rollback.
 - [ ] I can measure net improvement rather than local speed alone.
-- [ ] I can define a stop condition for diminishing returns.
 - [ ] I can preserve governance while troubleshooting and optimizing.
-- [ ] I completed the Module 7 quiz and Key Takeaways.
 - [ ] I completed the troubleshooting lab and scored at least 80% on the extended quiz.
 
 ## Public-repository scenario policy
@@ -304,3 +270,7 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 ## Educational-use notice
 
 This repository is an unofficial educational resource. It does not constitute operational, security, reliability, legal, privacy, compliance, or production-engineering advice.
+
+## Source note
+
+The Module 7 quiz material was supplied on August 3, 2026. The repository records the learner's reported result of full marks, 5/5, while using original public-safe scenarios rather than reproducing proprietary quiz wording.
