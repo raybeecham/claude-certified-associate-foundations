@@ -78,6 +78,7 @@ These templates are study aids and starting points, not universal production pro
 2. [Configuring Projects prompts](module-05/02-configuring-projects-prompts.md)
 3. [Connectors and Uploaded Knowledge prompts](module-05/03-connectors-uploaded-knowledge-prompts.md)
 4. [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
+5. [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -87,27 +88,30 @@ Before using a template:
 
 - distinguish a one-time prompt from a maintained operating baseline;
 - place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct layer;
-- pair mechanisms when one need contains different responsibilities;
-- assign one authoritative home to each configuration item;
+- assign one authoritative home and pair mechanisms without duplicating authority;
 - treat connector availability as access, not authority;
 - document connector identity, scope, capabilities, unsupported actions, and approval boundaries;
 - apply least privilege and separate retrieve, draft, approve, execute, and record-state stages;
 - curate sources by owner, authority, effective date, review date, scope, sensitivity, version, refresh type, conflicts, and replacement;
-- remove or clearly label duplicate and superseded files;
-- identify durable behavior users repeatedly retype;
+- remove or label duplicate and superseded sources;
 - define persistent instructions with trigger, required behavior, evidence boundary, failure behavior, and observable output;
-- apply the two-reader test to vague terms and ambiguous thresholds;
-- define `unknown`, `unverified`, `conflicting`, clarification, and escalation behavior;
-- keep facts in knowledge and reusable procedures in Skills;
-- document instruction precedence, authority, owner, and version;
-- pair consequential instructions with permissions, deterministic controls, tool restrictions, human review, and approval gates;
-- test positive, missing-evidence, conflict, bypass, format-exception, unrelated-task, and regression cases;
-- keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration;
-- assign owner, version, tests, review cadence, rollback, revocation, and retirement conditions; and
+- apply the two-reader test and pair consequential guidance with enforceable controls;
+- inventory instructions, knowledge, Skills, connectors, and Memory as versioned operational assets;
+- schedule recurring and event-triggered reviews;
+- distinguish Anthropic, organization-provisioned, shared, directory-installed, and personal Skill distribution paths;
+- update or re-upload owner-managed personal Skills when procedures change;
+- review Memory for accuracy, relevance, and appropriate authority placement;
+- export approved context before destructive Memory changes where appropriate;
+- treat reset as irreversible and use it only when selective repair is insufficient;
+- recertify connector identity, permissions, tools, business need, offboarding, and revocation;
+- choose edit, replace, disable, revoke, reset, rollback, or retirement according to the defect;
+- rerun representative and adversarial tests after material change;
+- preserve rollback paths and release evidence;
+- keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration; and
 - preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication.
 
 A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, connector permissions, secret handling, factual accuracy, correct business rules, professional approval, durable state, confidentiality, or irreversible-action authorization.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential instructions, emails, private files, connector identifiers, credentials, internal policies, proprietary procedures, production dependencies, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential instructions, emails, files, connector identifiers, credentials, internal policies, Skill packages, Memory exports, production dependencies, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
