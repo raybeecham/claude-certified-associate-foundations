@@ -83,39 +83,36 @@ These templates are study aids and starting points, not universal production pro
 7. [Module 5 Key Takeaways prompts](module-05/06b-key-takeaways-prompts.md)
 8. [Module 5 completion and transition prompts](module-05/07-module-complete-prompts.md)
 
+### Module 6: Governance, Risk & Responsible Use
+
+1. [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
+
 Additional notebooks will be added as later course-aligned sections are completed.
 
 ## Usage discipline
 
 Before using a template:
 
-- distinguish a one-time prompt from a maintained operating baseline;
-- place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct layer;
-- assign one authoritative home and pair mechanisms without duplicating authority;
-- separate sensitive workstreams when purpose, users, sources, disclosure boundaries, or continuity materially differ;
-- treat Project separation as context scoping rather than a replacement for identity, permissions, or data controls;
-- treat connector availability as access, not authority;
-- document connector identity, scope, capabilities, unsupported actions, and approval boundaries;
-- apply least privilege and separate retrieve, draft, approve, execute, and record-state stages;
-- curate sources by owner, authority, effective date, review date, scope, sensitivity, version, refresh type, conflicts, and replacement;
-- remove or label duplicate and superseded sources;
-- define persistent instructions with trigger, required behavior, evidence boundary, failure behavior, and observable output;
-- apply the two-reader test and pair consequential guidance with enforceable controls;
-- inventory instructions, knowledge, Skills, connectors, and Memory as versioned operational assets;
-- schedule recurring and event-triggered reviews;
-- inspect the full configured baseline when output drifts without a prompt change;
-- distinguish Skill ownership and distribution paths before assuming update behavior;
-- review Memory for accuracy, relevance, and appropriate authority placement;
-- preserve approved context before destructive Memory changes where appropriate;
-- recertify connector identity, permissions, tools, business need, offboarding, and revocation;
-- choose edit, replace, disable, revoke, reset, rollback, or retirement according to the defect;
-- rerun representative and adversarial tests after material change;
-- reject distractors based only on stronger models, more careful one-time prompting, or connecting more sources;
-- keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration; and
-- transition from configuration to governance by evaluating use-case, data, policy, ethics, accountability, and approval conditions.
+- distinguish technical capability from appropriateness and approval;
+- identify the proposed use, users, affected parties, stakes, reversibility, and accountable owner;
+- apply Delegation criteria to decide what Claude may prepare, what remains human-controlled, and what should not be delegated;
+- apply Diligence through ownership, evidence, current policy, documented approval, monitoring, and escalation;
+- classify data before selecting an environment, feature, connector, or persistence mechanism;
+- apply minimization, least privilege, retention, deletion, and disclosure controls;
+- vet Skills, connectors, tools, code execution, Memory, and other features by provenance, access, execution, persistence, and side effects;
+- distinguish feature availability from feature approval and trust for the current use case;
+- locate and apply organizational policy rather than assuming permission;
+- pause, narrow, or seek authorized clarification when policy or authority is unclear;
+- keep human oversight meaningful through expertise, evidence, time, criteria, intervention rights, and escalation;
+- assess fairness, bias, consent, transparency, accessibility, power imbalance, recourse, labor effects, and misuse potential;
+- threat-model prompt injection, exfiltration, overbroad permissions, malicious dependencies, and unauthorized action;
+- pair natural-language guidance with technical controls, approval gates, logging, monitoring, and incident response;
+- select approve, constrain, redesign, defer, or reject rather than defaulting to automatic approval or prohibition;
+- preserve evidence, exceptions, approvals, decision rationale, and next review dates; and
+- use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, connector permissions, secret handling, factual accuracy, correct business rules, professional approval, durable state, confidentiality, or irreversible-action authorization.
+A prompt, policy statement, or human-in-the-loop label cannot by itself enforce source authority, identity, authorization, privacy, data isolation, connector permissions, secret handling, fairness, professional accountability, durable state, or irreversible-action approval.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential instructions, emails, files, connector identifiers, credentials, internal policies, Skill packages, Memory exports, production dependencies, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential governance reviews, internal policies, restricted data, private incident reports, credentials, connector identifiers, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
