@@ -101,6 +101,7 @@ These templates are study aids and starting points. Adapt them to the use case, 
 2. [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
 3. [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
 4. [Module 7 quiz and remediation prompts](module-07/04a-module-7-quiz-prompts.md)
+5. [Module 7 Key Takeaways prompts](module-07/04b-key-takeaways-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -111,8 +112,7 @@ Before using a template:
 - preserve governance boundaries during troubleshooting and optimization;
 - define expected and observed behavior before changing anything;
 - diagnose specification, context, capability, configuration, and task-fit causes in that order;
-- treat first-response failure as evidence for under-specification, not proof without testing;
-- test model or feature mismatch by holding the task, evidence, and evaluation set constant;
+- treat symptom timing as evidence rather than proof;
 - build a minimal reproducible case and change one variable at a time;
 - translate vague reactions into observable defects and testable instructions;
 - identify the lever that actually controls the defect;
