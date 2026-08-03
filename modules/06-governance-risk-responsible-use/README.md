@@ -2,11 +2,11 @@
 
 Associate Persona · Official Exam Domain 6
 
-> **Status:** In progress — all Module 6 teaching sections are complete. Quiz, takeaways, and Module Complete remain open.
+> **Status:** In progress — teaching and quiz are complete. Key Takeaways and Module Complete remain open.
 
 ## Module thesis
 
-> Governance is a practitioner skill: classify the use case, feature, data, policy, and ethical impact before deployment; preserve accountable human authority; audit actual behavior; and monitor the decision over time.
+> Governance is a practitioner skill: classify the use case, feature, data, policy, and ethical impact before deployment; preserve accountable human authority; audit real behavior; and monitor outcomes over time.
 
 ```text
 Proposed use case
@@ -37,44 +37,37 @@ Approve / constrain / redesign / defer / reject
 - [x] [05. Organizational Policies & Diligence](lessons/05-organizational-policies-diligence.md)
 - [x] [06. Ethical Implications](lessons/06-ethical-implications.md)
 - [ ] 07. Module 6 Quiz
-  - [ ] Quiz
+  - [x] [Quiz — Full marks, 5/5](lessons/07a-module-6-quiz.md)
   - [ ] Takeaways
 - [ ] 08. Module Complete
 
-No later section is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
-
 ---
 
-# Foundation 1: Governance as practitioner judgment
-
-Governance appears in routine decisions about use cases, uploads, Skills, connectors, permissions, review gates, affected people, and escalation.
+# Completion record
 
 ```text
-Policy exists
-      ≠
-Decision is automatic
-```
-
-Diligence verifies ownership, evidence, current policy, approval, monitoring, and escalation. Delegation defines what Claude may prepare, what remains human-controlled, and what should not be delegated.
-
-```text
-Diligence = ownership + verification + documented judgment
+Module 6 teaching sections: Complete
+Module 6 quiz:              Full marks — 5 of 5
+Key takeaways:              Open
+Module complete:            Open
 ```
 
 ---
 
-# Foundation 2: Appropriate versus inappropriate use cases
+# Integrated governance framework
 
-Screen each use through four Delegation criteria:
+## 1. Classify the use case
 
-| Criterion | Core question |
+Screen the proposed use through four Delegation criteria:
+
+| Criterion | Question |
 |---|---|
-| Reversibility | Can an incorrect output be caught and undone before harm? |
-| Consequence of error | What is the cost if the output is wrong? |
-| Human creativity or empathy | Does judgment, care, authenticity, or relationship ownership need to remain human? |
+| Reversibility | Can an incorrect result be caught and undone before harm? |
+| Consequence of error | What happens if the result is wrong? |
+| Human creativity or empathy | Does care, authenticity, judgment, or relationship ownership need to remain human? |
 | Accountability | Who is answerable, and can that person meaningfully review and intervene? |
 
-Identify the **load-bearing criterion**—the factor that would move the use into a different classification if it changed.
+Identify the **load-bearing criterion**—the factor that would move the use into another classification if it changed.
 
 | Classification | Meaning |
 |---|---|
@@ -82,19 +75,17 @@ Identify the **load-bearing criterion**—the factor that would move the use int
 | Appropriate with human review | AI assistance is useful, but a qualified pre-use gate is required |
 | Inappropriate | AI ownership cannot be made responsible because of irreversibility, severe consequence, non-transferable accountability, essential human care, or policy constraints |
 
-A human gate must state **who** reviews, **what** they verify, and **when** review occurs before use or consequence.
+A review gate must state **who** reviews, **what** they verify, and **when** review occurs before use or consequence.
 
 ```text
-Human in the loop
+Technically possible
       ≠
-Operational human gate
+Appropriate
+      ≠
+Approved
 ```
 
----
-
-# Foundation 3: Skill trust and feature-level risk
-
-A Skill is a software-like package containing instructions, scripts, dependencies, and resources. Its risk depends on the environment in which it runs.
+## 2. Evaluate Skill and feature trust
 
 ```text
 Skill scope
@@ -106,9 +97,9 @@ Effective reach
 
 Review:
 
-1. **Source** — publisher, owner, version, distribution, approval, and support.
+1. **Source** — publisher, owner, version, distribution path, approval, and support.
 2. **Reach** — files, connectors, tools, code, secrets, persistence, and external actions available in the actual session.
-3. **Appropriateness** — whether the capability and access are proportionate to the approved task.
+3. **Appropriateness** — whether capability and access are proportionate to the approved task.
 
 ```text
 Internal
@@ -118,23 +109,7 @@ Vetted
 
 Choose **Enable**, **Escalate**, or **Decline** under the correct authority.
 
----
-
-# Foundation 4: Data sensitivity, privacy, and feature controls
-
-Classify data before it enters a chat, Project, upload, connector, Memory, Skill, or code-execution workflow.
-
-```text
-Classify data
-      ↓
-Confirm approved processing environment
-      ↓
-Minimize or redact when valid
-      ↓
-Choose feature and persistence controls
-      ↓
-Review, delete, monitor, or escalate
-```
+## 3. Classify data before entry
 
 | Tier | Typical data | Default action |
 |---|---|---|
@@ -143,31 +118,39 @@ Review, delete, monitor, or escalate
 | Red | Regulated, secret, legally restricted, or unapproved third-party data | Keep out until an approved path exists |
 
 ```text
+Classify data
+      ↓
+Confirm approved environment
+      ↓
+Minimize or redact when valid
+      ↓
+Choose persistence and feature controls
+```
+
+Redaction is valid only when it lowers identification risk and preserves task validity.
+
+```text
 Feature control applied
       ≠
 Data approved for processing
 ```
 
-Redaction is valid only when it lowers identification risk **and** preserves the task’s validity. Incognito, Memory, retention, export, and sandboxing are bounded controls rather than processing authorization.
+Incognito, Memory, retention, export, and sandboxing are bounded controls—not processing authorization.
 
----
-
-# Foundation 5: Organizational policies and Diligence
-
-Governance fails when written policy and observed practice drift apart.
+## 4. Apply policy as a Diligence habit
 
 ```text
 Written policy
       ↓
-Daily practitioner decisions
-      ↓
-Observed behavior
+Observed practice
       ↓
 Usage audit
       ↓
-Diligence gaps
+Diligence gap
       ↓
-Corrective action and re-audit
+Containment and corrective action
+      ↓
+Verified closure and re-audit
 ```
 
 A Diligence gap record should include:
@@ -190,7 +173,7 @@ Remediated
 Verified closed
 ```
 
-Audits must also respect privacy and authority boundaries.
+Audits must remain proportionate and authorized.
 
 ```text
 Audit authority
@@ -198,13 +181,7 @@ Audit authority
 Unlimited surveillance authority
 ```
 
-Exceptions require scope, duration, compensating controls, approving authority, monitoring, expiration, and renewal or closure decisions.
-
----
-
-# Foundation 6: Ethical implications
-
-Ethical risk can hide in routine outputs such as summaries, recommendations, evaluations, and audience-specific communications.
+## 5. Review ethical implications
 
 ```text
 Accurate wording
@@ -214,96 +191,23 @@ Fair treatment
 Ethical sufficiency
 ```
 
-## Bias entry points
+Review bias entry points across:
 
-Review:
-
-- prompt framing and assumptions;
+- prompts and assumptions;
 - source selection and representation;
-- labels, categories, and evaluation criteria;
-- examples and evidence standards;
-- generated wording, tone, certainty, and omissions;
+- labels, categories, criteria, and examples;
+- generated tone, certainty, and omissions;
 - human edits; and
 - downstream decision rules.
 
-```text
-Neutral-looking output
-      ≠
-Neutral process
-```
+A six-part ethical review asks:
 
-## Fairness review
-
-Ask:
-
-- Who is affected?
-- Which opportunities, burdens, treatment, or reputation may change?
-- Are relevantly similar cases treated consistently?
-- Are material differences justified by the task?
-- Are protected or proxy characteristics influencing results?
-- Are evidence and certainty standards consistent?
-- Can affected people receive explanation, correction, or appeal?
-
-```text
-Same process for everyone
-      ≠
-Fair outcome by default
-```
-
-## Transparency and disclosure
-
-Disclosure depends on:
-
-- organizational policy;
-- audience expectations;
-- professional or contractual obligations;
-- materiality of AI assistance;
-- risk of misleading authorship or expertise claims;
-- human review performed; and
-- consequence of concealment.
-
-```text
-No explicit disclosure rule found
-      ≠
-Concealment automatically appropriate
-```
-
-## Six-part ethical review
-
-1. **Affected parties** — Who may benefit, be burdened, or be excluded?
-2. **Potential harm** — What could go wrong, and how severe or reversible is it?
-3. **Fair outcome** — What would justified and consistent treatment look like?
-4. **Transparency** — What should subjects, users, or recipients know?
-5. **Human authority and recourse** — Who reviews, intervenes, explains, or hears appeals?
-6. **Decision and escalation** — Can the team decide, or is specialist review required?
-
-```text
-Name affected parties
-      ↓
-Describe possible harm
-      ↓
-Define fair treatment
-      ↓
-Determine disclosure
-      ↓
-Define review and recourse
-      ↓
-Decide or escalate
-```
-
-## Escalation threshold
-
-Escalate when:
-
-- the affected population is large;
-- harm could be severe or difficult to reverse;
-- vulnerable or protected groups may be affected;
-- fairness criteria are contested;
-- the team lacks expertise or organizational standing;
-- surveillance, manipulation, or power imbalance is present;
-- disclosure obligations are materially unclear;
-- no meaningful recourse exists; or
-- policy assigns the decision elsewhere.
+1. Who is affected?
+2. What harm or benefit could result?
+3. What would fair treatment require?
+4. What transparency or disclosure is appropriate?
+5. Who retains human authority, explanation, correction, and recourse?
+6. Can the team decide, or must it escalate?
 
 ```text
 Structured reasoning completed
@@ -311,38 +215,56 @@ Structured reasoning completed
 Authority to decide
 ```
 
+Escalate when scale, potential harm, vulnerable groups, disputed fairness standards, unclear disclosure obligations, or organizational standing exceed the team’s authority.
+
 ---
 
-# Worked ethical case: performance-review summaries
-
-A manager uses Claude to draft employee performance-review summaries from the manager’s notes.
-
-## Ethical risks
-
-- unequal tone across employees;
-- inconsistent evidence standards;
-- unsupported personality or motivation claims;
-- amplification of subjective notes;
-- different certainty levels;
-- concealment of AI assistance where disclosure is required; and
-- weak explanation or appeal paths.
-
-## Required gate
-
-- **Who:** Accountable manager, with HR or another qualified reviewer where required.
-- **What:** Factual support, consistency, bias, tone, policy compliance, and unsupported inference.
-- **When:** Before the review is finalized, shared, or used for compensation or promotion.
-
-## Classification
+# Module 6 quiz result
 
 ```text
-Appropriate with human review
-+ fairness check
-+ manager accountability
-+ disclosure according to policy and context
+Full marks — 5 of 5
 ```
 
-The reasoning and gate make the decision defensible—not the verdict alone.
+The original public-safe quiz demonstrated command of:
+
+1. classifying consequential final decisions;
+2. evaluating unknown executable Skills;
+3. separating processing authorization from persistence controls;
+4. diagnosing policy-to-practice Diligence gaps; and
+5. identifying hidden bias in automated exclusions.
+
+## Quiz shortcut
+
+```text
+Final consequential determination
+→ retain authorized human ownership
+
+Unknown executable Skill
+→ inspect source, bundle, and effective reach
+
+Confidential approved data with no ordinary persistence
+→ Incognito may fit, subject to organizational retention
+
+Policy and real use diverge
+→ record and close a Diligence gap
+
+Automated exclusions receive no human review
+→ bias and fairness risk
+```
+
+## Quiz reasoning sequence
+
+```text
+Identify the governance concern
+      ↓
+Locate the controlling Module 6 concept
+      ↓
+Distinguish capability from authority and approval
+      ↓
+Name the human role, control, or escalation path
+      ↓
+Reject convenience and stronger-model distractors
+```
 
 ---
 
@@ -354,7 +276,7 @@ The reasoning and gate make the decision defensible—not the verdict alone.
 3. Identify the load-bearing criterion and human gate
 4. Establish Skill or feature source, contents, reach, and proportionality
 5. Define and classify the minimum required data
-6. Confirm the approved environment and feature controls
+6. Confirm the approved environment and persistence controls
 7. Identify the controlling policy and version
 8. Translate policy into observable controls and evidence
 9. Audit actual and planned use against policy
@@ -363,7 +285,7 @@ The reasoning and gate make the decision defensible—not the verdict alone.
 12. Determine disclosure, human authority, explanation, and recourse
 13. Test representative and edge cases
 14. Escalate when scale, harm, standing, or policy requires it
-15. Monitor actual outcomes and revisit after material change
+15. Monitor outcomes and revisit after material change
 16. Approve, constrain, redesign, defer, decline, or reject
 ```
 
@@ -379,6 +301,7 @@ The reasoning and gate make the decision defensible—not the verdict alone.
 - [Data Sensitivity, Privacy & Feature Controls](lessons/04-data-sensitivity-privacy-feature-controls.md)
 - [Organizational Policies and Diligence](lessons/05-organizational-policies-diligence.md)
 - [Ethical Implications](lessons/06-ethical-implications.md)
+- [Module 6 Quiz](lessons/07a-module-6-quiz.md)
 
 ## Prompt notebooks
 
@@ -388,6 +311,7 @@ The reasoning and gate make the decision defensible—not the verdict alone.
 - [Data Sensitivity, Privacy & Feature Controls prompts](../../prompts/module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
 - [Organizational Policies and Diligence prompts](../../prompts/module-06/05-organizational-policies-diligence-prompts.md)
 - [Ethical Implications prompts](../../prompts/module-06/06-ethical-implications-prompts.md)
+- [Module 6 quiz and remediation prompts](../../prompts/module-06/07a-module-6-quiz-prompts.md)
 
 ## Engineering patterns
 
@@ -409,58 +333,55 @@ The reasoning and gate make the decision defensible—not the verdict alone.
 # Exam lens
 
 ```text
-People-facing output                       → review bias, fairness, and transparency
-Biased prompt or evidence                  → correct upstream framing
-Same process but unequal effects           → fairness risk remains
-Disclosure requirement unclear             → seek guidance or disclose rather than conceal
-Reviewer lacks standing                    → escalate
-Large affected population                  → stronger testing and governance review
-No appeal or correction path               → add recourse or redesign
-Policy-compliant but unfair                 → ethics review still required
+Final unreviewed consequential decision → inappropriate for AI ownership
+Unknown Skill with broad reach          → inspect and escalate
+Incognito                               → persistence control, not authorization
+Approved path is too difficult          → systemic Diligence gap
+People filtered before human review     → bias and unfair-exclusion risk
+Stronger model suggested                → check whether governance is the real defect
 ```
 
-For ethical-implication scenarios:
+For Module 6 scenarios:
 
-1. identify who is affected;
-2. inspect prompt, sources, criteria, and generated language;
-3. assess stakes and distribution of harm;
-4. define a justified fairness standard;
-5. determine disclosure expectations;
-6. preserve accountable human ownership;
-7. provide explanation, correction, and appeal paths;
-8. document the reasoning;
+1. identify the affected people and consequence;
+2. classify the use case before selecting the model;
+3. inspect feature source and effective reach;
+4. classify data before choosing controls;
+5. apply the current policy rather than remembered guidance;
+6. distinguish containment from verified closure;
+7. identify the most direct ethical concern;
+8. preserve accountable human authority and recourse;
 9. escalate beyond the team’s standing; and
-10. monitor actual outcomes.
+10. document a defensible rationale.
 
 ---
 
 # Completion criteria
 
 - [x] I completed all Module 6 teaching sections.
-- [ ] I can assess reversibility, consequence, human element, and accountability.
+- [x] I completed the Module 6 quiz with full marks, 5/5.
+- [ ] I completed the Module 6 takeaways.
+- [ ] I can classify appropriate, human-reviewed, and inappropriate uses.
 - [ ] I can identify the load-bearing criterion and define an operational gate.
-- [ ] I can distinguish source trust, effective reach, and feature appropriateness.
-- [ ] I can classify data and apply valid minimization and feature controls.
-- [ ] I can translate policy into observable behavior and run a bounded usage audit.
+- [ ] I can evaluate Skill source, contents, effective reach, and proportionality.
+- [ ] I can classify data and separate processing authorization from persistence controls.
+- [ ] I can translate policy into observable controls and run a bounded audit.
 - [ ] I can distinguish containment, remediation, and verified closure.
-- [ ] I can identify bias in prompts, sources, criteria, language, and workflow design.
-- [ ] I can define a task-specific fairness standard.
-- [ ] I can determine appropriate AI-use disclosure.
-- [ ] I can preserve meaningful human authority, explanation, correction, and recourse.
-- [ ] I can escalate when harm, scale, standing, or policy exceeds individual judgment.
-- [ ] I completed the Module 6 quiz and takeaways.
+- [ ] I can identify bias entry points and define a task-specific fairness standard.
+- [ ] I can determine disclosure, explanation, correction, and recourse requirements.
+- [ ] I can preserve human accountability and escalate beyond my authority.
 - [ ] I completed the threat-model lab and scored at least 80% on the extended quiz.
 
 ---
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential governance or ethics reviews, private employee or applicant records, protected-characteristic data, regulated records, credentials, organization-only escalation records, client identities, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential governance or ethics reviews, internal policies, regulated records, private employee or applicant data, proprietary Skill bundles, credentials, incident details, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute ethics, privacy, legal, regulatory, security, compliance, employment, human-resources, medical, financial, records-management, or operational advice.
+This repository is an unofficial educational resource. It does not constitute ethics, privacy, legal, regulatory, security, compliance, employment, public-benefits, medical, financial, records-management, or operational advice.
 
 ## Source note
 
-The Ethical Implications course material was supplied on August 3, 2026. Current organizational policy, law, contracts, professional obligations, qualified human judgment, and authorized governance or ethics review control real decisions.
+The Module 6 quiz material was supplied on August 3, 2026. The repository records the learner’s reported result of full marks, 5/5, while using original public-safe scenarios rather than reproducing proprietary quiz wording.
