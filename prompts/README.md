@@ -79,6 +79,7 @@ These templates are study aids and starting points, not universal production pro
 3. [Connectors and Uploaded Knowledge prompts](module-05/03-connectors-uploaded-knowledge-prompts.md)
 4. [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
 5. [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
+6. [Module 5 quiz and remediation prompts](module-05/06a-module-5-quiz-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -89,6 +90,8 @@ Before using a template:
 - distinguish a one-time prompt from a maintained operating baseline;
 - place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct layer;
 - assign one authoritative home and pair mechanisms without duplicating authority;
+- separate sensitive workstreams when purpose, users, sources, disclosure boundaries, or continuity materially differ;
+- treat Project separation as context scoping rather than a replacement for identity, permissions, or data controls;
 - treat connector availability as access, not authority;
 - document connector identity, scope, capabilities, unsupported actions, and approval boundaries;
 - apply least privilege and separate retrieve, draft, approve, execute, and record-state stages;
@@ -98,6 +101,7 @@ Before using a template:
 - apply the two-reader test and pair consequential guidance with enforceable controls;
 - inventory instructions, knowledge, Skills, connectors, and Memory as versioned operational assets;
 - schedule recurring and event-triggered reviews;
+- inspect the full configured baseline when output drifts without a prompt change;
 - distinguish Anthropic, organization-provisioned, shared, directory-installed, and personal Skill distribution paths;
 - update or re-upload owner-managed personal Skills when procedures change;
 - review Memory for accuracy, relevance, and appropriate authority placement;
@@ -106,6 +110,7 @@ Before using a template:
 - recertify connector identity, permissions, tools, business need, offboarding, and revocation;
 - choose edit, replace, disable, revoke, reset, rollback, or retirement according to the defect;
 - rerun representative and adversarial tests after material change;
+- reject distractors based only on stronger models, more careful one-time prompting, or connecting more sources;
 - preserve rollback paths and release evidence;
 - keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration; and
 - preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication.
