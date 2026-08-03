@@ -2,11 +2,11 @@
 
 Associate Persona · Official Exam Domain 8
 
-> **Status:** Roadmap staged — Modules 1 through 7 are complete. No Module 8 section is marked complete yet.
+> **Status:** In progress — Course Summary & Next Steps is complete. Module Complete remains open.
 
 ## Module purpose
 
-Module 8 closes the Associate path by connecting the earlier domains into one coherent decision process, preparing for the certification exam, and clarifying when work exceeds Associate-level responsibility.
+Module 8 closes the Associate path by connecting the seven completed operating domains into one coherent decision process, preparing for scenario-style assessment, and clarifying when work exceeds Associate-level responsibility.
 
 ```text
 Select the capability
@@ -23,34 +23,30 @@ Govern the use
       ↓
 Troubleshoot and optimize
       ↓
-Summarize, prepare, and escalate appropriately
+Prepare, continue learning, and escalate appropriately
 ```
 
 ---
 
 # Course-aligned roadmap
 
-- [ ] 01. Course Summary & Next Steps
+- [x] [01. Course Summary & Next Steps](lessons/01-course-summary-next-steps.md)
 - [ ] 02. Module Complete
-
-No section is marked complete until its corresponding preparation-course material is supplied and converted into original public-safe study content.
 
 ---
 
 # Associate-path synthesis
 
-Module 8 will consolidate the seven completed operating domains.
-
 | Module | Core practitioner question |
 |---|---|
-| M1 — Product & Model Selection | Which entry point, model, and feature set fit the task? |
-| M2 — Prompting | How should the task be specified and decomposed? |
+| M1 — Product & Model Selection | Which entry point, model, and features fit the task? |
+| M2 — Prompting | How should the task be described and decomposed? |
 | M3 — Output Evaluation | Is the result accurate, complete, grounded, and ready for use? |
-| M4 — Workflow Integration | Which steps should be assigned to AI, code, tools, storage, or humans? |
+| M4 — Workflow Integration | Which steps belong to AI, code, tools, sources, or humans? |
 | M5 — Configuration | Which behavior, knowledge, procedures, and continuity should persist? |
 | M6 — Governance | Is the use appropriate, approved, fair, and accountable? |
-| M7 — Troubleshooting | Why is the workflow underperforming, and what is the smallest validated repair? |
-| M8 — Summary & Next Steps | How do the domains combine, how should exam preparation proceed, and when should work escalate? |
+| M7 — Troubleshooting | Where is the failure, and what is the smallest validated repair? |
+| M8 — Summary & Next Steps | How do the domains combine, and when should work escalate? |
 
 ```text
 Individual feature knowledge
@@ -58,90 +54,98 @@ Individual feature knowledge
 Integrated Associate judgment
 ```
 
-The final module should emphasize choosing and sequencing the right decisions rather than treating each domain as an isolated checklist.
-
----
-
-# Integrated Associate decision sequence
+## Complete operating sequence
 
 ```text
 1. Define the task, users, evidence, constraints, and success criteria
-2. Choose the appropriate entry point, model, features, and tools
-3. Build or repair the prompt and task decomposition
+2. Select the appropriate entry point, model, features, and tools
+3. Describe and decompose the task
 4. Validate claims, calculations, completeness, uncertainty, and format
-5. Map workflow ownership across AI, code, tools, storage, and humans
-6. Place stable behavior, facts, procedures, and continuity correctly
+5. Assign ownership across AI, code, tools, sources, and humans
+6. Place stable behavior, knowledge, procedures, and continuity correctly
 7. Apply data, policy, fairness, disclosure, review, and escalation controls
-8. Diagnose failures before changing the system
-9. Promote validated recurring fixes and measure workflow improvement
-10. Recognize when the work exceeds Associate-level authority or capability
+8. Diagnose underperformance before changing the system
+9. Validate and promote recurring improvements
+10. Monitor, maintain, and escalate when the boundary is reached
 ```
 
----
-
-# Expected final-module outcomes
-
-By the end of Module 8, the learner should be able to:
-
-- summarize the responsibilities of all seven completed Associate domains;
-- choose which domain controls a mixed scenario;
-- distinguish capability, quality, workflow, configuration, governance, and troubleshooting concerns;
-- apply the domains in the correct sequence;
-- identify cross-domain dependencies and conflicts;
-- prepare for scenario-based exam questions;
-- explain why attractive distractors do not address the controlling issue;
-- identify remaining knowledge gaps and create a focused review plan;
-- distinguish Associate-level use and workflow judgment from deeper implementation or architecture responsibilities; and
-- escalate work when it requires authority, engineering depth, security review, compliance interpretation, or architecture decisions beyond the Associate role.
+A mixed scenario may involve several modules. Identify the **controlling issue** first—the issue that must be resolved before the others matter.
 
 ---
 
-# Exam-preparation lens
+# AI Fluency thread
 
-The final module should reinforce scenario reasoning rather than memorization alone.
+Official Anthropic AI Fluency material defines four core competencies:
+
+| Competency | Practical meaning |
+|---|---|
+| Delegation | Decide what AI should do, what humans should do, and how work should be divided |
+| Description | Communicate the desired product, process, and performance clearly |
+| Discernment | Evaluate AI outputs, processes, and behavior critically |
+| Diligence | Use AI responsibly through appropriate selection, transparency, verification, and ownership |
+
+```text
+Delegation  → responsibility boundaries
+Description → clear task contracts
+Discernment → evaluation and feedback
+Diligence   → responsibility throughout
+```
+
+The four competencies operate as a continuous loop rather than isolated topics.
+
+---
+
+# Scenario-style preparation
+
+The supplied course describes the certification assessment as scenario-based and says it follows the seven content modules. Current exam details—including question count, timing, blueprint version, domain weights, provider, registration rules, and retake policy—must be verified against the current official specification.
+
+## Preparation sequence
+
+```text
+Identify weakest module
+      ↓
+Review its decision frameworks
+      ↓
+Practice new scenarios
+      ↓
+Explain the strongest distractor
+      ↓
+Log the reasoning error
+      ↓
+Retest
+```
+
+## Scenario-solving sequence
 
 ```text
 Read the scenario
       ↓
-Identify the controlling problem
+Identify the desired outcome and affected parties
       ↓
-Select the relevant domain
+Locate the controlling issue
       ↓
-Reject answers that solve a different problem
+Select the relevant module framework
       ↓
-Choose the smallest sufficient and responsible action
+Reject answers aimed at another layer
+      ↓
+Choose the smallest sufficient responsible action
 ```
 
-Common cross-domain distractors may include:
+Common distractors include:
 
-- choosing a stronger model when the prompt is under-specified;
-- rewriting a prompt when the source evidence is missing;
-- adding Memory when shared configuration is required;
-- enabling a Skill before evaluating trust and effective reach;
-- using Incognito as if it authorized sensitive-data processing;
-- adding human review without defining who, what, and when;
-- optimizing speed when the measured bottleneck is consistency or quality;
-- treating an ethical or policy issue as a technical performance defect; and
-- continuing to troubleshoot when the task must be reshaped or escalated.
+- using a stronger model for an under-specified prompt;
+- rewriting a prompt when evidence is missing;
+- using Memory when shared configuration is required;
+- enabling a Skill before trust review;
+- treating Incognito as sensitive-data authorization;
+- adding undefined “human review”;
+- optimizing speed when quality or consistency is the bottleneck;
+- treating a policy or ethics issue as a technical defect; and
+- continuing to tune a task that must be reshaped or escalated.
 
 ---
 
 # Associate escalation boundary
-
-Module 8 will clarify that strong Associate judgment includes knowing when not to decide alone.
-
-Potential escalation triggers include:
-
-- custom application or API implementation;
-- complex tool orchestration or agent engineering;
-- production architecture and reliability design;
-- organization-wide identity, access, or data architecture;
-- regulated-data eligibility or contractual interpretation;
-- security threat modeling beyond ordinary feature review;
-- large-scale evaluation and observability design;
-- disputed fairness standards or high-impact ethical decisions;
-- irreversible or consequential actions without established authority; and
-- unresolved product behavior requiring official Anthropic or organizational confirmation.
 
 ```text
 Able to identify the issue
@@ -149,36 +153,106 @@ Able to identify the issue
 Authorized or qualified to resolve it alone
 ```
 
+## Common Associate-level work
+
+- selecting standard Claude capabilities;
+- writing and refining prompts;
+- evaluating ordinary outputs;
+- configuring approved Projects and knowledge;
+- mapping workflow responsibilities;
+- applying established governance rules;
+- diagnosing common underperformance; and
+- preparing clear escalation evidence.
+
+## Escalate for deeper implementation
+
+Examples include custom APIs, SDKs, applications, agents, tools, authentication, production observability, custom evaluation infrastructure, or deployment engineering.
+
+The supplied course associates these areas with a Developer path. Current official certification names and scope must be confirmed before treating that description as an official requirement.
+
+## Escalate for enterprise architecture or authority
+
+Examples include enterprise integration, identity and access architecture, regulated-data design, reliability architecture, organization-wide governance, major security decisions, and cross-system standards.
+
+The supplied course associates these areas with an Architect path. Current official path descriptions should control real certification or role claims.
+
+A useful escalation package includes:
+
+- task and desired outcome;
+- evidence and constraints;
+- affected systems and people;
+- current configuration;
+- tests already performed;
+- observed risks;
+- unresolved questions; and
+- required expertise or authority.
+
 ---
 
-# Current course status
+# Continued learning
 
-| Module | Status |
-|---|---|
-| M1 — Product & Model Selection | Complete |
-| M2 — Prompting | Complete |
-| M3 — Output Evaluation | Complete |
-| M4 — Workflow Integration | Complete |
-| M5 — Configuration | Complete |
-| M6 — Governance | Complete |
-| M7 — Troubleshooting | Complete |
-| **M8 — Course Summary & Next Steps** | **Active — roadmap staged** |
+```text
+Course section completed
+      ≠
+Fluency finished
+```
+
+Recommended practice:
+
+- apply the complete sequence to authorized real work;
+- maintain a decision journal;
+- review errors by controlling module;
+- promote recurring fixes into maintained configuration;
+- refresh product-specific claims from official documentation;
+- practice explaining limitations and escalation needs;
+- build public or synthetic case studies; and
+- revisit governance after product or policy changes.
+
+## Compact operating rule
+
+```text
+Select deliberately.
+Describe clearly.
+Evaluate critically.
+Integrate explicitly.
+Configure durably.
+Govern responsibly.
+Troubleshoot systematically.
+Escalate appropriately.
+```
+
+---
+
+# Current module resources
+
+## Lesson
+
+- [Course Summary & Next Steps](lessons/01-course-summary-next-steps.md)
+
+## Prompt notebook
+
+- [Course Summary & Next Steps prompts](../../prompts/module-08/01-course-summary-next-steps-prompts.md)
 
 ---
 
 # Completion criteria
 
-- [ ] I completed Course Summary & Next Steps.
+- [x] I completed Course Summary & Next Steps.
 - [ ] I completed Module 8.
-- [ ] I can summarize all seven completed Associate domains.
+- [ ] I can summarize all seven Associate operating domains.
 - [ ] I can identify the controlling domain in a mixed scenario.
 - [ ] I can apply the domains in a coherent sequence.
+- [ ] I can map the AI Fluency 4Ds across a workflow.
 - [ ] I can reject distractors that solve the wrong layer.
 - [ ] I can create a targeted certification review plan.
-- [ ] I can distinguish Associate, Developer, and Architect escalation boundaries.
-- [ ] I can explain when authorized human, governance, security, legal, compliance, engineering, or architecture review is required.
+- [ ] I can distinguish Associate-level judgment from deeper implementation or architecture work.
+- [ ] I can prepare a clear escalation package.
 
 ---
+
+# Verification note
+
+The AI Fluency competency descriptions were checked against official Anthropic material available on August 3, 2026. The supplied course states that the Associate assessment is scenario-style and contains 60 questions, and it describes Developer and Architect continuation paths. Those exam and certification-family details were not independently confirmed through an official public source during this verification pass. Verify them against the current official blueprint, exam-provider specification, and Anthropic certification documentation before exam planning or publication.
 
 # Public-repository scenario policy
 
