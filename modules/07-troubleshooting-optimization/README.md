@@ -2,24 +2,24 @@
 
 Associate Persona · Official Exam Domain 7
 
-> **Status:** In progress — Module 7 is the active module.
+> **Status:** In progress — lessons 1 and 2 are complete.
 
 ## Module thesis
 
-> Troubleshooting is disciplined diagnosis: observe the failure, read its timing and pattern, localize the responsible layer, change the smallest relevant variable, and verify that the repair improves behavior without weakening governance or causing regressions.
+> Troubleshooting is disciplined diagnosis and controlled learning: identify the responsible layer, translate feedback into a specific adjustment, validate the smallest relevant change, and promote recurring fixes into durable configuration without weakening governance.
 
 ```text
 Observed underperformance
       ↓
-Evidence and symptom timing
+Evidence and diagnosis
       ↓
-Failure classification
+Feedback translated into instruction
       ↓
-Cheapest relevant test
-      ↓
-Bounded repair
+Bounded adjustment
       ↓
 Representative validation
+      ↓
+Durable promotion and monitoring
 ```
 
 ---
@@ -27,7 +27,7 @@ Representative validation
 # Course-aligned roadmap
 
 - [x] [01. Diagnosing Underperforming Prompts & Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
-- [ ] 02. Adjusting Approach from Feedback
+- [x] [02. Adjusting Approach from Feedback](lessons/02-adjusting-approach-from-feedback.md)
 - [ ] 03. Optimizing Workflows
 - [ ] 04. Module 7 Quiz
   - [ ] Module 7 Quiz
@@ -38,29 +38,7 @@ No later section is marked complete until its preparation-course material is sup
 
 ---
 
-# Module 6 to Module 7 bridge
-
-Module 6 established whether a use case should proceed and under what data, feature, policy, ethical, and accountability boundaries.
-
-Module 7 begins when an approved workflow underperforms.
-
-```text
-Governed workflow
-      ↓
-Unexpected or weak result
-      ↓
-Diagnose the responsible layer
-      ↓
-Apply the narrowest responsible repair
-      ↓
-Verify quality, safety, and operational impact
-```
-
-Governance remains active. Performance improvements must not weaken data controls, permissions, human-review gates, fairness, disclosure, recourse, or accountability.
-
----
-
-# Lesson 1 foundation: diagnose before optimizing
+# Foundation 1: diagnose before editing
 
 Weak output has multiple possible causes.
 
@@ -70,105 +48,17 @@ Output is weak
 Prompt is automatically the cause
 ```
 
-The first lesson uses five diagnostic categories.
-
-## 1. Under-specification
-
-**Timing:** Wrong from the first response.
-
-The prompt omitted required context, objective, constraints, evidence boundaries, format, examples, audience, or success criteria.
-
-```text
-First response wrong
-      →
-Check specification first
-```
-
-**First repair:** Add only the missing task-contract elements.
-
-## 2. Context overload
-
-**Timing:** The session began well and degraded over time.
-
-The conversation may contain excessive, irrelevant, conflicting, or compressed earlier context. Current Claude guidance states that, when code execution is enabled, automatic context management can summarize earlier messages as a long conversation approaches its context limit.
-
-```text
-Started right
-+ degraded later
-      →
-Inspect context before rewriting prompt
-```
-
-**First repair:** Restart from a verified summary, remove irrelevant material, and move recurring rules into the correct persistent layer.
-
-## 3. Wrong feature or model
-
-**Pattern:** A specific failure repeats.
-
-Examples include subtle arithmetic errors, missing source access, malformed structured output, shallow analysis, or use of an entry point that lacks the required capability.
-
-```text
-Specific repeatable error
-      →
-Check feature and model fit
-```
-
-**First repair:** Use the smallest capability that directly addresses the limitation, such as code execution for deterministic calculations.
-
-## 4. Stale configuration
-
-**Timing:** The workflow used to work but now performs poorly.
-
-Potential drift includes:
-
-- Project instructions;
-- knowledge and source versions;
-- Skills and dependencies;
-- connector scope;
-- Memory;
-- schemas and templates;
-- policy references; and
-- human-review processes.
-
-```text
-Used to work
-      →
-Inspect configuration before rewriting prompt
-```
-
-**First repair:** Run the Module 5 maintenance lifecycle and regression tests.
-
-## 5. Expectation mismatch
-
-**Pattern:** The requested result remains unavailable after cheaper causes are ruled out.
-
-Examples include exact future predictions, certainty beyond evidence, unavailable source information, unsupported external actions, or final judgments that require non-transferable human authority.
-
-```text
-Unavailable requested outcome
-      →
-Reshape the task
-```
-
-**First repair:** Convert the request into a bounded analysis, scenario range, evidence summary, draft, checklist, or human-reviewed decision aid.
-
----
-
-# Read symptom timing
-
-| Symptom | Primary hypothesis | First repair |
+| Symptom pattern | Likely cause | First repair |
 |---|---|---|
-| Wrong from the first response | Under-specification | Add missing task-contract elements |
-| Good initially, then degrades | Context overload | Restart or summarize cleanly |
-| Specific repeatable error type | Wrong feature or model | Select the correct capability |
-| Worked before, now performs poorly | Stale configuration | Inspect and maintain dependencies |
-| Still unavailable after other causes are ruled out | Expectation mismatch | Reshape the task |
+| Wrong from the first response | Under-specification | Add missing task-contract details |
+| Started well, then degraded | Context overload | Restart from a verified summary |
+| Specific repeatable error | Wrong feature or model | Select the correct capability |
+| Used to work, now performs poorly | Stale configuration | Review maintained dependencies |
+| Unavailable after cheaper causes are ruled out | Expectation mismatch | Reshape the task |
 
-Timing is evidence, not proof. Confirm the diagnosis with a controlled test.
+Timing is evidence, not proof. Confirm the diagnosis through a controlled test.
 
----
-
-# Cheapest-fix-first diagnostic sequence
+## Cheapest-fix-first sequence
 
 ```text
 1. Prompt specification
@@ -178,66 +68,7 @@ Timing is evidence, not proof. Confirm the diagnosis with a controlled test.
 5. Task fit and expectation
 ```
 
-## Step 1: Re-read the prompt
-
-Check:
-
-- objective;
-- context and evidence;
-- constraints;
-- output format; and
-- success criteria.
-
-## Step 2: Inspect context
-
-Check:
-
-- session length and drift;
-- irrelevant or conflicting material;
-- compressed details that need restatement;
-- clean restart requirements; and
-- stable information that belongs in a Project, Skill, or instruction.
-
-## Step 3: Check feature and model fit
-
-Check whether the task requires:
-
-- code execution;
-- structured extraction;
-- connected or uploaded sources;
-- a different entry point;
-- deeper reasoning; or
-- a faster, less expensive route for a simpler stage.
-
-## Step 4: Inspect configuration
-
-Review instructions, knowledge, Skills, connectors, Memory, schemas, templates, review gates, policies, and product changes.
-
-## Step 5: Test task fit
-
-Ask whether the result is knowable, supported by available evidence, technically possible in the selected feature, and appropriate for AI assistance.
-
-The order is deliberate: cheap and common causes come first; the expensive conclusion that the task is impossible comes last.
-
----
-
-# Minimal reproducible diagnosis
-
-Record:
-
-- expected behavior;
-- observed behavior;
-- symptom timing;
-- exact prompt;
-- minimum relevant context;
-- model and entry point;
-- enabled tools and features;
-- configuration version;
-- source version;
-- repeatability; and
-- explicit pass/fail criteria.
-
-Then test one hypothesis at a time.
+## Controlled diagnosis
 
 ```text
 One hypothesis
@@ -249,55 +80,187 @@ One controlled comparison
 Keep / revise / revert
 ```
 
-Changing prompt, model, tools, context, and configuration simultaneously destroys causal evidence.
+A repair should pass the original failing case, representative cases, edge cases, and governance checks.
 
 ---
 
-# Worked failure gallery
+# Foundation 2: adjust from feedback
 
-| Failure | Diagnosis | First repair |
-|---|---|---|
-| Summary misses key decisions from the first response | Under-specification | Define what counts as key |
-| Format degrades during a long conversation | Context overload | Restart from a verified summary or persist the rule |
-| Totals are subtly wrong | Wrong feature | Use code execution and deterministic validation |
-| A reliable Project now uses outdated language | Stale configuration | Review sources, instructions, Skills, and dependencies |
-| User requests next quarter’s exact sales number | Expectation mismatch | Produce ranges, assumptions, drivers, and sensitivity analysis |
-
----
-
-# Diagnostic decision record
+A disappointing output is diagnostic data about the setup that produced it.
 
 ```text
-Observed failure:
-Expected behavior:
-Symptom timing:
-Primary hypothesis:
-Alternate hypothesis:
-Evidence:
-Minimal test:
-Result:
-Selected repair:
-Regression checks:
-Governance checks:
-Rollback condition:
-Final disposition:
+Output critique
+      ↓
+Observable defect
+      ↓
+Missing condition
+      ↓
+Controlling lever
+      ↓
+Testable adjustment
+      ↓
+Validation and promotion
+```
+
+## Reaction versus instruction
+
+A reaction describes how an output feels:
+
+- too generic;
+- wrong tone;
+- missed the point;
+- too long;
+- incomplete.
+
+An instruction defines what must change:
+
+- name the audience and required action;
+- add a tone rule and example;
+- state the single question first;
+- impose section or length limits;
+- require the missing field.
+
+```text
+Reaction
+      ≠
+Instruction
+```
+
+If the controlling lever cannot be named, the next attempt remains a guess.
+
+## Feedback translation table
+
+| Reaction | Specific adjustment | Lever |
+|---|---|---|
+| Too generic | State the audience and desired action | Prompt context or Project instruction |
+| Wrong tone | Define observable tone constraints | Standing instruction |
+| Missed the point | Put the required question first | Prompt objective |
+| Same field missing repeatedly | Add it to the maintained template or Skill | Configuration |
+| Test records included | Add deterministic exclusion and verification | Code, query, or workflow control |
+
+## Choose the correct lever
+
+| Cause | Correct home |
+|---|---|
+| One-time detail | Current prompt |
+| Reusable facts | Project knowledge or approved source |
+| Recurring behavior or format | Project, user, or organization instruction |
+| Multi-step repeatable procedure | Skill |
+| Exact calculation or filtering | Code, query, schema, or workflow control |
+| Long-session drift | Clean restart or transfer summary |
+| Outdated rule or dependency | Configuration maintenance |
+| Missing approval | Human workflow gate |
+
+```text
+Correct correction
++ wrong layer
+=
+fragile repair
+```
+
+## Promotion test
+
+Ask:
+
+```text
+Will this same correction be needed again
+by me, another person, or another cycle?
+```
+
+- **No:** keep the change local.
+- **Yes:** validate it, then promote it to the narrowest durable layer.
+
+Before promotion, confirm scope, ownership, approval, representative tests, conflicts, rollback, and review triggers.
+
+## Memory versus deliberate configuration
+
+Memory can support personal continuity, but recurring shared corrections belong in deliberate configuration that can be reviewed, shared, versioned, tested, and maintained.
+
+Current Claude guidance describes:
+
+- Project instructions as guidance applied across chats in a Project;
+- Project knowledge as reusable context across Project chats;
+- Skills as task-specific repeatable workflows using instructions, scripts, and resources; and
+- organization instructions, where available, as standards applied across an organization.
+
+```text
+May be remembered personally
+      ≠
+Authoritative shared control
+```
+
+---
+
+# Worked feedback examples
+
+## Campaign briefs
+
+Recurring defects:
+
+- target segment omitted;
+- call to action buried.
+
+Validated standing instructions:
+
+```text
+Always state the target segment in the first line.
+Place the call to action in a separate closing section.
+```
+
+Because these are recurring Project-specific behavior rules, they belong in Project instructions after representative testing.
+
+## Monthly report test accounts
+
+A repeated conversational reminder to exclude internal test accounts is insufficient.
+
+The durable repair is:
+
+```text
+Authoritative exclusion rule
++ deterministic filter
++ verification count
++ shared documentation
+```
+
+Exact business logic belongs in code or query configuration, not only in natural-language prompting.
+
+---
+
+# Feedback-adjustment protocol
+
+```text
+1. Capture the output and critique
+2. Describe the observable defect
+3. Identify the missing or incorrect condition
+4. Select the controlling lever
+5. State one testable hypothesis
+6. Make one bounded adjustment
+7. Re-run the failing case
+8. Test representative and edge cases
+9. Check quality, cost, latency, and governance
+10. Keep, revise, or revert
+11. Decide whether the fix should remain local or be promoted
+12. Version, approve, monitor, and review durable changes
 ```
 
 ---
 
 # Current module resources
 
-## Course-aligned lesson
+## Course-aligned lessons
 
 - [Diagnosing Underperforming Prompts and Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
+- [Adjusting Approach from Feedback and Results](lessons/02-adjusting-approach-from-feedback.md)
 
-## Prompt notebook
+## Prompt notebooks
 
 - [Diagnosing Underperformance prompts](../../prompts/module-07/01-diagnosing-underperformance-prompts.md)
+- [Adjusting Approach from Feedback prompts](../../prompts/module-07/02-adjusting-approach-from-feedback-prompts.md)
 
-## Existing engineering pattern
+## Engineering patterns
 
 - [Failure Localization Pattern](../../patterns/failure-localization-pattern.md)
+- [Feedback-to-Configuration Promotion Pattern](../../patterns/feedback-to-configuration-promotion-pattern.md)
 
 ## Existing extended practice
 
@@ -311,43 +274,34 @@ Final disposition:
 # Exam lens
 
 ```text
-Wrong on first response                  → inspect specification
-Started well, then drifted               → inspect context
-Specific quantitative or schema failure  → inspect feature or tool fit
-Used to work                             → inspect configuration
-Exact unavailable outcome                → reshape the task
-Strongest model suggested first          → rule out cheaper causes
-Many variables changed together          → attribution is lost
-Performance fix weakens controls          → reject or redesign
+Wrong on first response                 → inspect specification
+Started well, then drifted              → inspect context
+Specific quantitative failure          → inspect feature fit
+Used to work                            → inspect configuration
+Exact unavailable outcome               → reshape the task
+Same correction every cycle             → validate and promote
+Feedback says `too generic`             → identify audience and action
+Recurring format requirement            → standing instruction
+Multi-step recurring procedure          → Skill
+Exact exclusion or calculation          → deterministic control
+One improved example                    → run regression tests
+Memory may retain a pattern              → deliberate configuration is the shared home
 ```
-
-For diagnostic scenarios:
-
-1. define expected versus observed behavior;
-2. read symptom timing;
-3. classify the most likely cause;
-4. state the cheapest controlled test;
-5. change one variable;
-6. compare with a baseline;
-7. preserve governance;
-8. test representative cases; and
-9. keep, revise, revert, or reshape.
 
 ---
 
 # Completion criteria
 
 - [x] I completed Diagnosing Underperforming Prompts & Outputs.
-- [ ] I completed Adjusting Approach from Feedback.
+- [x] I completed Adjusting Approach from Feedback.
 - [ ] I completed Optimizing Workflows.
-- [ ] I can distinguish first-response, degraded-over-time, specific-error, used-to-work, and expectation-mismatch patterns.
-- [ ] I can audit a prompt against objective, evidence, constraints, format, and success criteria.
-- [ ] I can identify when context needs a clean restart or persistent instruction.
-- [ ] I can distinguish feature and model fit from prompt quality.
-- [ ] I can inspect stale configuration when a workflow used to work.
-- [ ] I can reshape an unrealistic task rather than endlessly tune it.
-- [ ] I can create a minimal reproducible case and change one variable at a time.
-- [ ] I can validate a repair without weakening governance.
+- [ ] I can classify under-specification, context overload, wrong feature or model, stale configuration, and expectation mismatch.
+- [ ] I can convert a vague reaction into an observable defect and testable instruction.
+- [ ] I can identify the lever that controls a recurring defect.
+- [ ] I can distinguish local prompt edits from Project instructions, knowledge, Skills, deterministic controls, and human gates.
+- [ ] I can validate one bounded adjustment against representative cases.
+- [ ] I can decide when a correction should be promoted into configuration.
+- [ ] I can preserve governance while troubleshooting and promoting fixes.
 - [ ] I completed the Module 7 quiz and Key Takeaways.
 - [ ] I completed the troubleshooting lab and scored at least 80% on the extended quiz.
 
@@ -355,7 +309,7 @@ For diagnostic scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include client data, private production prompts, confidential incidents, proprietary logs, credentials, internal connector identifiers, nonpublic performance results, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include client data, private prompts or outputs, confidential incidents, proprietary logs, credentials, internal configuration, nonpublic performance results, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
@@ -363,4 +317,4 @@ This repository is an unofficial educational resource. It does not constitute op
 
 ## Product-verification note
 
-Product behavior changes. Current Claude Help Center guidance available on August 3, 2026 states that automatic context management can summarize earlier messages in long conversations when code execution is enabled. Current official documentation controls if product behavior differs from this module.
+Product behavior changes. The placement guidance in this module was checked against official Claude Help Center material available on August 3, 2026. Current official documentation and authorized organizational guidance control implementation-specific decisions.
