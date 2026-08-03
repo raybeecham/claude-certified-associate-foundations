@@ -6,16 +6,16 @@ Associate Persona · Official Exam Domain 6
 
 ## Module thesis
 
-> Governance is a practitioner skill: decide whether a use case should proceed, what data and feature boundaries apply, who remains accountable, and how policy, ethics, monitoring, and escalation govern the work.
+> Governance is a practitioner skill: decide whether a use case should proceed, whether its features and data are trustworthy for the task, who remains accountable, and how policy, ethics, monitoring, and escalation govern the work.
 
 ```text
 Proposed use case
       ↓
-Practitioner judgment
+Appropriateness classification
       ↓
-Delegation and Diligence
+Skill and feature trust review
       ↓
-Data, feature, policy, and ethical review
+Data, policy, and ethical review
       ↓
 Human approval, monitoring, and escalation
       ↓
@@ -28,7 +28,7 @@ Approve / constrain / redesign / defer / reject
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
-- [ ] 03. Skill Trust & Feature-Level Risk
+- [x] [03. Skill Trust & Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
 - [ ] 04. Data Sensitivity, Privacy & Feature Controls
 - [ ] 05. Organizational Policies & Diligence
 - [ ] 06. Ethical Implications
@@ -43,7 +43,7 @@ No later lesson is marked complete until its preparation-course material is supp
 
 # Foundation 1: Governance as practitioner judgment
 
-Governance is applied through daily choices about use cases, uploads, Skills, connectors, review gates, affected people, and escalation.
+Governance appears in daily choices about use cases, uploads, Skills, connectors, permissions, review gates, affected people, and escalation.
 
 ```text
 Policy exists
@@ -61,14 +61,12 @@ Diligence = ownership + verification + documented judgment
 
 # Foundation 2: Appropriate versus inappropriate use cases
 
-A technically possible task is not automatically appropriate.
+Screen every use case against four Delegation criteria:
 
-Screen every proposed use with four Delegation criteria:
-
-| Criterion | Question |
+| Criterion | Core question |
 |---|---|
-| Reversibility | Can an incorrect output be detected and undone before harm? |
-| Consequence of error | What happens if the output is wrong? |
+| Reversibility | Can a wrong output be caught and undone before harm? |
+| Consequence of error | What is the cost if the output is wrong? |
 | Human creativity or empathy | Does judgment, care, authenticity, or relationship ownership need to remain human? |
 | Accountability | Who is answerable, and can that person meaningfully review and intervene? |
 
@@ -80,41 +78,17 @@ Claude should own the task
 Organization may use it without controls
 ```
 
-## The load-bearing criterion
+## Load-bearing criterion
 
-Run all four criteria, then name the one that controls the classification.
+Run all four criteria, then name the one that controls the classification—the criterion that would move the use case if it changed.
 
-The load-bearing criterion is the one that, if changed, would move the use case between classifications.
+## Three classifications
 
-```text
-All criteria considered
-      ↓
-Load-bearing criterion named
-      ↓
-Defensible classification
-```
-
-Examples:
-
-- A condolence-note draft may be reversible and low consequence, but the human relationship requirement is load bearing.
-- A financial summary may be consequential, but a qualified pre-use review can restore accountability and practical reversibility.
-- A final professional determination may remain inappropriate because accountability cannot transfer and consequences may be difficult to reverse.
-
----
-
-# Three classifications
-
-## Fully appropriate
-
-Use when the task is reversible, low consequence, suitably grounded, not dependent on special human empathy or authority, and subject to normal quality review.
-
-## Appropriate with human review
-
-Use when AI assistance is useful but consequence, fairness, relationship sensitivity, policy exposure, or accountability requires a qualified pre-use gate.
-
-## Inappropriate
-
-Use when AI ownership cannot be made responsible because of irreversibility, severe consequence, non-transferable accountability, essential human care, policy prohibition, or the absence of meaningful review.
+| Classification | Meaning |
+|---|---|
+| Fully appropriate | Reversible, low consequence, grounded, and not dependent on special human authority or empathy |
+| Appropriate with human review | AI assistance is useful, but a qualified pre-use gate is required |
+| Inappropriate | AI ownership cannot be made responsible because of irreversibility, severe consequence, non-transferable accountability, essential human care, or policy constraints |
 
 ```text
 Technically possible
@@ -124,19 +98,15 @@ Appropriate
 Approved
 ```
 
----
+## The gate is part of the classification
 
-# The gate is part of the classification
+A human-review gate must state:
 
-`Appropriate with human review` is incomplete until the gate is operational.
+- **Who** reviews;
+- **What** they verify; and
+- **When** review occurs before use or consequence.
 
-| Gate element | Required question |
-|---|---|
-| Who | Which accountable and qualified role reviews? |
-| What | Which facts, risks, evidence, fairness, or policy conditions are checked? |
-| When | At what point before use or consequence does review occur? |
-
-A complete gate also gives the reviewer evidence, time, authority to reject or modify, an escalation path, and retained approval evidence.
+It also needs evidence, time, intervention authority, escalation, and retained approval evidence.
 
 ```text
 Human in the loop
@@ -144,103 +114,179 @@ Human in the loop
 Operational human gate
 ```
 
-If the who, what, and when cannot be stated, the use case is not ready to run.
+---
+
+# Foundation 3: Skill trust and feature-level risk
+
+A Skill is a software-like package containing instructions, scripts, dependencies, and resources. Its practical risk depends on the environment in which it runs.
+
+```text
+Skill scope
+      ×
+Session permissions
+      =
+Effective reach
+```
+
+## The three trust checks
+
+### Source
+
+Establish:
+
+- publisher;
+- owner;
+- distribution path;
+- current version;
+- approval evidence;
+- update and support path; and
+- bundle integrity or provenance.
+
+```text
+Internal
+      ≠
+Vetted
+```
+
+Anthropic-provided and organization-reviewed Skills are lower-risk starting points for their documented purpose, not universal guarantees.
+
+### Reach
+
+Map what the Skill could access or change in the real session:
+
+- files and directories;
+- Project knowledge;
+- connectors;
+- code execution;
+- tools and external systems;
+- secrets exposed to the runtime;
+- read, write, create, send, publish, modify, and delete actions;
+- logs and retained outputs; and
+- sensitive or regulated data.
+
+Inspect the actual bundle:
+
+- instructions;
+- scripts;
+- dependencies;
+- bundled files;
+- tool references;
+- external calls;
+- file paths;
+- retention behavior; and
+- actions beyond the stated purpose.
+
+### Appropriateness
+
+Ask whether the Skill is the smallest capability that meets the approved task.
+
+```text
+Useful capability
+      ≠
+Necessary capability
+      ≠
+Proportionate capability
+```
+
+Apply least privilege: reduce files, connectors, write permissions, external actions, persistence, and audience to the minimum required.
+
+## Trust is contextual
+
+```text
+Same Skill
++ different data
++ different connectors
++ different permissions
+=
+different risk decision
+```
+
+Trust belongs to the Skill–environment–use-case combination, not the Skill name alone.
+
+## Three outcomes
+
+| Outcome | Use when |
+|---|---|
+| Enable | Source, reach, appropriateness, policy, tests, monitoring, and disable paths are clear |
+| Escalate | The Skill may be useful, but broader authority or specialist review is required |
+| Decline | Source is unverifiable, access is disproportionate, policy conflicts exist, or review cannot make the use responsible |
+
+```text
+Trust check failed
+      ≠
+Always permanent ban
+```
+
+It means the current user should not enable the capability under the current authority and conditions.
 
 ---
 
-# Worked portfolio
+# Worked Skill portfolio
 
-| Use case | Classification | Load-bearing criterion | Required control |
-|---|---|---|---|
-| Draft internal FAQ from approved policy documents | Fully appropriate | Reversibility and low consequence | Normal source and owner review |
-| Summarize resumes into a proposed shortlist | Appropriate with human review | Accountability and consequence | Hiring reviewer checks job relevance, unsupported inference, fairness, and policy before any decision or contact |
-| Generate a final medical or legal determination | Inappropriate for AI ownership | Non-transferable accountability | Qualified professional makes and owns the determination |
-| Draft a response to a billing complaint | Appropriate with human review | Accountability | Support agent verifies account facts, policy, disclosures, and tone before send |
-
----
-
-# Defensible rationale format
-
-```text
-Use case:
-[bounded description]
-
-Classification:
-Fully appropriate / Appropriate with human review / Inappropriate
-
-Delegation criteria:
-- Reversibility:
-- Consequence of error:
-- Human creativity or empathy:
-- Accountability:
-
-Load-bearing criterion:
-[criterion and why it controls]
-
-Human gate or retained role:
-- Who:
-- What:
-- When:
-
-Conditions and controls:
-[data, policy, evidence, permissions, monitoring]
-
-Decision owner:
-[accountable role]
-```
-
-This replaces `it feels risky` with a reviewable governance decision.
+| Skill | Source | Reach | Appropriateness | Outcome |
+|---|---|---|---|---|
+| Anthropic-provided document formatter | Established | Task-matched document handling | Fits approved non-sensitive document task | Enable with normal controls |
+| Unknown analytics booster | Unknown publisher | Scripts, broad files, unrelated connectors | Disproportionate to stated task | Escalate or decline |
+| Internal status-report Skill | Known sister team, no current review | Shared repository access and stale policy template | Useful method, excessive current reach | Escalate and request narrower reviewed version |
 
 ---
 
-# Broader governance foundation
+# Feature-level risk generalization
 
-Later lessons will extend this baseline into:
-
-- Skill provenance, code, dependencies, access, persistence, and side effects;
-- data sensitivity, privacy, minimization, retention, and feature controls;
-- organizational AI policy, diligence, approvals, exceptions, and records;
-- fairness, consent, accessibility, transparency, and recourse;
-- prompt injection, exfiltration, unauthorized action, and misuse;
-- meaningful human oversight, monitoring, escalation, and incident response.
+Apply the same proportionality habit to connectors, code execution, tools, integrations, Memory, and external actions.
 
 ```text
-Feature available
-      ≠
-Feature approved
-      ≠
-Feature trusted for this use case
+Who provides it?
+What can it access, execute, persist, or change?
+Is that reach proportionate to the approved task?
 ```
 
 ```text
-Data accessible
+Feature enabled
       ≠
-Data approved for processing
+Feature governed
 ```
 
-```text
-Policy-compliant
-      ≠
-Ethically sufficient
-```
+For consequential capabilities, define monitoring, human approval, logging, revocation, rollback, and incident response.
 
 ---
 
-# Use-case screening protocol
+# Skill trust register
+
+| Field | Purpose |
+|---|---|
+| Skill ID and version | Stable identification |
+| Publisher and owner | Provenance and accountability |
+| Distribution path | Anthropic, organization, shared, personal, third-party |
+| Stated purpose | Intended task |
+| Bundle contents | Instructions, scripts, files, dependencies |
+| Runtime requirements | Code execution, files, connectors, tools, network |
+| Effective reach | Data and actions exposed during use |
+| Data classification | Information processed |
+| External actions | Create, update, send, publish, delete |
+| Review status | Approved, conditional, pending, rejected |
+| Tests | Functional, security, boundary, regression |
+| Limitations | Residual risk |
+| Disable or rollback | Containment path |
+| Review date | Revalidation schedule |
+
+---
+
+# Integrated governance protocol
 
 ```text
-1. Define the bounded use case and intended outcome
-2. Identify users, affected parties, and decision context
-3. Assess reversibility before consequence
-4. Assess the consequence of error
-5. Assess need for human creativity, empathy, or relationship ownership
-6. Identify who retains accountability
-7. Check policy, data, and prohibited-use boundaries
-8. Identify the load-bearing criterion
-9. Classify as fully appropriate, human-reviewed, or inappropriate
-10. Define the who, what, and when gate or retained human role
-11. Record conditions, evidence, monitoring, and escalation
-12. Approve, constrain, redesign, defer, or reject
+1. Define the bounded use case, users, and affected parties
+2. Run reversibility, consequence, human-element, and accountability criteria
+3. Identify the load-bearing criterion and classification
+4. Define the who / what / when gate or retained human role
+5. Identify the Skill or feature, publisher, owner, and version
+6. Inspect instructions, scripts, dependencies, files, and external calls
+7. Map effective reach across the real environment
+8. Compare access with task necessity, data sensitivity, and policy
+9. Apply least privilege and preserve approval boundaries
+10. Run functional, security, boundary, and regression tests
+11. Record monitoring, residual risk, disable, and re-review triggers
+12. Enable, escalate, decline, constrain, redesign, defer, or reject
 ```
 
 ---
@@ -251,15 +297,18 @@ Ethically sufficient
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
+- [Skill Trust and Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-06/01-module-introduction-prompts.md)
 - [Appropriate vs Inappropriate Use Cases prompts](../../prompts/module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
+- [Skill Trust and Feature-Level Risk prompts](../../prompts/module-06/03-skill-trust-feature-risk-prompts.md)
 
-## Engineering pattern
+## Engineering patterns
 
 - [Use-Case Appropriateness Classification Pattern](../../patterns/use-case-appropriateness-classification-pattern.md)
+- [Skill Trust and Feature-Risk Pattern](../../patterns/skill-trust-and-feature-risk-pattern.md)
 
 ## Existing extended practice
 
@@ -273,28 +322,28 @@ Ethically sufficient
 # Exam lens
 
 ```text
-Low-stakes reversible drafting       → often fully appropriate
-Consequential recommendation         → human-reviewed with explicit gate
-Essential empathy or relationship    → retain human ownership
-Final professional determination     → human professional owns the decision
-Human in the loop                    → require who, what, and when
-Criteria interact                    → identify the load-bearing criterion
-Accountability assigned to Claude    → invalid; retain human accountability
-Feels risky                          → replace with criterion-based rationale
+Unknown publisher with broad reach        → escalate or decline
+Internal Skill without review evidence    → internal is not automatically vetted
+Skill description narrower than contents  → inspect and treat as a red flag
+Skill inherits broad session environment  → reduce effective reach
+Capability exceeds task need              → choose narrower capability
+User lacks approval authority             → escalate
+Source, reach, and appropriateness clear   → enable with monitoring
+Useful output                              → does not prove safe behavior
 ```
 
-For appropriateness scenarios:
+For Skill and feature-risk scenarios:
 
-1. define the exact use case;
-2. run all four Delegation criteria;
-3. avoid capability-first reasoning;
-4. identify the load-bearing criterion;
-5. preserve non-transferable accountability;
-6. define meaningful review before consequence;
-7. distinguish AI assistance from AI ownership;
-8. name the retained human role;
-9. document conditions and escalation; and
-10. choose a defensible classification.
+1. identify the exact feature and version;
+2. establish publisher and owner;
+3. inspect the bundle rather than relying on the name;
+4. enumerate effective reach;
+5. compare access with the approved task;
+6. apply least privilege;
+7. classify data and external actions;
+8. confirm approval authority;
+9. define tests, monitoring, and disable paths; and
+10. choose enable, escalate, or decline.
 
 ---
 
@@ -302,12 +351,13 @@ For appropriateness scenarios:
 
 - [x] I completed the Module 6 introduction.
 - [x] I completed Appropriate vs Inappropriate Use Cases.
+- [x] I completed Skill Trust and Feature-Level Risk.
 - [ ] I can assess reversibility, consequence, human element, and accountability.
-- [ ] I can identify the load-bearing criterion.
-- [ ] I can distinguish fully appropriate, human-reviewed, and inappropriate uses.
-- [ ] I can define an operational who / what / when review gate.
-- [ ] I can preserve non-transferable human accountability.
-- [ ] I can evaluate Skill trust and feature-level risk.
+- [ ] I can identify the load-bearing criterion and define an operational gate.
+- [ ] I can distinguish source trust, effective reach, and appropriateness.
+- [ ] I can inspect Skill instructions, scripts, dependencies, and bundled files.
+- [ ] I can apply least privilege to Skills and other features.
+- [ ] I can choose enable, escalate, or decline under the correct authority.
 - [ ] I can classify data and apply privacy controls.
 - [ ] I can locate and apply organizational policy.
 - [ ] I can identify ethical implications beyond compliance.
@@ -319,12 +369,12 @@ For appropriateness scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential governance reviews, internal policies, restricted data, private personnel or applicant records, client identities, medical or legal determinations, credentials, proprietary risk assessments, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential Skill bundles, proprietary scripts, internal security findings, restricted data, private connector identifiers, credentials, organization-only review records, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute legal, medical, employment, financial, privacy, security, compliance, ethics, or operational advice.
+This repository is an unofficial educational resource. It does not constitute security, privacy, legal, compliance, procurement, software-assurance, or operational advice.
 
 ## Source note
 
-The Appropriate vs Inappropriate Use Cases course material was supplied on August 3, 2026. Current law, policy, organizational controls, and qualified professional judgment govern real use cases.
+The Skill Trust and Feature-Level Risk course material was supplied on August 3, 2026. Product behavior and organizational controls can change. Current official documentation and organizational policy govern real deployments.
