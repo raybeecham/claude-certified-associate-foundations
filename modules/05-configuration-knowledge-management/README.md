@@ -6,7 +6,7 @@ Associate Persona · Official Exam Domain 5 · **12% of the exam blueprint**
 
 ## Module thesis
 
-> Set up the right context, instructions, procedures, continuity, and access once; benefit across repeated conversations; then maintain the configuration so it remains accurate, authorized, scoped, and owned.
+> Set up the right context, instructions, procedures, continuity, and access once; benefit across repeated conversations; then maintain the configuration so it remains accurate, authorized, scoped, testable, and owned.
 
 ```text
 Using Claude
@@ -20,7 +20,8 @@ Configured baseline
 + reusable procedures
 + scoped continuity
 + scoped connector access
-+ human controls
++ precise persistent instructions
++ human and technical controls
 + lifecycle maintenance
 ```
 
@@ -31,7 +32,7 @@ Configured baseline
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Configuring Projects](lessons/02-configuring-projects.md)
 - [x] [03. Connectors & Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
-- [ ] 04. System-Level Instructions That Stick
+- [x] [04. System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 - [ ] 05. Maintaining Configurations
 - [ ] 06. Module 5 Quiz
   - [ ] Quiz
@@ -46,18 +47,7 @@ No later lesson is marked complete until its preparation-course material is supp
 
 A person using Claude supplies the prompt, context, sources, format, and review decisions for the current conversation.
 
-A team operating Claude maintains a bounded, approved environment with:
-
-- standing instructions;
-- approved knowledge;
-- reusable procedures;
-- scoped connectors;
-- selected continuity;
-- output contracts;
-- review and approval gates;
-- testing;
-- ownership; and
-- maintenance cadence.
+A team operating Claude maintains a bounded, approved environment with instructions, knowledge, procedures, connectors, continuity, output contracts, controls, tests, ownership, and maintenance cadence.
 
 ```text
 Good prompt today
@@ -68,8 +58,6 @@ Reliable configured baseline tomorrow
 ---
 
 # Foundation 2: Configuring Projects
-
-## Four primary mechanisms
 
 | Mechanism | Primary role |
 |---|---|
@@ -85,32 +73,7 @@ Procedure  → Skill
 Continuity → Project-scoped Memory
 ```
 
-## Pairing rule
-
-One business need may require several mechanisms because it contains different responsibilities.
-
-```text
-Instruction:
-Always cite material factual claims.
-
-Knowledge:
-Approved sources Claude should cite.
-```
-
-```text
-Skill:
-Status-report procedure.
-
-Knowledge:
-Current plan, brand guide, and references.
-
-Memory:
-Reviewed preferences and prior Project decisions.
-```
-
-Give each responsibility one authoritative home, then pair mechanisms without duplicating authority.
-
-## Memory boundary
+Give each responsibility one authoritative home, then pair mechanisms when a business need contains different responsibility types.
 
 ```text
 Scoped continuity
@@ -122,15 +85,9 @@ Confidentiality control
 System of record
 ```
 
-Material decisions remain subordinate to approved records, permissions, and human authority.
-
 ---
 
 # Foundation 3: Connectors and uploaded knowledge
-
-Connectors provide authorized access to external systems. Uploaded files provide explicit source material for a chat or Project.
-
-Neither mechanism establishes that every accessible item is authoritative, current, in scope, or actionable.
 
 ```text
 Connected or uploaded
@@ -144,123 +101,25 @@ Current
 Authorized for external action
 ```
 
-## Connector purpose and access
-
-Before enabling a connector, define:
-
-- business purpose;
-- intended users;
-- connected identity;
-- permitted systems, folders, mailboxes, tenants, or repositories;
-- read capabilities;
-- draft capabilities;
-- write or external-action capabilities;
-- prohibited or unsupported actions;
-- data sensitivity;
-- approval boundaries;
-- owner;
-- review date; and
-- revocation conditions.
-
-Use the smallest connector and permission scope that supports the approved workflow.
+Every connector needs a capability contract covering identity, source scope, read tools, draft tools, write tools, unsupported actions, approval boundaries, owner, review date, and revocation.
 
 ```text
-Connect everything by default
-      ≠
-Useful knowledge management
-```
-
-## Capability register
-
-| Field | Meaning |
-|---|---|
-| Connector | Exact integration and version |
-| Identity | Whose permissions are used |
-| Source scope | Accessible systems and records |
-| Read tools | Search and retrieval capabilities |
-| Draft tools | Proposed-output capabilities |
-| Write tools | Create, update, send, publish, or delete capabilities |
-| Unsupported actions | Known boundaries |
-| Approval boundary | Human confirmation before consequence |
-| Error modes | Setup, authentication, permission, scope, timeout, capability |
-| Owner and review date | Maintenance responsibility |
-
-Capabilities differ by connector, product surface, administrator settings, and permission configuration.
-
-```text
-Mail connector
-      ≠
-Universal mail capability
-```
-
-A connector may search and read, create drafts, or support write tools only when specifically documented and enabled.
-
-## Stage separation
-
-```text
-Search or retrieve
-      ↓
-Read evidence
-      ↓
+Retrieve
+  ↓
+Read
+  ↓
 Analyze
-      ↓
-Draft proposed output
-      ↓
-Human review and approval
-      ↓
+  ↓
+Draft
+  ↓
+Human review
+  ↓
+Approval
+  ↓
 Controlled execution, if supported
 ```
 
-A connector that can draft but not send has reached its designed boundary rather than failed.
-
-## Boundary-aware troubleshooting
-
-Classify failures before escalation:
-
-1. connector not installed or enabled;
-2. wrong or expired authentication;
-3. insufficient permission;
-4. source outside configured scope;
-5. connector not loaded for the conversation;
-6. unsupported action;
-7. missing, renamed, or stale source;
-8. external-system failure; or
-9. probable product defect.
-
-```text
-Unexpected result
-      ≠
-Product bug
-```
-
-The supplied course reports two field-observed cautions:
-
-- an apparently obvious connector-addition path may not be the organization's approved installation path; and
-- capability-boundary failures may be mislabeled and routed to the wrong support function.
-
-Treat these as operational cautions, not universal documented behavior. Confirm approved paths and current capabilities with the relevant administrator and official documentation.
-
----
-
-# Uploaded-knowledge governance
-
-Uploaded knowledge should be curated like a maintained shared repository.
-
-For every material file, record:
-
-- source ID;
-- title;
-- owner;
-- authority;
-- effective date;
-- review or expiration date;
-- scope;
-- sensitivity;
-- version;
-- refresh type;
-- conflicts;
-- replacement; and
-- permitted use.
+Uploaded knowledge requires ownership, authority, effective and review dates, version, refresh type, conflicts, replacement, sensitivity, and permitted use.
 
 ```text
 File uploaded
@@ -272,129 +131,146 @@ File current
 File controlling
 ```
 
-## Duplicates and supersession
+Remove, archive, or clearly label duplicate and superseded sources. Distinguish synced sources from static snapshots and historical archives.
 
-A knowledge base containing several unlabeled versions of the same policy invites obsolete citations and blended requirements.
+---
+
+# Foundation 4: Persistent instructions that stick
+
+Persistent instructions define recurring behavior across Project conversations.
+
+Appropriate uses include:
+
+- verification and citation behavior;
+- evidence and source boundaries;
+- missing-data and uncertainty behavior;
+- tone and terminology;
+- output structure;
+- review reminders; and
+- escalation rules.
 
 ```text
-New source approved
+Recurring behavioral requirement
       ↓
-Identify replaced source
+Precise standing instruction
       ↓
-Remove or label superseded version
+Representative and adversarial tests
       ↓
-Update source register
-      ↓
-Run regression questions
-      ↓
-Record effective date and owner
+Consistent Project baseline
 ```
 
-Historical sources may remain when history is part of the use case, but their status must be explicit.
+## Instruction anatomy
 
-## Synced and static sources
-
-| Refresh type | Maintenance approach |
+| Element | Question |
 |---|---|
-| Synced source | Monitor upstream ownership, access, and material changes |
-| Static upload | Replace manually when the controlling source changes |
-| Connector retrieval | Validate permissions, scope, and currency at use time |
-| Historical archive | Prevent accidental treatment as current authority |
+| Trigger | When does the rule apply? |
+| Required behavior | What should Claude do? |
+| Evidence boundary | What may it rely on? |
+| Failure behavior | What happens when the rule cannot be satisfied? |
+| Observable output | How can a reviewer tell it was followed? |
+
+## Vague versus precise
 
 ```text
-Connected or synced
+Vague:
+Make the reports good and accurate.
+
+Precise:
+Lead with a one-sentence headline.
+Use Summary, Evidence, Risks, Decisions, and Actions.
+Cite the supplied source and location for material factual claims.
+State the source or reviewed calculation method for every figure.
+Label unsupported figures `unverified`.
+List unresolved evidence gaps.
+Do not describe a draft as approved.
+```
+
+```text
+Vague intention
       ≠
-Reviewed and approved
+Operational behavior
 ```
 
----
+## Two-reader test
 
-# Connector and knowledge register
+Ask whether two competent readers would interpret the instruction the same way.
 
-| ID | Source or connector | Capability | Authority | Scope | Refresh | Owner | Review | Action boundary |
-|---|---|---|---|---|---|---|---|---|
-| C-001 | Approved mail connector | Search, read, draft | Evidence source | Named mailbox | Live | Workspace owner | Quarterly | No send |
-| K-001 | Current policy | Read | Controlling | Defined use case | Static | Policy owner | On change | Reference only |
-| K-002 | Prior policy | Read | Superseded | Historical | Archive | Policy owner | Annual | Never current guidance |
+If not, add defined terms, thresholds, named formats, source boundaries, examples, failure behavior, or precedence.
 
-This register prevents connector names and file availability from becoming implicit assumptions.
+| Weak | Stronger |
+|---|---|
+| Be concise | Limit the executive summary to five bullets and 150 words |
+| Be professional | Use a formal register, no slang, and define acronyms on first use |
+| Verify facts | Cite the supplied source and location for every material claim |
+| Do not hallucinate | Mark unsupported claims `not supported by supplied sources` |
+| Flag risks | List likelihood, impact, owner, and mitigation |
 
----
-
-# Worked policy-brief example
-
-A fictional compliance team prepares weekly policy-change briefs.
-
-## Connectors
-
-- read-only access to an approved repository;
-- email search for messages from the policy owner;
-- no authority to send, publish, or modify source records.
-
-## Uploaded knowledge
-
-- current briefing template;
-- approved terminology guide;
-- current review checklist;
-- superseded policies removed or explicitly labeled historical.
-
-## Workflow
+## Mechanism boundary
 
 ```text
-Retrieve current sources
-      ↓
-Check version and effective date
-      ↓
-Extract material changes
-      ↓
-Draft briefing
-      ↓
-Qualified human review
-      ↓
-Authorized publication outside Claude
+Behavior → Project instructions
+Facts → Project knowledge
+Procedure → Skill
+Continuity → scoped Memory
+Exact rule or authorization → deterministic control
+Temporary exception → current request
+Secret → approved secret handling
 ```
 
-## Controls
+## Conflict and precedence
 
-- connector capability register;
-- source authority order;
-- conflict handling;
-- duplicate detection;
-- weekly source review;
-- quarterly permission review; and
-- offboarding and revocation.
+```text
+Instruction present
+      ≠
+Instruction highest authority
+      ≠
+Instruction technically enforceable
+```
 
----
+When maintained instructions conflict, identify the exact conflict, compare scope and authority, determine supersession, preserve unresolved conflicts, obtain owner resolution, and rerun tests.
 
-# Common failure modes
+## Instructions are not security controls
 
-| Failure | Repair |
-|---|---|
-| Connector availability treated as authority | Classify source ownership, version, and scope |
-| Capability assumed from connector name | Maintain a tool-level capability contract |
-| Everything connected by default | Apply least privilege and enable only relevant tools |
-| Static upload treated as live | Record refresh type and replacement trigger |
-| Duplicate versions retained without status | Remove, archive, or label superseded copies |
-| Unsupported action reported as a bug | Check setup, authentication, permission, scope, loading, and capability first |
-| Draft directly triggers external consequence | Add qualified review and approval before execution |
+Persistent instructions cannot independently enforce identity, authorization, data isolation, connector permissions, secret handling, professional approval, external-action restrictions, or exact business rules.
+
+```text
+Instruction says `do not send`
+      ≠
+Send capability technically disabled
+```
+
+Pair consequential rules with least privilege, deterministic validation, tool restrictions, human review, approval gates, logging, and systems of record.
+
+## Test model
+
+Use:
+
+- positive tests;
+- missing-evidence tests;
+- source-conflict tests;
+- bypass attempts;
+- format exceptions;
+- unrelated-task tests;
+- draft-versus-approved tests; and
+- regression tests after change.
 
 ---
 
 # Integrated configuration protocol
 
 ```text
-1. Define the bounded purpose and users
+1. Define bounded purpose, users, and prohibited uses
 2. Classify behavior, facts, procedures, continuity, access, exact controls, and state
-3. Place each concern in the correct configuration mechanism
-4. Select the minimum required connectors and source scope
+3. Place each concern in the correct mechanism
+4. Select minimum connector and source scope
 5. Record connector identity, capabilities, and unsupported actions
-6. Establish source authority, freshness, scope, sensitivity, and conflict rules
-7. Curate uploaded knowledge and remove or label superseded versions
-8. Separate retrieve, draft, approve, and execute
-9. Test successful, denied, stale, conflicting, and unsupported cases
-10. Version and approve the configuration
-11. Monitor sources, permissions, capabilities, and operational dependency
-12. Update, revoke, roll back, or retire when conditions change
+6. Establish source authority, freshness, sensitivity, and conflict rules
+7. Curate uploads and remove or label superseded versions
+8. Write persistent instructions with trigger, evidence, failure, and observable behavior
+9. Apply the two-reader test and document precedence
+10. Pair consequential instructions with enforceable controls
+11. Test successful, denied, stale, conflicting, bypass, and unsupported cases
+12. Version, approve, monitor, update, revoke, roll back, or retire
 ```
 
 ---
@@ -406,17 +282,20 @@ Authorized publication outside Claude
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Configuring Projects](lessons/02-configuring-projects.md)
 - [Connectors and Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
+- [System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-05/01-module-introduction-prompts.md)
 - [Configuring Projects prompts](../../prompts/module-05/02-configuring-projects-prompts.md)
 - [Connectors and Uploaded Knowledge prompts](../../prompts/module-05/03-connectors-uploaded-knowledge-prompts.md)
+- [System-Level Instructions prompts](../../prompts/module-05/04-system-level-instructions-prompts.md)
 
 ## Engineering patterns
 
 - [Project Configuration Slot Selection Pattern](../../patterns/project-configuration-slot-selection-pattern.md)
 - [Connector and Knowledge Boundary Pattern](../../patterns/connector-and-knowledge-boundary-pattern.md)
+- [Persistent Instruction Precision Pattern](../../patterns/persistent-instruction-precision-pattern.md)
 
 ## Existing extended practice
 
@@ -430,28 +309,28 @@ Authorized publication outside Claude
 # Exam lens
 
 ```text
-External source is needed            → connector with approved scope
-File should persist across Project   → Project knowledge
-Connector can read but not act       → redesign around capability boundary
-Several versions of one policy       → identify current authority and remove ambiguity
-All connectors enabled by default    → apply least privilege
-Unexpected connector failure         → classify setup, auth, permission, scope, capability, or defect
-Synced source changed upstream        → verify authority and material change
-Static file became outdated           → replace and regression-test
+Always cite supplied sources          → persistent Project instruction
+Current policy text                   → Project knowledge
+Standard multi-step report method     → Skill
+Be professional                       → too vague; define observable behavior
+Unsupported claim                     → label unknown or unverified
+Two maintained instructions conflict  → resolve authority and version
+Instruction says no external action   → still require technical controls
+Instruction changed                   → rerun regression tests
 ```
 
-For connector and knowledge scenarios:
+For persistent-instruction scenarios:
 
-1. distinguish access from authority;
-2. identify the connected identity and permission scope;
-3. document exact capabilities and unsupported actions;
-4. separate read, draft, approve, and execute;
-5. select the minimum relevant connector set;
-6. curate files by authority, freshness, scope, and sensitivity;
-7. remove or label duplicates and superseded sources;
-8. classify failures before escalation;
-9. test connector and source boundaries; and
-10. assign ownership, review cadence, and revocation.
+1. identify whether the need is durable behavior;
+2. keep facts and procedures in their appropriate mechanisms;
+3. define trigger, evidence boundary, failure behavior, and observable output;
+4. apply the two-reader test;
+5. specify uncertainty and escalation behavior;
+6. document precedence and conflict handling;
+7. pair high-stakes rules with enforceable controls;
+8. test normal and adversarial cases;
+9. version and approve changes; and
+10. maintain the instruction set as workflows evolve.
 
 ---
 
@@ -460,18 +339,19 @@ For connector and knowledge scenarios:
 - [x] I completed the Module 5 introduction.
 - [x] I completed Configuring Projects.
 - [x] I completed Connectors and Uploaded Knowledge.
+- [x] I completed System-Level Instructions That Stick.
 - [ ] I can distinguish behavior, facts, procedures, continuity, access, exact controls, and state.
 - [ ] I can apply the Project configuration pairing rule.
 - [ ] I can distinguish connector access from source authority.
 - [ ] I can create a connector capability contract.
-- [ ] I can separate retrieve, draft, approve, and execute stages.
-- [ ] I can classify connector failures before escalation.
-- [ ] I can curate uploaded knowledge and remove or label superseded sources.
-- [ ] I can distinguish synced sources from static snapshots.
-- [ ] I can apply least privilege and define revocation.
-- [ ] I can keep credentials and secrets outside prompts and repositories.
-- [ ] I can design durable instructions with clear scope and precedence.
-- [ ] I can test, version, roll back, and retire configurations.
+- [ ] I can curate uploaded knowledge and manage supersession.
+- [ ] I can identify durable behavior that belongs in persistent instructions.
+- [ ] I can convert vague instructions into observable rules.
+- [ ] I can apply the two-reader test.
+- [ ] I can define evidence, uncertainty, and failure behavior.
+- [ ] I can distinguish instructions from technical enforcement.
+- [ ] I can test and version persistent instructions.
+- [ ] I can maintain, roll back, and retire configurations.
 - [ ] I completed the Module 5 quiz and takeaways.
 - [ ] I completed the knowledge lab and scored at least 80% on the extended quiz.
 
@@ -479,7 +359,7 @@ For connector and knowledge scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential emails, private Drive content, connector identifiers, credentials, internal policies, private knowledge sources, proprietary instructions, client data, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential instructions, connector identifiers, credentials, private knowledge sources, proprietary procedures, client data, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
@@ -487,4 +367,4 @@ This repository is an unofficial educational resource. It does not constitute ar
 
 ## Source note
 
-The Connectors and Uploaded Knowledge course material was supplied on August 3, 2026. Product capabilities and interfaces can change. Current official documentation and organizational policy control if they conflict with course or repository material.
+The System-Level Instructions course material was supplied on August 3, 2026. Product capabilities and interfaces can change. Current official documentation and organizational policy control if they conflict with course or repository material.
