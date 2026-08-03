@@ -33,6 +33,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Verified Planning Workflow Pattern](verified-planning-workflow-pattern.md): Combine current research, executed quantitative analysis, explicit assumptions, scenario synthesis, human judgment, and process optimization into a defensible plan
 - [Evidence-Driven Prototype Iteration Pattern](evidence-driven-prototype-iteration-pattern.md): Preserve stable design context, test bounded hypotheses, classify feedback, refine through controlled changes, and separate prototype success from production readiness
 - [Delegation Boundary Mapping Pattern](delegation-boundary-mapping-pattern.md): Map atomic work, assess reversibility, stakes, and accountability, assign model/code/tool/storage/human ownership, and place review before consequence
+- [Capability, Value, and Limitation Communication Pattern](capability-value-limitation-communication-pattern.md): Describe bounded AI tasks, support value claims with scoped evidence, preserve material limitations across audiences, and operationalize human oversight
 
 ## Planned pattern groups
 
