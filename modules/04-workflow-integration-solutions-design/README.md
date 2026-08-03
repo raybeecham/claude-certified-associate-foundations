@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 4 · **16% of the exam blueprint**
 
-> **Status:** In progress — teaching, exercise, and quiz are complete. Takeaways and Module Complete remain open.
+> **Status:** In progress — teaching, exercise, quiz, and takeaways are complete. Module Complete remains open.
 
 ## Module thesis
 
@@ -23,7 +23,7 @@ Delegation mapping and control boundaries
       ↓
 Accurate value and limitation communication
       ↓
-Workflow redesign and quiz synthesis
+Workflow redesign, quiz, and takeaway synthesis
 ```
 
 ---
@@ -37,9 +37,9 @@ Workflow redesign and quiz synthesis
 - [x] [05. Delegation Mapping](lessons/05-delegation-mapping.md)
 - [x] [06. Communicating Value & Limitations](lessons/06-communicating-value-limitations.md)
 - [x] [07. Exercise: Redesign a Workflow — all six correct](lessons/07-redesign-a-workflow.md)
-- [ ] 08. Module 4 Quiz
+- [x] 08. Module 4 Quiz
   - [x] [Quiz — Full marks, 5/5](lessons/08a-module-4-quiz.md)
-  - [ ] Takeaways
+  - [x] [Key Takeaways](lessons/08b-key-takeaways.md)
 - [ ] 09. Module Complete
 
 ---
@@ -49,15 +49,131 @@ Workflow redesign and quiz synthesis
 ```text
 Workflow redesign exercise: All six correct
 Module 4 quiz:             Full marks — 5 of 5
-Key takeaways:             Open
+Key takeaways:             Reviewed
 Module complete:           Open
+```
+
+---
+
+# Five durable takeaways
+
+## 1. Delegate deliberately, not indiscriminately
+
+```text
+Map the work
+      ↓
+Assess reversibility, stakes, accountability, and side effects
+      ↓
+Assign the minimum responsible delegation posture
+      ↓
+Add validation, review, exception handling, and recovery
+      ↓
+Choose Skills, code, tools, storage, and human gates
+```
+
+```text
+High-quality draft
+      ≠
+Authority to approve
+      ≠
+Permission to execute
+```
+
+## 2. Claude is a requirements-analysis partner
+
+```text
+Messy inputs
+      ↓
+Atomic candidate requirements
+      ↓
+Exact traceability
+      ↓
+Classification and coverage
+      ↓
+Ambiguity and gap review
+      ↓
+Human clarification and approval
+```
+
+Requirement classes include explicit, implied, ambiguous, missing, conflicting, assumption, constraint, and acceptance criterion.
+
+```text
+Explicit source statement
+      ≠
+Implied requirement
+      ≠
+Analyst assumption
+```
+
+A requirement is not ready when two competent implementers could build materially different solutions from it.
+
+## 3. Build plans on verified numbers
+
+```text
+Verified sources
+      +
+Executed analysis
+      +
+Visible assumptions
+      +
+Human constraints and judgment
+      ↓
+Defensible plan
+```
+
+```text
+Plausible number in prose
+      ≠
+Computed and reconciled result
+```
+
+Code execution improves repeatability, but execution alone does not prove the logic, data, assumptions, forecast method, or decision.
+
+## 4. Map every step against three criteria
+
+```text
+Reversibility
++ Stakes
++ Accountability
+↓
+Minimum responsible delegation posture
+```
+
+| Step type | Typical posture |
+|---|---|
+| Mechanical, reversible extraction | AI-appropriate with validation |
+| Repeatable procedure | Skill after the work is mapped |
+| Exact calculation | Code execution or deterministic logic |
+| Interpretive draft | Collaborative |
+| Professional approval or risk acceptance | Human-retained |
+| Irreversible external action | Approval before controlled execution |
+| Durable workflow state | System of record |
+
+## 5. Communicate limits as clearly as value
+
+```text
+What Claude does
++ What Claude does not do
++ Observed value and scope
++ Known limitations
++ Human review and approval
+↓
+Credible workflow description
+```
+
+Adapt depth and vocabulary for the audience. Preserve capability boundary, data scope, verified metrics, uncertainty, limitations, human gates, approval authority, and external-action controls.
+
+```text
+Audience adaptation
+      ≠
+Risk concealment
 ```
 
 ---
 
 # Integrated workflow framework
 
-## 1. Requirements must be testable
+## Requirements
 
 ```text
 Messy input
@@ -71,16 +187,7 @@ Ambiguity and gap review
 Measurable acceptance criterion
 ```
 
-A requirement is not ready when two competent implementers could build materially different solutions from it.
-
-```text
-Large number of users
-      ↓
-Clarify concurrency, duration, response time,
-transaction rate, and acceptable failure behavior
-```
-
-## 2. Research, computation, and judgment require different controls
+## Research, computation, and judgment
 
 ```text
 Current evidence       → web search, Research, or approved sources
@@ -89,20 +196,40 @@ Trade-off synthesis    → Claude using verified evidence
 Risk and approval      → accountable human
 ```
 
+## Solution iteration
+
 ```text
-Plausible number in prose
-      ≠
-Computed and reconciled result
+Stable design context
+      ↓
+Meaningfully different options
+      ↓
+Prototype hypothesis
+      ↓
+Smallest useful prototype
+      ↓
+Observed feedback
+      ↓
+Bounded refinement
+      ↓
+Acceptance and regression tests
+      ↓
+Continue / accept / redesign / escalate / stop
 ```
 
-## 3. Prototype success is not production readiness
+```text
+Minimum useful prototype
+      ≠
+Production-ready solution
+```
+
+## Prototype-to-infrastructure escalation
 
 ```text
 Personal helper
       ↓
-Used repeatedly by several people
+Used repeatedly by multiple people
       ↓
-Supports official reporting or decisions
+Supports official decisions or reporting
       ↓
 Operational dependency
       ↓
@@ -110,15 +237,7 @@ Engineering, architecture, security,
 support, monitoring, recovery, and governance review
 ```
 
-A helper that others depend on has crossed an escalation boundary even when its original prototype worked well.
-
-```text
-Useful artifact
-      ≠
-Supported operational system
-```
-
-## 4. Delegation follows reversibility, stakes, and accountability
+## Delegation modes
 
 | Mode | Appropriate responsibility |
 |---|---|
@@ -130,35 +249,11 @@ Supported operational system
 | Tool-owned | Controlled retrieval or external action |
 | Storage-owned | Durable state and authoritative records |
 
-```text
-High-quality draft
-      ≠
-Authority to approve
-      ≠
-Permission to execute
-```
-
-## 5. Stakeholder trust requires bounded claims
-
-```text
-What Claude does
-      +
-What Claude does not do
-      +
-Observed value and scope
-      +
-Known limitations
-      +
-Human review and approval
-      ↓
-Credible workflow description
-```
-
-Avoid broad claims such as `fully automated` or `Claude handles contract review`. Name the exact AI tasks and the retained human decisions.
-
 ---
 
-# Workflow redesign exercise
+# Exercise and quiz synthesis
+
+## Workflow redesign exercise
 
 ```text
 Result: All six classifications correct
@@ -173,9 +268,7 @@ Result: All six classifications correct
 | Approve or reject report | Human-retained | Authorized financial approval |
 | Submit for payment | Human-retained before controlled execution | Approved external action |
 
----
-
-# Module 4 quiz result
+## Module 4 quiz
 
 ```text
 Full marks — 5 of 5
@@ -189,27 +282,16 @@ The quiz demonstrated command of:
 4. human-retained approval and irreversible action; and
 5. accurate stakeholder communication.
 
-## Quiz shortcut
+## Quiz and takeaway shortcut
 
 ```text
 Unquantified requirement      → clarify and make testable
 Plan depends on exact figures → code execution + reconciliation
 Helper becomes depended on    → escalate toward production engineering
+Reversible preparation        → AI-appropriate with validation
 Approval or signature         → human-retained
+External side effect          → approval before controlled execution
 Stakeholder trust             → bounded task + evidence + limits + human gate
-```
-
-## Quiz reasoning sequence
-
-```text
-Identify the controlling property
-      ↓
-Ask what remains unproven or uncontrolled
-      ↓
-Select the smallest responsible intervention
-      ↓
-Reject stronger-model, polished-prose,
-or hidden-automation distractors
 ```
 
 ---
@@ -248,6 +330,7 @@ or hidden-automation distractors
 - [Communicating Value and Limitations](lessons/06-communicating-value-limitations.md)
 - [Exercise: Redesign a Workflow](lessons/07-redesign-a-workflow.md)
 - [Module 4 Quiz](lessons/08a-module-4-quiz.md)
+- [Module 4 Key Takeaways](lessons/08b-key-takeaways.md)
 
 ## Prompt notebooks
 
@@ -259,6 +342,7 @@ or hidden-automation distractors
 - [Communicating Value and Limitations prompts](../../prompts/module-04/06-communicating-value-limitations-prompts.md)
 - [Redesign a Workflow prompts](../../prompts/module-04/07-redesign-a-workflow-prompts.md)
 - [Module 4 quiz and remediation prompts](../../prompts/module-04/08a-module-4-quiz-prompts.md)
+- [Module 4 Key Takeaways prompts](../../prompts/module-04/08b-key-takeaways-prompts.md)
 
 ## Engineering patterns
 
@@ -278,14 +362,6 @@ or hidden-automation distractors
 ---
 
 # Exam lens
-
-```text
-Vague requirement                → quantify and clarify
-Exact trend or throughput        → code execution
-Shared relied-on artifact        → engineering escalation
-Approval, signing, commitment    → human-retained
-Broad AI capability claim        → bounded task and human-gate statement
-```
 
 For Module 4 scenarios:
 
@@ -307,7 +383,7 @@ For Module 4 scenarios:
 - [x] I completed all Module 4 teaching sections.
 - [x] I completed the workflow-redesign exercise with all six correct.
 - [x] I completed the Module 4 quiz with full marks, 5/5.
-- [ ] I completed the Module 4 takeaways.
+- [x] I completed the Module 4 takeaways.
 - [ ] I can identify ambiguous and untestable requirements.
 - [ ] I can separate research, computation, synthesis, and judgment.
 - [ ] I can recognize when a helper has become infrastructure.
@@ -327,3 +403,7 @@ Examples must be fictional, generic, synthetic, public, or explicitly authorized
 ## Educational-use notice
 
 This repository is an unofficial educational resource. It does not constitute legal, architecture, security, risk, compliance, financial, employment, or operational advice.
+
+## Source and currency note
+
+The supplied course takeaway material states that product behavior descriptions were based on Claude features as of June 2026. Product availability and behavior can change. Verify current official Anthropic documentation before relying on implementation-specific details.
