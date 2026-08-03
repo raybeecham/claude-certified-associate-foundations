@@ -35,6 +35,7 @@ A pattern describes the problem, context, recommended design, controls, failure 
 - [Governance Diligence Gap Closure Pattern](governance-diligence-gap-closure-pattern.md)
 - [Ethical Impact Review and Escalation Pattern](ethical-impact-review-and-escalation-pattern.md)
 - [Feedback-to-Configuration Promotion Pattern](feedback-to-configuration-promotion-pattern.md): Translate recurring feedback into an observable instruction, validate a bounded change, and promote it to the correct shared configuration layer.
+- [Workflow Efficiency Audit and Promotion Pattern](workflow-efficiency-audit-and-promotion-pattern.md): Instrument one full cycle, classify repetition, correction, and variance, place fixes correctly, pilot against a baseline, and adopt only measured improvements.
 
 ## Planned pattern groups
 
@@ -47,8 +48,8 @@ A pattern describes the problem, context, recommended design, controls, failure 
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities, models, context, tools, permissions, persistence, monitoring, and people-facing impact add setup, maintenance, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities, models, context, tools, permissions, persistence, monitoring, workflow consolidation, and people-facing impact add setup, maintenance, validation, and governance obligations.
 
 ## Public-repository content rule
 
-Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, regulated records, private prompts or outputs, proprietary workflows, credentials, secrets, private Skill bundles, internal audit findings, or facts that identify a nonpublic engagement.
+Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, regulated records, private prompts or outputs, proprietary workflows, credentials, secrets, private Skill bundles, internal audit findings, private workflow timings, or facts that identify a nonpublic engagement.
