@@ -1,6 +1,6 @@
 # Prompt Library
 
-These templates are study aids and starting points, not universal production prompts. Adapt them to the use case, current platform capabilities, data policy, tool design, and evaluation results.
+These templates are study aids and starting points. Adapt them to the use case, current platform capabilities, data policy, tool design, and evaluation evidence.
 
 ## General templates
 
@@ -16,88 +16,89 @@ These templates are study aids and starting points, not universal production pro
 
 ### Module 1: Claude Platform & Model Foundations
 
-1. [Workflow foundation prompts](module-01/01-workflow-foundation-prompts.md)
-2. [How Claude Behaves prompts](module-01/02-how-claude-behaves-prompts.md)
-3. [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
-4. [Core Entry Points worked-example prompts](module-01/03a-core-entry-points-worked-example-prompts.md)
-5. [Capability Layer, Skills and Code Execution prompts](module-01/04-capability-layer-skills-code-execution-prompts.md)
-6. [Capability Layer, Memory prompts](module-01/04a-capability-layer-memory-prompts.md)
-7. [Capability Layer scenario prompts](module-01/04b-capability-layer-scenario-prompts.md)
-8. [Capability Layer checkpoint prompts](module-01/04c-capability-layer-checkpoint-prompts.md)
-9. [Choosing Models prompts](module-01/05-choosing-models-prompts.md)
-10. [Context Management prompts](module-01/06-context-management-prompts.md)
-11. [Platform Selection Exercise prompts](module-01/07-platform-selection-exercise-prompts.md)
-12. [Module 1 quiz and remediation prompts](module-01/08-module-1-quiz-prompts.md)
-13. [Module 1 Key Takeaways prompts](module-01/09-key-takeaways-prompts.md)
+- [Workflow foundation prompts](module-01/01-workflow-foundation-prompts.md)
+- [How Claude Behaves prompts](module-01/02-how-claude-behaves-prompts.md)
+- [Core Entry Points prompts](module-01/03-core-entry-points-prompts.md)
+- [Core Entry Points worked example](module-01/03a-core-entry-points-worked-example-prompts.md)
+- [Capability Layer prompts](module-01/04-capability-layer-skills-code-execution-prompts.md)
+- [Capability Layer Memory prompts](module-01/04a-capability-layer-memory-prompts.md)
+- [Capability Layer scenario prompts](module-01/04b-capability-layer-scenario-prompts.md)
+- [Capability Layer checkpoint prompts](module-01/04c-capability-layer-checkpoint-prompts.md)
+- [Choosing Models prompts](module-01/05-choosing-models-prompts.md)
+- [Context Management prompts](module-01/06-context-management-prompts.md)
+- [Platform Selection Exercise prompts](module-01/07-platform-selection-exercise-prompts.md)
+- [Module 1 quiz prompts](module-01/08-module-1-quiz-prompts.md)
+- [Module 1 Key Takeaways prompts](module-01/09-key-takeaways-prompts.md)
 
 ### Module 2: Prompting & Task Execution
 
-1. [Module Introduction prompts](module-02/01-module-introduction-prompts.md)
-2. [Component Stack prompts](module-02/02a-component-stack-prompts.md)
-3. [Worked Build prompts](module-02/02b-worked-build-prompts.md)
-4. [Task Decomposition prompts](module-02/03a-decomposition-prompts.md)
-5. [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
-6. [Iterating to Improve Output prompts](module-02/04-iterating-to-improve-output-prompts.md)
-7. [Strategy by Task Type prompts](module-02/05a-strategy-by-task-type-prompts.md)
-8. [Strategy Checkpoint prompts](module-02/05b-strategy-checkpoint-prompts.md)
-9. [Repair-the-Prompt prompts](module-02/06-repair-the-prompt-prompts.md)
-10. [Module 2 quiz and remediation prompts](module-02/07a-module-2-quiz-prompts.md)
-11. [Module 2 Key Takeaways prompts](module-02/07b-key-takeaways-prompts.md)
-12. [Module 2 completion and transition prompts](module-02/08-module-complete-prompts.md)
+- [Module Introduction prompts](module-02/01-module-introduction-prompts.md)
+- [Component Stack prompts](module-02/02a-component-stack-prompts.md)
+- [Worked Build prompts](module-02/02b-worked-build-prompts.md)
+- [Task Decomposition prompts](module-02/03a-decomposition-prompts.md)
+- [Parallel Case prompts](module-02/03b-parallel-case-prompts.md)
+- [Iterating prompts](module-02/04-iterating-to-improve-output-prompts.md)
+- [Strategy by Task Type prompts](module-02/05a-strategy-by-task-type-prompts.md)
+- [Strategy Checkpoint prompts](module-02/05b-strategy-checkpoint-prompts.md)
+- [Repair-the-Prompt prompts](module-02/06-repair-the-prompt-prompts.md)
+- [Module 2 quiz prompts](module-02/07a-module-2-quiz-prompts.md)
+- [Module 2 Key Takeaways prompts](module-02/07b-key-takeaways-prompts.md)
+- [Module 2 completion prompts](module-02/08-module-complete-prompts.md)
 
-### Module 3: Evaluating & Validating Claude's Output
+### Module 3: Evaluating & Validating Output
 
-1. [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
-2. [Discernment: Accuracy and Completeness prompts](module-03/02-discernment-accuracy-completeness-prompts.md)
-3. [Hallucinations, Inconsistencies, and Bias prompts](module-03/03-hallucinations-inconsistencies-bias-prompts.md)
-4. [Fact-Checking and Grounding prompts](module-03/04-fact-checking-grounding-prompts.md)
-5. [Diligence and Human Review prompts](module-03/05-diligence-human-review-prompts.md)
-6. [Editing and Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
-7. [Choosing Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
-8. [Triage the Output Set prompts](module-03/08a-triage-output-set-prompts.md)
-9. [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
-10. [Module 3 quiz and remediation prompts](module-03/09a-module-3-quiz-prompts.md)
-11. [Module 3 Key Takeaways prompts](module-03/09b-key-takeaways-prompts.md)
-12. [Module 3 completion and transition prompts](module-03/10-module-complete-prompts.md)
+- [Module Introduction prompts](module-03/01-module-introduction-prompts.md)
+- [Accuracy and Completeness prompts](module-03/02-discernment-accuracy-completeness-prompts.md)
+- [Hallucinations, Inconsistencies, and Bias prompts](module-03/03-hallucinations-inconsistencies-bias-prompts.md)
+- [Fact-Checking and Grounding prompts](module-03/04-fact-checking-grounding-prompts.md)
+- [Diligence and Human Review prompts](module-03/05-diligence-human-review-prompts.md)
+- [Audience Adaptation prompts](module-03/06-editing-adapting-audience-prompts.md)
+- [Output Formats prompts](module-03/07-choosing-output-formats-prompts.md)
+- [Triage prompts](module-03/08a-triage-output-set-prompts.md)
+- [Self-Assessment prompts](module-03/08b-self-assessment-prompts.md)
+- [Module 3 quiz prompts](module-03/09a-module-3-quiz-prompts.md)
+- [Module 3 Key Takeaways prompts](module-03/09b-key-takeaways-prompts.md)
+- [Module 3 completion prompts](module-03/10-module-complete-prompts.md)
 
 ### Module 4: Workflow Integration & Solution Design
 
-1. [Module Introduction prompts](module-04/01-module-introduction-prompts.md)
-2. [Analyzing Requirements and Use Cases prompts](module-04/02-analyzing-requirements-use-cases-prompts.md)
-3. [Research, Planning, and Process Optimization prompts](module-04/03-research-planning-process-optimization-prompts.md)
-4. [Solution Design, Development, and Iteration prompts](module-04/04-solution-design-development-iteration-prompts.md)
-5. [Delegation Mapping prompts](module-04/05-delegation-mapping-prompts.md)
-6. [Communicating Value and Limitations prompts](module-04/06-communicating-value-limitations-prompts.md)
-7. [Redesign a Workflow prompts](module-04/07-redesign-a-workflow-prompts.md)
-8. [Module 4 quiz and remediation prompts](module-04/08a-module-4-quiz-prompts.md)
-9. [Module 4 Key Takeaways prompts](module-04/08b-key-takeaways-prompts.md)
+- [Module Introduction prompts](module-04/01-module-introduction-prompts.md)
+- [Requirements and Use Cases prompts](module-04/02-analyzing-requirements-use-cases-prompts.md)
+- [Research and Planning prompts](module-04/03-research-planning-process-optimization-prompts.md)
+- [Solution Design prompts](module-04/04-solution-design-development-iteration-prompts.md)
+- [Delegation Mapping prompts](module-04/05-delegation-mapping-prompts.md)
+- [Value and Limitations prompts](module-04/06-communicating-value-limitations-prompts.md)
+- [Workflow Redesign prompts](module-04/07-redesign-a-workflow-prompts.md)
+- [Module 4 quiz prompts](module-04/08a-module-4-quiz-prompts.md)
+- [Module 4 Key Takeaways prompts](module-04/08b-key-takeaways-prompts.md)
 
 ### Module 5: Configuration & Knowledge Management
 
-1. [Module Introduction prompts](module-05/01-module-introduction-prompts.md)
-2. [Configuring Projects prompts](module-05/02-configuring-projects-prompts.md)
-3. [Connectors and Uploaded Knowledge prompts](module-05/03-connectors-uploaded-knowledge-prompts.md)
-4. [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
-5. [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
-6. [Module 5 quiz and remediation prompts](module-05/06a-module-5-quiz-prompts.md)
-7. [Module 5 Key Takeaways prompts](module-05/06b-key-takeaways-prompts.md)
-8. [Module 5 completion and transition prompts](module-05/07-module-complete-prompts.md)
+- [Module Introduction prompts](module-05/01-module-introduction-prompts.md)
+- [Configuring Projects prompts](module-05/02-configuring-projects-prompts.md)
+- [Connectors and Knowledge prompts](module-05/03-connectors-uploaded-knowledge-prompts.md)
+- [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
+- [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
+- [Module 5 quiz prompts](module-05/06a-module-5-quiz-prompts.md)
+- [Module 5 Key Takeaways prompts](module-05/06b-key-takeaways-prompts.md)
+- [Module 5 completion prompts](module-05/07-module-complete-prompts.md)
 
 ### Module 6: Governance, Risk & Responsible Use
 
-1. [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
-2. [Appropriate vs Inappropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
-3. [Skill Trust and Feature-Level Risk prompts](module-06/03-skill-trust-feature-risk-prompts.md)
-4. [Data Sensitivity, Privacy & Feature Controls prompts](module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
-5. [Organizational Policies and Diligence prompts](module-06/05-organizational-policies-diligence-prompts.md)
-6. [Ethical Implications prompts](module-06/06-ethical-implications-prompts.md)
-7. [Module 6 quiz and remediation prompts](module-06/07a-module-6-quiz-prompts.md)
-8. [Module 6 Key Takeaways prompts](module-06/07b-key-takeaways-prompts.md)
-9. [Module 6 completion and transition prompts](module-06/08-module-complete-prompts.md)
+- [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
+- [Appropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
+- [Skill Trust prompts](module-06/03-skill-trust-feature-risk-prompts.md)
+- [Data Sensitivity prompts](module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
+- [Policies and Diligence prompts](module-06/05-organizational-policies-diligence-prompts.md)
+- [Ethical Implications prompts](module-06/06-ethical-implications-prompts.md)
+- [Module 6 quiz prompts](module-06/07a-module-6-quiz-prompts.md)
+- [Module 6 Key Takeaways prompts](module-06/07b-key-takeaways-prompts.md)
+- [Module 6 completion prompts](module-06/08-module-complete-prompts.md)
 
 ### Module 7: Troubleshooting & Optimization
 
-1. [Diagnosing Underperforming Prompts and Outputs](module-07/01-diagnosing-underperformance-prompts.md)
+1. [Diagnosing Underperformance prompts](module-07/01-diagnosing-underperformance-prompts.md)
+2. [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -105,32 +106,27 @@ Additional notebooks will be added as later course-aligned sections are complete
 
 Before using a template:
 
-- preserve governance boundaries during troubleshooting and optimization;
-- distinguish the approved constraints from the observed performance failure;
-- define expected and observed behavior before editing anything;
-- read symptom timing: first-response failure, degradation over time, repeatable error type, formerly working behavior, or persistent expectation mismatch;
-- check prompt specification before escalating to more expensive interventions;
-- audit objective, evidence, constraints, output format, and success criteria;
-- inspect context when a long session begins well and later drifts;
-- use a clean restart summary rather than carrying irrelevant or conflicting history;
-- move recurring context, rules, and procedures into Projects, instructions, Skills, or other appropriate maintained layers;
-- check feature and model fit for quantitative, structured, tool-dependent, source-dependent, speed-sensitive, or reasoning-intensive tasks;
-- use code execution for deterministic calculations and verify inputs, units, definitions, and outputs;
-- inspect instructions, sources, Skills, connectors, Memory, schemas, templates, review gates, and policy references when a workflow used to work;
-- treat exact future predictions, unavailable evidence, unsupported actions, and non-transferable judgments as expectation-mismatch candidates;
-- reshape unavailable outcomes into scenarios, ranges, assumptions, evidence summaries, or qualified human review;
-- build a minimal reproducible case with explicit pass/fail criteria;
-- form one testable hypothesis and change one relevant variable at a time;
-- compare against a baseline and retain causal evidence;
-- validate the failing case, representative cases, edge cases, and governance controls;
-- reject stronger-model fixes when the root cause is specification, context, feature choice, stale configuration, governance, or task fit;
-- keep, revise, revert, or reshape based on measured results;
-- document rollback, monitoring, residual risk, and re-evaluation triggers;
-- preserve data classification, least privilege, Skill and connector review, human approval, fairness, disclosure, explanation, recourse, and escalation; and
-- use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
+- preserve governance boundaries during troubleshooting;
+- define expected and observed behavior before changing anything;
+- diagnose specification, context, capability, configuration, and task-fit causes in that order;
+- treat symptom timing as evidence rather than proof;
+- build a minimal reproducible case and change one variable at a time;
+- translate vague reactions into observable defects and testable instructions;
+- identify the lever that actually controls the defect;
+- keep one-time details in the current prompt;
+- place recurring Project behavior in Project instructions;
+- place reusable facts in maintained knowledge;
+- place repeatable multi-step procedures in Skills;
+- place exact filtering, calculations, schemas, and approvals in deterministic controls or human gates;
+- treat Memory as personal continuity rather than an authoritative shared control;
+- validate the original failure, representative cases, edge cases, and governance constraints;
+- promote recurring fixes only after validation;
+- record scope, ownership, approval, version, rollback, and review triggers;
+- reject stronger-model fixes when the root cause is elsewhere; and
+- use fictional, synthetic, public, or authorized scenarios in public study materials.
 
-A prompt rewrite, model upgrade, longer context, extra tool, or continued conversation cannot by itself repair an incorrectly diagnosed failure or guarantee quality, safety, fairness, authorization, or accountability.
+A prompt rewrite, model upgrade, longer context, Memory entry, or extra tool cannot substitute for correct diagnosis, validated configuration, deterministic controls, or accountable human review.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential prompts, production logs, regulated data, credentials, secrets, private audit findings, employee or applicant data, proprietary Skill bundles, incident records, connector identifiers, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, confidential prompts or outputs, production logs, regulated data, credentials, secrets, private audit findings, proprietary Skill bundles, incident records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts.
