@@ -33,6 +33,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Configuration Maintenance Lifecycle Pattern](configuration-maintenance-lifecycle-pattern.md): Treat instructions, knowledge, Skills, connectors, and Memory as versioned assets with review cadence, drift detection, regression testing, rollback, reset safeguards, revocation, and retirement
 - [Use-Case Appropriateness Classification Pattern](use-case-appropriateness-classification-pattern.md): Screen uses through reversibility, consequence, human element, and accountability; identify the load-bearing criterion; and make the gate part of the classification
 - [Skill Trust and Feature-Risk Pattern](skill-trust-and-feature-risk-pattern.md): Establish source and ownership, inspect the bundle, calculate effective reach, test proportionality and least privilege, and choose enable, escalate, or decline
+- [Data Classification and Feature-Control Pattern](data-classification-and-feature-control-pattern.md): Classify before entry, verify processing approval, minimize data, test redaction validity, and treat Incognito, Memory, and sandboxing as bounded controls
 
 ## Planned pattern groups
 
@@ -45,8 +46,8 @@ The pattern library is an engineering reference, not a substitute for current of
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, longer sessions, executable bundles, and broad permissions add setup, maintenance, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, longer sessions, executable bundles, broad permissions, sensitive data, and persistence add setup, maintenance, validation, and governance obligations.
 
 ## Public-repository content rule
 
-Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, proprietary workflows, credentials, private Skill bundles, internal security findings, or facts that identify a nonpublic engagement.
+Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, regulated records, proprietary workflows, credentials, secrets, private Skill bundles, internal security findings, or facts that identify a nonpublic engagement.
