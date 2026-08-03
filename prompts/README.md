@@ -80,6 +80,7 @@ These templates are study aids and starting points, not universal production pro
 4. [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
 5. [Maintaining Configurations prompts](module-05/05-maintaining-configurations-prompts.md)
 6. [Module 5 quiz and remediation prompts](module-05/06a-module-5-quiz-prompts.md)
+7. [Module 5 Key Takeaways prompts](module-05/06b-key-takeaways-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
