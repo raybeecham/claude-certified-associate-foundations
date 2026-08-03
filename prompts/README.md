@@ -72,40 +72,37 @@ These templates are study aids and starting points, not universal production pro
 8. [Module 4 quiz and remediation prompts](module-04/08a-module-4-quiz-prompts.md)
 9. [Module 4 Key Takeaways prompts](module-04/08b-key-takeaways-prompts.md)
 
-Additional notebooks will be added as later course-aligned modules are completed.
+### Module 5: Configuration & Knowledge Management
+
+1. [Module Introduction prompts](module-05/01-module-introduction-prompts.md)
+
+Additional notebooks will be added as later course-aligned sections are completed.
 
 ## Usage discipline
 
 Before using a template:
 
-- define the business outcome, workflow boundary, audience, and decision;
-- make requirements atomic, traceable, measurable, and pressure-tested;
-- distinguish explicit source statements, implied requirements, assumptions, constraints, and acceptance criteria;
-- separate current research, supplied evidence, internal facts, computation, synthesis, assumptions, and human judgment;
-- execute and reconcile material calculations over actual data;
-- preserve business rules, date boundaries, units, missing-data behavior, and intermediate checks;
-- recognize when a personal helper has become shared operational infrastructure;
-- escalate depended-on systems toward engineering, architecture, security, support, monitoring, recovery, and governance review;
-- map atomic work before selecting Skills, tools, or integrations;
-- assess reversibility, stakes, accountability, propagation risk, and side effects independently for every stage;
-- separate preparation from decision authority;
-- assign Skills to repeatable procedures and code execution to exact calculations;
-- make collaborative review operational with named expertise, evidence, criteria, time, authority, and intervention rights;
-- expose send, submit, sign, file, pay, publish, grant-access, and system-update actions as separate stages;
-- place authorized approval before consequential or irreversible side effects;
-- preserve source authority, requirements, data definitions, assumptions, decisions, and version history;
-- classify feedback and regression-test controlled changes;
-- distinguish prototype acceptance from production readiness;
-- state what Claude does and does not own;
-- support value claims with scoped evidence and preserve limitations across audience versions;
-- avoid `fully automated`, `handles X`, `guarantees`, `eliminates risk`, and undefined human-comparison claims;
-- retain reconstructable source, calculation, review, approval, and execution evidence;
-- reject distractors based only on stronger models, polished prose, repeated prompting, hidden approval, or vague automation claims;
-- persist long-running state outside the prompt; and
-- measure stage quality and business outcomes rather than prompt volume.
+- distinguish a one-time prompt from a maintained operating baseline;
+- define the bounded purpose, users, approved uses, and prohibited uses of a configured workspace;
+- place immediate tasks, workspace behavior, evidence, reusable procedures, external access, continuity, and authority in the correct layer;
+- keep temporary facts out of permanent instructions;
+- keep reusable methods distinct from workspace-specific knowledge;
+- treat connector availability as access, not authority;
+- use the minimum relevant, permitted, authoritative, and current source set;
+- record source owner, authority, effective date, review date, scope, sensitivity, conflicts, and replacement;
+- surface source conflicts rather than silently reconciling them;
+- apply least privilege and separate read access from write or external-action authority;
+- keep secrets and credentials out of prompts, instructions, repositories, uploaded files, and knowledge stores;
+- use memory for selective continuity rather than authoritative records or workflow state;
+- assign an owner, version, test suite, review cadence, rollback path, and retirement condition to material configurations;
+- test representative and adversarial cases before release;
+- monitor instruction drift, stale knowledge, excessive access, unowned procedures, and unsupported operational dependency;
+- update, roll back, or retire configurations when they no longer match the approved workflow;
+- preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication; and
+- measure semantic and control consistency rather than requiring identical wording.
 
-A prompt cannot enforce source authority, requirement clarity, correct business rules, complete data, valid assumptions, production readiness, meaningful human review, stakeholder understanding, workflow accountability, or irreversible-action authorization by itself.
+A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, secret handling, correct business rules, complete data, professional approval, durable state, workflow accountability, or irreversible-action authorization.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential vendor briefs, internal datasets, production dependencies, contracts, legal decisions, pilot metrics, risk findings, approval records, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential configuration files, connector identifiers, credentials, internal policies, private knowledge sources, proprietary instructions, production dependencies, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
