@@ -70,6 +70,7 @@ These templates are study aids and starting points, not universal production pro
 6. [Communicating Value and Limitations prompts](module-04/06-communicating-value-limitations-prompts.md)
 7. [Redesign a Workflow prompts](module-04/07-redesign-a-workflow-prompts.md)
 8. [Module 4 quiz and remediation prompts](module-04/08a-module-4-quiz-prompts.md)
+9. [Module 4 Key Takeaways prompts](module-04/08b-key-takeaways-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -79,14 +80,15 @@ Before using a template:
 
 - define the business outcome, workflow boundary, audience, and decision;
 - make requirements atomic, traceable, measurable, and pressure-tested;
-- identify wording that could lead competent implementers to build different solutions;
+- distinguish explicit source statements, implied requirements, assumptions, constraints, and acceptance criteria;
 - separate current research, supplied evidence, internal facts, computation, synthesis, assumptions, and human judgment;
 - execute and reconcile material calculations over actual data;
+- preserve business rules, date boundaries, units, missing-data behavior, and intermediate checks;
 - recognize when a personal helper has become shared operational infrastructure;
 - escalate depended-on systems toward engineering, architecture, security, support, monitoring, recovery, and governance review;
 - map atomic work before selecting Skills, tools, or integrations;
 - assess reversibility, stakes, accountability, propagation risk, and side effects independently for every stage;
-- separate preparation from authority;
+- separate preparation from decision authority;
 - assign Skills to repeatable procedures and code execution to exact calculations;
 - make collaborative review operational with named expertise, evidence, criteria, time, authority, and intervention rights;
 - expose send, submit, sign, file, pay, publish, grant-access, and system-update actions as separate stages;
@@ -96,6 +98,8 @@ Before using a template:
 - distinguish prototype acceptance from production readiness;
 - state what Claude does and does not own;
 - support value claims with scoped evidence and preserve limitations across audience versions;
+- avoid `fully automated`, `handles X`, `guarantees`, `eliminates risk`, and undefined human-comparison claims;
+- retain reconstructable source, calculation, review, approval, and execution evidence;
 - reject distractors based only on stronger models, polished prose, repeated prompting, hidden approval, or vague automation claims;
 - persist long-running state outside the prompt; and
 - measure stage quality and business outcomes rather than prompt volume.
