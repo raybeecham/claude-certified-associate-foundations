@@ -107,8 +107,9 @@ These templates are study aids and starting points. Adapt them to the use case, 
 ### Module 8: Course Summary & Next Steps
 
 - [Course Summary & Next Steps prompts](module-08/01-course-summary-next-steps-prompts.md)
+- [Module 8 completion and Associate-path review prompts](module-08/02-module-complete-prompts.md)
 
-Additional notebooks will be added as later course-aligned sections are completed.
+All course-aligned module notebooks for the Associate learning path are now indexed.
 
 ## Usage discipline
 
