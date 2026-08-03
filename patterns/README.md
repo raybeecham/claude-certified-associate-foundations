@@ -31,6 +31,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Output Format and Reliability Pattern](output-format-reliability-pattern.md): Match inline, artifact, structured, and code-executed paths to consumer, reuse, machine-readability, computation, and release requirements
 - [Requirements Traceability and Pressure-Test Pattern](requirements-traceability-pressure-test-pattern.md): Convert messy source material into atomic, traceable requirements, classify uncertainty, challenge completeness, and approve a baseline before workflow design
 - [Verified Planning Workflow Pattern](verified-planning-workflow-pattern.md): Combine current research, executed quantitative analysis, explicit assumptions, scenario synthesis, human judgment, and process optimization into a defensible plan
+- [Evidence-Driven Prototype Iteration Pattern](evidence-driven-prototype-iteration-pattern.md): Preserve stable design context, test bounded hypotheses, classify feedback, refine through controlled changes, and separate prototype success from production readiness
 
 ## Planned pattern groups
 
