@@ -77,6 +77,7 @@ These templates are study aids and starting points, not universal production pro
 1. [Module Introduction prompts](module-05/01-module-introduction-prompts.md)
 2. [Configuring Projects prompts](module-05/02-configuring-projects-prompts.md)
 3. [Connectors and Uploaded Knowledge prompts](module-05/03-connectors-uploaded-knowledge-prompts.md)
+4. [System-Level Instructions prompts](module-05/04-system-level-instructions-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -85,27 +86,28 @@ Additional notebooks will be added as later course-aligned sections are complete
 Before using a template:
 
 - distinguish a one-time prompt from a maintained operating baseline;
-- define bounded purpose, users, approved uses, and prohibited uses;
 - place behavior, facts, procedures, continuity, access, exact controls, and durable state in the correct layer;
 - pair mechanisms when one need contains different responsibilities;
 - assign one authoritative home to each configuration item;
 - treat connector availability as access, not authority;
-- document connector identity, source scope, read tools, draft tools, write tools, unsupported actions, and approval boundaries;
-- separate retrieve, read, analyze, draft, review, approve, execute, and record-state stages;
-- apply least privilege and enable only relevant connectors;
-- classify connector failures as setup, authentication, permission, scope, loading, capability, source, external-system, or product issues before escalation;
-- use the minimum relevant, permitted, authoritative, and current source set;
-- record source owner, authority, effective date, review date, scope, sensitivity, version, refresh type, conflicts, and replacement;
-- distinguish synced sources, static uploads, live retrieval, and historical archives;
+- document connector identity, scope, capabilities, unsupported actions, and approval boundaries;
+- apply least privilege and separate retrieve, draft, approve, execute, and record-state stages;
+- curate sources by owner, authority, effective date, review date, scope, sensitivity, version, refresh type, conflicts, and replacement;
 - remove or clearly label duplicate and superseded files;
-- keep secrets out of prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration content;
-- treat Memory as continuity rather than authority, security, or durable state;
-- assign owner, version, tests, review cadence, rollback path, revocation path, and retirement conditions;
-- test successful, denied, stale, conflicting, unsupported, and revoked cases; and
+- identify durable behavior users repeatedly retype;
+- define persistent instructions with trigger, required behavior, evidence boundary, failure behavior, and observable output;
+- apply the two-reader test to vague terms and ambiguous thresholds;
+- define `unknown`, `unverified`, `conflicting`, clarification, and escalation behavior;
+- keep facts in knowledge and reusable procedures in Skills;
+- document instruction precedence, authority, owner, and version;
+- pair consequential instructions with permissions, deterministic controls, tool restrictions, human review, and approval gates;
+- test positive, missing-evidence, conflict, bypass, format-exception, unrelated-task, and regression cases;
+- keep secrets outside prompts, instructions, repositories, files, knowledge, Skills, Memory, and connector configuration;
+- assign owner, version, tests, review cadence, rollback, revocation, and retirement conditions; and
 - preserve Module 4 disciplines for requirements, calculations, delegation, review, and stakeholder communication.
 
-A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, connector permissions, secret handling, correct business rules, complete data, professional approval, durable state, confidentiality, workflow accountability, or irreversible-action authorization.
+A prompt or configuration cannot by itself enforce source authority, identity, authorization, data isolation, connector permissions, secret handling, factual accuracy, correct business rules, professional approval, durable state, confidentiality, or irreversible-action authorization.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential emails, private Drive content, connector identifiers, credentials, internal policies, private knowledge sources, proprietary instructions, production dependencies, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential instructions, emails, private files, connector identifiers, credentials, internal policies, proprietary procedures, production dependencies, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
