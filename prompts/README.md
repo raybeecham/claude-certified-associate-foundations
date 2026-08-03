@@ -65,6 +65,7 @@ These templates are study aids and starting points, not universal production pro
 1. [Module Introduction prompts](module-04/01-module-introduction-prompts.md)
 2. [Analyzing Requirements and Use Cases prompts](module-04/02-analyzing-requirements-use-cases-prompts.md)
 3. [Research, Planning, and Process Optimization prompts](module-04/03-research-planning-process-optimization-prompts.md)
+4. [Solution Design, Development, and Iteration prompts](module-04/04-solution-design-development-iteration-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -72,36 +73,32 @@ Additional notebooks will be added as later course-aligned modules are completed
 
 Before using a template:
 
-- define the planning decision, owner, deadline, and success criteria;
-- distinguish current research, supplied evidence, internal facts, computation, synthesis, and human judgment;
-- use web search for straightforward current lookups and deeper Research for multi-source investigation;
-- preserve source authority, date, scope, and exact support;
-- separate research findings from approved planning assumptions;
-- execute material calculations over actual data;
-- inspect schemas, date boundaries, filters, units, duplicates, and missing values;
-- review business rules and intermediate outputs before trusting a result;
-- reconcile calculations to a control total or independent method;
-- create an assumption register with owner, sensitivity, and review date;
-- build baseline, conservative, and stress scenarios;
+- define the business outcome, user, and acceptance criteria;
+- preserve approved requirements, constraints, data definitions, decisions, and version history;
+- generate meaningfully different options before committing to a design;
+- define what the prototype must prove and what it must not be used for;
+- build the smallest useful prototype that tests the highest-risk assumptions;
+- classify feedback as requirement, correctness, usability, accessibility, performance, disclosure, preference, new requirement, or out of scope;
+- prioritize release-blocking defects over preferences;
+- make bounded changes with an expected result;
+- define preserved requirements and regression tests before refinement;
+- rerun acceptance, calculation, data, accessibility, and disclosure checks after changes;
+- record decisions, rejected feedback, limitations, and superseded versions;
+- distinguish prototype acceptance from production readiness;
+- stop or escalate when progress becomes cosmetic or the remaining issue is authority, architecture, security, accessibility, data, or production engineering;
+- define the planning decision and accountable owner;
+- distinguish research, computation, synthesis, assumptions, and human judgment;
+- execute material calculations over actual data and reconcile results;
 - retain human ownership of risk, budget, feasibility, commitments, and approval;
-- map the current process before optimizing it;
-- identify whether the bottleneck is retrieval, synthesis, calculation, handoff, review, state, or authority;
-- target the controlling bottleneck rather than adding Claude everywhere;
-- define the business outcome and intended decision before selecting a capability;
-- inventory sources and establish the controlling-source hierarchy;
-- convert broad needs into actors, triggers, inputs, outputs, owners, and acceptance criteria;
-- extract atomic requirements with exact traceability;
-- distinguish explicit, implied, ambiguous, missing, conflicting, and assumed requirements;
-- pressure-test requirement coverage and testability;
+- map the current process and target the controlling bottleneck;
+- preserve exact requirements traceability and pressure-test the first extraction;
 - separate task assistance from decision authority;
-- classify responsibilities as AI-appropriate, human-retained, collaborative, deterministic, tool-owned, or storage-owned;
-- persist long-running workflow state outside the prompt;
-- define retries, idempotency, fallback, rollback, escalation, and failure ownership;
-- measure stage quality and business outcomes rather than prompt volume; and
-- choose the smallest intervention and workflow that establish the required property.
+- classify model, deterministic, tool, storage, review, and approval responsibilities;
+- persist long-running workflow state outside the prompt; and
+- measure stage quality and business outcomes rather than prompt volume.
 
-A prompt cannot enforce source authority, requirement approval, correct business rules, complete data, valid assumptions, forecast suitability, identity, authorization, durable state, meaningful human review, workflow authority, or irreversible-action approval by itself.
+A prompt cannot enforce requirement approval, source authority, correct business rules, complete data, valid assumptions, stable state, production security, accessibility compliance, meaningful human review, workflow authority, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential planning data, workforce records, internal budgets, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential requirements, datasets, prototypes, internal systems, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
