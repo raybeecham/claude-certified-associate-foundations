@@ -87,6 +87,7 @@ These templates are study aids and starting points, not universal production pro
 
 1. [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
 2. [Appropriate vs Inappropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
+3. [Skill Trust and Feature-Level Risk prompts](module-06/03-skill-trust-feature-risk-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -94,30 +95,31 @@ Additional notebooks will be added as later course-aligned sections are complete
 
 Before using a template:
 
-- distinguish technical capability from appropriateness and approval;
+- distinguish technical capability from appropriateness, trust, and approval;
 - define the bounded use case, intended outcome, users, affected parties, and accountable owner;
 - assess reversibility, consequence of error, need for human creativity or empathy, and accountability;
-- identify the load-bearing criterion that controls the classification;
-- classify the use as fully appropriate, appropriate with human review, or inappropriate;
-- treat the who / what / when gate or retained human role as part of the classification;
-- reject vague human-in-the-loop language and require expertise, evidence, timing, intervention rights, escalation, and approval records;
-- distinguish AI assistance from AI ownership and preserve non-transferable accountability;
-- apply Diligence through current policy, evidence, data classification, feature vetting, documented approval, monitoring, and escalation;
+- identify the load-bearing criterion and define the who / what / when gate;
+- preserve non-transferable human accountability;
+- establish Skill or feature publisher, owner, version, distribution path, and review evidence;
+- inspect instructions, scripts, dependencies, bundled files, tool references, external calls, retention, and behavior beyond the stated purpose;
+- calculate effective reach across files, connectors, tools, code execution, data, and external actions;
+- treat `internal` as traceable provenance rather than automatic vetting;
+- compare reach with task necessity, data sensitivity, policy, and human approval boundaries;
+- apply least privilege and choose the smallest sufficient capability;
+- require functional, security, boundary, and regression tests;
+- define monitoring, logging, disable, rollback, and re-review triggers;
+- choose Enable, Escalate, or Decline under the correct authority;
 - classify data before selecting an environment, feature, connector, or persistence mechanism;
-- apply minimization, least privilege, retention, deletion, and disclosure controls;
-- vet Skills, connectors, tools, code execution, Memory, and other features by provenance, access, execution, persistence, and side effects;
-- distinguish feature availability from feature approval and trust for the current use case;
+- apply minimization, retention, deletion, disclosure, and privacy controls;
 - locate and apply organizational policy rather than assuming permission;
-- pause, narrow, or seek authorized clarification when policy or authority is unclear;
 - assess fairness, bias, consent, transparency, accessibility, power imbalance, recourse, labor effects, and misuse potential;
 - threat-model prompt injection, exfiltration, overbroad permissions, malicious dependencies, and unauthorized action;
-- pair natural-language guidance with technical controls, approval gates, logging, monitoring, and incident response;
-- select approve, constrain, redesign, defer, or reject rather than defaulting to automatic approval or prohibition;
+- pair natural-language guidance with technical controls, approval gates, monitoring, and incident response;
 - preserve evidence, exceptions, approvals, decision rationale, and next review dates; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt, policy statement, or human-in-the-loop label cannot by itself enforce source authority, identity, authorization, privacy, data isolation, connector permissions, secret handling, fairness, professional accountability, durable state, or irreversible-action approval.
+A prompt, policy statement, publisher label, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, secret handling, fair outcomes, professional accountability, durable state, or irreversible-action approval.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential governance reviews, internal policies, restricted data, private incident reports, personnel or applicant records, credentials, connector identifiers, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential Skill bundles, proprietary scripts, internal policies, restricted data, private incident reports, credentials, connector identifiers, organization-only review records, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
