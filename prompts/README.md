@@ -97,12 +97,16 @@ These templates are study aids and starting points. Adapt them to the use case, 
 
 ### Module 7: Troubleshooting & Optimization
 
-1. [Diagnosing Underperformance prompts](module-07/01-diagnosing-underperformance-prompts.md)
-2. [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
-3. [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
-4. [Module 7 quiz and remediation prompts](module-07/04a-module-7-quiz-prompts.md)
-5. [Module 7 Key Takeaways prompts](module-07/04b-key-takeaways-prompts.md)
-6. [Module 7 completion and transition prompts](module-07/05-module-complete-prompts.md)
+- [Diagnosing Underperformance prompts](module-07/01-diagnosing-underperformance-prompts.md)
+- [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
+- [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
+- [Module 7 quiz and remediation prompts](module-07/04a-module-7-quiz-prompts.md)
+- [Module 7 Key Takeaways prompts](module-07/04b-key-takeaways-prompts.md)
+- [Module 7 completion and transition prompts](module-07/05-module-complete-prompts.md)
+
+### Module 8: Course Summary & Next Steps
+
+- [Course Summary & Next Steps prompts](module-08/01-course-summary-next-steps-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -110,27 +114,23 @@ Additional notebooks will be added as later course-aligned sections are complete
 
 Before using a template:
 
-- preserve governance boundaries during troubleshooting and optimization;
-- define expected and observed behavior before changing anything;
-- diagnose specification, context, capability, configuration, and task-fit causes in that order;
-- treat symptom timing as evidence rather than proof;
-- build a minimal reproducible case and change one variable at a time;
-- translate vague reactions into observable defects and testable instructions;
-- identify the lever that actually controls the defect;
-- promote recurring corrections only after representative validation;
-- place rules in instructions, references in governed knowledge, procedures in Skills or workflows, and exact logic in deterministic controls;
-- observe one complete recurring workflow cycle before proposing optimization;
-- record repetition, correction, variance, handoffs, waiting, rework, and required controls;
-- target the measured bottleneck rather than general speed;
-- select primary and guardrail metrics before changing the workflow;
-- retain the baseline during a guarded pilot;
-- test representative users, normal cases, edge cases, and governance constraints;
-- reject interventions that merely shift work, add capacity, or weaken controls;
-- define rollback, ownership, versioning, review cadence, and stop conditions; and
-- use fictional, synthetic, public, or authorized scenarios in public study materials.
+- identify the controlling problem before selecting a module framework;
+- sequence selection, Description, evaluation, integration, configuration, governance, and troubleshooting coherently;
+- use Delegation to define responsibility boundaries;
+- use Description to define product, process, and performance expectations;
+- use Discernment to evaluate outputs, processes, and behavior;
+- apply Diligence through system choice, transparency, verification, and ownership;
+- reject answers that solve a different layer of the scenario;
+- verify current exam counts, timing, weights, provider rules, and certification-family scope through official sources;
+- distinguish course-supplied claims from independently verified facts;
+- preserve human authority for consequential decisions;
+- prepare evidence-rich escalation packages when implementation, architecture, governance, security, legal, privacy, compliance, or other specialist authority is required;
+- use decision-framework practice rather than passive rereading as the primary review method;
+- maintain an error log organized by controlling module and reasoning failure; and
+- use fictional, synthetic, public, or explicitly authorized scenarios.
 
-A prompt rewrite, model upgrade, longer context, extra tool, or additional reviewer cannot substitute for correct diagnosis, durable configuration, measurable bottleneck removal, representative testing, or accountable human review.
+A stronger model, longer prompt, additional tool, policy statement, or human-in-the-loop label cannot substitute for correct problem classification, verified evidence, durable configuration, responsible governance, or qualified escalation.
 
 ## Public-repository content rule
 
-Do not place client names, confidential prompts or outputs, proprietary procedures, private workflow timings, production logs, regulated data, credentials, secrets, private audit findings, incident records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts.
+Do not place client names, confidential prompts or outputs, proprietary procedures, private workflow timings, production logs, regulated data, credentials, secrets, private assessment results, remembered live-exam questions, reconstructed proprietary course questions, or internal escalation records in these prompts.
