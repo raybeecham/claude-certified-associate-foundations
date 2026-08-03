@@ -99,6 +99,7 @@ These templates are study aids and starting points. Adapt them to the use case, 
 
 1. [Diagnosing Underperformance prompts](module-07/01-diagnosing-underperformance-prompts.md)
 2. [Adjusting Approach from Feedback prompts](module-07/02-adjusting-approach-from-feedback-prompts.md)
+3. [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -106,27 +107,28 @@ Additional notebooks will be added as later course-aligned sections are complete
 
 Before using a template:
 
-- preserve governance boundaries during troubleshooting;
+- preserve governance boundaries during troubleshooting and optimization;
 - define expected and observed behavior before changing anything;
 - diagnose specification, context, capability, configuration, and task-fit causes in that order;
-- treat symptom timing as evidence rather than proof;
 - build a minimal reproducible case and change one variable at a time;
 - translate vague reactions into observable defects and testable instructions;
 - identify the lever that actually controls the defect;
-- keep one-time details in the current prompt;
-- place recurring Project behavior in Project instructions;
-- place reusable facts in maintained knowledge;
-- place repeatable multi-step procedures in Skills;
-- place exact filtering, calculations, schemas, and approvals in deterministic controls or human gates;
-- treat Memory as personal continuity rather than an authoritative shared control;
-- validate the original failure, representative cases, edge cases, and governance constraints;
-- promote recurring fixes only after validation;
-- record scope, ownership, approval, version, rollback, and review triggers;
+- observe one complete recurring workflow cycle before proposing optimization;
+- record repetition, correction, variance, handoffs, waiting, rework, and required controls;
+- classify reusable fixes as rules, references, procedures, deterministic controls, or one-time details;
+- place rules in instructions, references in governed knowledge, procedures in Skills or workflows, and exact logic in code, queries, schemas, or technical gates;
+- consolidate steps only when permissions, data boundaries, independent review, testability, and rollback remain intact;
+- select the primary metric and guardrail metrics before changing the workflow;
+- retain the baseline during a guarded pilot;
+- test representative users, normal cases, edge cases, and governance constraints;
+- measure net improvement across time, quality, consistency, cost, maintenance, and downstream effort;
+- reject optimizations that merely shift work, weaken controls, or standardize an unvalidated workaround;
+- define rollback, ownership, versioning, review cadence, and stop conditions;
 - reject stronger-model fixes when the root cause is elsewhere; and
 - use fictional, synthetic, public, or authorized scenarios in public study materials.
 
-A prompt rewrite, model upgrade, longer context, Memory entry, or extra tool cannot substitute for correct diagnosis, validated configuration, deterministic controls, or accountable human review.
+A prompt rewrite, model upgrade, longer context, extra tool, or fewer workflow steps cannot substitute for correct diagnosis, correct configuration placement, representative testing, measurable improvement, or accountable human review.
 
 ## Public-repository content rule
 
-Do not place client names, confidential prompts or outputs, production logs, regulated data, credentials, secrets, private audit findings, proprietary Skill bundles, incident records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts.
+Do not place client names, confidential prompts or outputs, proprietary procedures, private workflow timings, production logs, regulated data, credentials, secrets, private audit findings, incident records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts.
