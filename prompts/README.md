@@ -92,6 +92,7 @@ These templates are study aids and starting points, not universal production pro
 5. [Organizational Policies and Diligence prompts](module-06/05-organizational-policies-diligence-prompts.md)
 6. [Ethical Implications prompts](module-06/06-ethical-implications-prompts.md)
 7. [Module 6 quiz and remediation prompts](module-06/07a-module-6-quiz-prompts.md)
+8. [Module 6 Key Takeaways prompts](module-06/07b-key-takeaways-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -100,6 +101,7 @@ Additional notebooks will be added as later course-aligned sections are complete
 Before using a template:
 
 - distinguish technical capability from appropriateness, trust, approval, current policy, and ethical sufficiency;
+- apply Delegation to define what AI may do and Diligence to verify, disclose, and own the conditions;
 - define the bounded use case, users, affected parties, accountable owner, and controlling policy version;
 - assess reversibility, consequence of error, human creativity or empathy, and accountability;
 - identify the load-bearing criterion and define the who / what / when gate;
