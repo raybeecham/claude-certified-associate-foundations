@@ -67,6 +67,7 @@ These templates are study aids and starting points, not universal production pro
 3. [Research, Planning, and Process Optimization prompts](module-04/03-research-planning-process-optimization-prompts.md)
 4. [Solution Design, Development, and Iteration prompts](module-04/04-solution-design-development-iteration-prompts.md)
 5. [Delegation Mapping prompts](module-04/05-delegation-mapping-prompts.md)
+6. [Communicating Value and Limitations prompts](module-04/06-communicating-value-limitations-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -74,30 +75,26 @@ Additional notebooks will be added as later course-aligned modules are completed
 
 Before using a template:
 
-- define the business outcome and workflow boundary;
-- map atomic work steps before selecting Skills, tools, or integrations;
-- identify the source of truth, work type, output, side effect, and exception path for every step;
-- assess reversibility, stakes, accountability, and propagation risk independently for each step;
+- define the business outcome, workflow boundary, audience, and decision;
+- map atomic work before selecting Skills, tools, or integrations;
+- preserve source authority, requirements, data definitions, decisions, and version history;
 - separate task preparation from decision authority;
-- classify work as AI-appropriate, AI with code execution, collaborative, human-retained, deterministic, tool-owned, or storage-owned;
-- route exact calculations, transformations, and reconciliation to code execution or deterministic logic;
-- use Skills for repeatable procedures only after the step is judged AI-appropriate;
-- make collaborative review real by naming a qualified reviewer with evidence, time, criteria, authority, and intervention rights;
-- expose send, sign, file, pay, publish, and system-update actions as separate stages;
-- place authorized approval before consequential or irreversible side effects;
-- define exception ownership, escalation, stopping rules, and audit evidence;
-- check for halo delegation and AI approval of its own work;
-- preserve approved requirements, data definitions, constraints, decisions, and version history;
-- generate bounded options and prototypes, classify feedback, and regression-test changes;
-- distinguish prototype acceptance from production readiness;
-- separate research, computation, synthesis, assumptions, and human judgment;
-- execute material calculations over actual data and reconcile results;
-- preserve requirements traceability and pressure-test the first extraction;
-- persist long-running workflow state outside the prompt; and
+- classify model, code, deterministic, tool, storage, collaborative, and human responsibilities;
+- execute and reconcile material calculations over actual data;
+- make review gates operational with qualified owners, evidence, criteria, authority, and intervention rights;
+- place approval before consequential or irreversible actions;
+- scope prototypes and value claims to tested cases, periods, and quality standards;
+- classify feedback and rerun acceptance and regression tests after changes;
+- state what Claude does and does not own;
+- support every material value claim with a baseline, comparison period, scope, source, and quality measure;
+- preserve capability boundaries, uncertainty, limitations, and controls across audience versions;
+- avoid `fully automated`, `handles X`, `guarantees`, `eliminates risk`, and undefined human-comparison claims;
+- disclose material failure modes, dependencies, exception routes, and escalation owners;
+- persist long-running state outside the prompt; and
 - measure stage quality and business outcomes rather than prompt volume.
 
-A prompt cannot enforce requirement approval, source authority, correct business rules, complete data, valid assumptions, stable state, production security, meaningful human review, legal or employment authority, workflow accountability, or irreversible-action approval by itself.
+A prompt cannot enforce source authority, correct business rules, complete data, valid assumptions, stable state, production security, meaningful human review, stakeholder understanding, workflow authority, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential contracts, employment records, compensation data, requirements, datasets, prototypes, internal systems, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential contracts, pilot metrics, risk findings, employment records, compensation data, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
