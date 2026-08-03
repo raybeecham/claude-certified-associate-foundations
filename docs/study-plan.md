@@ -85,7 +85,7 @@ This plan assumes roughly **45 to 75 minutes on weekdays** and **two to three ho
 ### Day 2
 
 - Take Practice Exam 1 under timed, closed-note conditions.
-- Classify every miss: knowledge, reading, judgment, or avoidable error.
+- Classify every miss: knowledge, reading, judgment, layering, or avoidable execution error.
 
 ### Day 3
 
@@ -101,14 +101,23 @@ This plan assumes roughly **45 to 75 minutes on weekdays** and **two to three ho
 
 - Verify volatile facts against current official sources.
 - Review governance and troubleshooting decision paths.
-- Stop adding new material.
+- Stop adding new content.
+
+### Weekend final simulation
+
+- Take the 60-question, blueprint-weighted Practice Exam 3 in 120 minutes.
+- Use the multiple-response rules exactly as written.
+- Score by domain and identify the controlling reasoning error behind every miss.
+- Review only the weakest objectives after the attempt; do not immediately retake the same questions.
 
 ### Final checkpoint
 
 Recommended readiness indicators:
 
-- 80% or better on both practice exams;
-- no recurring misses involving data protection, source grounding, high-impact decisions, or tool authorization;
+- 80% or better on all three practice exams;
+- no recurring misses involving data protection, source grounding, high-impact decisions, human review, fairness, or tool authorization;
+- ability to identify the controlling domain in a mixed scenario;
+- ability to explain why the strongest distractor solves the wrong layer;
 - ability to explain each domain without notes; and
 - ability to defend why a chosen design is simpler and safer than its alternatives.
 
@@ -118,4 +127,4 @@ These are study recommendations, not official certification requirements.
 
 | Date | Domain | Question or concept | Error type | Correct rule | Retest date | Resolved |
 |---|---|---|---|---|---|---|
-| | | | Knowledge / reading / judgment / execution | | | |
+| | | | Knowledge / reading / judgment / layering / execution | | | |
