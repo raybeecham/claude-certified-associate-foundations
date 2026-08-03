@@ -31,6 +31,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Connector and Knowledge Boundary Pattern](connector-and-knowledge-boundary-pattern.md): Connect only required sources, document exact connector capabilities, classify source authority and freshness, curate uploads, and place approval before external consequence
 - [Persistent Instruction Precision Pattern](persistent-instruction-precision-pattern.md): Convert recurring behavioral requirements into precise, observable, tested instructions with evidence, failure, conflict, and enforcement boundaries
 - [Configuration Maintenance Lifecycle Pattern](configuration-maintenance-lifecycle-pattern.md): Treat instructions, knowledge, Skills, connectors, and Memory as versioned assets with review cadence, drift detection, regression testing, rollback, reset safeguards, revocation, and retirement
+- [Use-Case Appropriateness Classification Pattern](use-case-appropriateness-classification-pattern.md): Screen uses through reversibility, consequence, human element, and accountability; identify the load-bearing criterion; and make the gate part of the classification
 
 ## Planned pattern groups
 
