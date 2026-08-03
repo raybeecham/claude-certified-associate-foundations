@@ -64,6 +64,7 @@ These templates are study aids and starting points, not universal production pro
 
 1. [Module Introduction prompts](module-04/01-module-introduction-prompts.md)
 2. [Analyzing Requirements and Use Cases prompts](module-04/02-analyzing-requirements-use-cases-prompts.md)
+3. [Research, Planning, and Process Optimization prompts](module-04/03-research-planning-process-optimization-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -71,34 +72,36 @@ Additional notebooks will be added as later course-aligned modules are completed
 
 Before using a template:
 
+- define the planning decision, owner, deadline, and success criteria;
+- distinguish current research, supplied evidence, internal facts, computation, synthesis, and human judgment;
+- use web search for straightforward current lookups and deeper Research for multi-source investigation;
+- preserve source authority, date, scope, and exact support;
+- separate research findings from approved planning assumptions;
+- execute material calculations over actual data;
+- inspect schemas, date boundaries, filters, units, duplicates, and missing values;
+- review business rules and intermediate outputs before trusting a result;
+- reconcile calculations to a control total or independent method;
+- create an assumption register with owner, sensitivity, and review date;
+- build baseline, conservative, and stress scenarios;
+- retain human ownership of risk, budget, feasibility, commitments, and approval;
+- map the current process before optimizing it;
+- identify whether the bottleneck is retrieval, synthesis, calculation, handoff, review, state, or authority;
+- target the controlling bottleneck rather than adding Claude everywhere;
 - define the business outcome and intended decision before selecting a capability;
-- distinguish personal productivity from a repeatable workflow;
 - inventory sources and establish the controlling-source hierarchy;
 - convert broad needs into actors, triggers, inputs, outputs, owners, and acceptance criteria;
-- extract atomic requirements into a structured register rather than a narrative summary;
-- preserve exact source traceability;
-- distinguish explicit, implied, ambiguous, missing, conflicting, assumed, and constrained requirements;
-- pressure-test the first extraction for omissions, hidden conditions, conflicts, duplicates, and testability;
-- preserve unresolved uncertainty instead of filling gaps with confident prose;
-- distinguish a product capability from a viable use case with measurable value and human ownership;
-- map workflow stages, owners, inputs, outputs, decisions, state, and side effects;
+- extract atomic requirements with exact traceability;
+- distinguish explicit, implied, ambiguous, missing, conflicting, and assumed requirements;
+- pressure-test requirement coverage and testability;
 - separate task assistance from decision authority;
 - classify responsibilities as AI-appropriate, human-retained, collaborative, deterministic, tool-owned, or storage-owned;
-- identify authoritative and untrusted inputs;
-- remove secrets and unauthorized data;
-- permit explicit `unknown`, `not covered`, and `conflicting` outcomes;
-- validate consequential claims and calculations independently;
-- assess stakes, reversibility, audience, and governing obligations;
-- place approval before irreversible actions;
-- preserve human and organizational accountability;
-- distinguish presentation format from computation method;
-- persist long-running state outside the prompt;
+- persist long-running workflow state outside the prompt;
 - define retries, idempotency, fallback, rollback, escalation, and failure ownership;
 - measure stage quality and business outcomes rather than prompt volume; and
 - choose the smallest intervention and workflow that establish the required property.
 
-A prompt cannot enforce source authority, requirement approval, identity, authorization, data isolation, legal authority, factual accuracy, correct code logic, durable state, meaningful human review, workflow authority, or irreversible-action approval by itself.
+A prompt cannot enforce source authority, requirement approval, correct business rules, complete data, valid assumptions, forecast suitability, identity, authorization, durable state, meaningful human review, workflow authority, or irreversible-action approval by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential solicitations, proposal materials, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential planning data, workforce records, internal budgets, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
