@@ -102,6 +102,7 @@ These templates are study aids and starting points. Adapt them to the use case, 
 3. [Optimizing Workflows prompts](module-07/03-optimizing-workflows-prompts.md)
 4. [Module 7 quiz and remediation prompts](module-07/04a-module-7-quiz-prompts.md)
 5. [Module 7 Key Takeaways prompts](module-07/04b-key-takeaways-prompts.md)
+6. [Module 7 completion and transition prompts](module-07/05-module-complete-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
