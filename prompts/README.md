@@ -95,46 +95,42 @@ These templates are study aids and starting points, not universal production pro
 8. [Module 6 Key Takeaways prompts](module-06/07b-key-takeaways-prompts.md)
 9. [Module 6 completion and transition prompts](module-06/08-module-complete-prompts.md)
 
+### Module 7: Troubleshooting & Optimization
+
+1. [Diagnosing Underperforming Prompts and Outputs](module-07/01-diagnosing-underperformance-prompts.md)
+
 Additional notebooks will be added as later course-aligned sections are completed.
 
 ## Usage discipline
 
 Before using a template:
 
-- distinguish technical capability from appropriateness, trust, approval, current policy, and ethical sufficiency;
-- apply Delegation to define what AI may do and Diligence to verify, disclose, and own the conditions;
-- define the bounded use case, users, affected parties, accountable owner, and controlling policy version;
-- assess reversibility, consequence of error, human creativity or empathy, and accountability;
-- identify the load-bearing criterion and define the who / what / when gate;
-- preserve non-transferable human responsibility for consequential decisions;
-- establish Skill or feature publisher, owner, version, contents, effective reach, and proportionality;
-- treat a recommendation, internal label, or product name as insufficient evidence of trust;
-- apply least privilege and choose Enable, Escalate, or Decline under the correct authority;
-- define the minimum necessary data and classify it before upload or retrieval;
-- separate processing authorization from history, Memory, retention, export, and deletion controls;
-- treat Incognito and sandboxing as bounded controls rather than permission to process prohibited data;
-- translate policy requirements into observable behavior, controls, evidence, ownership, and escalation;
-- audit actual and planned use against the current controlling policy;
-- bound governance audits to authorized and necessary evidence;
-- record Diligence gaps with scope, consequence, root cause, containment, corrective action, owner, due date, and closure test;
-- separate immediate containment from sustainable remediation and verified closure;
-- inspect workflow friction, incentives, staffing, configuration, and technical controls rather than blaming individuals by default;
-- manage exceptions with authority, scope, risk, compensating controls, monitoring, and expiration;
-- identify affected parties, including people excluded before a human sees their case;
-- inspect prompt framing, sources, labels, criteria, examples, generated wording, and downstream use for bias;
-- define a task-specific fairness standard rather than assuming identical processing is sufficient;
-- determine disclosure from policy, audience expectations, materiality, and risk of misleading authorship or expertise claims;
-- preserve qualified human review, intervention authority, explanation, correction, and appeal paths;
-- escalate when scale, potential harm, vulnerable groups, disputed fairness criteria, or decision authority exceed the team’s standing;
-- reject stronger-model fixes when the root cause is governance, permissions, data approval, accountability, or workflow design;
 - preserve governance boundaries during troubleshooting and optimization;
-- separate the approved constraints from the observed performance failure;
-- test representative and edge cases and monitor actual outcome differences;
-- preserve evidence, exceptions, approvals, ethical reasoning, rationale, and review dates; and
+- distinguish the approved constraints from the observed performance failure;
+- define expected and observed behavior before editing anything;
+- read symptom timing: first-response failure, degradation over time, repeatable error type, formerly working behavior, or persistent expectation mismatch;
+- check prompt specification before escalating to more expensive interventions;
+- audit objective, evidence, constraints, output format, and success criteria;
+- inspect context when a long session begins well and later drifts;
+- use a clean restart summary rather than carrying irrelevant or conflicting history;
+- move recurring context, rules, and procedures into Projects, instructions, Skills, or other appropriate maintained layers;
+- check feature and model fit for quantitative, structured, tool-dependent, source-dependent, speed-sensitive, or reasoning-intensive tasks;
+- use code execution for deterministic calculations and verify inputs, units, definitions, and outputs;
+- inspect instructions, sources, Skills, connectors, Memory, schemas, templates, review gates, and policy references when a workflow used to work;
+- treat exact future predictions, unavailable evidence, unsupported actions, and non-transferable judgments as expectation-mismatch candidates;
+- reshape unavailable outcomes into scenarios, ranges, assumptions, evidence summaries, or qualified human review;
+- build a minimal reproducible case with explicit pass/fail criteria;
+- form one testable hypothesis and change one relevant variable at a time;
+- compare against a baseline and retain causal evidence;
+- validate the failing case, representative cases, edge cases, and governance controls;
+- reject stronger-model fixes when the root cause is specification, context, feature choice, stale configuration, governance, or task fit;
+- keep, revise, revert, or reshape based on measured results;
+- document rollback, monitoring, residual risk, and re-evaluation triggers;
+- preserve data classification, least privilege, Skill and connector review, human approval, fairness, disclosure, explanation, recourse, and escalation; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt, policy acknowledgment, publisher label, Incognito session, sandbox, audit, disclosure statement, model tier, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, fair outcomes, professional accountability, recourse, durable state, or irreversible-action approval.
+A prompt rewrite, model upgrade, longer context, extra tool, or continued conversation cannot by itself repair an incorrectly diagnosed failure or guarantee quality, safety, fairness, authorization, or accountability.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential policies, regulated records, credentials, secrets, private audit or ethics findings, employee or applicant data, protected-characteristic records, proprietary Skill bundles, private incident or escalation records, connector identifiers, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential prompts, production logs, regulated data, credentials, secrets, private audit findings, employee or applicant data, proprietary Skill bundles, incident records, connector identifiers, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
