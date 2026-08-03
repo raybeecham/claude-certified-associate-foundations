@@ -19,7 +19,7 @@ Process planning and optimization
       ↓
 Evidence-driven solution iteration
       ↓
-Delegation mapping
+Delegation mapping and control boundaries
       ↓
 Value and limitation communication
       ↓
@@ -34,7 +34,7 @@ Validated workflow
 - [x] [02. Analyzing Requirements & Use Cases](lessons/02-analyzing-requirements-use-cases.md)
 - [x] [03. Research, Planning & Process Optimization](lessons/03-research-planning-process-optimization.md)
 - [x] [04. Solution Design, Development & Iteration](lessons/04-solution-design-development-iteration.md)
-- [ ] 05. Delegation Mapping
+- [x] [05. Delegation Mapping](lessons/05-delegation-mapping.md)
 - [ ] 06. Communicating Value & Limitations
 - [ ] 07. Exercise: Redesign a Workflow
 - [ ] 08. Module 4 Quiz
@@ -46,7 +46,7 @@ No later lesson is marked complete until its preparation-course material is supp
 
 ---
 
-# Foundation 1: Workflow integration and Delegation
+# Foundation 1: Workflow integration
 
 ```text
 I use Claude
@@ -110,7 +110,7 @@ A viable use case connects a measurable outcome, user, current process, repeatab
 
 ---
 
-# Foundation 3: Research, planning, and process optimization
+# Foundation 3: Research, planning, and optimization
 
 ```text
 Research and synthesis
@@ -137,15 +137,13 @@ Plausible number in prose
 Computed result
 ```
 
-Material planning calculations should be executed over actual data, reviewed, and reconciled. Claude can synthesize scenarios and trade-offs; accountable humans retain budget, risk, feasibility, and approval decisions.
+Material calculations should be executed over actual data, reviewed, and reconciled. Claude can synthesize scenarios and trade-offs; accountable humans retain budget, risk, feasibility, and approval decisions.
 
 Map the current process before optimizing it. Identify whether the controlling bottleneck is retrieval, synthesis, calculation, handoff, review, state, or authority.
 
 ---
 
-# Foundation 4: Solution design, development, and iteration
-
-Claude contributes most effectively through an explicit learning loop.
+# Foundation 4: Solution iteration
 
 ```text
 Stable design context
@@ -165,34 +163,7 @@ Acceptance and regression tests
 Continue / accept / redesign / escalate / stop
 ```
 
-## Stable design context
-
-Preserve:
-
-- approved requirements;
-- users and use cases;
-- source and data definitions;
-- constraints;
-- prior decisions and rationale;
-- acceptance criteria;
-- known risks;
-- unresolved questions; and
-- version history.
-
-Projects can support continuity through project knowledge, project instructions, and related conversations. Product behavior can change, so verify current official documentation.
-
-## Prototype scope
-
-A prototype should test the highest-risk assumptions and core user task with the minimum necessary features.
-
-Record:
-
-- included and excluded scope;
-- test data;
-- prohibited uses;
-- acceptance criteria;
-- failure criteria; and
-- required reviewers.
+Preserve approved requirements, data definitions, constraints, prior decisions, acceptance criteria, known risks, unresolved questions, and version history.
 
 ```text
 Minimum useful prototype
@@ -200,22 +171,7 @@ Minimum useful prototype
 Production-ready solution
 ```
 
-## Feedback classification
-
-| Class | Example |
-|---|---|
-| Requirement | Missing region filter |
-| Correctness | Total does not reconcile |
-| Usability | User cannot locate a control |
-| Accessibility | Meaning depends on color alone |
-| Performance | Large input is too slow |
-| Privacy or disclosure | Sensitive field is exposed |
-| Preference | Different chart requested |
-| New requirement | Printed output needs approval block |
-
-Prioritize release-blocking defects over preferences.
-
-## Controlled refinement
+Feedback should be classified as requirement, correctness, usability, accessibility, performance, disclosure, preference, new requirement, or out of scope. Release-blocking defects take priority over preferences.
 
 ```text
 Observed problem
@@ -231,35 +187,121 @@ Preserved requirements
 Regression and acceptance tests
 ```
 
-## Dashboard example
+Stop or escalate when progress becomes cosmetic or the remaining issue requires unavailable evidence, authority, architecture, security, accessibility, data governance, or production engineering.
+
+---
+
+# Foundation 5: Delegation mapping
+
+Delegation Mapping assigns every atomic workflow step to the component best suited for it.
+
+## Three criteria
 
 ```text
-Cycle 1: Show five verified metrics
-Cycle 2: Add region filter and computed totals
-Cycle 3: Add direction-aware deltas and print layout
+Reversibility
++ Stakes
++ Accountability
+↓
+Minimum responsible delegation posture
 ```
 
-The prototype can be created and refined through natural-language requests, but the team must still verify data mappings, totals, accessibility, disclosure, and sharing behavior.
+| Mode | Typical responsibility |
+|---|---|
+| AI-appropriate | Bounded extraction, classification, synthesis, or drafting |
+| AI with code execution | Exact calculations, transformations, and reconciliation |
+| Collaborative | Claude prepares; qualified human evaluates and decides |
+| Human-retained | Authority, professional judgment, exception handling, approval, binding action |
+| Deterministic | Fixed rules, schemas, routing, authorization checks |
+| Tool-owned | Controlled retrieval or external side effect |
+| Storage-owned | Durable workflow state and authoritative records |
 
-A working artifact does not establish security, scale, persistence, operational support, or deployment approval.
-
-## Iteration stopping rules
-
-Continue when the next bounded change can produce meaningful evidence.
-
-Stop or escalate when:
-
-- the learning objective is met;
-- changes become cosmetic;
-- requirements conflict;
-- evidence or authority is missing;
-- architecture, security, accessibility, or data concerns exceed prototype scope; or
-- production engineering is required.
+## Work-first sequence
 
 ```text
-More iterations
+Business outcome
+      ↓
+Atomic workflow steps
+      ↓
+Work type, consequence, and side effects
+      ↓
+Delegation classification
+      ↓
+Validation, review, and exception handling
+      ↓
+Skill, Project, code, tool, storage, and human-gate assignment
+```
+
+```text
+Map the work first.
+Assign features second.
+```
+
+## Contract-review map
+
+| Step | Delegation | Control |
+|---|---|---|
+| Extract clauses | AI-appropriate | Completeness check |
+| Flag playbook departures | AI-appropriate | Skill or approved procedure; clause and rule trace |
+| Draft redline and rationale | Collaborative | Lawyer reviews every edit |
+| Approve or reject change | Human-retained | Authorized legal approval |
+| Compute penalty exposure | AI with code execution | Formula, units, assumptions, reconciliation |
+| Sign and send | Human-retained | Authorized signatory and controlled action |
+
+## Onboarding-document map
+
+| Step | Delegation | Control |
+|---|---|---|
+| Pull approved new-hire fields | AI with code execution | Schema and record validation |
+| Draft approved template | AI-appropriate | Skill carries template and required clauses |
+| Personalize welcome note | Collaborative | Hiring manager edits and approves |
+| Confirm compensation | Human-retained | Authorized source-record verification |
+| Send signed offer | Human-retained | Approved version, recipient, and sender confirmation |
+
+The domains differ, but the decision pattern remains:
+
+```text
+Mechanical and reversible preparation → delegate with validation
+Drafting and interpretation            → AI or collaborative
+Exact material calculation             → code execution
+High-stakes approval                    → human-retained
+Irreversible external action            → human approval before execution
+```
+
+## Over-delegation signals
+
+- Claude approves the work it drafted;
+- a classification automatically triggers a consequential action;
+- an irreversible step lacks an approval gate;
+- exact rules are assigned to probabilistic judgment;
+- calculations are generated as prose;
+- human review is mentioned but not staffed; or
+- success on one step is used to justify the next step.
+
+```text
+High-quality draft
       ≠
-More progress
+Authority to approve
+      ≠
+Permission to execute
+```
+
+## Common mapping errors
+
+```text
+Halo delegation
+→ evaluate every stage independently
+
+Collaborative in name only
+→ define reviewer, evidence, criteria, time, and intervention rights
+
+Feature-first mapping
+→ map work before Skills or integrations
+
+Hidden side effect
+→ show send, sign, file, pay, publish, or update as a separate stage
+
+Mechanical-but-material
+→ assess downstream propagation and validate deterministically
 ```
 
 ---
@@ -272,13 +314,14 @@ More progress
 3. Select and validate research and data inputs
 4. Execute and reconcile material calculations
 5. Map the current workflow and bottleneck
-6. Generate meaningfully different solution options
-7. Define the prototype hypothesis and scope
-8. Build the smallest useful prototype
-9. Gather and classify evidence and feedback
-10. Make bounded changes and run regression tests
-11. Record decisions, limitations, and version history
-12. Accept, continue, redesign, escalate, or stop
+6. Generate solution options and prototype the highest-risk assumptions
+7. Gather evidence, refine through bounded changes, and regression-test
+8. Decompose the workflow into atomic steps
+9. Assess reversibility, stakes, accountability, and side effects
+10. Assign model, code, deterministic, tool, storage, and human responsibilities
+11. Place qualified review before consequential or irreversible action
+12. Test handoffs, exceptions, failures, and recovery
+13. Record owners, approvals, limitations, and evidence
 ```
 
 ---
@@ -291,6 +334,7 @@ More progress
 - [Analyzing Requirements and Use Cases](lessons/02-analyzing-requirements-use-cases.md)
 - [Research, Planning, and Process Optimization](lessons/03-research-planning-process-optimization.md)
 - [Solution Design, Development, and Iteration](lessons/04-solution-design-development-iteration.md)
+- [Delegation Mapping](lessons/05-delegation-mapping.md)
 
 ## Prompt notebooks
 
@@ -298,12 +342,14 @@ More progress
 - [Requirements Analysis prompts](../../prompts/module-04/02-analyzing-requirements-use-cases-prompts.md)
 - [Research and Planning prompts](../../prompts/module-04/03-research-planning-process-optimization-prompts.md)
 - [Solution Design and Iteration prompts](../../prompts/module-04/04-solution-design-development-iteration-prompts.md)
+- [Delegation Mapping prompts](../../prompts/module-04/05-delegation-mapping-prompts.md)
 
 ## Engineering patterns
 
 - [Requirements Traceability and Pressure-Test Pattern](../../patterns/requirements-traceability-pressure-test-pattern.md)
 - [Verified Planning Workflow Pattern](../../patterns/verified-planning-workflow-pattern.md)
 - [Evidence-Driven Prototype Iteration Pattern](../../patterns/evidence-driven-prototype-iteration-pattern.md)
+- [Delegation Boundary Mapping Pattern](../../patterns/delegation-boundary-mapping-pattern.md)
 
 ## Existing extended practice
 
@@ -317,27 +363,27 @@ More progress
 # Exam lens
 
 ```text
-Need several approaches           → ideate bounded alternatives
-Need to test one idea             → smallest useful prototype
-Feedback received                 → classify and prioritize
-Change requested                  → expected effect + regression tests
-Iterations lose prior decisions   → stabilize context
-Prototype demo succeeds           → production-readiness review still required
-Cosmetic rounds with no gain      → stop or escalate
+Reversible extraction or drafting  → AI-appropriate or collaborative
+Exact numeric calculation          → code execution + review
+Fixed policy or authorization rule → deterministic logic
+Professional approval              → human-retained
+Sign, send, file, pay, or publish   → approval before controlled execution
+Skill already exists               → does not determine delegation
+Previous AI stage succeeded        → evaluate next stage independently
 ```
 
-For solution-design scenarios:
+For Delegation scenarios:
 
-1. preserve the requirement baseline;
-2. generate options before committing;
-3. define what the prototype must prove;
-4. keep scope bounded;
-5. gather observable feedback;
-6. distinguish defects from preferences;
-7. refine through controlled changes;
-8. rerun affected and preserved tests;
-9. retain human authority over requirements and acceptance; and
-10. distinguish prototype success from deployment approval.
+1. map the actual work;
+2. identify atomic stages and side effects;
+3. assess reversibility, stakes, and accountability;
+4. separate preparation from authority;
+5. route exact rules and calculations to deterministic execution;
+6. make collaborative review real and staffed;
+7. expose irreversible actions;
+8. retain human accountability for consequential decisions;
+9. check for halo delegation and over-delegation; and
+10. choose the least autonomous design that achieves the outcome.
 
 ---
 
@@ -347,16 +393,16 @@ For solution-design scenarios:
 - [x] I completed Analyzing Requirements and Use Cases.
 - [x] I completed Research, Planning, and Process Optimization.
 - [x] I completed Solution Design, Development, and Iteration.
+- [x] I completed Delegation Mapping.
 - [ ] I can distinguish personal use from workflow integration.
 - [ ] I can build and pressure-test a traceable requirement register.
 - [ ] I can separate research, computation, synthesis, and human judgment.
-- [ ] I can define a reproducible planning analysis.
-- [ ] I can create a stable design context.
-- [ ] I can define a bounded prototype hypothesis and acceptance criteria.
-- [ ] I can classify feedback and prioritize release-blocking issues.
-- [ ] I can write controlled change requests with regression tests.
-- [ ] I can distinguish prototype acceptance from production approval.
-- [ ] I can apply Delegation criteria to workflow stages.
+- [ ] I can define a bounded prototype and controlled iteration loop.
+- [ ] I can classify every workflow step by reversibility, stakes, and accountability.
+- [ ] I can distinguish AI, code-executed, collaborative, human, deterministic, tool, and storage responsibilities.
+- [ ] I can detect halo delegation and ceremonial review.
+- [ ] I can place human approval before irreversible action.
+- [ ] I can assign Skills and tools only after the work is mapped.
 - [ ] I can communicate value and limitations without overclaiming.
 - [ ] I completed the workflow-redesign exercise.
 - [ ] I completed the Module 4 quiz and takeaways.
@@ -366,14 +412,14 @@ For solution-design scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential requirements, datasets, prototypes, internal systems, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential contracts, employment records, compensation data, requirements, prototypes, internal systems, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute product, software, architecture, security, accessibility, legal, compliance, or operational advice.
+This repository is an unofficial educational resource. It does not constitute legal, employment, compensation, architecture, security, compliance, or operational advice.
 
 ## Official reading
 
-- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)
-- [How can I create and manage projects?](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects)
-- [Publish and share artifacts](https://support.claude.com/en/articles/9547008-publish-and-share-artifacts)
+- [What are Skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
+- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
+- [Tool use with Claude](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)
