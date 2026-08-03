@@ -86,6 +86,7 @@ These templates are study aids and starting points, not universal production pro
 ### Module 6: Governance, Risk & Responsible Use
 
 1. [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
+2. [Appropriate vs Inappropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -94,16 +95,20 @@ Additional notebooks will be added as later course-aligned sections are complete
 Before using a template:
 
 - distinguish technical capability from appropriateness and approval;
-- identify the proposed use, users, affected parties, stakes, reversibility, and accountable owner;
-- apply Delegation criteria to decide what Claude may prepare, what remains human-controlled, and what should not be delegated;
-- apply Diligence through ownership, evidence, current policy, documented approval, monitoring, and escalation;
+- define the bounded use case, intended outcome, users, affected parties, and accountable owner;
+- assess reversibility, consequence of error, need for human creativity or empathy, and accountability;
+- identify the load-bearing criterion that controls the classification;
+- classify the use as fully appropriate, appropriate with human review, or inappropriate;
+- treat the who / what / when gate or retained human role as part of the classification;
+- reject vague human-in-the-loop language and require expertise, evidence, timing, intervention rights, escalation, and approval records;
+- distinguish AI assistance from AI ownership and preserve non-transferable accountability;
+- apply Diligence through current policy, evidence, data classification, feature vetting, documented approval, monitoring, and escalation;
 - classify data before selecting an environment, feature, connector, or persistence mechanism;
 - apply minimization, least privilege, retention, deletion, and disclosure controls;
 - vet Skills, connectors, tools, code execution, Memory, and other features by provenance, access, execution, persistence, and side effects;
 - distinguish feature availability from feature approval and trust for the current use case;
 - locate and apply organizational policy rather than assuming permission;
 - pause, narrow, or seek authorized clarification when policy or authority is unclear;
-- keep human oversight meaningful through expertise, evidence, time, criteria, intervention rights, and escalation;
 - assess fairness, bias, consent, transparency, accessibility, power imbalance, recourse, labor effects, and misuse potential;
 - threat-model prompt injection, exfiltration, overbroad permissions, malicious dependencies, and unauthorized action;
 - pair natural-language guidance with technical controls, approval gates, logging, monitoring, and incident response;
@@ -115,4 +120,4 @@ A prompt, policy statement, or human-in-the-loop label cannot by itself enforce 
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential governance reviews, internal policies, restricted data, private incident reports, credentials, connector identifiers, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential governance reviews, internal policies, restricted data, private incident reports, personnel or applicant records, credentials, connector identifiers, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
