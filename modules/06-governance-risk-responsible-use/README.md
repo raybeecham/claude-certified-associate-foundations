@@ -6,7 +6,7 @@ Associate Persona · Official Exam Domain 6
 
 ## Module thesis
 
-> Governance is a practitioner skill: decide whether a use case should proceed, whether its features and data are trustworthy for the task, who remains accountable, and how policy, ethics, monitoring, and escalation govern the work.
+> Governance is a practitioner skill: classify the use case, feature, data, policy, and ethical impact before deployment; retain accountable human authority; and monitor the decision over time.
 
 ```text
 Proposed use case
@@ -15,7 +15,9 @@ Appropriateness classification
       ↓
 Skill and feature trust review
       ↓
-Data, policy, and ethical review
+Data classification and feature controls
+      ↓
+Policy and ethical review
       ↓
 Human approval, monitoring, and escalation
       ↓
@@ -29,7 +31,7 @@ Approve / constrain / redesign / defer / reject
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
 - [x] [03. Skill Trust & Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
-- [ ] 04. Data Sensitivity, Privacy & Feature Controls
+- [x] [04. Data Sensitivity, Privacy & Feature Controls](lessons/04-data-sensitivity-privacy-feature-controls.md)
 - [ ] 05. Organizational Policies & Diligence
 - [ ] 06. Ethical Implications
 - [ ] 07. Module 6 Quiz
@@ -65,7 +67,7 @@ Screen every use case against four Delegation criteria:
 
 | Criterion | Core question |
 |---|---|
-| Reversibility | Can a wrong output be caught and undone before harm? |
+| Reversibility | Can an incorrect output be detected and undone before harm? |
 | Consequence of error | What is the cost if the output is wrong? |
 | Human creativity or empathy | Does judgment, care, authenticity, or relationship ownership need to remain human? |
 | Accountability | Who is answerable, and can that person meaningfully review and intervene? |
@@ -90,29 +92,7 @@ Run all four criteria, then name the one that controls the classification—the 
 | Appropriate with human review | AI assistance is useful, but a qualified pre-use gate is required |
 | Inappropriate | AI ownership cannot be made responsible because of irreversibility, severe consequence, non-transferable accountability, essential human care, or policy constraints |
 
-```text
-Technically possible
-      ≠
-Appropriate
-      ≠
-Approved
-```
-
-## The gate is part of the classification
-
-A human-review gate must state:
-
-- **Who** reviews;
-- **What** they verify; and
-- **When** review occurs before use or consequence.
-
-It also needs evidence, time, intervention authority, escalation, and retained approval evidence.
-
-```text
-Human in the loop
-      ≠
-Operational human gate
-```
+A human-review gate must state **who** reviews, **what** they verify, and **when** review occurs before use or consequence.
 
 ---
 
@@ -128,57 +108,17 @@ Session permissions
 Effective reach
 ```
 
-## The three trust checks
+Review three dimensions:
 
-### Source
-
-Establish:
-
-- publisher;
-- owner;
-- distribution path;
-- current version;
-- approval evidence;
-- update and support path; and
-- bundle integrity or provenance.
+1. **Source** — publisher, owner, version, distribution, approval, and support.
+2. **Reach** — files, connectors, tools, code, secrets, persistence, and external actions available in the actual session.
+3. **Appropriateness** — whether the capability and access are proportionate to the approved task.
 
 ```text
 Internal
       ≠
 Vetted
 ```
-
-Anthropic-provided and organization-reviewed Skills are lower-risk starting points for their documented purpose, not universal guarantees.
-
-### Reach
-
-Map what the Skill could access or change in the real session:
-
-- files and directories;
-- Project knowledge;
-- connectors;
-- code execution;
-- tools and external systems;
-- secrets exposed to the runtime;
-- read, write, create, send, publish, modify, and delete actions;
-- logs and retained outputs; and
-- sensitive or regulated data.
-
-Inspect the actual bundle:
-
-- instructions;
-- scripts;
-- dependencies;
-- bundled files;
-- tool references;
-- external calls;
-- file paths;
-- retention behavior; and
-- actions beyond the stated purpose.
-
-### Appropriateness
-
-Ask whether the Skill is the smallest capability that meets the approved task.
 
 ```text
 Useful capability
@@ -188,105 +128,153 @@ Necessary capability
 Proportionate capability
 ```
 
-Apply least privilege: reduce files, connectors, write permissions, external actions, persistence, and audience to the minimum required.
+Choose **Enable**, **Escalate**, or **Decline** under the correct authority.
 
-## Trust is contextual
+---
+
+# Foundation 4: Data sensitivity, privacy, and feature controls
+
+Classify data before it enters a chat, Project, file upload, connector, Memory, Skill, or code-execution workflow.
 
 ```text
-Same Skill
-+ different data
-+ different connectors
-+ different permissions
-=
-different risk decision
+Classify data
+      ↓
+Confirm approved processing environment
+      ↓
+Minimize or redact when valid
+      ↓
+Choose feature and persistence controls
+      ↓
+Review, delete, monitor, or escalate
 ```
 
-Trust belongs to the Skill–environment–use-case combination, not the Skill name alone.
+## Rapid three-tier screen
 
-## Three outcomes
-
-| Outcome | Use when |
-|---|---|
-| Enable | Source, reach, appropriateness, policy, tests, monitoring, and disable paths are clear |
-| Escalate | The Skill may be useful, but broader authority or specialist review is required |
-| Decline | Source is unverifiable, access is disproportionate, policy conflicts exist, or review cannot make the use responsible |
+| Tier | Typical data | Default action |
+|---|---|---|
+| Green | Public, synthetic, anonymized, aggregated, or broadly cleared | Proceed under normal controls |
+| Yellow | Internal, confidential, identifiable, unreleased, or uncertain | Review policy and environment first |
+| Red | Regulated, secret, legally restricted, or unapproved third-party data | Keep out until an approved path exists |
 
 ```text
-Trust check failed
+Uncertain classification
+      ↓
+Use the more sensitive tier
+      ↓
+Seek authorized clarification
+```
+
+## Minimum necessary data
+
+Before applying a feature control, determine whether the task needs each field.
+
+Possible actions include:
+
+- remove unused columns;
+- aggregate records;
+- pseudonymize identities;
+- replace real data with synthetic examples;
+- omit secrets entirely; and
+- separate confidential context from analytical inputs.
+
+```text
+Available data
       ≠
-Always permanent ban
+Necessary data
 ```
 
-It means the current user should not enable the capability under the current authority and conditions.
+## Redaction boundaries
 
----
-
-# Worked Skill portfolio
-
-| Skill | Source | Reach | Appropriateness | Outcome |
-|---|---|---|---|---|
-| Anthropic-provided document formatter | Established | Task-matched document handling | Fits approved non-sensitive document task | Enable with normal controls |
-| Unknown analytics booster | Unknown publisher | Scripts, broad files, unrelated connectors | Disproportionate to stated task | Escalate or decline |
-| Internal status-report Skill | Known sister team, no current review | Shared repository access and stale policy template | Useful method, excessive current reach | Escalate and request narrower reviewed version |
-
----
-
-# Feature-level risk generalization
-
-Apply the same proportionality habit to connectors, code execution, tools, integrations, Memory, and external actions.
+Redaction is valid only when it reduces identification risk **and** preserves the task’s validity.
 
 ```text
-Who provides it?
-What can it access, execute, persist, or change?
-Is that reach proportionate to the approved task?
-```
-
-```text
-Feature enabled
+Name removed
       ≠
-Feature governed
+Person de-identified
 ```
 
-For consequential capabilities, define monitoring, human approval, logging, revocation, rollback, and incident response.
+Review account identifiers, exact dates, rare job titles, precise locations, small groups, free text, and distinctive field combinations.
+
+If identifiers are essential, use an approved environment or stop. Do not use superficial redaction to force sensitive data into an unapproved path.
+
+## Code execution
+
+Claude’s code-execution environment is sandboxed, but sandboxing does not establish that a data class may be processed there.
+
+```text
+Sandboxed
+      ≠
+Approved for every data class
+```
+
+Minimize uploaded files, remove secrets, review generated artifacts, and follow current network, retention, and deletion controls.
+
+## Memory
+
+Memory provides continuity but should not become an unreviewed archive or authoritative system of record.
+
+```text
+Useful to remember
+      ≠
+Appropriate to persist
+```
+
+Review sensitivity, staleness, export, retention, editing, deletion, and organizational controls.
+
+## Incognito
+
+Current Claude guidance describes Incognito chats as excluded from ordinary chat history and Memory. For Team and Enterprise accounts, organizational retention and export rules still apply.
+
+```text
+Not in history or Memory
+      ≠
+Not retained by the organization
+      ≠
+Permission to process Red data
+```
+
+Incognito is a persistence control. It is not a compliance approval or an approved entry point for regulated data.
+
+## Processing and persistence are separate decisions
+
+```text
+Question 1:
+May this data be processed here?
+
+Question 2:
+If yes, how may it be remembered, retained, exported, or deleted?
+```
+
+Answer Question 1 first.
 
 ---
 
-# Skill trust register
+# Worked data decisions
 
-| Field | Purpose |
-|---|---|
-| Skill ID and version | Stable identification |
-| Publisher and owner | Provenance and accountability |
-| Distribution path | Anthropic, organization, shared, personal, third-party |
-| Stated purpose | Intended task |
-| Bundle contents | Instructions, scripts, files, dependencies |
-| Runtime requirements | Code execution, files, connectors, tools, network |
-| Effective reach | Data and actions exposed during use |
-| Data classification | Information processed |
-| External actions | Create, update, send, publish, delete |
-| Review status | Approved, conditional, pending, rejected |
-| Tests | Functional, security, boundary, regression |
-| Limitations | Residual risk |
-| Disable or rollback | Containment path |
-| Review date | Revalidation schedule |
+| Scenario | Classification | Decision |
+|---|---|---|
+| Anonymized survey trends | Green | Use code execution for verified counts; check small-group re-identification |
+| Confidential acquisition draft | Yellow | Confirm policy and approved account; minimize details; use Incognito only if processing is allowed |
+| Customer spreadsheet with PII | Yellow or Red | Redact and test indirect identifiers, or use an approved path; otherwise stop |
+| Patient records | Red without confirmed compliant path | Do not upload; escalate to the authorized administrator or privacy function |
 
 ---
 
 # Integrated governance protocol
 
 ```text
-1. Define the bounded use case, users, and affected parties
+1. Define the bounded use case, users, affected parties, and owner
 2. Run reversibility, consequence, human-element, and accountability criteria
-3. Identify the load-bearing criterion and classification
-4. Define the who / what / when gate or retained human role
-5. Identify the Skill or feature, publisher, owner, and version
-6. Inspect instructions, scripts, dependencies, files, and external calls
-7. Map effective reach across the real environment
-8. Compare access with task necessity, data sensitivity, and policy
-9. Apply least privilege and preserve approval boundaries
-10. Run functional, security, boundary, and regression tests
-11. Record monitoring, residual risk, disable, and re-review triggers
-12. Enable, escalate, decline, constrain, redesign, defer, or reject
+3. Identify the load-bearing criterion and human gate
+4. Establish Skill or feature source, contents, reach, and proportionality
+5. Define the task’s minimum required data
+6. Classify data under current organizational policy
+7. Confirm the approved account, product, entry point, and retention environment
+8. Minimize, redact, aggregate, pseudonymize, or synthesize where valid
+9. Select execution, Memory, history, sharing, export, and deletion controls
+10. Test re-identification risk and task validity
+11. Record approval, monitoring, revocation, incident, and escalation paths
+12. Approve, constrain, redesign, defer, decline, or reject
 ```
 
 ---
@@ -298,17 +286,20 @@ For consequential capabilities, define monitoring, human approval, logging, revo
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
 - [Skill Trust and Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
+- [Data Sensitivity, Privacy & Feature Controls](lessons/04-data-sensitivity-privacy-feature-controls.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-06/01-module-introduction-prompts.md)
 - [Appropriate vs Inappropriate Use Cases prompts](../../prompts/module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
 - [Skill Trust and Feature-Level Risk prompts](../../prompts/module-06/03-skill-trust-feature-risk-prompts.md)
+- [Data Sensitivity, Privacy & Feature Controls prompts](../../prompts/module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
 
 ## Engineering patterns
 
 - [Use-Case Appropriateness Classification Pattern](../../patterns/use-case-appropriateness-classification-pattern.md)
 - [Skill Trust and Feature-Risk Pattern](../../patterns/skill-trust-and-feature-risk-pattern.md)
+- [Data Classification and Feature-Control Pattern](../../patterns/data-classification-and-feature-control-pattern.md)
 
 ## Existing extended practice
 
@@ -322,28 +313,29 @@ For consequential capabilities, define monitoring, human approval, logging, revo
 # Exam lens
 
 ```text
-Unknown publisher with broad reach        → escalate or decline
-Internal Skill without review evidence    → internal is not automatically vetted
-Skill description narrower than contents  → inspect and treat as a red flag
-Skill inherits broad session environment  → reduce effective reach
-Capability exceeds task need              → choose narrower capability
-User lacks approval authority             → escalate
-Source, reach, and appropriateness clear   → enable with monitoring
-Useful output                              → does not prove safe behavior
+Public or approved anonymized data       → usually Green
+Confidential internal material           → Yellow; review first
+Regulated data, credentials, or secrets  → Red without approved path
+Incognito                                → history and Memory control, not permission
+Sandbox                                  → execution isolation, not authorization
+Name removed but unique details remain   → incomplete redaction
+Sensitive identifiers unnecessary        → minimize or redact
+Sensitive identifiers required           → approved environment or stop
+Unsure between tiers                     → use the more sensitive tier
 ```
 
-For Skill and feature-risk scenarios:
+For data-sensitivity scenarios:
 
-1. identify the exact feature and version;
-2. establish publisher and owner;
-3. inspect the bundle rather than relying on the name;
-4. enumerate effective reach;
-5. compare access with the approved task;
-6. apply least privilege;
-7. classify data and external actions;
-8. confirm approval authority;
-9. define tests, monitoring, and disable paths; and
-10. choose enable, escalate, or decline.
+1. classify before upload;
+2. identify the minimum necessary data;
+3. map the rapid tier to current policy;
+4. separate processing approval from persistence controls;
+5. identify direct and indirect identifiers;
+6. test whether redaction preserves task validity;
+7. use Incognito only inside an approved processing boundary;
+8. understand sandbox and Memory limits;
+9. verify current organization settings rather than relying on plan assumptions; and
+10. escalate when no approved path is established.
 
 ---
 
@@ -352,16 +344,18 @@ For Skill and feature-risk scenarios:
 - [x] I completed the Module 6 introduction.
 - [x] I completed Appropriate vs Inappropriate Use Cases.
 - [x] I completed Skill Trust and Feature-Level Risk.
+- [x] I completed Data Sensitivity, Privacy & Feature Controls.
 - [ ] I can assess reversibility, consequence, human element, and accountability.
 - [ ] I can identify the load-bearing criterion and define an operational gate.
-- [ ] I can distinguish source trust, effective reach, and appropriateness.
-- [ ] I can inspect Skill instructions, scripts, dependencies, and bundled files.
-- [ ] I can apply least privilege to Skills and other features.
-- [ ] I can choose enable, escalate, or decline under the correct authority.
-- [ ] I can classify data and apply privacy controls.
+- [ ] I can distinguish source trust, effective reach, and feature appropriateness.
+- [ ] I can classify data as Green, Yellow, or Red and map it to current policy.
+- [ ] I can identify minimum necessary data and valid minimization options.
+- [ ] I can distinguish direct identifiers from indirect re-identification risk.
+- [ ] I can explain why Incognito and sandboxing do not authorize regulated data.
+- [ ] I can separate processing approval from Memory, history, retention, and export controls.
 - [ ] I can locate and apply organizational policy.
 - [ ] I can identify ethical implications beyond compliance.
-- [ ] I can define meaningful human oversight and incident response.
+- [ ] I can define meaningful oversight and incident response.
 - [ ] I completed the Module 6 quiz and takeaways.
 - [ ] I completed the threat-model lab and scored at least 80% on the extended quiz.
 
@@ -369,12 +363,12 @@ For Skill and feature-risk scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential Skill bundles, proprietary scripts, internal security findings, restricted data, private connector identifiers, credentials, organization-only review records, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include regulated records, credentials, secrets, confidential transactions, private personnel or customer data, internal privacy findings, organization-only retention details, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute security, privacy, legal, compliance, procurement, software-assurance, or operational advice.
+This repository is an unofficial educational resource. It does not constitute privacy, legal, regulatory, security, compliance, medical, financial, records-management, or operational advice.
 
-## Source note
+## Product-verification note
 
-The Skill Trust and Feature-Level Risk course material was supplied on August 3, 2026. Product behavior and organizational controls can change. Current official documentation and organizational policy govern real deployments.
+The data-control material was reviewed against official Anthropic Help Center content available on August 3, 2026. Current guidance describes code execution as sandboxed and Incognito as excluded from ordinary history and Memory, while organizational retention and exports can still apply. Product behavior, plans, organizational settings, contracts, and policy can change; current official documentation and authorized organizational guidance control real decisions.
