@@ -22,9 +22,7 @@ Representative validation
 Durable promotion and monitoring
 ```
 
----
-
-# Course-aligned roadmap
+## Course-aligned roadmap
 
 - [x] [01. Diagnosing Underperforming Prompts & Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
 - [x] [02. Adjusting Approach from Feedback](lessons/02-adjusting-approach-from-feedback.md)
@@ -34,19 +32,7 @@ Durable promotion and monitoring
   - [ ] Key Takeaways
 - [ ] 05. Module Complete
 
-No later section is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
-
----
-
-# Foundation 1: diagnose before editing
-
-Weak output has multiple possible causes.
-
-```text
-Output is weak
-      ≠
-Prompt is automatically the cause
-```
+## Diagnostic foundation
 
 | Symptom pattern | Likely cause | First repair |
 |---|---|---|
@@ -55,20 +41,6 @@ Prompt is automatically the cause
 | Specific repeatable error | Wrong feature or model | Select the correct capability |
 | Used to work, now performs poorly | Stale configuration | Review maintained dependencies |
 | Unavailable after cheaper causes are ruled out | Expectation mismatch | Reshape the task |
-
-Timing is evidence, not proof. Confirm the diagnosis through a controlled test.
-
-## Cheapest-fix-first sequence
-
-```text
-1. Prompt specification
-2. Conversation context
-3. Feature and model fit
-4. Maintained configuration
-5. Task fit and expectation
-```
-
-## Controlled diagnosis
 
 ```text
 One hypothesis
@@ -80,13 +52,7 @@ One controlled comparison
 Keep / revise / revert
 ```
 
-A repair should pass the original failing case, representative cases, edge cases, and governance checks.
-
----
-
-# Foundation 2: adjust from feedback
-
-A disappointing output is diagnostic data about the setup that produced it.
+## Feedback-adjustment foundation
 
 ```text
 Output critique
@@ -102,33 +68,13 @@ Testable adjustment
 Validation and promotion
 ```
 
-## Reaction versus instruction
-
-A reaction describes how an output feels:
-
-- too generic;
-- wrong tone;
-- missed the point;
-- too long;
-- incomplete.
-
-An instruction defines what must change:
-
-- name the audience and required action;
-- add a tone rule and example;
-- state the single question first;
-- impose section or length limits;
-- require the missing field.
+A reaction describes how an output feels. An instruction defines what must change.
 
 ```text
 Reaction
       ≠
 Instruction
 ```
-
-If the controlling lever cannot be named, the next attempt remains a guess.
-
-## Feedback translation table
 
 | Reaction | Specific adjustment | Lever |
 |---|---|---|
@@ -138,7 +84,7 @@ If the controlling lever cannot be named, the next attempt remains a guess.
 | Same field missing repeatedly | Add it to the maintained template or Skill | Configuration |
 | Test records included | Add deterministic exclusion and verification | Code, query, or workflow control |
 
-## Choose the correct lever
+## Correct placement
 
 | Cause | Correct home |
 |---|---|
@@ -160,8 +106,6 @@ fragile repair
 
 ## Promotion test
 
-Ask:
-
 ```text
 Will this same correction be needed again
 by me, another person, or another cycle?
@@ -170,50 +114,27 @@ by me, another person, or another cycle?
 - **No:** keep the change local.
 - **Yes:** validate it, then promote it to the narrowest durable layer.
 
-Before promotion, confirm scope, ownership, approval, representative tests, conflicts, rollback, and review triggers.
+Memory can support personal continuity, but shared recurring corrections belong in deliberate configuration that can be reviewed, versioned, tested, shared, and maintained.
 
-## Memory versus deliberate configuration
+## Worked examples
 
-Memory can support personal continuity, but recurring shared corrections belong in deliberate configuration that can be reviewed, shared, versioned, tested, and maintained.
-
-Current Claude guidance describes:
-
-- Project instructions as guidance applied across chats in a Project;
-- Project knowledge as reusable context across Project chats;
-- Skills as task-specific repeatable workflows using instructions, scripts, and resources; and
-- organization instructions, where available, as standards applied across an organization.
-
-```text
-May be remembered personally
-      ≠
-Authoritative shared control
-```
-
----
-
-# Worked feedback examples
-
-## Campaign briefs
+### Campaign briefs
 
 Recurring defects:
 
 - target segment omitted;
 - call to action buried.
 
-Validated standing instructions:
+Validated Project instructions:
 
 ```text
 Always state the target segment in the first line.
 Place the call to action in a separate closing section.
 ```
 
-Because these are recurring Project-specific behavior rules, they belong in Project instructions after representative testing.
+### Monthly test-account exclusion
 
-## Monthly report test accounts
-
-A repeated conversational reminder to exclude internal test accounts is insufficient.
-
-The durable repair is:
+A recurring conversational reminder is insufficient.
 
 ```text
 Authoritative exclusion rule
@@ -222,11 +143,9 @@ Authoritative exclusion rule
 + shared documentation
 ```
 
-Exact business logic belongs in code or query configuration, not only in natural-language prompting.
+Exact business logic belongs in code or query configuration, not only in prompting.
 
----
-
-# Feedback-adjustment protocol
+## Feedback-adjustment protocol
 
 ```text
 1. Capture the output and critique
@@ -239,39 +158,35 @@ Exact business logic belongs in code or query configuration, not only in natural
 8. Test representative and edge cases
 9. Check quality, cost, latency, and governance
 10. Keep, revise, or revert
-11. Decide whether the fix should remain local or be promoted
+11. Decide whether the fix remains local or is promoted
 12. Version, approve, monitor, and review durable changes
 ```
 
----
+## Current module resources
 
-# Current module resources
-
-## Course-aligned lessons
+### Lessons
 
 - [Diagnosing Underperforming Prompts and Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
 - [Adjusting Approach from Feedback and Results](lessons/02-adjusting-approach-from-feedback.md)
 
-## Prompt notebooks
+### Prompt notebooks
 
 - [Diagnosing Underperformance prompts](../../prompts/module-07/01-diagnosing-underperformance-prompts.md)
 - [Adjusting Approach from Feedback prompts](../../prompts/module-07/02-adjusting-approach-from-feedback-prompts.md)
 
-## Engineering patterns
+### Engineering patterns
 
 - [Failure Localization Pattern](../../patterns/failure-localization-pattern.md)
 - [Feedback-to-Configuration Promotion Pattern](../../patterns/feedback-to-configuration-promotion-pattern.md)
 
-## Existing extended practice
+### Extended practice
 
 - [notes.md](notes.md)
 - [lab.md](lab.md)
 - [flashcards.md](flashcards.md)
 - [quiz.md](quiz.md)
 
----
-
-# Exam lens
+## Exam lens
 
 ```text
 Wrong on first response                 → inspect specification
@@ -288,26 +203,22 @@ One improved example                    → run regression tests
 Memory may retain a pattern              → deliberate configuration is the shared home
 ```
 
----
-
-# Completion criteria
+## Completion criteria
 
 - [x] I completed Diagnosing Underperforming Prompts & Outputs.
 - [x] I completed Adjusting Approach from Feedback.
 - [ ] I completed Optimizing Workflows.
-- [ ] I can classify under-specification, context overload, wrong feature or model, stale configuration, and expectation mismatch.
+- [ ] I can classify the five common underperformance causes.
 - [ ] I can convert a vague reaction into an observable defect and testable instruction.
 - [ ] I can identify the lever that controls a recurring defect.
-- [ ] I can distinguish local prompt edits from Project instructions, knowledge, Skills, deterministic controls, and human gates.
-- [ ] I can validate one bounded adjustment against representative cases.
+- [ ] I can distinguish prompt edits, instructions, knowledge, Skills, deterministic controls, and human gates.
+- [ ] I can validate a bounded adjustment against representative cases.
 - [ ] I can decide when a correction should be promoted into configuration.
 - [ ] I can preserve governance while troubleshooting and promoting fixes.
 - [ ] I completed the Module 7 quiz and Key Takeaways.
 - [ ] I completed the troubleshooting lab and scored at least 80% on the extended quiz.
 
----
-
-# Public-repository scenario policy
+## Public-repository scenario policy
 
 Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include client data, private prompts or outputs, confidential incidents, proprietary logs, credentials, internal configuration, nonpublic performance results, remembered live-exam questions, or reconstructed proprietary course content.
 
