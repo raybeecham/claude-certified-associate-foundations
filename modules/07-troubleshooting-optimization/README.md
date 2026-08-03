@@ -2,31 +2,31 @@
 
 Associate Persona · Official Exam Domain 7
 
-> **Status:** Roadmap staged — Module 6 is complete. No Module 7 section is marked complete yet.
+> **Status:** In progress — Module 7 is the active module.
 
 ## Module thesis
 
-> Troubleshooting is disciplined diagnosis: observe the failure, localize the responsible stage, change the smallest relevant variable, and verify that the repair improves the target behavior without weakening governance or causing regressions.
+> Troubleshooting is disciplined diagnosis: observe the failure, read its timing and pattern, localize the responsible layer, change the smallest relevant variable, and verify that the repair improves behavior without weakening governance or causing regressions.
 
 ```text
 Observed underperformance
       ↓
-Evidence and reproduction
+Evidence and symptom timing
       ↓
-Failure classification and localization
+Failure classification
       ↓
-Targeted adjustment
+Cheapest relevant test
+      ↓
+Bounded repair
       ↓
 Representative validation
-      ↓
-Workflow optimization and monitoring
 ```
 
 ---
 
 # Course-aligned roadmap
 
-- [ ] 01. Diagnosing Underperforming Prompts & Outputs
+- [x] [01. Diagnosing Underperforming Prompts & Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
 - [ ] 02. Adjusting Approach from Feedback
 - [ ] 03. Optimizing Workflows
 - [ ] 04. Module 7 Quiz
@@ -34,7 +34,7 @@ Workflow optimization and monitoring
   - [ ] Key Takeaways
 - [ ] 05. Module Complete
 
-No section is marked complete until its corresponding preparation-course material is supplied and converted into original public-safe study content.
+No later section is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
 
 ---
 
@@ -42,7 +42,7 @@ No section is marked complete until its corresponding preparation-course materia
 
 Module 6 established whether a use case should proceed and under what data, feature, policy, ethical, and accountability boundaries.
 
-Module 7 begins after an approved workflow underperforms.
+Module 7 begins when an approved workflow underperforms.
 
 ```text
 Governed workflow
@@ -56,31 +56,13 @@ Apply the narrowest responsible repair
 Verify quality, safety, and operational impact
 ```
 
-The transition question is:
-
-> The workflow is approved and governed—but why is it underperforming, where is the failure located, and what is the smallest repair that survives validation?
-
-Governance remains active during troubleshooting. Performance improvements must not weaken data controls, permissions, human-review gates, fairness, disclosure, recourse, or accountability.
+Governance remains active. Performance improvements must not weaken data controls, permissions, human-review gates, fairness, disclosure, recourse, or accountability.
 
 ---
 
-# Durable troubleshooting foundation
+# Lesson 1 foundation: diagnose before optimizing
 
-The repository already contains extended troubleshooting material. It will be mapped to the supplied course sections as they arrive.
-
-## 1. Diagnose before editing
-
-Uncontrolled prompt tweaking produces fragile systems.
-
-Start with:
-
-- the expected behavior;
-- the observed behavior;
-- a reproducible example;
-- the relevant inputs and configuration;
-- a known-good baseline where available;
-- the stage at which the failure first appears; and
-- evidence that distinguishes competing explanations.
+Weak output has multiple possible causes.
 
 ```text
 Output is weak
@@ -88,204 +70,284 @@ Output is weak
 Prompt is automatically the cause
 ```
 
-Potential failure layers include:
+The first lesson uses five diagnostic categories.
 
-- task definition;
-- source quality or context;
-- prompt structure;
-- model fit;
-- tool selection;
-- tool parameters or schema;
-- connector access;
-- code execution;
-- truncation or stop behavior;
-- workflow sequencing;
-- human-review design;
-- evaluation criteria;
-- latency or reliability constraints; and
-- stale configuration.
+## 1. Under-specification
 
-## 2. Reproduce and establish a baseline
+**Timing:** Wrong from the first response.
 
-A useful diagnostic case should be small enough to inspect but representative enough to preserve the failure.
+The prompt omitted required context, objective, constraints, evidence boundaries, format, examples, audience, or success criteria.
 
 ```text
-Large failing workflow
-      ↓
-Minimal reproducible case
-      ↓
-Known-good or expected baseline
-      ↓
-Controlled comparison
+First response wrong
+      →
+Check specification first
 ```
 
-Without a baseline, changes may feel better while remaining unmeasured.
+**First repair:** Add only the missing task-contract elements.
 
-## 3. Form one hypothesis
+## 2. Context overload
 
-State one explanation that can be tested.
+**Timing:** The session began well and degraded over time.
 
-Examples:
+The conversation may contain excessive, irrelevant, conflicting, or compressed earlier context. Current Claude guidance states that, when code execution is enabled, automatic context management can summarize earlier messages as a long conversation approaches its context limit.
 
-- the prompt omits a required constraint;
-- the source context is incomplete;
-- a tool schema encourages the wrong argument;
-- the model is selecting an inappropriate tool;
-- the output is truncated;
-- a review step is placed too late;
-- the workflow repeats expensive work;
-- an optimization reduced accuracy; or
-- feedback reveals a requirement that was never captured.
+```text
+Started right
++ degraded later
+      →
+Inspect context before rewriting prompt
+```
 
-## 4. Change one variable at a time
+**First repair:** Restart from a verified summary, remove irrelevant material, and move recurring rules into the correct persistent layer.
+
+## 3. Wrong feature or model
+
+**Pattern:** A specific failure repeats.
+
+Examples include subtle arithmetic errors, missing source access, malformed structured output, shallow analysis, or use of an entry point that lacks the required capability.
+
+```text
+Specific repeatable error
+      →
+Check feature and model fit
+```
+
+**First repair:** Use the smallest capability that directly addresses the limitation, such as code execution for deterministic calculations.
+
+## 4. Stale configuration
+
+**Timing:** The workflow used to work but now performs poorly.
+
+Potential drift includes:
+
+- Project instructions;
+- knowledge and source versions;
+- Skills and dependencies;
+- connector scope;
+- Memory;
+- schemas and templates;
+- policy references; and
+- human-review processes.
+
+```text
+Used to work
+      →
+Inspect configuration before rewriting prompt
+```
+
+**First repair:** Run the Module 5 maintenance lifecycle and regression tests.
+
+## 5. Expectation mismatch
+
+**Pattern:** The requested result remains unavailable after cheaper causes are ruled out.
+
+Examples include exact future predictions, certainty beyond evidence, unavailable source information, unsupported external actions, or final judgments that require non-transferable human authority.
+
+```text
+Unavailable requested outcome
+      →
+Reshape the task
+```
+
+**First repair:** Convert the request into a bounded analysis, scenario range, evidence summary, draft, checklist, or human-reviewed decision aid.
+
+---
+
+# Read symptom timing
+
+| Symptom | Primary hypothesis | First repair |
+|---|---|---|
+| Wrong from the first response | Under-specification | Add missing task-contract elements |
+| Good initially, then degrades | Context overload | Restart or summarize cleanly |
+| Specific repeatable error type | Wrong feature or model | Select the correct capability |
+| Worked before, now performs poorly | Stale configuration | Inspect and maintain dependencies |
+| Still unavailable after other causes are ruled out | Expectation mismatch | Reshape the task |
+
+Timing is evidence, not proof. Confirm the diagnosis with a controlled test.
+
+---
+
+# Cheapest-fix-first diagnostic sequence
+
+```text
+1. Prompt specification
+2. Conversation context
+3. Feature and model fit
+4. Maintained configuration
+5. Task fit and expectation
+```
+
+## Step 1: Re-read the prompt
+
+Check:
+
+- objective;
+- context and evidence;
+- constraints;
+- output format; and
+- success criteria.
+
+## Step 2: Inspect context
+
+Check:
+
+- session length and drift;
+- irrelevant or conflicting material;
+- compressed details that need restatement;
+- clean restart requirements; and
+- stable information that belongs in a Project, Skill, or instruction.
+
+## Step 3: Check feature and model fit
+
+Check whether the task requires:
+
+- code execution;
+- structured extraction;
+- connected or uploaded sources;
+- a different entry point;
+- deeper reasoning; or
+- a faster, less expensive route for a simpler stage.
+
+## Step 4: Inspect configuration
+
+Review instructions, knowledge, Skills, connectors, Memory, schemas, templates, review gates, policies, and product changes.
+
+## Step 5: Test task fit
+
+Ask whether the result is knowable, supported by available evidence, technically possible in the selected feature, and appropriate for AI assistance.
+
+The order is deliberate: cheap and common causes come first; the expensive conclusion that the task is impossible comes last.
+
+---
+
+# Minimal reproducible diagnosis
+
+Record:
+
+- expected behavior;
+- observed behavior;
+- symptom timing;
+- exact prompt;
+- minimum relevant context;
+- model and entry point;
+- enabled tools and features;
+- configuration version;
+- source version;
+- repeatability; and
+- explicit pass/fail criteria.
+
+Then test one hypothesis at a time.
 
 ```text
 One hypothesis
       ↓
 One bounded change
       ↓
-One comparison
+One controlled comparison
       ↓
 Keep / revise / revert
 ```
 
-Changing prompt, model, tools, context, and workflow together prevents attribution.
-
-## 5. Validate beyond the example
-
-A fix should be tested against:
-
-- the original failing case;
-- representative normal cases;
-- edge cases;
-- adversarial or boundary cases where appropriate;
-- quality and completeness criteria;
-- latency and cost constraints;
-- governance controls; and
-- regression risks.
-
-```text
-One example improved
-      ≠
-Workflow repaired
-```
-
-## 6. Optimize the workflow, not only the prompt
-
-Optimization may involve:
-
-- clearer task decomposition;
-- better source selection;
-- improved tool descriptions or schemas;
-- fewer unnecessary calls;
-- parallelizing independent work;
-- caching stable context;
-- moving deterministic operations to code;
-- adding checkpoints;
-- narrowing model use to stages that need it;
-- improving error handling;
-- adding fallback paths;
-- changing review placement; or
-- retiring steps that add cost without value.
-
-A model change is only one possible intervention.
+Changing prompt, model, tools, context, and configuration simultaneously destroys causal evidence.
 
 ---
 
-# Troubleshooting protocol
+# Worked failure gallery
+
+| Failure | Diagnosis | First repair |
+|---|---|---|
+| Summary misses key decisions from the first response | Under-specification | Define what counts as key |
+| Format degrades during a long conversation | Context overload | Restart from a verified summary or persist the rule |
+| Totals are subtly wrong | Wrong feature | Use code execution and deterministic validation |
+| A reliable Project now uses outdated language | Stale configuration | Review sources, instructions, Skills, and dependencies |
+| User requests next quarter’s exact sales number | Expectation mismatch | Produce ranges, assumptions, drivers, and sensitivity analysis |
+
+---
+
+# Diagnostic decision record
 
 ```text
-1. Define expected and observed behavior
-2. Capture inputs, configuration, tools, and environment
-3. Reproduce the failure with a minimal representative case
-4. Compare against a baseline or explicit success criteria
-5. Classify the likely failure layer
-6. Form one testable hypothesis
-7. Change one relevant variable
-8. Re-run the failing and control cases
-9. Measure quality, completeness, latency, cost, and safety
-10. Keep, revise, or revert the change
-11. Run representative regression tests
-12. Document the result, rollback path, and monitoring trigger
+Observed failure:
+Expected behavior:
+Symptom timing:
+Primary hypothesis:
+Alternate hypothesis:
+Evidence:
+Minimal test:
+Result:
+Selected repair:
+Regression checks:
+Governance checks:
+Rollback condition:
+Final disposition:
 ```
 
 ---
 
-# Learning objectives
+# Current module resources
 
-By the end of this module, you should be able to:
+## Course-aligned lesson
 
-- diagnose underperforming prompts and outputs without immediately rewriting everything;
-- distinguish prompt defects from context, model, tool, workflow, configuration, and evaluation defects;
-- collect the minimum evidence needed for diagnosis;
-- reproduce a problem with a minimal representative case;
-- compare behavior with an explicit baseline;
-- interpret feedback as evidence about requirements, process, or quality;
-- form and test bounded hypotheses;
-- change one variable at a time;
-- validate repairs against representative and edge cases;
-- optimize workflow quality, latency, cost, and reliability;
-- preserve governance controls during optimization;
-- document rollback, monitoring, and re-evaluation triggers; and
-- recognize when the responsible repair belongs outside the prompt.
+- [Diagnosing Underperforming Prompts and Outputs](lessons/01-diagnosing-underperforming-prompts-outputs.md)
 
----
+## Prompt notebook
 
-# Existing module resources
+- [Diagnosing Underperformance prompts](../../prompts/module-07/01-diagnosing-underperformance-prompts.md)
 
-The repository already contains extended practice material that remains available while the course-aligned sections are developed.
+## Existing engineering pattern
 
-- [notes.md](notes.md): Failure layers, diagnostic evidence, tool and workflow issues, latency, and optimization concepts
-- [lab.md](lab.md): Applied troubleshooting exercise
-- [flashcards.md](flashcards.md): Active-recall review
-- [quiz.md](quiz.md): Original extended scenario quiz
+- [Failure Localization Pattern](../../patterns/failure-localization-pattern.md)
 
-Course-aligned lessons and Module 7 prompt notebooks will be added as each supplied section is completed.
+## Existing extended practice
+
+- [notes.md](notes.md)
+- [lab.md](lab.md)
+- [flashcards.md](flashcards.md)
+- [quiz.md](quiz.md)
 
 ---
 
 # Exam lens
 
 ```text
-Weak output                              → diagnose before rewriting
-Single bad example                       → reproduce and test representative cases
-Many variables changed at once           → attribution is lost
-Tool fails despite clear prompt          → inspect schema, parameters, and access
-Output ends unexpectedly                 → inspect stop and truncation behavior
-Quality improved but latency doubled     → optimization tradeoff remains unresolved
-Feedback reveals missing requirement     → update task contract, not merely wording
-Model upgrade proposed first             → localize the failure before escalating capability
-Fix weakens review or data controls       → reject or redesign the optimization
+Wrong on first response                  → inspect specification
+Started well, then drifted               → inspect context
+Specific quantitative or schema failure  → inspect feature or tool fit
+Used to work                             → inspect configuration
+Exact unavailable outcome                → reshape the task
+Strongest model suggested first          → rule out cheaper causes
+Many variables changed together          → attribution is lost
+Performance fix weakens controls          → reject or redesign
 ```
 
-For troubleshooting scenarios:
+For diagnostic scenarios:
 
 1. define expected versus observed behavior;
-2. gather diagnostic evidence;
-3. identify the earliest failing stage;
-4. distinguish symptom from cause;
-5. state one testable hypothesis;
-6. make one bounded change;
-7. validate against a baseline;
-8. test representative and edge cases;
-9. measure tradeoffs and governance impact; and
-10. keep, revise, revert, or escalate.
+2. read symptom timing;
+3. classify the most likely cause;
+4. state the cheapest controlled test;
+5. change one variable;
+6. compare with a baseline;
+7. preserve governance;
+8. test representative cases; and
+9. keep, revise, revert, or reshape.
 
 ---
 
 # Completion criteria
 
-- [ ] I completed Diagnosing Underperforming Prompts & Outputs.
+- [x] I completed Diagnosing Underperforming Prompts & Outputs.
 - [ ] I completed Adjusting Approach from Feedback.
 - [ ] I completed Optimizing Workflows.
-- [ ] I can classify failures without immediately editing the prompt.
-- [ ] I can collect evidence and build a minimal reproducible case.
-- [ ] I can distinguish prompt, context, model, tool, workflow, and evaluation defects.
-- [ ] I can form one testable hypothesis and change one variable at a time.
-- [ ] I can use feedback to identify missing requirements or workflow defects.
-- [ ] I can validate a repair against representative and edge cases.
-- [ ] I can optimize quality, latency, cost, and reliability without weakening governance.
-- [ ] I can document rollback and monitoring.
+- [ ] I can distinguish first-response, degraded-over-time, specific-error, used-to-work, and expectation-mismatch patterns.
+- [ ] I can audit a prompt against objective, evidence, constraints, format, and success criteria.
+- [ ] I can identify when context needs a clean restart or persistent instruction.
+- [ ] I can distinguish feature and model fit from prompt quality.
+- [ ] I can inspect stale configuration when a workflow used to work.
+- [ ] I can reshape an unrealistic task rather than endlessly tune it.
+- [ ] I can create a minimal reproducible case and change one variable at a time.
+- [ ] I can validate a repair without weakening governance.
 - [ ] I completed the Module 7 quiz and Key Takeaways.
 - [ ] I completed the troubleshooting lab and scored at least 80% on the extended quiz.
 
@@ -293,16 +355,12 @@ For troubleshooting scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include client data, private production prompts, confidential incident details, proprietary logs, credentials, internal connector identifiers, nonpublic performance results, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include client data, private production prompts, confidential incidents, proprietary logs, credentials, internal connector identifiers, nonpublic performance results, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
 This repository is an unofficial educational resource. It does not constitute operational, security, reliability, legal, privacy, compliance, or production-engineering advice.
 
-## Official reading
+## Product-verification note
 
-Product behavior and technical guidance can change. Verify current official documentation before relying on implementation-specific details.
-
-- [Troubleshooting tool use](https://platform.claude.com/docs/en/agents-and-tools/tool-use/troubleshooting-tool-use)
-- [Stop reasons and fallback](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
-- [Reducing latency](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-latency)
+Product behavior changes. Current Claude Help Center guidance available on August 3, 2026 states that automatic context management can summarize earlier messages in long conversations when code execution is enabled. Current official documentation controls if product behavior differs from this module.
