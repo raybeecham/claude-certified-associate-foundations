@@ -2,11 +2,11 @@
 
 Associate Persona · Official Exam Domain 5 · **12% of the exam blueprint**
 
-> **Status:** In progress — teaching and quiz are complete. Takeaways and Module Complete remain open. Module 4's final completion checkpoint remains open.
+> **Status:** In progress — teaching, quiz, and takeaways are complete. Module Complete remains open. Module 4's final completion checkpoint also remains open.
 
 ## Module thesis
 
-> Set up the right context, instructions, procedures, continuity, and access once; benefit across repeated conversations; then maintain the configuration so it remains accurate, authorized, scoped, testable, and owned.
+> Configure recurring behavior, knowledge, procedures, continuity, and access once; benefit across repeated conversations; then maintain the environment so it remains accurate, authorized, scoped, testable, and owned.
 
 ```text
 Using Claude
@@ -33,9 +33,9 @@ Configured baseline
 - [x] [03. Connectors & Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
 - [x] [04. System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 - [x] [05. Maintaining Configurations](lessons/05-maintaining-configurations.md)
-- [ ] 06. Module 5 Quiz
+- [x] 06. Module 5 Quiz
   - [x] [Quiz — Full marks, 5/5](lessons/06a-module-5-quiz.md)
-  - [ ] Takeaways
+  - [x] [Key Takeaways](lessons/06b-key-takeaways.md)
 - [ ] 07. Module Complete
 
 ---
@@ -45,15 +45,31 @@ Configured baseline
 ```text
 Module 5 teaching sections: Complete
 Module 5 quiz:              Full marks — 5 of 5
-Key takeaways:              Open
+Key takeaways:              Complete
 Module complete:            Open
 ```
 
 ---
 
-# Integrated configuration framework
+# Five durable takeaways
 
-## 1. Put each need in the correct layer
+## 1. Configuration is leverage
+
+A configured environment reduces repeated setup and turns individual prompting habits into visible, reusable team expectations.
+
+```text
+Set up once
+      ↓
+Use repeatedly
+      ↓
+Review and maintain
+      ↓
+Continue to trust
+```
+
+Configuration improves consistency and inspectability, but it does not guarantee factual accuracy or replace qualified review.
+
+## 2. Match each need to the right mechanism
 
 | Need | Primary home |
 |---|---|
@@ -75,50 +91,31 @@ Access → connector
 Authority → deterministic and human controls
 ```
 
-Give each responsibility one authoritative home, then pair mechanisms when one need contains several responsibility types.
-
-## 2. Bound Projects and continuity deliberately
-
-Use a separate bounded Project when workstreams materially differ in purpose, users, sources, permissions, disclosure boundaries, or continuity.
+Give each responsibility one authoritative home, then pair mechanisms when one business need contains several responsibility types.
 
 ```text
 Scoped continuity
       ≠
-Authorization boundary
+Authoritative record
       ≠
-Confidentiality control
-      ≠
-System of record
+Permission boundary
 ```
 
-Project separation supports contextual scope. It does not replace identity, permissions, disclosure review, or authoritative records.
-
-## 3. Govern connectors and uploaded knowledge
+## 3. Know each connector's boundary
 
 ```text
-Connected or uploaded
+Connector available
       ≠
-Permitted for every task
+Source accessible
       ≠
-Authoritative
+Source authoritative
       ≠
-Current
+Action supported
       ≠
-Authorized for external action
+Action approved
 ```
 
-Every connector needs a capability contract covering:
-
-- connected identity;
-- source scope;
-- read and retrieval tools;
-- draft capabilities;
-- write or external-action capabilities;
-- unsupported actions;
-- approval boundaries;
-- owner;
-- review date; and
-- revocation.
+Maintain a connector capability contract with identity, source scope, read and draft tools, write or external-action tools, unsupported actions, approval boundaries, owner, review date, and revocation path.
 
 ```text
 Retrieve
@@ -129,16 +126,16 @@ Analyze
   ↓
 Draft
   ↓
-Human review and approval
+Human review
+  ↓
+Approval
   ↓
 Controlled execution, if supported
 ```
 
-Every maintained source needs owner, authority, scope, effective and review dates, version, refresh type, conflicts, replacement, sensitivity, and permitted use.
+A stronger model does not expand connector permissions or unsupported capabilities.
 
-Remove, archive, or label duplicate and superseded sources. Distinguish synced sources, static uploads, live retrieval, and historical archives.
-
-## 4. Write persistent instructions that are observable
+## 4. Write instructions precisely
 
 A durable instruction defines:
 
@@ -156,7 +153,7 @@ Write clear and professional notes.
 
 Precise:
 Record each decision as a separate bullet.
-List each action as owner — due date — status.
+List every action as owner — due date — status.
 Label missing owners `owner TBD`.
 Put unresolved questions in a final section.
 ```
@@ -164,35 +161,36 @@ Put unresolved questions in a final section.
 Apply the two-reader test: two competent readers should interpret a material instruction the same way.
 
 ```text
-Instruction says `do not send`
+Instruction written
       ≠
-Send capability technically disabled
+Instruction precise
+      ≠
+Instruction technically enforced
 ```
 
-Persistent guidance does not replace identity, authorization, permissions, deterministic controls, professional approval, or external-action restrictions.
+High-stakes guardrails still require permissions, deterministic checks, controlled tools, human review, and approval gates.
 
-## 5. Maintain the configured baseline
+## 5. Maintain configurations or quality decays
 
 ```text
 Configured baseline
       ↓
-Repeated use and environmental change
+Process, source, permission, and personnel change
       ↓
-Configuration drift
+Silent configuration drift
       ↓
-Scheduled review, repair, rollback, or retirement
+Output quality degradation
 ```
 
-Use recurring and event-triggered reviews.
+Use recurring and event-triggered reviews. A monthly review is a practical baseline for active Projects, adjusted for change rate and consequence.
 
-| Change profile | Example cadence |
-|---|---|
-| High-change or high-consequence | Weekly or event-triggered |
-| Active recurring Project | Monthly |
-| Stable reference workspace | Quarterly |
-| Archived workspace | Annual review or retirement |
+Review:
 
-Review instructions, knowledge, Skills, connectors, Memory, owners, permissions, tests, rollback, and retirement conditions.
+- instructions for outdated terminology, process, format, evidence rules, and reviewers;
+- knowledge for authority, freshness, duplicates, supersession, scope, and ownership;
+- Skills for owner, distribution, version, trigger behavior, dependencies, tests, and rollback;
+- connectors for identity, permissions, tools, business need, offboarding, and revocation; and
+- Memory for accuracy, relevance, and proper authority placement.
 
 ```text
 No visible error
@@ -226,21 +224,24 @@ Vague standing rule → precise observable instruction
 Output drifts without prompt change → inspect configuration
 ```
 
-## Quiz reasoning sequence
+---
+
+# Integrated configuration review
+
+Before relying on a configured workspace, ask:
 
 ```text
-Identify the configuration concern
-      ↓
-Select the correct layer or component
-      ↓
-Check authority, scope, precision, and capability
-      ↓
-Identify what remains uncontrolled or stale
-      ↓
-Choose the smallest responsible repair
-      ↓
-Reject stronger-model and one-time-prompt distractors
+1. Is the Project purpose still current?
+2. Is every need in the correct mechanism?
+3. Are sources authoritative, current, and in scope?
+4. Are connector capabilities and permissions explicit?
+5. Are standing instructions precise and testable?
+6. Are consequential actions protected by real controls?
+7. Are Skills, Memory, and access still accurate?
+8. Is ownership and the next review date recorded?
 ```
+
+A failed question identifies the next maintenance or redesign task.
 
 ---
 
@@ -271,6 +272,7 @@ Reject stronger-model and one-time-prompt distractors
 - [System-Level Instructions That Stick](lessons/04-system-level-instructions-that-stick.md)
 - [Maintaining Configurations](lessons/05-maintaining-configurations.md)
 - [Module 5 Quiz](lessons/06a-module-5-quiz.md)
+- [Module 5 Key Takeaways](lessons/06b-key-takeaways.md)
 
 ## Prompt notebooks
 
@@ -280,6 +282,7 @@ Reject stronger-model and one-time-prompt distractors
 - [System-Level Instructions prompts](../../prompts/module-05/04-system-level-instructions-prompts.md)
 - [Maintaining Configurations prompts](../../prompts/module-05/05-maintaining-configurations-prompts.md)
 - [Module 5 quiz and remediation prompts](../../prompts/module-05/06a-module-5-quiz-prompts.md)
+- [Module 5 Key Takeaways prompts](../../prompts/module-05/06b-key-takeaways-prompts.md)
 
 ## Engineering patterns
 
@@ -300,28 +303,30 @@ Reject stronger-model and one-time-prompt distractors
 # Exam lens
 
 ```text
-Multi-step procedure                    → Skill
-Workspace-specific behavior             → Project instructions
-Stable reference                         → Project knowledge
-Evolving continuity                      → scoped Memory
-Distinct sensitive workstream            → separate bounded Project
-Connector cannot perform requested action → respect capability contract
-Vague instruction                        → define observable behavior
-Output drifts without prompt change       → inspect stale configuration
+Repeated setup in every chat            → configure a stable baseline
+Multi-step reusable procedure           → Skill
+Project-specific source material        → Project knowledge
+Standing behavior rule                  → Project instruction
+Selected prior context                  → scoped Memory
+External source or action               → connector with defined capability
+Vague instruction                       → make observable and testable
+Quiet recurring regression              → inspect configuration drift
+Old source or stakeholder persists      → update knowledge or Memory
+Connector cannot perform action         → respect the capability boundary
 ```
 
 For Module 5 scenarios:
 
-1. identify the configuration concern;
-2. select the smallest correct layer;
-3. separate access from authority;
-4. respect connector and action boundaries;
-5. make persistent behavior precise and testable;
-6. keep sensitive workstreams bounded;
-7. maintain authoritative sources and procedures;
-8. detect quiet drift across all components;
-9. pair natural-language guidance with enforceable controls; and
-10. choose the smallest sufficient repair.
+1. identify whether the need is behavior, fact, procedure, continuity, access, authority, or state;
+2. choose the smallest correct mechanism;
+3. preserve one authoritative home;
+4. distinguish access from authority;
+5. document connector capabilities and unsupported actions;
+6. make persistent instructions precise and observable;
+7. pair guidance with enforceable controls;
+8. inspect configuration before blaming prompting or model tier;
+9. maintain on cadence and after material events; and
+10. edit, replace, revoke, reset, roll back, or retire according to the defect.
 
 ---
 
@@ -329,9 +334,8 @@ For Module 5 scenarios:
 
 - [x] I completed all Module 5 teaching sections.
 - [x] I completed the Module 5 quiz with full marks, 5/5.
-- [ ] I completed the Module 5 takeaways.
+- [x] I completed the Module 5 takeaways.
 - [ ] I can place behavior, facts, procedures, continuity, access, controls, and state correctly.
-- [ ] I can separate sensitive workstreams and define Project boundaries.
 - [ ] I can create connector and source capability registers.
 - [ ] I can curate uploaded knowledge and manage supersession.
 - [ ] I can write precise persistent instructions and apply the two-reader test.
@@ -342,6 +346,10 @@ For Module 5 scenarios:
 - [ ] I completed the knowledge lab and scored at least 80% on the extended quiz.
 
 ---
+
+# Product-verification note
+
+This module was reviewed against official Anthropic Help Center material available on August 3, 2026. Current documentation describes Projects as self-contained workspaces with knowledge and instructions, Skills as reusable procedures that load when relevant, connectors as permission-bound integrations with connector-specific capabilities, and project memory as a separate continuity space. Product availability and behavior can change, and current official documentation controls.
 
 # Public-repository scenario policy
 
