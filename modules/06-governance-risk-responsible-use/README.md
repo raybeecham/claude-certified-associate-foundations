@@ -6,7 +6,7 @@ Associate Persona · Official Exam Domain 6
 
 ## Module thesis
 
-> Governance is a practitioner skill: classify the use case, feature, data, policy, and ethical impact before deployment; retain accountable human authority; and monitor the decision over time.
+> Governance is a practitioner skill: classify the use case, feature, data, policy, and ethical impact before deployment; retain accountable human authority; audit actual behavior; and monitor the decision over time.
 
 ```text
 Proposed use case
@@ -17,7 +17,9 @@ Skill and feature trust review
       ↓
 Data classification and feature controls
       ↓
-Policy and ethical review
+Policy application and Diligence audit
+      ↓
+Ethical review
       ↓
 Human approval, monitoring, and escalation
       ↓
@@ -32,7 +34,7 @@ Approve / constrain / redesign / defer / reject
 - [x] [02. Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
 - [x] [03. Skill Trust & Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
 - [x] [04. Data Sensitivity, Privacy & Feature Controls](lessons/04-data-sensitivity-privacy-feature-controls.md)
-- [ ] 05. Organizational Policies & Diligence
+- [x] [05. Organizational Policies & Diligence](lessons/05-organizational-policies-diligence.md)
 - [ ] 06. Ethical Implications
 - [ ] 07. Module 6 Quiz
   - [ ] Quiz
@@ -63,11 +65,11 @@ Diligence = ownership + verification + documented judgment
 
 # Foundation 2: Appropriate versus inappropriate use cases
 
-Screen every use case against four Delegation criteria:
+Screen each use through four Delegation criteria:
 
 | Criterion | Core question |
 |---|---|
-| Reversibility | Can an incorrect output be detected and undone before harm? |
+| Reversibility | Can an incorrect output be caught and undone before harm? |
 | Consequence of error | What is the cost if the output is wrong? |
 | Human creativity or empathy | Does judgment, care, authenticity, or relationship ownership need to remain human? |
 | Accountability | Who is answerable, and can that person meaningfully review and intervene? |
@@ -80,9 +82,7 @@ Claude should own the task
 Organization may use it without controls
 ```
 
-## Load-bearing criterion
-
-Run all four criteria, then name the one that controls the classification—the criterion that would move the use case if it changed.
+Identify the **load-bearing criterion**—the criterion that would move the classification if it changed.
 
 ## Three classifications
 
@@ -108,7 +108,7 @@ Session permissions
 Effective reach
 ```
 
-Review three dimensions:
+Review:
 
 1. **Source** — publisher, owner, version, distribution, approval, and support.
 2. **Reach** — files, connectors, tools, code, secrets, persistence, and external actions available in the actual session.
@@ -164,27 +164,6 @@ Use the more sensitive tier
 Seek authorized clarification
 ```
 
-## Minimum necessary data
-
-Before applying a feature control, determine whether the task needs each field.
-
-Possible actions include:
-
-- remove unused columns;
-- aggregate records;
-- pseudonymize identities;
-- replace real data with synthetic examples;
-- omit secrets entirely; and
-- separate confidential context from analytical inputs.
-
-```text
-Available data
-      ≠
-Necessary data
-```
-
-## Redaction boundaries
-
 Redaction is valid only when it reduces identification risk **and** preserves the task’s validity.
 
 ```text
@@ -193,88 +172,252 @@ Name removed
 Person de-identified
 ```
 
-Review account identifiers, exact dates, rare job titles, precise locations, small groups, free text, and distinctive field combinations.
-
-If identifiers are essential, use an approved environment or stop. Do not use superficial redaction to force sensitive data into an unapproved path.
-
-## Code execution
-
-Claude’s code-execution environment is sandboxed, but sandboxing does not establish that a data class may be processed there.
+Incognito, Memory, and sandboxing are bounded controls.
 
 ```text
-Sandboxed
+Feature control applied
       ≠
-Approved for every data class
+Data approved for processing
 ```
 
-Minimize uploaded files, remove secrets, review generated artifacts, and follow current network, retention, and deletion controls.
-
-## Memory
-
-Memory provides continuity but should not become an unreviewed archive or authoritative system of record.
-
-```text
-Useful to remember
-      ≠
-Appropriate to persist
-```
-
-Review sensitivity, staleness, export, retention, editing, deletion, and organizational controls.
-
-## Incognito
-
-Current Claude guidance describes Incognito chats as excluded from ordinary chat history and Memory. For Team and Enterprise accounts, organizational retention and export rules still apply.
-
-```text
-Not in history or Memory
-      ≠
-Not retained by the organization
-      ≠
-Permission to process Red data
-```
-
-Incognito is a persistence control. It is not a compliance approval or an approved entry point for regulated data.
-
-## Processing and persistence are separate decisions
-
-```text
-Question 1:
-May this data be processed here?
-
-Question 2:
-If yes, how may it be remembered, retained, exported, or deleted?
-```
-
-Answer Question 1 first.
+Processing permission must be resolved before persistence, history, export, or deletion controls are selected.
 
 ---
 
-# Worked data decisions
+# Foundation 5: Organizational policies and Diligence
 
-| Scenario | Classification | Decision |
+A policy that is followed only during visible reviews is not operational governance.
+
+```text
+Written policy
+      ↓
+Daily practitioner decisions
+      ↓
+Observed behavior
+      ↓
+Usage audit
+      ↓
+Diligence gaps
+      ↓
+Corrective action and re-audit
+```
+
+## Apply governance consistently
+
+Routine decisions are where governance drift accumulates:
+
+- uploading an internal draft;
+- enabling a convenient Skill;
+- connecting a new source;
+- skipping a human gate under deadline pressure;
+- retaining an expired exception;
+- using an old policy reference; or
+- assuming that an internal capability is already vetted.
+
+```text
+Repeated exception
+      ↓
+Unrecorded norm
+      ↓
+Governance drift
+```
+
+## Translate policy into observable controls
+
+| Policy requirement | Observable practice | Evidence |
 |---|---|---|
-| Anonymized survey trends | Green | Use code execution for verified counts; check small-group re-identification |
-| Confidential acquisition draft | Yellow | Confirm policy and approved account; minimize details; use Incognito only if processing is allowed |
-| Customer spreadsheet with PII | Yellow or Red | Redact and test indirect identifiers, or use an approved path; otherwise stop |
-| Patient records | Red without confirmed compliant path | Do not upload; escalate to the authorized administrator or privacy function |
+| Use approved entry points | Sensitive work occurs only in approved environments | Account, product, or access record |
+| Classify data before use | Data tier recorded before upload or retrieval | Intake or decision record |
+| Vet executable Skills | Source, contents, reach, and approval reviewed | Skill trust register |
+| Require human approval | Qualified reviewer acts before consequence | Approval record |
+| Apply least privilege | Connector and tool access is narrowly scoped | Permission inventory |
+| Maintain configurations | Instructions, sources, Skills, connectors, and Memory are reviewed | Maintenance record |
+| Record exceptions | Exception has authority, scope, controls, and expiration | Exception register |
+
+```text
+Policy acknowledged
+      ≠
+Policy operationalized
+```
+
+## Audit usage against policy
+
+A usage audit should define:
+
+- review period;
+- policy version;
+- teams, Projects, or workflows included;
+- approved products and entry points;
+- applicable data classes;
+- Skills, connectors, and external actions;
+- required human gates;
+- exception records;
+- authorized evidence sources;
+- sample method; and
+- accountable audit owner.
+
+Audits must also respect privacy, access, and monitoring policy.
+
+```text
+Audit authority
+      ≠
+Unlimited surveillance authority
+```
+
+## Diligence gaps
+
+A Diligence gap is the difference between required and observed behavior.
+
+Examples include:
+
+- unapproved data or entry-point use;
+- unvetted Skills;
+- excessive connector permissions;
+- skipped review gates;
+- stale policy language in Projects or procedures;
+- missing approval evidence;
+- expired exceptions; and
+- high-impact uses without monitoring.
+
+A gap record should include:
+
+- controlling requirement;
+- observed practice;
+- evidence;
+- scope and frequency;
+- affected risk;
+- root cause;
+- immediate containment;
+- corrective action;
+- owner and due date;
+- closure test; and
+- status.
+
+```text
+Gap identified
+      ≠
+Gap closed
+```
+
+Closure requires evidence that the practice changed.
+
+## Containment versus correction
+
+Immediate containment limits current exposure.
+
+Sustainable correction prevents recurrence.
+
+```text
+Contained
+      ≠
+Remediated
+      ≠
+Verified closed
+```
+
+Root causes may include unclear policy, inconvenient approved paths, overbroad permissions, outdated configuration, unstaffed gates, deadline pressure, unclear ownership, or untracked exceptions.
+
+Prefer durable repairs:
+
+```text
+Clarify policy and ownership
+      ↓
+Repair workflow and configuration
+      ↓
+Narrow technical access
+      ↓
+Add approval and evidence requirements
+      ↓
+Train affected users
+      ↓
+Monitor and re-audit
+```
+
+Training alone does not repair a broken or bypassable workflow.
+
+## Exception management
+
+An exception should record:
+
+- controlling requirement;
+- reason;
+- scope and duration;
+- risk assessment;
+- compensating controls;
+- approving authority;
+- owner;
+- effective and expiration dates;
+- monitoring; and
+- closure or renewal decision.
+
+```text
+Exception approved
+      ≠
+Policy requirement removed
+```
+
+## Stay current
+
+Review after:
+
+- policy revision;
+- product or feature changes;
+- Skill or connector updates;
+- data-classification changes;
+- role or ownership changes;
+- incidents or near misses;
+- exception expiration; or
+- growth from prototype to operational dependency.
+
+```text
+Previously approved
+      ≠
+Permanently approved
+```
+
+---
+
+# Worked usage-audit example
+
+A fictional monthly audit finds three gaps.
+
+| Gap | Immediate action | Durable repair |
+|---|---|---|
+| Unreleased product specification used in a non-approved entry point | Remove or contain the material and notify the owner | Clarify classification and approved-path guidance in the Project setup |
+| Skill enabled without trust review | Disable or restrict pending review | Require source, bundle, reach, testing, and approval records |
+| Client-report review gate skipped twice | Pause release until qualified review occurs | Add backup reviewer, technical release gate, and urgent escalation path |
+
+```text
+Invisible drift
+      ↓
+Audited evidence
+      ↓
+Owned corrective actions
+      ↓
+Verified closure
+```
+
+The objective is not to assume malicious intent. It is to repair the conditions that allowed the deviation.
 
 ---
 
 # Integrated governance protocol
 
 ```text
-1. Define the bounded use case, users, affected parties, and owner
+1. Define the use case, users, affected parties, and owner
 2. Run reversibility, consequence, human-element, and accountability criteria
 3. Identify the load-bearing criterion and human gate
 4. Establish Skill or feature source, contents, reach, and proportionality
-5. Define the task’s minimum required data
-6. Classify data under current organizational policy
-7. Confirm the approved account, product, entry point, and retention environment
-8. Minimize, redact, aggregate, pseudonymize, or synthesize where valid
-9. Select execution, Memory, history, sharing, export, and deletion controls
-10. Test re-identification risk and task validity
-11. Record approval, monitoring, revocation, incident, and escalation paths
-12. Approve, constrain, redesign, defer, decline, or reject
+5. Define and classify the minimum required data
+6. Confirm the approved environment and feature controls
+7. Identify the controlling policy and version
+8. Translate policy into observable controls and evidence
+9. Audit actual and planned use against policy
+10. Record gaps, containment, root causes, corrective actions, and owners
+11. Manage exceptions and verify closure
+12. Re-audit after material change
+13. Assess ethical impact, monitoring, escalation, and incident response
+14. Approve, constrain, redesign, defer, decline, or reject
 ```
 
 ---
@@ -287,6 +430,7 @@ Answer Question 1 first.
 - [Appropriate vs Inappropriate Use Cases](lessons/02-appropriate-vs-inappropriate-use-cases.md)
 - [Skill Trust and Feature-Level Risk](lessons/03-skill-trust-feature-level-risk.md)
 - [Data Sensitivity, Privacy & Feature Controls](lessons/04-data-sensitivity-privacy-feature-controls.md)
+- [Organizational Policies and Diligence](lessons/05-organizational-policies-diligence.md)
 
 ## Prompt notebooks
 
@@ -294,12 +438,14 @@ Answer Question 1 first.
 - [Appropriate vs Inappropriate Use Cases prompts](../../prompts/module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
 - [Skill Trust and Feature-Level Risk prompts](../../prompts/module-06/03-skill-trust-feature-risk-prompts.md)
 - [Data Sensitivity, Privacy & Feature Controls prompts](../../prompts/module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
+- [Organizational Policies and Diligence prompts](../../prompts/module-06/05-organizational-policies-diligence-prompts.md)
 
 ## Engineering patterns
 
 - [Use-Case Appropriateness Classification Pattern](../../patterns/use-case-appropriateness-classification-pattern.md)
 - [Skill Trust and Feature-Risk Pattern](../../patterns/skill-trust-and-feature-risk-pattern.md)
 - [Data Classification and Feature-Control Pattern](../../patterns/data-classification-and-feature-control-pattern.md)
+- [Governance Diligence Gap Closure Pattern](../../patterns/governance-diligence-gap-closure-pattern.md)
 
 ## Existing extended practice
 
@@ -313,29 +459,30 @@ Answer Question 1 first.
 # Exam lens
 
 ```text
-Public or approved anonymized data       → usually Green
-Confidential internal material           → Yellow; review first
-Regulated data, credentials, or secrets  → Red without approved path
-Incognito                                → history and Memory control, not permission
-Sandbox                                  → execution isolation, not authorization
-Name removed but unique details remain   → incomplete redaction
-Sensitive identifiers unnecessary        → minimize or redact
-Sensitive identifiers required           → approved environment or stop
-Unsure between tiers                     → use the more sensitive tier
+Policy acknowledged once                 → insufficient; apply continuously
+Routine low-visibility deviation         → Diligence gap
+Observed practice differs from policy    → record and remediate
+Gap lacks owner or closure evidence      → not closed
+Repeated bypass under deadline pressure  → repair workflow and approval control
+Internal Skill assumed safe              → require trust review
+Old practice after policy change         → re-evaluate
+No current policy located                → pause or seek authorized clarification
+Audit collects excessive personal data   → narrow the audit
+Expired exception remains active         → close, renew, narrow, or escalate
 ```
 
-For data-sensitivity scenarios:
+For policy-and-Diligence scenarios:
 
-1. classify before upload;
-2. identify the minimum necessary data;
-3. map the rapid tier to current policy;
-4. separate processing approval from persistence controls;
-5. identify direct and indirect identifiers;
-6. test whether redaction preserves task validity;
-7. use Incognito only inside an approved processing boundary;
-8. understand sandbox and Memory limits;
-9. verify current organization settings rather than relying on plan assumptions; and
-10. escalate when no approved path is established.
+1. identify the controlling policy and version;
+2. translate it into observable practice and evidence;
+3. compare actual or planned use with the requirement;
+4. distinguish isolated error from systemic drift;
+5. identify root cause;
+6. separate containment from remediation;
+7. assign owner, due date, and closure test;
+8. manage exceptions explicitly;
+9. verify closure; and
+10. schedule re-audit.
 
 ---
 
@@ -345,15 +492,15 @@ For data-sensitivity scenarios:
 - [x] I completed Appropriate vs Inappropriate Use Cases.
 - [x] I completed Skill Trust and Feature-Level Risk.
 - [x] I completed Data Sensitivity, Privacy & Feature Controls.
+- [x] I completed Organizational Policies and Diligence.
 - [ ] I can assess reversibility, consequence, human element, and accountability.
 - [ ] I can identify the load-bearing criterion and define an operational gate.
 - [ ] I can distinguish source trust, effective reach, and feature appropriateness.
-- [ ] I can classify data as Green, Yellow, or Red and map it to current policy.
-- [ ] I can identify minimum necessary data and valid minimization options.
-- [ ] I can distinguish direct identifiers from indirect re-identification risk.
-- [ ] I can explain why Incognito and sandboxing do not authorize regulated data.
-- [ ] I can separate processing approval from Memory, history, retention, and export controls.
-- [ ] I can locate and apply organizational policy.
+- [ ] I can classify data and apply valid minimization and feature controls.
+- [ ] I can translate policy requirements into observable behavior and evidence.
+- [ ] I can run a bounded usage audit.
+- [ ] I can record a Diligence gap and distinguish containment from correction.
+- [ ] I can manage exceptions and verify closure.
 - [ ] I can identify ethical implications beyond compliance.
 - [ ] I can define meaningful oversight and incident response.
 - [ ] I completed the Module 6 quiz and takeaways.
@@ -363,12 +510,12 @@ For data-sensitivity scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include regulated records, credentials, secrets, confidential transactions, private personnel or customer data, internal privacy findings, organization-only retention details, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential policies, internal audit findings, regulated records, credentials, private personnel information, organization-only exception records, client identities, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute privacy, legal, regulatory, security, compliance, medical, financial, records-management, or operational advice.
+This repository is an unofficial educational resource. It does not constitute privacy, legal, regulatory, security, compliance, audit, employment, ethics, records-management, or operational advice.
 
-## Product-verification note
+## Source note
 
-The data-control material was reviewed against official Anthropic Help Center content available on August 3, 2026. Current guidance describes code execution as sandboxed and Incognito as excluded from ordinary history and Memory, while organizational retention and exports can still apply. Product behavior, plans, organizational settings, contracts, and policy can change; current official documentation and authorized organizational guidance control real decisions.
+The Organizational Policies and Diligence course material was supplied on August 3, 2026. Current organizational policy, law, contracts, approved product settings, and authorized governance decisions control real use.
