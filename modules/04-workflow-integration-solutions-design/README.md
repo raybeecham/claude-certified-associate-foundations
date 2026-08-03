@@ -13,7 +13,9 @@ Business need
       ↓
 Traceable requirements and viable use case
       ↓
-Current-process research and planning
+Verified research and executed analysis
+      ↓
+Process planning and optimization
       ↓
 Solution design and iteration
       ↓
@@ -30,7 +32,7 @@ Validated workflow
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Analyzing Requirements & Use Cases](lessons/02-analyzing-requirements-use-cases.md)
-- [ ] 03. Research, Planning & Process Optimization
+- [x] [03. Research, Planning & Process Optimization](lessons/03-research-planning-process-optimization.md)
 - [ ] 04. Solution Design, Development & Iteration
 - [ ] 05. Delegation Mapping
 - [ ] 06. Communicating Value & Limitations
@@ -41,26 +43,6 @@ Validated workflow
 - [ ] 09. Module Complete
 
 No later lesson is marked complete until its preparation-course material is supplied and converted into original public-safe study content.
-
----
-
-# Module 3 to Module 4 bridge
-
-Module 3 asked whether an output was trustworthy and releasable. Module 4 expands the boundary to the complete process.
-
-```text
-Business objective
-      ↓
-Requirements and acceptance criteria
-      ↓
-Workflow stages and responsibilities
-      ↓
-Inputs, state, decisions, approvals, and side effects
-      ↓
-Stage-level validation and recovery
-      ↓
-Operational outcome
-```
 
 ---
 
@@ -95,14 +77,6 @@ Designed workflow
 | Storage-owned | Authoritative records, durable state, checkpoints, logs, and version history |
 
 ```text
-Probabilistic language work → model
-Exact rule or calculation   → deterministic component
-External action             → controlled tool
-Durable state               → system of record
-Authority and accountability → human or organization
-```
-
-```text
 Generate recommendation
       ≠
 Authorize action
@@ -111,8 +85,6 @@ Authorize action
 ---
 
 # Foundation 2: Requirements and use-case analysis
-
-Real workflows commonly begin with long documents, email threads, notes, forms, or verbal requests. These must be converted into requirements that can be assigned, built, and tested.
 
 ```text
 Messy inputs
@@ -127,23 +99,6 @@ Human clarification and approval
       ↓
 Requirement baseline
 ```
-
-## Business need versus task definition
-
-```text
-We need better reporting
-```
-
-is not yet actionable. A task definition should identify:
-
-- actor and purpose;
-- trigger and authorized inputs;
-- work and output;
-- audience and timing;
-- constraints;
-- owner and approver;
-- acceptance criteria; and
-- failure or escalation behavior.
 
 ## Requirement classes
 
@@ -166,42 +121,9 @@ Implied requirement
 Analyst assumption
 ```
 
-## Requirements register
-
-| ID | Requirement | Class | Source/location | Coverage | Gap | Owner | Acceptance criterion |
-|---|---|---|---|---|---|---|---|
-| R-001 | Atomic obligation | Explicit | Document §x.x | Complete/Partial/Open | Clarification | Role | Observable test |
-
-Every material row should be traceable to an exact source location.
-
-## Pressure-test pass
-
-After extraction, separately check for:
-
-- omitted clauses and hidden conditions;
-- requirements split or merged incorrectly;
-- duplicate obligations;
-- superseded language and amendments;
-- implications mislabeled as explicit;
-- examples mistaken for mandates;
-- assumptions presented as facts;
-- incomplete internal answers;
-- missing actors, dates, formats, data, owners, or tests; and
-- requirements that cannot be verified.
-
-```text
-Requirement extracted
-      ↓
-Check source support
-      ↓
-Check completeness and interpretation
-      ↓
-Clarify or approve
-```
+Every material requirement should have an exact source location, owner, status, and completion test.
 
 ## Use-case viability
-
-A Claude capability becomes a viable use case only when it connects:
 
 ```text
 Measurable business outcome
@@ -215,68 +137,167 @@ Measurable business outcome
 + risk and escalation
 ```
 
-Weak:
+---
+
+# Foundation 3: Research, planning, and process optimization
+
+Planning combines three responsibilities that require different controls.
 
 ```text
-Claude can summarize documents, so automate document review.
+Research and synthesis
+      +
+Executed computation
+      +
+Human judgment and authority
+      ↓
+Defensible plan
 ```
 
-Stronger:
+## Research-path selection
+
+| Need | Preferred path |
+|---|---|
+| Straightforward current fact | Web search |
+| Deeper multi-source investigation | Research |
+| Supplied-document question | Closed-source analysis |
+| Internal operational truth | Approved internal system |
+| Exact metric or transformation | Code execution |
+| Missing organizational constraint | Human clarification |
+
+Current official Claude guidance describes web search as suited to straightforward current lookups and Research as the deeper path for more comprehensive investigation. Product availability can change.
+
+## Synthesis versus calculation
 
 ```text
-The team spends eight hours building a requirement inventory.
-Claude may extract and organize candidate requirements from approved sources,
-while an authorized reviewer owns interpretation and final coverage.
+Evidence and trade-off synthesis → Claude with verified sources
+Material calculation             → code execution or deterministic analytics
+Risk appetite and approval       → accountable human
 ```
-
-## Project and Skill fit
-
-For recurring, context-rich work:
 
 ```text
-Project knowledge    → project-specific sources and background
-Project instructions → project-specific behavior and output requirements
-Skill                → reusable procedure that can activate across Claude
-Human review         → clarification, prioritization, and approval
+Plausible number in prose
+      ≠
+Computed result
 ```
 
-Current official Claude guidance describes Projects as self-contained workspaces with project knowledge and instructions, while Skills provide reusable procedures that load when relevant and can work across Claude. Product behavior can change. citeturn472072search0turn472072search1turn472072search3
+Material planning values such as growth, throughput, utilization, backlog burn rate, cost, and headcount should be calculated over actual data.
+
+## Code-execution trust boundary
+
+```text
+Inspect data and schema
+      ↓
+Define rules and assumptions
+      ↓
+Review critical logic
+      ↓
+Execute
+      ↓
+Inspect intermediate results
+      ↓
+Reconcile
+      ↓
+Synthesize scenarios
+      ↓
+Human decision and approval
+```
+
+```text
+Code executed
+      ≠
+Logic correct
+      ≠
+Data complete
+      ≠
+Forecast valid
+      ≠
+Decision approved
+```
+
+## Capacity-planning example
+
+```text
+Curate four quarters of workload and staffing data
+      ↓
+Compute volume growth and throughput
+      ↓
+Build baseline, conservative, and stress scenarios
+      ↓
+Claude synthesizes recommendation and trade-offs
+      ↓
+Operations lead weighs budget, hiring, and risk
+      ↓
+Authorized staffing decision
+```
+
+Claude may improve the analysis and recommendation. It does not authorize hiring.
+
+## Process optimization
+
+Map the current process before adding automation:
+
+- triggers;
+- inputs;
+- stages;
+- owners;
+- waiting time;
+- calculations;
+- handoffs;
+- rework;
+- state;
+- approvals;
+- exceptions; and
+- failure paths.
+
+Then identify the controlling bottleneck:
+
+```text
+Retrieval
+Synthesis
+Calculation
+Handoff
+Review
+State
+Authority
+```
+
+```text
+Automating a broken process
+      =
+Producing defects faster
+```
+
+Target the actual bottleneck and measure the business outcome.
 
 ---
 
-# Requirements-analysis protocol
+# Integrated planning protocol
 
 ```text
-1. Define the business outcome and intended decision
-2. Inventory sources and establish authority
-3. Extract atomic requirements with exact traceability
-4. Classify explicit, implied, ambiguous, missing, conflicting, and assumed items
-5. Link current answers and evidence
-6. Pressure-test coverage, interpretation, authority, and testability
-7. Resolve or assign clarification questions
-8. Add owners and acceptance criteria
-9. Approve the requirement baseline
-10. Map approved requirements to workflow stages and tests
+1. Define the decision and accountable owner
+2. Establish the requirement baseline
+3. Map evidence, data, constraints, and stakeholders
+4. Select web search, Research, closed-source, internal, or code path
+5. Curate and label inputs
+6. Separate synthesis questions from calculation questions
+7. Execute and reconcile material analysis
+8. Record assumptions and sensitivity
+9. Build scenarios and trade-offs
+10. Retain human judgment for feasibility, risk, and approval
+11. Optimize the controlling process bottleneck
+12. Measure stage performance and business outcomes
 ```
 
----
+## Planning evidence table
 
-# Durable engineering foundation
+| Planning input | Type | Source or method | Validation | Sensitivity | Decision impact |
+|---|---|---|---|---|---|
+| Workload growth | Computed | Code-executed analysis | Reconcile | Medium | Capacity forecast |
+| Budget ceiling | Human constraint | Approved budget | Owner confirmation | High | Feasible scenario |
+| Productivity ramp | Assumption | Historical cohorts | Sensitivity review | High | Staffing timing |
+| Market availability | Research finding | Current sources | Scope and currency | Medium | Hiring risk |
 
-Later lessons will extend this baseline into:
-
-- current-process research;
-- process optimization;
-- interactive, fixed, application, or bounded-agent pattern selection;
-- responsibility partitioning;
-- tool contracts;
-- state management;
-- retries, timeouts, idempotency, fallback, rollback, and compensation;
-- stage-level observability;
-- solution iteration; and
-- stakeholder communication.
-
-A production workflow may need input validation, deterministic calculations, provenance checks, human approval, durable state, audit logs, monitoring, and incident ownership.
+This makes facts, calculations, assumptions, and human constraints visible.
 
 ---
 
@@ -286,15 +307,18 @@ A production workflow may need input validation, deterministic calculations, pro
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Analyzing Requirements and Use Cases](lessons/02-analyzing-requirements-use-cases.md)
+- [Research, Planning, and Process Optimization](lessons/03-research-planning-process-optimization.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-04/01-module-introduction-prompts.md)
 - [Requirements Analysis prompts](../../prompts/module-04/02-analyzing-requirements-use-cases-prompts.md)
+- [Research, Planning, and Process Optimization prompts](../../prompts/module-04/03-research-planning-process-optimization-prompts.md)
 
-## Engineering pattern
+## Engineering patterns
 
 - [Requirements Traceability and Pressure-Test Pattern](../../patterns/requirements-traceability-pressure-test-pattern.md)
+- [Verified Planning Workflow Pattern](../../patterns/verified-planning-workflow-pattern.md)
 
 ## Existing extended practice
 
@@ -307,20 +331,27 @@ A production workflow may need input validation, deterministic calculations, pro
 
 # Exam lens
 
-For requirements and use-case scenarios:
-
 ```text
-Broad need                  → define actor, output, data, timing, and success
-Long source package         → structured requirement register
-Requirement lacks source    → add exact traceability
-Hidden implication          → classify and confirm
-Multiple interpretations    → clarification question
-Base and amendment conflict → resolve source authority
-No completion test          → add acceptance criterion
-Feature-first proposal      → restate business outcome and controls
+Quick current lookup        → web search
+Deep multi-source inquiry   → Research
+Exact trend or forecast     → code execution
+Trade-off synthesis         → Claude + verified evidence
+Risk, budget, or approval   → human
+Messy current process       → map before automating
 ```
 
-Choose structured extraction over a narrative summary, preserve uncertainty, run a second pressure-test pass, and retain human authority for interpretation and approval.
+For planning scenarios:
+
+1. identify the decision and owner;
+2. distinguish research, supplied evidence, computation, synthesis, and judgment;
+3. match research depth to the question;
+4. preserve source authority, scope, and currency;
+5. execute material calculations over actual data;
+6. review logic, data, assumptions, and reconciliation;
+7. use Claude for synthesis, scenarios, and trade-offs;
+8. retain human authority for feasibility and approval;
+9. identify the real process bottleneck; and
+10. choose the least complex improvement that changes the outcome.
 
 ---
 
@@ -328,15 +359,16 @@ Choose structured extraction over a narrative summary, preserve uncertainty, run
 
 - [x] I completed the Module 4 introduction.
 - [x] I completed Analyzing Requirements and Use Cases.
+- [x] I completed Research, Planning, and Process Optimization.
 - [ ] I can distinguish personal use from workflow integration.
 - [ ] I can explain Delegation and its responsibility modes.
-- [ ] I can translate a business need into a testable task definition.
-- [ ] I can build a traceable requirement register.
-- [ ] I can distinguish explicit, implied, ambiguous, missing, conflicting, and assumed requirements.
-- [ ] I can pressure-test a requirement set.
-- [ ] I can distinguish a product capability from a viable use case.
-- [ ] I can research and map a current-state workflow.
-- [ ] I can identify unsuitable automation targets.
+- [ ] I can build and pressure-test a traceable requirement register.
+- [ ] I can distinguish web search, Research, source analysis, code execution, and human clarification.
+- [ ] I can separate synthesis from material calculation.
+- [ ] I can define a reproducible planning analysis.
+- [ ] I can create an assumption register and sensitivity scenarios.
+- [ ] I can map a current process and identify the controlling bottleneck.
+- [ ] I can retain human ownership of risk, feasibility, and approval.
 - [ ] I can create a component responsibility matrix.
 - [ ] I can design tool, state, validation, and approval boundaries.
 - [ ] I can communicate value and limitations without overclaiming.
@@ -348,8 +380,14 @@ Choose structured extraction over a narrative summary, preserve uncertainty, run
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential solicitations, proposal materials, workflows, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential planning data, workforce records, internal budgets, proprietary processes, credentials, system identifiers, engagement-identifying facts, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute procurement, proposal, architecture, legal, compliance, or other professional advice.
+This repository is an unofficial educational resource. It does not constitute workforce, financial, operational, architecture, legal, compliance, or other professional advice.
+
+## Official reading
+
+- [When to use web search, extended thinking, and research](https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research)
+- [Tool use with Claude](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)
+- [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
