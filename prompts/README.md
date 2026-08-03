@@ -69,6 +69,7 @@ These templates are study aids and starting points, not universal production pro
 5. [Delegation Mapping prompts](module-04/05-delegation-mapping-prompts.md)
 6. [Communicating Value and Limitations prompts](module-04/06-communicating-value-limitations-prompts.md)
 7. [Redesign a Workflow prompts](module-04/07-redesign-a-workflow-prompts.md)
+8. [Module 4 quiz and remediation prompts](module-04/08a-module-4-quiz-prompts.md)
 
 Additional notebooks will be added as later course-aligned modules are completed.
 
@@ -77,27 +78,30 @@ Additional notebooks will be added as later course-aligned modules are completed
 Before using a template:
 
 - define the business outcome, workflow boundary, audience, and decision;
+- make requirements atomic, traceable, measurable, and pressure-tested;
+- identify wording that could lead competent implementers to build different solutions;
+- separate current research, supplied evidence, internal facts, computation, synthesis, assumptions, and human judgment;
+- execute and reconcile material calculations over actual data;
+- recognize when a personal helper has become shared operational infrastructure;
+- escalate depended-on systems toward engineering, architecture, security, support, monitoring, recovery, and governance review;
 - map atomic work before selecting Skills, tools, or integrations;
-- assess reversibility, stakes, accountability, propagation risk, and side effects for every stage;
-- separate task preparation from decision authority;
-- assign Skills to repeatable procedures only after the work is mapped;
-- assign code execution or deterministic logic to exact calculations and reconciliation;
+- assess reversibility, stakes, accountability, propagation risk, and side effects independently for every stage;
+- separate preparation from authority;
+- assign Skills to repeatable procedures and code execution to exact calculations;
 - make collaborative review operational with named expertise, evidence, criteria, time, authority, and intervention rights;
 - expose send, submit, sign, file, pay, publish, grant-access, and system-update actions as separate stages;
 - place authorized approval before consequential or irreversible side effects;
-- define source traceability, input validation, exception routes, stopping rules, failure ownership, retry behavior, and audit evidence;
-- prevent duplicate external actions with idempotency or equivalent controls;
-- preserve approved requirements, source authority, data definitions, decisions, assumptions, and version history;
-- execute and reconcile material calculations over actual data;
-- classify feedback and rerun affected and preserved tests after changes;
+- preserve source authority, requirements, data definitions, assumptions, decisions, and version history;
+- classify feedback and regression-test controlled changes;
 - distinguish prototype acceptance from production readiness;
 - state what Claude does and does not own;
 - support value claims with scoped evidence and preserve limitations across audience versions;
+- reject distractors based only on stronger models, polished prose, repeated prompting, hidden approval, or vague automation claims;
 - persist long-running state outside the prompt; and
 - measure stage quality and business outcomes rather than prompt volume.
 
-A prompt cannot enforce source authority, correct business rules, complete data, valid assumptions, stable state, production security, meaningful human review, financial approval, workflow accountability, or irreversible-action authorization by itself.
+A prompt cannot enforce source authority, requirement clarity, correct business rules, complete data, valid assumptions, production readiness, meaningful human review, stakeholder understanding, workflow accountability, or irreversible-action authorization by itself.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential contracts, receipts, financial records, expense data, internal policies, pilot metrics, risk findings, employment records, compensation data, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential vendor briefs, internal datasets, production dependencies, contracts, legal decisions, pilot metrics, risk findings, approval records, proprietary workflows, credentials, system identifiers, full private conversation transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
