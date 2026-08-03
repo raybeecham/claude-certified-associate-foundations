@@ -23,6 +23,8 @@ Delegation mapping and control boundaries
       ↓
 Accurate value and limitation communication
       ↓
+Workflow redesign exercise
+      ↓
 Validated workflow
 ```
 
@@ -36,7 +38,7 @@ Validated workflow
 - [x] [04. Solution Design, Development & Iteration](lessons/04-solution-design-development-iteration.md)
 - [x] [05. Delegation Mapping](lessons/05-delegation-mapping.md)
 - [x] [06. Communicating Value & Limitations](lessons/06-communicating-value-limitations.md)
-- [ ] 07. Exercise: Redesign a Workflow
+- [x] [07. Exercise: Redesign a Workflow — all six correct](lessons/07-redesign-a-workflow.md)
 - [ ] 08. Module 4 Quiz
   - [ ] Quiz
   - [ ] Takeaways
@@ -46,28 +48,22 @@ No later lesson is marked complete until its preparation-course material is supp
 
 ---
 
-# Foundation 1: Workflow integration
+# Integrated workflow model
+
+## 1. Workflow integration
 
 ```text
 I use Claude
-      ↓
-Personal productivity
-
-Our workflow uses Claude
-      ↓
-Repeatable stages, inputs, controls, ownership, state, and outcomes
-```
-
-```text
-Repeated prompting
       ≠
-Designed workflow
+Our workflow uses Claude
 ```
+
+A designed workflow defines stages, authorized inputs, responsibilities, state, validation, review, failure behavior, approval, and measurable outcomes.
 
 | Responsibility | Appropriate owner |
 |---|---|
 | Interpretation, synthesis, drafting, options | Model under bounded criteria |
-| Exact calculation, schema, fixed rule | Deterministic component |
+| Exact calculation, schema, fixed rule | Deterministic component or code execution |
 | Retrieval or external side effect | Controlled tool |
 | Durable state and authoritative record | Storage or system of record |
 | Professional judgment, approval, accountability | Human or organization |
@@ -78,9 +74,7 @@ Generate recommendation
 Authorize action
 ```
 
----
-
-# Foundation 2: Requirements and use cases
+## 2. Requirements and use cases
 
 ```text
 Messy inputs
@@ -106,11 +100,9 @@ Implied requirement
 Analyst assumption
 ```
 
-A viable use case connects a measurable outcome, user, current process, repeatable task, authorized inputs, bounded AI contribution, retained human authority, deterministic controls, acceptance criteria, and escalation path.
+A viable use case connects a measurable outcome, a real user and process, authorized inputs, a bounded AI contribution, retained human authority, deterministic controls, acceptance criteria, and escalation.
 
----
-
-# Foundation 3: Research, planning, and optimization
+## 3. Research, planning, and optimization
 
 ```text
 Research and synthesis
@@ -137,13 +129,9 @@ Plausible number in prose
 Computed result
 ```
 
-Material calculations should be executed over actual data, reviewed, and reconciled. Claude can synthesize scenarios and trade-offs; accountable humans retain budget, risk, feasibility, and approval decisions.
+Map the current process before optimizing it. Target the controlling bottleneck rather than adding Claude everywhere.
 
-Map the current process before optimizing it. Identify whether the controlling bottleneck is retrieval, synthesis, calculation, handoff, review, state, or authority.
-
----
-
-# Foundation 4: Solution iteration
+## 4. Solution iteration
 
 ```text
 Stable design context
@@ -163,19 +151,15 @@ Acceptance and regression tests
 Continue / accept / redesign / escalate / stop
 ```
 
-Preserve approved requirements, data definitions, constraints, prior decisions, acceptance criteria, known risks, unresolved questions, and version history.
-
 ```text
 Minimum useful prototype
       ≠
 Production-ready solution
 ```
 
-Classify feedback before acting. Prioritize correctness, security, accessibility, disclosure, and release-blocking defects over preference. Make bounded changes and rerun affected and preserved tests.
+Classify feedback before acting. Prioritize correctness, security, accessibility, disclosure, and release-blocking defects over preference.
 
----
-
-# Foundation 5: Delegation mapping
+## 5. Delegation mapping
 
 ```text
 Reversibility
@@ -200,40 +184,9 @@ Map the work first.
 Assign features second.
 ```
 
-## Contract-review boundary
+Over-delegation signals include AI approving its own work, classification automatically triggering consequence, generated arithmetic, ceremonial review, or hidden irreversible actions.
 
-| Step | Delegation | Control |
-|---|---|---|
-| Extract clauses | AI-appropriate | Completeness check |
-| Flag playbook departures | AI-appropriate | Skill or approved procedure; source and rule trace |
-| Draft redline and rationale | Collaborative | Lawyer reviews every edit |
-| Approve or reject change | Human-retained | Authorized legal approval |
-| Compute penalty exposure | AI with code execution | Formula, units, assumptions, reconciliation |
-| Sign and send | Human-retained | Authorized signatory and controlled action |
-
-## Over-delegation signals
-
-- Claude approves the work it drafted;
-- classification automatically triggers consequence;
-- an irreversible step lacks approval;
-- exact rules are assigned to probabilistic judgment;
-- calculations are generated as prose;
-- review is named but not staffed; or
-- success on one stage is used to justify the next.
-
-```text
-High-quality draft
-      ≠
-Authority to approve
-      ≠
-Permission to execute
-```
-
----
-
-# Foundation 6: Communicating value and limitations
-
-Stakeholders need an accurate operational description rather than an inflated label.
+## 6. Communicating value and limitations
 
 ```text
 What Claude does
@@ -247,25 +200,7 @@ What limitations and controls remain
 Credible workflow description
 ```
 
-## Capability-boundary statement
-
-```text
-Claude [performs bounded tasks].
-It does not [retain authority or execute prohibited actions].
-[Named role] reviews or approves [consequential output].
-Observed value is [measured result] under [scope and period].
-Known limitations include [material failure modes or dependencies].
-```
-
-## Same workflow, different audiences
-
-| Audience | Primary need |
-|---|---|
-| Technical or professional lead | Workflow detail, sources, failure modes, exceptions, review duties |
-| Executive | Outcome, evidence, retained oversight, risk posture, next decision |
-| Client risk function | AI boundary, data scope, approvals, external actions, limitations, escalation |
-
-Adapt depth, vocabulary, order, and emphasis. Preserve capability boundary, verified metrics, uncertainty, limitations, review gates, approval authority, data scope, and external-action model.
+Adapt depth and vocabulary for each audience. Preserve capability boundaries, verified metrics, uncertainty, limitations, human gates, and approval authority.
 
 ```text
 Audience adaptation
@@ -273,46 +208,78 @@ Audience adaptation
 Risk concealment
 ```
 
-## Evidence for value claims
+---
 
-Record:
+# Workflow redesign exercise
 
-- metric definition;
-- baseline and comparison period;
-- sample and case scope;
-- source system;
-- quality or approval standard;
-- correction and escalation rate;
-- exclusions and confounders; and
-- claim owner.
+## Completion record
 
 ```text
-Pilot observation
-      ≠
-Universal capability
-      ≠
-Guaranteed result
+Strong map — all six steps correct
 ```
 
-## Human oversight
+The fictional expense-report workflow was mapped as follows:
 
-`Human review is included` is incomplete. Define reviewer expertise, evidence, criteria, authority, intervention rights, timing before consequence, exception routing, and retained approval evidence.
+| Step | Delegation | Feature | Governing reason |
+|---|---|---|---|
+| Extract receipt line items and amounts | Automated | Skill | Mechanical, reversible, reviewable |
+| Compare expenses with travel policy | Collaborative | Skill | Repeatable procedure with human review for ambiguity and exceptions |
+| Total report and calculate policy variance | Automated | Code execution | Exact numeric work must be computed and reconciled |
+| Draft exception summary | Collaborative | Neither required by default | AI drafts from verified findings; approver confirms context |
+| Approve or reject report | Human-retained | None | Financial accountability and authority do not delegate |
+| Submit approved report for payment | Human-retained before controlled execution | Controlled system | Financially material external action |
+
+## Feature selections
 
 ```text
-Review gate named
-      ≠
-Review gate operational
+Best Skill step:
+Step 2 — policy comparison
+
+Best code-execution step:
+Step 3 — totals and policy-limit calculations
 ```
 
-## Quiet overstatement
+Step 1 can also use a document-processing Skill. Step 2 most clearly demonstrates a maintained policy procedure.
 
-| Weak phrase | Better approach |
-|---|---|
-| Fully automated | State which stages are automated and which remain human-controlled |
-| Claude handles X | Name the bounded tasks and retained decisions |
-| As good as a person | Report tested performance under defined conditions |
-| Eliminates errors or risk | State reduced steps or observed defect rates plus remaining risks |
-| Guarantees compliance | State candidate-rule flagging and retained compliance judgment |
+## Why the map is defensible
+
+```text
+Procedure → Skill
+Calculation → Code execution
+Drafting → AI or collaborative
+Approval → Human-retained
+External financial action → Approval before controlled execution
+```
+
+The exercise preserves four critical separations:
+
+1. procedure versus calculation;
+2. assistance versus authority;
+3. approval versus external execution; and
+4. reversible preparation versus financial consequence.
+
+## Audit evidence
+
+A defensible workflow retains:
+
+- source receipts;
+- extracted line-item records;
+- policy version and cited rules;
+- policy flags and exception classifications;
+- calculation code and outputs;
+- human review rationale;
+- approval record; and
+- payment-submission identifier.
+
+```text
+Mapped delegation
+      +
+Operational controls
+      +
+Retained evidence
+      =
+Audit-ready workflow design
+```
 
 ---
 
@@ -324,16 +291,16 @@ Review gate operational
 3. Select and validate research and data inputs
 4. Execute and reconcile material calculations
 5. Map the current workflow and controlling bottleneck
-6. Generate solution options and prototype highest-risk assumptions
+6. Generate options and prototype highest-risk assumptions
 7. Gather evidence, refine through bounded changes, and regression-test
 8. Decompose the workflow into atomic steps
 9. Assess reversibility, stakes, accountability, and side effects
 10. Assign model, code, deterministic, tool, storage, and human ownership
 11. Place qualified review before consequential or irreversible action
-12. Measure workflow value and retain supporting evidence
-13. Describe capability, exclusions, controls, limitations, and scope accurately
-14. Adapt communication to the audience without changing material facts
-15. Confirm expectations, owners, escalation, and monitoring
+12. Test handoffs, exceptions, failures, retries, and recovery
+13. Retain source, calculation, review, approval, and external-action evidence
+14. Measure workflow value and scope the claim
+15. Communicate capability, exclusions, controls, and limitations accurately
 ```
 
 ---
@@ -348,6 +315,7 @@ Review gate operational
 - [Solution Design, Development, and Iteration](lessons/04-solution-design-development-iteration.md)
 - [Delegation Mapping](lessons/05-delegation-mapping.md)
 - [Communicating Value and Limitations](lessons/06-communicating-value-limitations.md)
+- [Exercise: Redesign a Workflow](lessons/07-redesign-a-workflow.md)
 
 ## Prompt notebooks
 
@@ -357,6 +325,7 @@ Review gate operational
 - [Solution Design and Iteration prompts](../../prompts/module-04/04-solution-design-development-iteration-prompts.md)
 - [Delegation Mapping prompts](../../prompts/module-04/05-delegation-mapping-prompts.md)
 - [Communicating Value and Limitations prompts](../../prompts/module-04/06-communicating-value-limitations-prompts.md)
+- [Redesign a Workflow prompts](../../prompts/module-04/07-redesign-a-workflow-prompts.md)
 
 ## Engineering patterns
 
@@ -378,28 +347,28 @@ Review gate operational
 # Exam lens
 
 ```text
-Broad capability label              → replace with bounded task description
-Pilot metric                         → scope by cases, period, baseline, and quality
-Different stakeholder               → adapt depth, not material facts
-Human review mentioned              → require owner, evidence, criteria, and authority
-Fully automated claim               → expose approvals, exceptions, and monitoring
-Claude handles X                     → name AI steps and retained human decisions
-Value claim lacks evidence           → mark as not established
-Executive version removes limits     → restore uncertainty and control dependencies
+Mechanical extraction               → automate with validation
+Repeatable policy procedure          → Skill
+Ambiguous policy interpretation      → collaborative review
+Exact totals and limits              → code execution
+Draft explanatory note               → collaborative
+Financial approval                   → human-retained
+Payment submission                   → approval before controlled action
+Previous stage succeeded             → still assess next stage independently
 ```
 
-For stakeholder-communication scenarios:
+For redesign scenarios:
 
-1. identify the audience and decision;
-2. state Claude's bounded tasks;
-3. state what Claude does not approve or execute;
-4. preserve the delegation and human-control model;
-5. support value claims with scoped evidence;
-6. disclose material limitations and dependencies;
-7. document meaningful review and approval;
-8. adapt language without changing facts;
-9. avoid broad or comparative capability claims; and
-10. assign an accountable message owner.
+1. map atomic stages;
+2. assess reversibility, stakes, accountability, and side effects;
+3. assign Skills to repeatable procedures;
+4. assign code execution to material calculations;
+5. keep ambiguous judgment collaborative;
+6. keep approval human-retained;
+7. expose irreversible actions;
+8. place approval before external consequence;
+9. define exception and failure routes; and
+10. retain reconstructable evidence.
 
 ---
 
@@ -411,17 +380,17 @@ For stakeholder-communication scenarios:
 - [x] I completed Solution Design, Development, and Iteration.
 - [x] I completed Delegation Mapping.
 - [x] I completed Communicating Value and Limitations.
+- [x] I completed the Redesign a Workflow exercise with all six steps correct.
 - [ ] I can distinguish personal use from workflow integration.
 - [ ] I can build and pressure-test a traceable requirement register.
 - [ ] I can separate research, computation, synthesis, and human judgment.
 - [ ] I can define a bounded prototype and controlled iteration loop.
-- [ ] I can classify every workflow step by reversibility, stakes, and accountability.
+- [ ] I can classify workflow stages by reversibility, stakes, and accountability.
+- [ ] I can assign Skills and code execution to appropriate stages.
 - [ ] I can detect over-delegation and ceremonial review.
 - [ ] I can place approval before irreversible action.
-- [ ] I can create a bounded capability statement.
 - [ ] I can support value claims with scoped evidence.
 - [ ] I can adapt messages without hiding limitations or controls.
-- [ ] I completed the workflow-redesign exercise.
 - [ ] I completed the Module 4 quiz and takeaways.
 - [ ] I completed the workflow lab and scored at least 80% on the extended quiz.
 
@@ -429,8 +398,8 @@ For stakeholder-communication scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential contracts, client identities, pilot metrics, risk findings, internal approval records, compensation data, proprietary workflows, credentials, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential receipts, financial records, expense data, internal policies, contracts, client identities, pilot metrics, approval records, proprietary workflows, credentials, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
-This repository is an unofficial educational resource. It does not constitute legal, risk, compliance, communications, employment, architecture, security, or operational advice.
+This repository is an unofficial educational resource. It does not constitute accounting, tax, legal, financial-control, risk, compliance, employment, architecture, security, or operational advice.
