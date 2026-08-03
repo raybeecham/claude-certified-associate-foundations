@@ -2,7 +2,7 @@
 
 Associate Persona · Official Exam Domain 6
 
-> **Status:** In progress — teaching, quiz, and Key Takeaways are complete. Module Complete remains open.
+> **Status:** Complete — all teaching sections, quiz, Key Takeaways, and the Module Complete checkpoint are finished. Module 7: Troubleshooting is up next.
 
 ## Module thesis
 
@@ -39,26 +39,25 @@ Approve / constrain / redesign / defer / reject
 - [x] 07. Module 6 Quiz
   - [x] [Quiz — Full marks, 5/5](lessons/07a-module-6-quiz.md)
   - [x] [Key Takeaways](lessons/07b-key-takeaways.md)
-- [ ] 08. Module Complete
+- [x] [08. Module Complete](lessons/08-module-complete.md)
 
 ---
 
 # Completion record
 
 ```text
+Course checkpoint:          1 of 1 passed
 Module 6 teaching sections: Complete
 Module 6 quiz:              Full marks — 5 of 5
 Key takeaways:              Complete
-Module complete:            Open
+Module complete:            Complete
 ```
 
 ---
 
-# Five durable takeaways
+# Integrated governance framework
 
-## 1. Governance is a practitioner skill
-
-Governance is exercised through daily decisions about use cases, uploads, Skills, connectors, review gates, disclosure, accountability, and escalation.
+## 1. Governance is practitioner judgment
 
 ```text
 Policy exists
@@ -68,52 +67,31 @@ Policy applied
 Responsible outcome
 ```
 
-The AI Fluency Framework connects this work to:
+- **Delegation** defines what Claude may prepare, what remains human-controlled, and what should not be delegated.
+- **Diligence** requires ownership, verification, transparency where appropriate, evidence, monitoring, and escalation.
 
-- **Delegation:** deciding what work to do with AI, what remains human-controlled, and what should not be delegated; and
-- **Diligence:** selecting systems thoughtfully, being transparent where required, verifying outputs, and taking responsibility for what is used or shared.
+## 2. Classify the use case
 
-```text
-Delegation → responsibility boundary
-Diligence  → ownership and verification
-```
+Screen each use through:
 
-## 2. Screen use cases with the Delegation criteria
-
-| Criterion | Core question |
+| Criterion | Question |
 |---|---|
-| Reversibility | Can an error be detected and corrected before harm? |
-| Consequence of error | What happens if the output is wrong? |
+| Reversibility | Can an incorrect result be caught and undone before harm? |
+| Consequence of error | What happens if the result is wrong? |
 | Human creativity or empathy | Must care, authenticity, judgment, or relationship ownership remain human? |
 | Accountability | Who is answerable, and can that person meaningfully review and intervene? |
 
-Identify the **load-bearing criterion**—the factor that would change the classification if it changed.
-
-| Classification | Meaning |
-|---|---|
-| Fully appropriate | Reversible, low consequence, grounded, and not dependent on special human authority or empathy |
-| Appropriate with human review | AI assistance is useful, but a qualified pre-use gate is required |
-| Inappropriate | AI ownership cannot be made responsible because of irreversibility, severe consequence, non-transferable accountability, essential human care, or policy constraints |
-
-A review gate must state:
+Identify the **load-bearing criterion** and classify the use as:
 
 ```text
-Who reviews?
-What do they verify?
-When does review occur?
+Fully appropriate
+Appropriate with human review
+Inappropriate for AI ownership
 ```
 
-```text
-Technically possible
-      ≠
-Appropriate
-      ≠
-Approved
-```
+A human-review gate must define **who**, **what**, and **when** before use or consequence.
 
-## 3. A Skill is software
-
-Current Claude documentation describes Skills as folders containing instructions, scripts, and resources. Skills require code execution to be enabled.
+## 3. Treat a Skill as software
 
 ```text
 Skill contents
@@ -123,11 +101,7 @@ Session permissions
 Effective reach
 ```
 
-Review three dimensions:
-
-1. **Source** — publisher, owner, version, distribution path, approval, and support.
-2. **Reach** — files, connectors, tools, code, secrets, persistence, and external actions available in the real session.
-3. **Appropriateness** — whether the capability and access are proportionate to the approved task.
+Review source, owner, version, distribution, instructions, scripts, dependencies, bundled files, data access, connectors, tools, external actions, persistence, least privilege, tests, monitoring, and rollback.
 
 ```text
 Internal
@@ -135,9 +109,15 @@ Internal
 Vetted
 ```
 
-Choose **Enable**, **Escalate**, or **Decline** under the correct authority. Less-trusted Skills, including those shared by colleagues, require review of bundled files, scripts, dependencies, resources, and external references before enablement.
+Choose **Enable**, **Escalate**, or **Decline** under the correct authority.
 
-## 4. Know data sensitivity before it enters a feature
+## 4. Classify data before entry
+
+| Tier | Typical data | Default action |
+|---|---|---|
+| Green | Public, synthetic, anonymized, aggregated, or broadly cleared | Proceed under normal controls |
+| Yellow | Internal, confidential, identifiable, unreleased, or uncertain | Review policy and approved environment first |
+| Red | Regulated, secret, legally restricted, or unapproved third-party data | Keep out until an approved path exists |
 
 ```text
 Classify
@@ -147,45 +127,43 @@ Confirm processing approval
 Minimize or redact
       ↓
 Select feature controls
+```
+
+Redaction is valid only when it reduces identification risk and preserves task validity.
+
+```text
+Incognito / Memory / sandboxing
+      ≠
+Permission to process disallowed data
+```
+
+## 5. Apply policy as a Diligence habit
+
+```text
+Written policy
       ↓
-Retain, delete, monitor, or escalate
+Observed practice
+      ↓
+Diligence gap
+      ↓
+Containment
+      ↓
+Root-cause repair
+      ↓
+Verified closure and re-audit
 ```
 
-| Tier | Typical data | Default action |
-|---|---|---|
-| Green | Public, synthetic, anonymized, aggregated, or broadly cleared | Proceed under normal controls |
-| Yellow | Internal, confidential, identifiable, unreleased, or uncertain | Review policy and approved environment first |
-| Red | Regulated, secret, legally restricted, or unapproved third-party data | Keep out until an approved path exists |
-
-Redaction is valid only when it lowers identification risk and preserves task validity.
+Translate policy into observable behavior, controls, evidence, ownership, review cadence, and escalation. Bound audits to authorized and necessary evidence.
 
 ```text
-Name removed
+Contained
       ≠
-Person de-identified
+Remediated
+      ≠
+Verified closed
 ```
 
-### Feature-control boundaries
-
-- **Incognito:** excluded from ordinary chat history and Memory, but still subject to retention and, for Team or Enterprise accounts, organizational exports.
-- **Memory:** provides continuity and follows applicable retention and export controls; it is not an authoritative or unrestricted sensitive-data store.
-- **Code execution:** processes files in an execution environment, but sandboxing does not establish that the data may be processed there.
-
-```text
-Not in history or Memory
-      ≠
-Not retained
-      ≠
-Data approved for processing
-```
-
-```text
-Sandboxed processing
-      ≠
-Approved processing
-```
-
-## 5. Ethical risk hides in ordinary outputs
+## 6. Review ethical implications
 
 ```text
 Accurate wording
@@ -195,32 +173,16 @@ Fair treatment
 Ethical sufficiency
 ```
 
-Review bias across:
+Review:
 
-- prompt framing and assumptions;
-- source selection and representation;
-- labels, categories, criteria, and examples;
-- generated tone, certainty, and omissions;
-- human edits; and
-- downstream decision rules.
-
-```text
-Neutral-looking output
-      ≠
-Neutral process
-```
-
-A fairness review asks who is affected, what opportunities or burdens may change, whether similar cases are treated consistently, whether differences are justified, whether proxy characteristics influence results, and whether explanation, correction, and appeal are available.
-
-Disclosure depends on policy, audience expectations, professional or contractual obligations, materiality of AI assistance, human review, and the risk of misleading authorship or expertise claims.
-
-```text
-No explicit disclosure rule found
-      ≠
-Concealment automatically appropriate
-```
-
-Escalate when the affected population is large, harm may be significant, vulnerable groups may be affected, fairness standards are contested, the team lacks standing, disclosure duties are unclear, or meaningful recourse is absent.
+- affected parties;
+- prompt framing, sources, labels, criteria, examples, and downstream use;
+- possible harms and benefits;
+- task-specific fairness;
+- disclosure and transparency;
+- accountable human authority;
+- explanation, correction, and recourse; and
+- escalation when scale, harm, or standing exceeds the team’s authority.
 
 ```text
 Structured reasoning completed
@@ -238,33 +200,58 @@ Full marks — 5 of 5
 
 The original public-safe quiz demonstrated command of:
 
-1. classifying consequential final decisions;
-2. evaluating unknown executable Skills;
-3. separating processing authorization from persistence controls;
-4. diagnosing policy-to-practice Diligence gaps; and
-5. identifying hidden bias in automated exclusions.
+1. consequential use-case classification;
+2. Skill source and effective-reach review;
+3. processing authorization versus persistence controls;
+4. policy-to-practice Diligence gaps; and
+5. hidden bias in automated exclusions.
 
 ---
 
-# Integrated Module 6 checklist
+# Five durable takeaways
 
 ```text
-1. Is the use appropriate under all four Delegation criteria?
-2. What is the load-bearing criterion?
-3. Is a who / what / when human gate required?
-4. Is every Skill, connector, or tool vetted for source and effective reach?
-5. Is access proportionate and least privilege?
-6. What is the data classification?
-7. Is the account, organization, product, and entry point approved?
-8. Has unnecessary data been removed?
-9. Are history, Memory, retention, export, and deletion controls understood?
-10. Which policy and version control the use?
-11. Does observed practice match policy?
-12. Have Diligence gaps and exceptions been closed with evidence?
-13. Who is affected, and what does fair treatment require?
-14. Is disclosure appropriate or required?
-15. Are explanation, correction, appeal, monitoring, and escalation available?
+1. Governance is a practitioner skill.
+2. Screen use cases with Delegation criteria.
+3. Treat a Skill as software.
+4. Classify data before it enters a feature.
+5. Review ordinary outputs for bias, fairness, and transparency.
 ```
+
+---
+
+# Associate path
+
+| Module | Capability | Status |
+|---|---|---|
+| M1 — Product & Model Selection | Choose the right entry point, model, and features | Complete |
+| M2 — Prompting | Build structured prompts and adapt them to the task | Complete |
+| M3 — Output Evaluation | Validate output and identify mandatory human review | Complete |
+| M4 — Workflow Integration | Map responsibilities and redesign workflows safely | Complete |
+| M5 — Configuration | Configure and maintain Projects, instructions, and knowledge | Complete |
+| **M6 — Governance** | Apply use-case, data, policy, and ethics judgment responsibly | **Complete** |
+| **M7 — Troubleshooting** | Diagnose underperformance and optimize workflows | **Up next** |
+| M8 — Course Summary & Next Steps | Consolidate learning and prepare for the exam | Final synthesis |
+
+---
+
+# Transition to Module 7
+
+```text
+Governed use case
+      ↓
+Observed underperformance
+      ↓
+Failure classification and localization
+      ↓
+Targeted intervention
+      ↓
+Verification and optimization
+```
+
+Module 6 asked whether a use should proceed and under which boundaries. Module 7 asks why an approved workflow is underperforming and what the smallest responsible repair is.
+
+Governance remains active during troubleshooting. Performance improvements must not bypass data, permission, fairness, review, recourse, or accountability controls.
 
 ---
 
@@ -280,6 +267,7 @@ The original public-safe quiz demonstrated command of:
 - [Ethical Implications](lessons/06-ethical-implications.md)
 - [Module 6 Quiz](lessons/07a-module-6-quiz.md)
 - [Module 6 Key Takeaways](lessons/07b-key-takeaways.md)
+- [Module 6 Complete](lessons/08-module-complete.md)
 
 ## Prompt notebooks
 
@@ -291,6 +279,7 @@ The original public-safe quiz demonstrated command of:
 - [Ethical Implications prompts](../../prompts/module-06/06-ethical-implications-prompts.md)
 - [Module 6 quiz and remediation prompts](../../prompts/module-06/07a-module-6-quiz-prompts.md)
 - [Module 6 Key Takeaways prompts](../../prompts/module-06/07b-key-takeaways-prompts.md)
+- [Module 6 completion and transition prompts](../../prompts/module-06/08-module-complete-prompts.md)
 
 ## Engineering patterns
 
@@ -300,7 +289,7 @@ The original public-safe quiz demonstrated command of:
 - [Governance Diligence Gap Closure Pattern](../../patterns/governance-diligence-gap-closure-pattern.md)
 - [Ethical Impact Review and Escalation Pattern](../../patterns/ethical-impact-review-and-escalation-pattern.md)
 
-## Existing extended practice
+## Extended practice
 
 - [notes.md](notes.md)
 - [lab.md](lab.md)
@@ -309,44 +298,23 @@ The original public-safe quiz demonstrated command of:
 
 ---
 
-# Exam lens
-
-```text
-Technically capable but consequential       → apply Delegation criteria
-Final unreviewed determination              → retain human ownership
-Unknown or broad Skill                      → inspect source, bundle, and reach
-Confidential data with unclear approval     → stop and verify entry point
-Incognito selected for Red data             → insufficient; authorization comes first
-Policy and behavior diverge                 → Diligence gap
-Routine output affects people               → review bias, fairness, and disclosure
-Team lacks authority to settle ethical issue → escalate with documented reasoning
-```
-
----
-
 # Completion criteria
 
 - [x] I completed all Module 6 teaching sections.
 - [x] I completed the Module 6 quiz with full marks, 5/5.
 - [x] I completed the Module 6 takeaways.
-- [ ] I can classify appropriate, human-reviewed, and inappropriate uses.
-- [ ] I can identify the load-bearing criterion and define an operational gate.
-- [ ] I can evaluate Skill source, contents, effective reach, and proportionality.
-- [ ] I can classify data and separate processing authorization from persistence controls.
-- [ ] I can translate policy into observable controls and run a bounded audit.
-- [ ] I can distinguish containment, remediation, and verified closure.
-- [ ] I can identify bias entry points and define a task-specific fairness standard.
-- [ ] I can determine disclosure, explanation, correction, and recourse requirements.
-- [ ] I can preserve human accountability and escalate beyond my authority.
-- [ ] I completed the threat-model lab and scored at least 80% on the extended quiz.
+- [x] I completed the Module 6 checkpoint, 1/1.
+- [x] I can classify appropriate, human-reviewed, and inappropriate uses.
+- [x] I can identify the load-bearing criterion and define an operational gate.
+- [x] I can evaluate Skill source, contents, effective reach, and proportionality.
+- [x] I can classify data and separate processing authorization from persistence controls.
+- [x] I can translate policy into observable controls and run a bounded audit.
+- [x] I can distinguish containment, remediation, and verified closure.
+- [x] I can identify bias entry points and define a task-specific fairness standard.
+- [x] I can determine disclosure, explanation, correction, and recourse requirements.
+- [x] I can preserve human accountability and escalate beyond my authority.
 
 ---
-
-# Product-verification note
-
-This module was reviewed against official Anthropic material available on August 3, 2026. Current documentation describes Delegation and Diligence as AI Fluency competencies; Skills as folders of instructions, scripts, and resources that require code execution; less-trusted Skills as requiring review before enablement; and Incognito chats as excluded from ordinary history and Memory while still subject to retention and organizational export controls.
-
-Product behavior, plan availability, contracts, compliance eligibility, zero-data-retention arrangements, regulated-data handling, and organizational settings can change. Current official documentation and authorized organizational or Anthropic account guidance control real deployments.
 
 # Public-repository scenario policy
 
