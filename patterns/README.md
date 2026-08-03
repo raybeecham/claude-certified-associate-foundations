@@ -35,6 +35,7 @@ The pattern library is an engineering reference, not a substitute for current of
 - [Skill Trust and Feature-Risk Pattern](skill-trust-and-feature-risk-pattern.md): Establish source and ownership, inspect the bundle, calculate effective reach, test proportionality and least privilege, and choose enable, escalate, or decline
 - [Data Classification and Feature-Control Pattern](data-classification-and-feature-control-pattern.md): Classify before entry, verify processing approval, minimize data, test redaction validity, and treat Incognito, Memory, and sandboxing as bounded controls
 - [Governance Diligence Gap Closure Pattern](governance-diligence-gap-closure-pattern.md): Compare observed behavior with current policy, contain exposure, repair root causes, verify closure, manage exceptions, and re-audit after change
+- [Ethical Impact Review and Escalation Pattern](ethical-impact-review-and-escalation-pattern.md): Map affected parties, inspect bias entry points, define fair treatment and disclosure, preserve human authority and recourse, and escalate beyond the team’s standing
 
 ## Planned pattern groups
 
@@ -47,8 +48,8 @@ The pattern library is an engineering reference, not a substitute for current of
 
 ## Usage rule
 
-Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, longer sessions, executable bundles, broad permissions, sensitive data, persistence, and monitoring add setup, maintenance, validation, and governance obligations.
+Use the least complex pattern that meets the requirement. Additional capabilities, stronger models, larger contexts, longer sessions, executable bundles, broad permissions, sensitive data, persistence, monitoring, and people-facing impact add setup, maintenance, validation, and governance obligations.
 
 ## Public-repository content rule
 
-Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, regulated records, proprietary workflows, credentials, secrets, private Skill bundles, internal audit findings, or facts that identify a nonpublic engagement.
+Patterns and examples must use fictional, generic, synthetic, or public information. Do not include client names, confidential information, regulated records, private employee or applicant data, proprietary workflows, credentials, secrets, private Skill bundles, internal audit or ethics findings, or facts that identify a nonpublic engagement.
