@@ -88,6 +88,7 @@ These templates are study aids and starting points, not universal production pro
 1. [Module Introduction prompts](module-06/01-module-introduction-prompts.md)
 2. [Appropriate vs Inappropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
 3. [Skill Trust and Feature-Level Risk prompts](module-06/03-skill-trust-feature-risk-prompts.md)
+4. [Data Sensitivity, Privacy & Feature Controls prompts](module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -96,30 +97,31 @@ Additional notebooks will be added as later course-aligned sections are complete
 Before using a template:
 
 - distinguish technical capability from appropriateness, trust, and approval;
-- define the bounded use case, intended outcome, users, affected parties, and accountable owner;
-- assess reversibility, consequence of error, need for human creativity or empathy, and accountability;
+- define the bounded use case, users, affected parties, and accountable owner;
+- assess reversibility, consequence of error, human creativity or empathy, and accountability;
 - identify the load-bearing criterion and define the who / what / when gate;
-- preserve non-transferable human accountability;
-- establish Skill or feature publisher, owner, version, distribution path, and review evidence;
-- inspect instructions, scripts, dependencies, bundled files, tool references, external calls, retention, and behavior beyond the stated purpose;
-- calculate effective reach across files, connectors, tools, code execution, data, and external actions;
-- treat `internal` as traceable provenance rather than automatic vetting;
-- compare reach with task necessity, data sensitivity, policy, and human approval boundaries;
-- apply least privilege and choose the smallest sufficient capability;
-- require functional, security, boundary, and regression tests;
-- define monitoring, logging, disable, rollback, and re-review triggers;
-- choose Enable, Escalate, or Decline under the correct authority;
-- classify data before selecting an environment, feature, connector, or persistence mechanism;
-- apply minimization, retention, deletion, disclosure, and privacy controls;
+- establish Skill or feature publisher, owner, version, contents, effective reach, and proportionality;
+- apply least privilege and choose Enable, Escalate, or Decline under the correct authority;
+- define the minimum necessary data before selecting a feature;
+- classify data under current organizational policy before upload or retrieval;
+- use the more sensitive tier when classification is uncertain;
+- distinguish direct identifiers from indirect re-identification risk;
+- use redaction or anonymization only when it reduces privacy risk without invalidating the task;
+- confirm the approved account, organization, product, plan, and entry point before processing sensitive data;
+- separate processing authorization from history, Memory, retention, export, and deletion controls;
+- treat Incognito as a history and Memory control rather than permission to process regulated data;
+- treat sandboxing as execution isolation rather than data authorization;
+- keep credentials and secrets out of prompts, files, knowledge, Skills, Memory, and connector configuration;
+- apply data minimization, least privilege, retention, deletion, disclosure, and revocation controls;
 - locate and apply organizational policy rather than assuming permission;
 - assess fairness, bias, consent, transparency, accessibility, power imbalance, recourse, labor effects, and misuse potential;
-- threat-model prompt injection, exfiltration, overbroad permissions, malicious dependencies, and unauthorized action;
-- pair natural-language guidance with technical controls, approval gates, monitoring, and incident response;
-- preserve evidence, exceptions, approvals, decision rationale, and next review dates; and
+- threat-model prompt injection, exfiltration, malicious dependencies, and unauthorized action;
+- pair guidance with technical controls, human approval, monitoring, logging, and incident response;
+- preserve evidence, exceptions, approvals, rationale, and review dates; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt, policy statement, publisher label, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, secret handling, fair outcomes, professional accountability, durable state, or irreversible-action approval.
+A prompt, policy statement, publisher label, Incognito session, sandbox, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, secret handling, fair outcomes, professional accountability, durable state, or irreversible-action approval.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, confidential Skill bundles, proprietary scripts, internal policies, restricted data, private incident reports, credentials, connector identifiers, organization-only review records, proprietary risk assessments, private transcripts, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, regulated records, credentials, secrets, confidential transactions, private personnel or customer data, proprietary Skill bundles, internal policies, private incident reports, connector identifiers, organization-only review records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
