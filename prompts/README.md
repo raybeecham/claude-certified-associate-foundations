@@ -89,6 +89,7 @@ These templates are study aids and starting points, not universal production pro
 2. [Appropriate vs Inappropriate Use Cases prompts](module-06/02-appropriate-vs-inappropriate-use-cases-prompts.md)
 3. [Skill Trust and Feature-Level Risk prompts](module-06/03-skill-trust-feature-risk-prompts.md)
 4. [Data Sensitivity, Privacy & Feature Controls prompts](module-06/04-data-sensitivity-privacy-feature-controls-prompts.md)
+5. [Organizational Policies and Diligence prompts](module-06/05-organizational-policies-diligence-prompts.md)
 
 Additional notebooks will be added as later course-aligned sections are completed.
 
@@ -96,32 +97,32 @@ Additional notebooks will be added as later course-aligned sections are complete
 
 Before using a template:
 
-- distinguish technical capability from appropriateness, trust, and approval;
-- define the bounded use case, users, affected parties, and accountable owner;
+- distinguish technical capability from appropriateness, trust, approval, and current policy;
+- define the bounded use case, users, affected parties, accountable owner, and controlling policy version;
 - assess reversibility, consequence of error, human creativity or empathy, and accountability;
 - identify the load-bearing criterion and define the who / what / when gate;
 - establish Skill or feature publisher, owner, version, contents, effective reach, and proportionality;
 - apply least privilege and choose Enable, Escalate, or Decline under the correct authority;
-- define the minimum necessary data before selecting a feature;
-- classify data under current organizational policy before upload or retrieval;
-- use the more sensitive tier when classification is uncertain;
+- define the minimum necessary data and classify it before upload or retrieval;
 - distinguish direct identifiers from indirect re-identification risk;
-- use redaction or anonymization only when it reduces privacy risk without invalidating the task;
-- confirm the approved account, organization, product, plan, and entry point before processing sensitive data;
-- separate processing authorization from history, Memory, retention, export, and deletion controls;
-- treat Incognito as a history and Memory control rather than permission to process regulated data;
-- treat sandboxing as execution isolation rather than data authorization;
-- keep credentials and secrets out of prompts, files, knowledge, Skills, Memory, and connector configuration;
-- apply data minimization, least privilege, retention, deletion, disclosure, and revocation controls;
-- locate and apply organizational policy rather than assuming permission;
+- treat Incognito, Memory, sandboxing, retention, and export as bounded controls rather than processing authorization;
+- translate policy requirements into observable behavior, controls, evidence, ownership, and escalation;
+- audit actual and planned use against the current controlling policy;
+- bound governance audits to authorized and necessary evidence;
+- record Diligence gaps with scope, consequence, root cause, containment, corrective action, owner, due date, and closure test;
+- separate immediate containment from sustainable remediation;
+- prefer workflow, configuration, permission, and approval repairs over reminders alone;
+- manage exceptions with authority, scope, risk, compensating controls, monitoring, and expiration;
+- verify closure with evidence rather than accepting completion claims;
+- re-audit after policy, feature, data, ownership, or workflow changes;
 - assess fairness, bias, consent, transparency, accessibility, power imbalance, recourse, labor effects, and misuse potential;
 - threat-model prompt injection, exfiltration, malicious dependencies, and unauthorized action;
 - pair guidance with technical controls, human approval, monitoring, logging, and incident response;
 - preserve evidence, exceptions, approvals, rationale, and review dates; and
 - use fictional, synthetic, public, or explicitly authorized scenarios in public study materials.
 
-A prompt, policy statement, publisher label, Incognito session, sandbox, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, secret handling, fair outcomes, professional accountability, durable state, or irreversible-action approval.
+A prompt, policy acknowledgment, publisher label, Incognito session, sandbox, audit, or human-in-the-loop claim cannot by itself enforce source integrity, identity, authorization, privacy, data isolation, connector permissions, fair outcomes, professional accountability, durable state, or irreversible-action approval.
 
 ## Public-repository content rule
 
-Do not place client names, nonpublic organizational details, regulated records, credentials, secrets, confidential transactions, private personnel or customer data, proprietary Skill bundles, internal policies, private incident reports, connector identifiers, organization-only review records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
+Do not place client names, nonpublic organizational details, confidential policies, regulated records, credentials, secrets, private audit findings, personnel data, proprietary Skill bundles, private incident reports, connector identifiers, organization-only review records, remembered live-exam questions, or reconstructed proprietary course questions in these prompts. Use fictional, generic, synthetic, public, or sanitized descriptions.
