@@ -19,7 +19,7 @@ Configured baseline
 + governed knowledge
 + reusable procedures
 + scoped continuity
-+ scoped access
++ scoped connector access
 + human controls
 + lifecycle maintenance
 ```
@@ -30,7 +30,7 @@ Configured baseline
 
 - [x] [01. Module Introduction](lessons/01-module-introduction.md)
 - [x] [02. Configuring Projects](lessons/02-configuring-projects.md)
-- [ ] 03. Connectors & Uploaded Knowledge
+- [x] [03. Connectors & Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
 - [ ] 04. System-Level Instructions That Stick
 - [ ] 05. Maintaining Configurations
 - [ ] 06. Module 5 Quiz
@@ -46,10 +46,8 @@ No later lesson is marked complete until its preparation-course material is supp
 
 A person using Claude supplies the prompt, context, sources, format, and review decisions for the current conversation.
 
-A team operating Claude maintains an approved starting environment containing:
+A team operating Claude maintains a bounded, approved environment with:
 
-- bounded purpose;
-- intended users;
 - standing instructions;
 - approved knowledge;
 - reusable procedures;
@@ -67,22 +65,18 @@ Good prompt today
 Reliable configured baseline tomorrow
 ```
 
-Configuration turns individual habits and unstated expertise into visible, reusable expectations.
-
 ---
 
 # Foundation 2: Configuring Projects
 
-A Project runs smoothly when recurring needs are placed in the correct mechanism.
-
 ## Four primary mechanisms
 
-| Mechanism | Primary role | Typical contents |
-|---|---|---|
-| Project instructions | Workspace behavior | Tone, format defaults, citation rules, uncertainty behavior, review reminders |
-| Project knowledge | Workspace facts and references | Policies, brand guides, statements of work, approved reports, reference files |
-| Skills | Reusable procedures | Report formatters, checklists, analysis workflows, document-generation methods |
-| Project-scoped Memory | Selected continuity | Prior decisions, stakeholder preferences, unresolved questions, recurring terminology |
+| Mechanism | Primary role |
+|---|---|
+| Project instructions | Workspace behavior |
+| Project knowledge | Workspace facts and references |
+| Skills | Reusable procedures |
+| Project-scoped Memory | Selected continuity |
 
 ```text
 Behavior   → Project instructions
@@ -91,79 +85,32 @@ Procedure  → Skill
 Continuity → Project-scoped Memory
 ```
 
-The mechanisms are related but not interchangeable.
+## Pairing rule
 
-## Instructions
-
-Project instructions should contain durable behavioral rules such as:
-
-- use a formal register;
-- cite supplied sources for material factual claims;
-- label uncertainty instead of guessing;
-- use the approved output structure; and
-- escalate conflicting evidence.
-
-Do not use instructions as a warehouse for all factual details or as the only home for a complex reusable procedure.
-
-## Knowledge
-
-Project knowledge should contain relevant, permitted, maintained source material.
-
-For important sources, record:
-
-- authority;
-- owner;
-- scope;
-- effective date;
-- review date;
-- sensitivity;
-- conflicts; and
-- replacement when superseded.
+One business need may require several mechanisms because it contains different responsibilities.
 
 ```text
-Knowledge uploaded
-      ≠
-Knowledge current
-      ≠
-Knowledge controlling
+Instruction:
+Always cite material factual claims.
+
+Knowledge:
+Approved sources Claude should cite.
 ```
-
-## Skills
-
-Skills carry task-specific procedures, instructions, scripts, and resources that can activate when relevant across Claude.
-
-Use a Skill when the method:
-
-- recurs;
-- should remain consistent;
-- can be defined independently from one Project's private facts;
-- has clear inputs and outputs;
-- benefits from examples, templates, or scripts; and
-- can be tested and versioned.
 
 ```text
-One Project's background → Project knowledge
-Reusable method          → Skill
+Skill:
+Status-report procedure.
+
+Knowledge:
+Current plan, brand guide, and references.
+
+Memory:
+Reviewed preferences and prior Project decisions.
 ```
 
-## Project-scoped Memory
+Give each responsibility one authoritative home, then pair mechanisms without duplicating authority.
 
-Where available and appropriate, Project memory can preserve continuity from prior work within that Project.
-
-Use it selectively for:
-
-- settled stakeholder names;
-- standing preferences;
-- prior conversational decisions;
-- recurring terminology; and
-- unresolved follow-up context.
-
-Material items should still be verified against authoritative records.
-
-```text
-Stable approved reference → Project knowledge
-Evolving Project history  → Project-scoped Memory
-```
+## Memory boundary
 
 ```text
 Scoped continuity
@@ -175,160 +122,279 @@ Confidentiality control
 System of record
 ```
 
-Project separation helps scope continuity, but it does not replace identity, permissions, disclosure review, or data-handling controls.
+Material decisions remain subordinate to approved records, permissions, and human authority.
 
 ---
 
-# The pairing rule
+# Foundation 3: Connectors and uploaded knowledge
 
-Many needs require more than one mechanism because they contain different responsibilities.
+Connectors provide authorized access to external systems. Uploaded files provide explicit source material for a chat or Project.
 
-## Citation example
+Neither mechanism establishes that every accessible item is authoritative, current, in scope, or actionable.
 
 ```text
-Project instruction:
-Always cite the source document for material factual claims.
-
-Project knowledge:
-The approved source documents Claude is expected to cite.
+Connected or uploaded
+      ≠
+Permitted for every task
+      ≠
+Authoritative
+      ≠
+Current
+      ≠
+Authorized for external action
 ```
 
-## Status-report example
+## Connector purpose and access
+
+Before enabling a connector, define:
+
+- business purpose;
+- intended users;
+- connected identity;
+- permitted systems, folders, mailboxes, tenants, or repositories;
+- read capabilities;
+- draft capabilities;
+- write or external-action capabilities;
+- prohibited or unsupported actions;
+- data sensitivity;
+- approval boundaries;
+- owner;
+- review date; and
+- revocation conditions.
+
+Use the smallest connector and permission scope that supports the approved workflow.
 
 ```text
-Skill:
-Standard report procedure and required sections.
-
-Project knowledge:
-Brand guide, current plan, approved reference documents.
-
-Project instructions:
-Tone, citation, uncertainty, and review requirements.
-
-Project-scoped Memory:
-Settled stakeholder preferences and prior Project decisions.
+Connect everything by default
+      ≠
+Useful knowledge management
 ```
 
-> Give each responsibility one authoritative home, then pair mechanisms when a business need contains different responsibility types.
+## Capability register
 
----
+| Field | Meaning |
+|---|---|
+| Connector | Exact integration and version |
+| Identity | Whose permissions are used |
+| Source scope | Accessible systems and records |
+| Read tools | Search and retrieval capabilities |
+| Draft tools | Proposed-output capabilities |
+| Write tools | Create, update, send, publish, or delete capabilities |
+| Unsupported actions | Known boundaries |
+| Approval boundary | Human confirmation before consequence |
+| Error modes | Setup, authentication, permission, scope, timeout, capability |
+| Owner and review date | Maintenance responsibility |
 
-# Worked account-workspace example
-
-A fictional consulting team creates one bounded Project for a client account.
-
-## Project instructions
-
-- formal register;
-- source citations for material claims;
-- no unsupported gap filling;
-- unresolved questions and conflicts labeled;
-- approved weekly-update format.
-
-## Project knowledge
-
-- current statement of work;
-- current brand guide;
-- approved delivery plan;
-- last three approved status reports;
-- maintained glossary.
-
-## Skill
-
-An account-independent status-report Skill defines:
-
-1. required inputs;
-2. standard sections;
-3. issue and risk formatting;
-4. decisions and actions;
-5. quality checks; and
-6. output validation.
-
-The procedure is reusable while each Project supplies its own knowledge.
-
-## Project-scoped Memory
-
-Eligible continuity may include:
-
-- accepted stakeholder naming;
-- approved abbreviations;
-- prior conversational decisions; and
-- unresolved follow-up items.
-
-## Sharing and permissions
-
-A shared Project should have explicit membership, visibility, source permissions, ownership, review expectations, offboarding, and disclosure controls.
-
----
-
-# Common configuration mistakes
-
-| Mistake | Why it fails | Repair |
-|---|---|---|
-| Procedure buried in instructions | Difficult to reuse, test, and version | Move the procedure to a Skill |
-| Behavior rule stored only in knowledge | Source content does not reliably establish operating behavior | Put behavior in Project instructions |
-| Stable fact stored only in Memory | Continuity may be stale or informal | Put the authoritative fact in knowledge or a system of record |
-| Project used as a dumping ground | Creates retrieval noise, conflicts, and disclosure ambiguity | Bound the Project by purpose, audience, and sources |
-| Same rule duplicated across layers | Versions drift | Choose one authoritative home |
-| Memory described as a security guarantee | Scope does not replace access or disclosure controls | Add identity, permissions, and governance controls |
-
----
-
-# Project configuration protocol
+Capabilities differ by connector, product surface, administrator settings, and permission configuration.
 
 ```text
-1. Define the Project purpose, users, and prohibited uses
-2. Inventory recurring needs
-3. Classify each need as behavior, fact, procedure, continuity, access, exact control, or durable state
-4. Place it in the smallest correct mechanism
-5. Identify required pairings
-6. Establish source authority, freshness, scope, and sensitivity
-7. Define sharing, access, and review boundaries
-8. Test representative and adversarial scenarios
-9. Record configuration version, owner, and approval
-10. Review, update, roll back, or retire on cadence
+Mail connector
+      ≠
+Universal mail capability
 ```
 
-## Configuration map
+A connector may search and read, create drafts, or support write tools only when specifically documented and enabled.
 
-| Need | Type | Mechanism | Authoritative home | Owner | Test | Review cadence |
-|---|---|---|---|---|---|---|
-| Cite material claims | Behavior | Project instructions | Instruction set | Project owner | Claim-to-source test | Quarterly |
-| Current policy | Fact | Project knowledge | Approved policy | Policy owner | Version and scope check | On change |
-| Standard report | Procedure | Skill | Skill package | Process owner | Golden-output cases | On release |
-| Settled preference | Continuity | Project memory | Reviewed continuity | Project owner | Accuracy and relevance | Monthly |
+## Stage separation
+
+```text
+Search or retrieve
+      ↓
+Read evidence
+      ↓
+Analyze
+      ↓
+Draft proposed output
+      ↓
+Human review and approval
+      ↓
+Controlled execution, if supported
+```
+
+A connector that can draft but not send has reached its designed boundary rather than failed.
+
+## Boundary-aware troubleshooting
+
+Classify failures before escalation:
+
+1. connector not installed or enabled;
+2. wrong or expired authentication;
+3. insufficient permission;
+4. source outside configured scope;
+5. connector not loaded for the conversation;
+6. unsupported action;
+7. missing, renamed, or stale source;
+8. external-system failure; or
+9. probable product defect.
+
+```text
+Unexpected result
+      ≠
+Product bug
+```
+
+The supplied course reports two field-observed cautions:
+
+- an apparently obvious connector-addition path may not be the organization's approved installation path; and
+- capability-boundary failures may be mislabeled and routed to the wrong support function.
+
+Treat these as operational cautions, not universal documented behavior. Confirm approved paths and current capabilities with the relevant administrator and official documentation.
 
 ---
 
-# Broader configuration foundation
+# Uploaded-knowledge governance
 
-Later lessons will extend this baseline into:
+Uploaded knowledge should be curated like a maintained shared repository.
 
-- connector and uploaded-file selection;
-- least-privilege retrieval;
-- source authority and freshness;
-- instruction scope and precedence;
-- configuration testing;
-- change control;
-- rollback and retirement;
-- stale and superseded knowledge;
-- secret boundaries; and
-- appropriate reusable context.
+For every material file, record:
+
+- source ID;
+- title;
+- owner;
+- authority;
+- effective date;
+- review or expiration date;
+- scope;
+- sensitivity;
+- version;
+- refresh type;
+- conflicts;
+- replacement; and
+- permitted use.
 
 ```text
-Available source
+File uploaded
       ≠
-Authorized source
+File approved
       ≠
-Controlling source
+File current
       ≠
-Current source
+File controlling
 ```
 
+## Duplicates and supersession
+
+A knowledge base containing several unlabeled versions of the same policy invites obsolete citations and blended requirements.
+
 ```text
-Configuration created
+New source approved
+      ↓
+Identify replaced source
+      ↓
+Remove or label superseded version
+      ↓
+Update source register
+      ↓
+Run regression questions
+      ↓
+Record effective date and owner
+```
+
+Historical sources may remain when history is part of the use case, but their status must be explicit.
+
+## Synced and static sources
+
+| Refresh type | Maintenance approach |
+|---|---|
+| Synced source | Monitor upstream ownership, access, and material changes |
+| Static upload | Replace manually when the controlling source changes |
+| Connector retrieval | Validate permissions, scope, and currency at use time |
+| Historical archive | Prevent accidental treatment as current authority |
+
+```text
+Connected or synced
       ≠
-Configuration governed
+Reviewed and approved
+```
+
+---
+
+# Connector and knowledge register
+
+| ID | Source or connector | Capability | Authority | Scope | Refresh | Owner | Review | Action boundary |
+|---|---|---|---|---|---|---|---|---|
+| C-001 | Approved mail connector | Search, read, draft | Evidence source | Named mailbox | Live | Workspace owner | Quarterly | No send |
+| K-001 | Current policy | Read | Controlling | Defined use case | Static | Policy owner | On change | Reference only |
+| K-002 | Prior policy | Read | Superseded | Historical | Archive | Policy owner | Annual | Never current guidance |
+
+This register prevents connector names and file availability from becoming implicit assumptions.
+
+---
+
+# Worked policy-brief example
+
+A fictional compliance team prepares weekly policy-change briefs.
+
+## Connectors
+
+- read-only access to an approved repository;
+- email search for messages from the policy owner;
+- no authority to send, publish, or modify source records.
+
+## Uploaded knowledge
+
+- current briefing template;
+- approved terminology guide;
+- current review checklist;
+- superseded policies removed or explicitly labeled historical.
+
+## Workflow
+
+```text
+Retrieve current sources
+      ↓
+Check version and effective date
+      ↓
+Extract material changes
+      ↓
+Draft briefing
+      ↓
+Qualified human review
+      ↓
+Authorized publication outside Claude
+```
+
+## Controls
+
+- connector capability register;
+- source authority order;
+- conflict handling;
+- duplicate detection;
+- weekly source review;
+- quarterly permission review; and
+- offboarding and revocation.
+
+---
+
+# Common failure modes
+
+| Failure | Repair |
+|---|---|
+| Connector availability treated as authority | Classify source ownership, version, and scope |
+| Capability assumed from connector name | Maintain a tool-level capability contract |
+| Everything connected by default | Apply least privilege and enable only relevant tools |
+| Static upload treated as live | Record refresh type and replacement trigger |
+| Duplicate versions retained without status | Remove, archive, or label superseded copies |
+| Unsupported action reported as a bug | Check setup, authentication, permission, scope, loading, and capability first |
+| Draft directly triggers external consequence | Add qualified review and approval before execution |
+
+---
+
+# Integrated configuration protocol
+
+```text
+1. Define the bounded purpose and users
+2. Classify behavior, facts, procedures, continuity, access, exact controls, and state
+3. Place each concern in the correct configuration mechanism
+4. Select the minimum required connectors and source scope
+5. Record connector identity, capabilities, and unsupported actions
+6. Establish source authority, freshness, scope, sensitivity, and conflict rules
+7. Curate uploaded knowledge and remove or label superseded versions
+8. Separate retrieve, draft, approve, and execute
+9. Test successful, denied, stale, conflicting, and unsupported cases
+10. Version and approve the configuration
+11. Monitor sources, permissions, capabilities, and operational dependency
+12. Update, revoke, roll back, or retire when conditions change
 ```
 
 ---
@@ -339,15 +405,18 @@ Configuration governed
 
 - [Module Introduction](lessons/01-module-introduction.md)
 - [Configuring Projects](lessons/02-configuring-projects.md)
+- [Connectors and Uploaded Knowledge](lessons/03-connectors-uploaded-knowledge.md)
 
 ## Prompt notebooks
 
 - [Module Introduction prompts](../../prompts/module-05/01-module-introduction-prompts.md)
 - [Configuring Projects prompts](../../prompts/module-05/02-configuring-projects-prompts.md)
+- [Connectors and Uploaded Knowledge prompts](../../prompts/module-05/03-connectors-uploaded-knowledge-prompts.md)
 
-## Engineering pattern
+## Engineering patterns
 
 - [Project Configuration Slot Selection Pattern](../../patterns/project-configuration-slot-selection-pattern.md)
+- [Connector and Knowledge Boundary Pattern](../../patterns/connector-and-knowledge-boundary-pattern.md)
 
 ## Existing extended practice
 
@@ -361,29 +430,28 @@ Configuration governed
 # Exam lens
 
 ```text
-Always cite sources                 → Project instruction
-Current policy document             → Project knowledge
-Repeatable report procedure         → Skill
-Prior Project decision              → scoped Memory, verified if material
-Same need includes rule and facts   → pair instructions with knowledge
-Procedure buried in instructions    → move to Skill
-Stable fact stored only in Memory   → move to knowledge
-Project contains unrelated clients  → separate bounded workspaces
-Memory described as security        → add permissions and data controls
+External source is needed            → connector with approved scope
+File should persist across Project   → Project knowledge
+Connector can read but not act       → redesign around capability boundary
+Several versions of one policy       → identify current authority and remove ambiguity
+All connectors enabled by default    → apply least privilege
+Unexpected connector failure         → classify setup, auth, permission, scope, capability, or defect
+Synced source changed upstream        → verify authority and material change
+Static file became outdated           → replace and regression-test
 ```
 
-For Project-configuration scenarios:
+For connector and knowledge scenarios:
 
-1. identify the need type;
-2. choose the smallest correct mechanism;
-3. distinguish behavior, facts, procedures, and continuity;
-4. pair mechanisms when responsibilities differ;
-5. retain one authoritative home for each item;
-6. verify source authority and freshness;
-7. keep Memory subordinate to authoritative records;
-8. define sharing and access controls;
-9. test for bleed, drift, conflict, and missing context; and
-10. assign ownership and maintenance.
+1. distinguish access from authority;
+2. identify the connected identity and permission scope;
+3. document exact capabilities and unsupported actions;
+4. separate read, draft, approve, and execute;
+5. select the minimum relevant connector set;
+6. curate files by authority, freshness, scope, and sensitivity;
+7. remove or label duplicates and superseded sources;
+8. classify failures before escalation;
+9. test connector and source boundaries; and
+10. assign ownership, review cadence, and revocation.
 
 ---
 
@@ -391,14 +459,16 @@ For Project-configuration scenarios:
 
 - [x] I completed the Module 5 introduction.
 - [x] I completed Configuring Projects.
-- [ ] I can explain the difference between using and operating Claude.
-- [ ] I can configure a Project around a bounded purpose.
-- [ ] I can distinguish Project instructions, Project knowledge, Skills, and scoped Memory.
-- [ ] I can apply the pairing rule when one need spans mechanisms.
-- [ ] I can give each configuration responsibility one authoritative home.
-- [ ] I can distinguish scoped continuity from authority, durable state, and security controls.
-- [ ] I can build and maintain a source register.
-- [ ] I can apply least privilege to connector and knowledge access.
+- [x] I completed Connectors and Uploaded Knowledge.
+- [ ] I can distinguish behavior, facts, procedures, continuity, access, exact controls, and state.
+- [ ] I can apply the Project configuration pairing rule.
+- [ ] I can distinguish connector access from source authority.
+- [ ] I can create a connector capability contract.
+- [ ] I can separate retrieve, draft, approve, and execute stages.
+- [ ] I can classify connector failures before escalation.
+- [ ] I can curate uploaded knowledge and remove or label superseded sources.
+- [ ] I can distinguish synced sources from static snapshots.
+- [ ] I can apply least privilege and define revocation.
 - [ ] I can keep credentials and secrets outside prompts and repositories.
 - [ ] I can design durable instructions with clear scope and precedence.
 - [ ] I can test, version, roll back, and retire configurations.
@@ -409,7 +479,7 @@ For Project-configuration scenarios:
 
 # Public-repository scenario policy
 
-Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential client workspaces, private knowledge sources, stakeholder details, connector identifiers, credentials, proprietary instructions, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
+Examples must be fictional, generic, synthetic, public, or explicitly authorized. Do not include confidential emails, private Drive content, connector identifiers, credentials, internal policies, private knowledge sources, proprietary instructions, client data, system identifiers, remembered live-exam questions, or reconstructed proprietary course content.
 
 ## Educational-use notice
 
@@ -417,4 +487,4 @@ This repository is an unofficial educational resource. It does not constitute ar
 
 ## Source note
 
-The Configuring Projects course material was supplied on August 3, 2026. Product capabilities and terminology can change. Current official Anthropic documentation controls if it conflicts with course or repository material.
+The Connectors and Uploaded Knowledge course material was supplied on August 3, 2026. Product capabilities and interfaces can change. Current official documentation and organizational policy control if they conflict with course or repository material.
